@@ -1,0 +1,155 @@
+// Pagination
+// *******************************************************************************
+
+// Basic Pagination
+@mixin template-pagination-variant($parent, $background, $color: null) {
+  #{$parent} .page-item.active .page-link,
+  #{$parent}.pagination li.active > a:not(.page-link) {
+    &,
+    &:hover,
+    &:focus {
+      border-color: $background;
+      background-color: $background;
+      // @include gradient-bg($pagination-active-bg);
+      color: if($color, $color, color-contrast($background));
+    }
+  }
+
+  #{$parent} .page-item > .page-link {
+    &:hover,
+    &:focus {
+      border-color: rgba($background, 0.1);
+      background-color: rgba($background, 0.07);
+      color: $background;
+    }
+  }
+
+  #{$parent} .page-item {
+    &.first,
+    &.last,
+    &.next,
+    &.prev,
+    &.previous {
+      .page-link {
+        border-color: rgba($background, 0.1);
+        background-color: rgba($background, 0.2);
+        color: $background;
+      }
+
+      // disabled css
+      &:disabled,
+      &.disabled {
+        .page-link {
+          border-color: rgba($background, 0.07);
+          color: rgba($background, 0.5);
+          background-color: rgba($background, 0.07);
+        }
+      }
+    }
+  }
+}
+
+// Pagination Label Variant
+@mixin template-pagination-label-variant($parent, $background, $color: null) {
+  #{$parent} .page-item.active .page-link,
+  #{$parent}.pagination li.active > a:not(.page-link) {
+    &,
+    &:hover,
+    &:focus {
+      border-color: $background;
+      background-color: $background;
+      color: if($color, $color, color-contrast($background));
+    }
+  }
+
+  #{$parent} .page-item > .page-link {
+    border-color: rgba($background, 0.1);
+    background-color: rgba($background, 0.1);
+    color: $background;
+
+    &:hover,
+    &:focus {
+      border-color: rgba($background, 0.1);
+      background-color: rgba($background, 0.07);
+      color: $background;
+    }
+  }
+
+  #{$parent} .page-item {
+    &.first,
+    &.last,
+    &.next,
+    &.prev,
+    &.previous {
+      .page-link {
+        border-color: rgba($background, 0.1);
+        background-color: rgba($background, 0.2);
+        color: $background;
+      }
+
+      // disabled css
+      &:disabled,
+      &.disabled {
+        .page-link {
+          border-color: rgba($background, 0.07);
+          color: rgba($background, 0.5);
+          background-color: rgba($background, 0.07);
+        }
+      }
+    }
+  }
+}
+
+// Pagination Outline Variant
+@mixin template-pagination-outline-variant($parent, $background, $color: null) {
+  #{$parent} .page-item.active .page-link,
+  #{$parent}.pagination li.active > a:not(.page-link) {
+    &,
+    &:hover,
+    &:focus {
+      border-color: $background;
+      color: if($color, $color, color-contrast($background));
+      background-color: $background;
+    }
+  }
+
+  #{$parent} .page-item > .page-link {
+    border-color: $background;
+    color: $background;
+
+    &:hover,
+    &:focus {
+      border-color: $background;
+      background-color: rgba($background, 0.07);
+      color: $background;
+    }
+  }
+
+  #{$parent} .page-item {
+    &.first,
+    &.last,
+    &.next,
+    &.prev,
+    &.previous {
+      .page-link {
+        color: $background;
+        border-color: $background;
+        background-color: rgba($background, 0.07);
+      }
+
+      // disabled css
+      &:disabled,
+      &.disabled {
+        .page-link {
+          border-color: rgba($background, 0.5);
+          color: rgba($background, 0.5);
+          background-color: rgba($background, 0.07);
+        }
+      }
+    }
+  }
+}
+
+@mixin template-pagination-theme($background, $color: null) {
+  @include template-pagination-variant('', $background, $color);
+}

@@ -1,0 +1,59 @@
+@import './_components/include';
+@import './_theme/common';
+@import './_theme/libs';
+@import './_theme/pages';
+
+$primary-color: #775cdc;
+$body-bg: #f5f5f5;
+
+body {
+  background: $body-bg;
+}
+
+.bg-body {
+  background: $body-bg !important;
+}
+
+@include template-common-theme($primary-color);
+@include template-libs-theme($primary-color);
+@include template-pages-theme($primary-color);
+
+// Navbar
+// ---------------------------------------------------------------------------
+@include template-navbar-style('.bg-navbar-theme', $white, $color: $text-muted, $active-color: $body-color);
+
+.layout-navbar {
+  box-shadow: 0 0 10px $border-color;
+}
+
+// Menu
+// ---------------------------------------------------------------------------
+@include template-menu-style(
+  '.bg-menu-theme',
+  $white,
+  $color: $body-color,
+  $active-color: $headings-color,
+  $border: transparent,
+  $active-bg: rgba-to-hex($gray-100, $rgba-to-hex-bg)
+);
+@include media-breakpoint-up(xl) {
+  .bg-menu-theme {
+    box-shadow: 0 0 10px $border-color;
+  }
+}
+.bg-menu-theme {
+  .menu-inner > .menu-item.active > .menu-link .menu-icon {
+    color: $primary-color !important;
+  }
+  .menu-inner > .menu-header::before {
+    background-color: rgba-to-hex($gray-400, $rgba-to-hex-bg);
+  }
+}
+
+// Footer
+// ---------------------------------------------------------------------------
+@include template-footer-style('.bg-footer-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.content-footer {
+  box-shadow: 0 -1px 0 $border-color;
+}

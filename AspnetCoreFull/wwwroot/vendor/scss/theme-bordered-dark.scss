@@ -1,0 +1,101 @@
+@import './_components/include-dark';
+@import './_theme/common';
+@import './_theme/libs';
+@import './_theme/pages';
+
+$primary-color: #7367f0;
+
+body {
+  background: $body-bg;
+}
+
+.bg-body {
+  background: $body-bg !important;
+}
+
+@include template-common-theme($primary-color);
+@include template-libs-dark-theme($primary-color);
+@include template-pages-theme($primary-color);
+
+// Navbar
+// ---------------------------------------------------------------------------
+@include template-navbar-style('.bg-navbar-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.layout-navbar {
+  box-shadow: 0 1px 0 $border-color;
+}
+
+// Menu
+// ---------------------------------------------------------------------------
+@include template-menu-style(
+  '.bg-menu-theme',
+  $body-bg,
+  $color: $text-muted,
+  $active-color: $body-color,
+  $active-bg: shade-color($body-bg, 2.5%)
+);
+
+.bg-menu-theme {
+  .menu-inner > .menu-item > .menu-link .menu-icon,
+  .menu-inner > .menu-item > .menu-link:hover .menu-icon,
+  .menu-inner > .menu-item > .menu-link:focus .menu-icon {
+    color: $gray-300;
+  }
+  .menu-inner > .menu-item.active > .menu-link .menu-icon {
+    color: $primary-color !important;
+  }
+  .menu-item.active > .menu-link:not(.menu-toggle) {
+    background: none !important;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .layout-menu {
+    box-shadow: 0 0 0 1px $border-color;
+  }
+}
+
+.layout-menu-horizontal {
+  box-shadow: 0 -1px 0 $border-color inset;
+}
+
+// Footer
+// ---------------------------------------------------------------------------
+@include template-footer-style('.bg-footer-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.content-footer {
+  box-shadow: 0 -1px 0 $border-color;
+}
+
+// Component styles
+// ---------------------------------------------------------------------------
+
+// card
+.card {
+  box-shadow: none;
+  border: $border-width solid $card-border-color;
+}
+
+// Accordion
+.accordion {
+  .accordion-item {
+    border-top: $accordion-border-width solid $accordion-border-color;
+  }
+}
+
+// default form wizard style
+
+.bs-stepper:not(.wizard-modern) {
+  border: 1px solid $border-color;
+  border-radius: $card-border-radius;
+}
+
+// modern form wizard style
+
+.bs-stepper.wizard-modern {
+  .bs-stepper-content {
+    box-shadow: none !important;
+    border: 1px solid $border-color;
+    border-radius: $card-border-radius;
+  }
+}
