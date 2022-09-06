@@ -1,0 +1,65 @@
+﻿@page
+@model AspnetCoreFull.Pages.LayoutExamples.NavbarFullWithSidebarModel
+@{
+  ViewData["Title"] = "Navbar Full With Sidebar layout - Layouts";
+  ViewData["isFlex"] = (ViewData["isFlex"] ??= true);
+  Layout = "Layouts/_NavbarFullLayout";
+}
+@* ************** Content ************** *@
+
+<div class="flex-shrink-1 flex-grow-0 w-px-350 border-end container-p-x container-p-y">
+  <div class="layout-example-sidebar layout-example-content-inner">
+    Sidebar
+  </div>
+</div>
+
+<div class="flex-shrink-1 flex-grow-1 container-p-x container-p-y">
+  <h4 class="fw-bold py-3 mb-4">
+    <span class="text-muted fw-light">Layouts /</span> Navbar full + Sidebar
+  </h4>
+
+  <div class="layout-example-window">
+    <div class="layout-example-toolbar">
+      <div class="layout-example-buttons">
+        <span class="layout-example-button layout-example-button-close"></span>
+        <span class="layout-example-button layout-example-button-minimize"></span>
+        <span class="layout-example-button layout-example-button-expand"></span>
+      </div>
+    </div>
+    <div class="layout-example-content layout-example-navbar-full">
+      <code>.layout-wrapper.layout-navbar-full</code>
+
+      <div class="layout-example-content">
+        <code>.layout-container</code>
+
+        <div class="layout-example-content layout-example-content-nav">
+          <code>.layout-navbar</code>
+        </div>
+
+        <div class="layout-example-content layout-example-content-page">
+          <code>.layout-page</code>
+
+          <div class="layout-example-content-inner">
+
+            <div class="layout-example-content layout-example-content-menu">
+              <code>.layout-menu</code>
+            </div>
+
+            <div class="layout-example-content layout-example-content-wrapper">
+              <code>.content-wrapper</code>
+
+              <div class="layout-example-content bg-white">
+                <code class="text-body">.container-xxl.d-flex.align-items-stretch</code>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
