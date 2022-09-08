@@ -7,8 +7,8 @@
 @* ************** Content ************** *@
 
 <div class="layout-demo-wrapper">
-  <div class="layout-demo-placeholder">
-    @if (@ViewData["menuHorizontal"] != null)
+  <div class='layout-demo-placeholder'>
+    @if (Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True")
     {
       <img src="~/img/layouts/layout-horizontal-container-light.png" class="img-fluid" alt="Layout container" data-app-light-img="layouts/layout-horizontal-container-light.png" data-app-dark-img="layouts/layout-horizontal-container-dark.png">
     }

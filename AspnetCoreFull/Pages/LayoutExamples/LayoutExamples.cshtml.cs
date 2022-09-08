@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspnetCoreFull.Pages.LayoutExamples
@@ -19,9 +16,7 @@ namespace AspnetCoreFull.Pages.LayoutExamples
 
   public class ContainerModel : PageModel
   {
-    public void OnGet()
-    {
-    }
+    public void OnGet() { }
   }
 
   public class ContentNavbarModel : PageModel
@@ -41,10 +36,7 @@ namespace AspnetCoreFull.Pages.LayoutExamples
 
   public class HorizontalMenuModel : PageModel
   {
-    public void OnGet()
-    {
-      ViewData["menuHorizontal"] = @ViewData["menuHorizontal"];
-    }
+    public void OnGet() { }
   }
 
   public class VerticalMenuModel : PageModel

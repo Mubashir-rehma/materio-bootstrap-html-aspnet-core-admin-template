@@ -1,6 +1,6 @@
 @{
   TempData.Keep();
-  string? currentPage = ViewContext.RouteData.Values["Page"].ToString();
+  string? currentPage = Convert.ToString(ViewContext.RouteData.Values["Page"])!;
 }
 
 <!-- Menu -->
@@ -13,7 +13,7 @@
       <span class="app-brand-logo demo bg-primary">
         @await Html.PartialAsync("../_Partials/_Macros")
       </span>
-      <span class="app-brand-text demo menu-text fw-bold ms-2">@TempData["templateName"]</span>
+      <span class="app-brand-text demo menu-text fw-bold ms-2">@TempData.Peek("templateName")</span>
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -954,13 +954,13 @@
       <span class="menu-header-text">Misc</span>
     </li>
     <li class="menu-item">
-      <a href='@TempData["support"]' target="_blank" class="menu-link">
+      <a href='@TempData.Peek("support")' target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-support"></i>
         <div data-i18n="Support">Support</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href='@TempData["documentation"]' target="_blank" class="menu-link">
+      <a href='@TempData.Peek("documentation")' target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-file"></i>
         <div data-i18n="Documentation">Documentation</div>
       </a>

@@ -1,7 +1,7 @@
 @{
   Layout = "Layouts/_CommonMasterLayout";
 
-  ViewData["menuHorizontal"] = true; // session in place of viewdata
+  TempData["menuHorizontal"] = true;
   ViewData["navbarFull"] = true;
 
   @* Display elements *@
@@ -73,7 +73,7 @@
 <!-- Overlay -->
 @if (Convert.ToBoolean(@ViewData["isMenu"]))
 {
-  <div class="layout-overlay layout-menu-toggle"></div>
+      <div class="layout-overlay layout-menu-toggle"></div>
 }
 <!-- Drag Target Area To SlideIn Menu On Small Screens -->
 <div class="drag-target"></div>

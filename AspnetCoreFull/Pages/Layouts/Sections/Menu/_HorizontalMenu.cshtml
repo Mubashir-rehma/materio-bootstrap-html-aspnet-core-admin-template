@@ -1,6 +1,6 @@
 @{
   TempData.Keep();
-  string? currentPage = ViewContext.RouteData.Values["Page"].ToString();
+  string? currentPage = Convert.ToString(ViewContext.RouteData.Values["Page"])!;
   ViewData["containerNav"] ??= "container-fluid";
 }
 
@@ -915,12 +915,12 @@
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href='@TempData["support"]' target="_blank" class="menu-link">
+            <a href='@TempData.Peek("support")' target="_blank" class="menu-link">
               <div data-i18n="Support">Support</div>
             </a>
           </li>
           <li class="menu-item">
-            <a href='@TempData["documentation"]' target="_blank" class="menu-link">
+            <a href='@TempData.Peek("documentation")' target="_blank" class="menu-link">
               <div data-i18n="Documentation">Documentation</div>
             </a>
           </li>

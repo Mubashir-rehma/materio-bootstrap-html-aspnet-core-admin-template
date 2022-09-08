@@ -10,13 +10,13 @@
       <script>
         document.write(new Date().getFullYear())
       </script>
-      , made with ❤️ by <a href='@TempData["creatorUrl"]' target="_blank" class="footer-link fw-bolder">@TempData["creatorName"]</a>
+      , made with ❤️ by <a href='@TempData.Peek("creatorUrl")' target="_blank" class="footer-link fw-bolder">@TempData.Peek("creatorName")</a>
     </div>
     <div>
-      <a href='@TempData["licenseUrl"]' class="footer-link me-4" target="_blank">License</a>
-      <a href='@TempData["moreThemes"]' target="_blank" class="footer-link me-4">More Themes</a>
-      <a href='@TempData["documentation"]' target="_blank" class="footer-link me-4">Documentation</a>
-      <a href='@TempData["support"]' target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
+      <a href='@TempData.Peek("licenseUrl")' class="footer-link me-4" target="_blank">License</a>
+      <a href='@TempData.Peek("moreThemes")' target="_blank" class="footer-link me-4">More Themes</a>
+      <a href='@TempData.Peek("documentation")' target="_blank" class="footer-link me-4">Documentation</a>
+      <a href='@TempData.Peek("support")' target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
     </div>
   </div>
 </footer>

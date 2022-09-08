@@ -14,11 +14,11 @@
           <span class="app-brand-logo demo bg-primary">
             @await Html.PartialAsync("../_Partials/_Macros")
           </span>
-          <span class="app-brand-text demo menu-text fw-bold">@TempData["templateName"]</span>
+          <span class="app-brand-text demo menu-text fw-bold">@TempData.Peek("templateName")</span>
         </a>
 
         @* ! Display menu close icon only for horizontal-menu with navbar-full *@
-        @if (ViewData["menuHorizontal"] != null)
+        @if (Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True")
         {
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
             <i class="bx bx-x bx-sm align-middle"></i>
@@ -30,7 +30,7 @@
     @* ! Not required for layout-without-menu *@
     @if (ViewData["navbarHideToggle"] == null)
     {
-      <div class='layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0  @((@ViewData["menuHorizontal"] != null && Convert.ToBoolean(@ViewData["menuHorizontal"])) ? "" : "d-xl-none") @((@ViewData["contentNavbar"] != null && Convert.ToBoolean(@ViewData["contentNavbar"])) ? "" : "d-xl-none")'>
+      <div class='layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0  @((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "" : "d-xl-none") @((@ViewData["contentNavbar"] != null && Convert.ToBoolean(@ViewData["contentNavbar"])) ? "" : "d-xl-none")'>
         <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
           <i class="bx bx-menu bx-sm"></i>
         </a>
@@ -450,8 +450,8 @@
     </div>
 
     <!-- Search Small Screens -->
-    <div class='navbar-search-wrapper search-input-wrapper @((@ViewData["menuHorizontal"] != null && Convert.ToBoolean(@ViewData["menuHorizontal"])) ? @ViewData["containerNav"] : "") d-none'>
-      <input type="text" class='form-control search-input @((@ViewData["menuHorizontal"] != null && Convert.ToBoolean(@ViewData["menuHorizontal"])) ? "" : @ViewData["containerNav"]) border-0' placeholder="Search..." aria-label="Search...">
+    <div class='navbar-search-wrapper search-input-wrapper @((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? @ViewData["containerNav"] : "") d-none'>
+      <input type="text" class='form-control search-input @((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "" : @ViewData["containerNav"]) border-0' placeholder="Search..." aria-label="Search...">
       <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
     </div>
   </div>
