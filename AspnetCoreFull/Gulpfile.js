@@ -48,11 +48,11 @@ function srcGlob(...src) {
 // -------------------------------------------------------------------------------
 // Build CSS
 // -------------------------------------------------------------------------------
-  const buildCssTask = function (cb) {
+  const buildCssTask = function (cb) {    
     return src(srcGlob('**/*.scss', '!**/_*.scss'))
       .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
       .pipe(
-        // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
+        // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower        
         gulpIf(
           !localSass,
           exec(

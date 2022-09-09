@@ -101,12 +101,17 @@ bld/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 
 # Ignoring following files/folder only for master
-wwwroot/
-# wwwroot/img/
-# wwwroot/svg/
-# wwwroot/js/*.dist.js
-# wwwroot/vendor/**/*.dist.js
-# wwwroot/vendor/**/*.dist.css
+
+wwwroot/audio/
+wwwroot/css/*
+!wwwroot/css/site.scss
+wwwroot/js/*
+!wwwroot/js/site.js
+wwwroot/img/
+wwwroot/svg/
+wwwroot/json/
+wwwroot/vendor/
+
 build-config.js
 package.json
 webpack.config.js
