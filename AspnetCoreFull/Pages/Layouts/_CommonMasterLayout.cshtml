@@ -1,29 +1,13 @@
 @{
-  TempData["creatorName"] = "ThemeSelection";
-  TempData["creatorUrl"] = "https://themeselection.com";
-  TempData["templateName"] = "MyAdmin";
-  TempData["templateSuffix"] = "Bootstrap Admin Template";
-  TempData["templateVersion"] = "1.0.0";
-  TempData["templateFree"] = false;
-  TempData["templateDescription"] = "Start your development with a Dashboard for Bootstrap 5";
-  TempData["templateKeyword"] = "dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5";
+
+  TempData["appName"] = "MyAdmin";
+  TempData["appUrl"] = "https://themeselection.com";
+  @* Footer & Misc urls *@
   TempData["licenseUrl"] = "https://themeselection.com/license/";
-  TempData["livePreview"] = "https://themeselection.com/demo/chameleon-admin-template/landing/";
   TempData["productPage"] = "https://themeselection.com/products/chameleon-admin-modern-bootstrap-webapp-dashboard-html-template-ui-kit/";
   TempData["support"] = "https://themeselection.com/support/";
   TempData["moreThemes"] = "https://themeselection.com/";
   TempData["documentation"] = "https://themeselection.com/documentation";
-  TempData["generator"] = "https://themeselection.com/tools/generator/sneat";
-  TempData["changelog"] = "https://themeselection.com/changelog.html";
-  TempData["repository"] = "https://gitlab.com/repository";
-  TempData["gitRepo"] = "chameleon-free-bootstrap-admin-template";
-  TempData["gitRepoAccess"] = "https://themeselection.com/tools/github/github-access";
-  TempData["githubFreeUrl"] = "https://github.com/themeselection";
-  TempData["facebookUrl"] = "https://www.facebook.com/ThemeSelections/";
-  TempData["twitterUrl"] = "https://twitter.com/Theme_Selection";
-  TempData["githubUrl"] = "https://github.com/themeselection";
-  TempData["dribbbleUrl"] = "https://dribbble.com/themeselection";
-  TempData["instagramUrl"] = "https://www.instagram.com/themeselection/";
 }
 
 <!DOCTYPE html>
@@ -33,9 +17,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>@ViewData["title"] | @TempData.Peek("templateName") - @TempData.Peek("templateSuffix")</title>
-  <meta name="description" content='@TempData.Peek("templateDescription")' />
-  <meta name="keywords" content='@TempData.Peek("templateKeyword")' />
+  <title>@ViewData["title"] | @TempData.Peek("appName") - Asp.Net Core Admin Template</title>
+  <meta name="description" content="" />
+
   <!-- Canonical SEO -->
   <link rel="canonical" href='@TempData.Peek("productPage")'>
   <!-- Favicon -->
