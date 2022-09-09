@@ -1,18 +1,20 @@
 <environment include="Development">
+  @* Template helper js *@
   <script src="~/vendor/js/helpers.dist.js"></script>
+  @* Template customizer js *@
+  <script src="~/vendor/js/template-customizer.dist.js"></script>
+  @* Config file contain global vars & default theme options, Set your preferred theme option in this file. *@
+  <script src="~/js/config.js"></script>
 </environment>
+
 <environment exclude="Development">
   <script src="~/vendor/js/helpers.dist.js" asp-append-version="true"></script>
+  <script src="~/vendor/js/template-customizer.dist.js" asp-append-version="true"></script>
+  <script src="~/js/config.js" asp-append-version="true"></script>
 </environment>
-<!-- beautify ignore:start -->
-  <environment include="Development"><script src="~/vendor/js/template-customizer.dist.js"></script></environment>
-  <environment exclude="Development"><script src="~/vendor/js/template-customizer.dist.js" asp-append-version="true"></script></environment>
 
-  <environment include="Development"><script src="~/js/config.js"></script></environment>
-  <environment exclude="Development"><script src="~/js/config.js" asp-append-version="true"></script></environment>
-<!-- beautify ignore:end -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+ @* Global site tag (gtag.js) - Google Analytics
 <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -23,4 +25,4 @@
   gtag('js', new Date());
   gtag('config', 'GA_MEASUREMENT_ID');
 
-</script>
+</script> *@
