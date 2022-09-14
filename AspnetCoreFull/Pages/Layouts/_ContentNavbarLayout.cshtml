@@ -33,10 +33,12 @@
 
 @section PageScripts{ @RenderSection("PageScripts", required: false) }
 
-<div class='layout-wrapper layout-content-navbar @((@ViewData["isMenu"] != null && Convert.ToBoolean(@ViewData["isMenu"])) ? "" : "layout-without-menu")'>
+@{bool isMenu = ViewData["isMenu"] != null && ViewData["isMenu"].ToString() == "True";}
+
+<div class='layout-wrapper layout-content-navbar @(isMenu ? "" : "layout-without-menu")'>
   <div class='layout-container'>
 
-    @if (@ViewData["isMenu"] != null ? Convert.ToBoolean(@ViewData["isMenu"]) : false)
+    @if (isMenu)
     {
       @await Html.PartialAsync("Layouts/Sections/Menu/_VerticalMenu")
     }
