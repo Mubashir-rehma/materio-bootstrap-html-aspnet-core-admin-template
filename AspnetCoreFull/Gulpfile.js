@@ -23,6 +23,7 @@ const localSass = require('sass');
 const autoprefixer = require('gulp-autoprefixer');
 const exec = require('gulp-exec');
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 const gulpIf = require('gulp-if');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
@@ -48,11 +49,11 @@ function srcGlob(...src) {
 // -------------------------------------------------------------------------------
 // Build CSS
 // -------------------------------------------------------------------------------
-  const buildCssTask = function (cb) {    
+  const buildCssTask = function (cb) {
     return src(srcGlob('**/*.scss', '!**/_*.scss'))
       .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
       .pipe(
-        // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower        
+        // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
         gulpIf(
           !localSass,
           exec(
@@ -81,7 +82,7 @@ function srcGlob(...src) {
         })
       )
       .pipe(dest(conf.distPath));
-      
+
   };
   const renameTask = function(cb) {
     return src(conf.distPath+`/vendor/css/**/*.css`)
@@ -91,7 +92,7 @@ function srcGlob(...src) {
 
   // Build JS
   // -------------------------------------------------------------------------------
-  const buildJsTask = function (cb) {
+  const webpackJsTask = function (cb) {
     setTimeout(function () {
       webpack(require('./webpack.config'), (err, stats) => {
         if (err) {
@@ -134,6 +135,12 @@ function srcGlob(...src) {
       });
     }, 1);
   };
+  const pageJsTask = function(cb) {
+    return src(conf.distPath+`/js/**/*.js`)
+      .pipe(uglify())
+      .pipe(rename({ suffix: '.dist' }))
+      .pipe(dest(conf.distPath+`/js`));
+  };
 
 // Clean build directory
 // -------------------------------------------------------------------------------
@@ -165,22 +172,24 @@ const watchTask = function () {
 
 // Build (Dev & Prod)
 // -------------------------------------------------------------------------------
+const buildJsTask = series(webpackJsTask,  pageJsTask)
+
 const buildTasks = [
   buildCssTask,
   buildJsTask
 ]
 const buildTask = conf.cleanDist
   ? series(cleanAllTask, parallel(buildTasks))
-  : series(cleanSourcemapsTask, parallel(buildTasks));
+  : series(cleanAllTask, cleanSourcemapsTask, parallel(buildTasks));
 
 // Exports
 // -------------------------------------------------------------------------------
 module.exports = {
   default: buildTask,
   'clean': cleanAllTask,
-  build: buildTask,
   'build:js': buildJsTask,
   'build:css': buildCssTask,
   'build:ren': renameTask,
+  build: buildTask,
   watch: watchTask
 };

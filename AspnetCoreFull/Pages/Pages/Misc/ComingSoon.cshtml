@@ -1,0 +1,31 @@
+@page
+@model AspnetCoreFull.Pages.Pages.Misc.ComingSoonModel
+@{
+  Layout = "Layouts/_BlankLayout";
+  ViewData["Title"] = "Coming Soon - Pages";
+}
+
+@section PageStyles {
+<link rel="stylesheet" href="~/vendor/css/pages/page-misc.dist.css">
+}
+
+@* ************** Content ************** *@
+<!-- Under Maintenance -->
+<div class="container-xxl py-3">
+  <div class="misc-wrapper">
+    <div class="mb-4">
+      <img src="~/img/illustrations/boy-with-rocket-light.png" alt="boy-with-rocket-light" width="500" class="img-fluid" data-app-light-img="illustrations/boy-with-rocket-light.png" data-app-dark-img="illustrations/boy-with-rocket-dark.png">
+    </div>
+    <h1 class="mb-2 mx-2">We are launching soon</h1>
+    <p class="mb-5 mx-2">We're creating something awesome. Please subscribe to get notified when it's ready!</p>
+    <form onsubmit="return false">
+      <div class="mb-0">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="email" autofocus>
+          <button type="submit" class="btn btn-primary">Notify</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- /Under Maintenance -->

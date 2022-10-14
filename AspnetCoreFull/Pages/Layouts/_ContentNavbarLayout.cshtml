@@ -33,7 +33,9 @@
 
 @section PageScripts{ @RenderSection("PageScripts", required: false) }
 
-@{bool isMenu = ViewData["isMenu"] != null && ViewData["isMenu"].ToString() == "True";}
+@{
+  bool isMenu = ViewData["isMenu"] != null && Convert.ToBoolean(ViewData["isMenu"]);
+}
 
 <div class='layout-wrapper layout-content-navbar @(isMenu ? "" : "layout-without-menu")'>
   <div class='layout-container'>
