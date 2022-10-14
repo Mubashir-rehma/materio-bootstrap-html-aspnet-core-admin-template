@@ -33,7 +33,7 @@
     {
       "name": "Calendar",
       "icon": "bx-calendar",
-      "url": "/AppCalendar"
+      "url": "/Apps/Calendar"
     },
     {
       "name": "User List",
