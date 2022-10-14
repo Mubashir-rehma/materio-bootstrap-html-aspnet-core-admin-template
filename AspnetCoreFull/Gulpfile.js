@@ -36,9 +36,7 @@ colors.enabled = require('color-support').hasBasic;
 // -------------------------------------------------------------------------------
 
 function root(p) {
-  return p.startsWith('!') ?
-    `!${path.join(__dirname, 'wwwroot', p.slice(1))}` :
-    path.join(__dirname, 'wwwroot', p)
+  return p.startsWith('!') ? `!${path.join(__dirname, 'wwwroot', p.slice(1))}` : path.join(__dirname, 'wwwroot', p);
 }
 
 function srcGlob(...src) {
@@ -49,111 +47,109 @@ function srcGlob(...src) {
 // -------------------------------------------------------------------------------
 // Build CSS
 // -------------------------------------------------------------------------------
-  const buildCssTask = function (cb) {
-    return src(srcGlob('**/*.scss', '!**/_*.scss'))
-      .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
-      .pipe(
-        // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
-        gulpIf(
-          !localSass,
-          exec(
-            // If conf.minify == true, generate compressed style without sourcemap
-            gulpIf(
-              conf.minify,
-              `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --style compressed --no-source-map`,
-              `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --no-source-map`
-            ),
-            function (err) {
-              cb(err);
-            }
+const buildCssTask = function (cb) {
+  return src(srcGlob('**/*.scss', '!**/_*.scss'))
+    .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
+    .pipe(
+      // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
+      gulpIf(
+        !localSass,
+        exec(
+          // If conf.minify == true, generate compressed style without sourcemap
+          gulpIf(
+            conf.minify,
+            `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --style compressed --no-source-map`,
+            `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --no-source-map`
           ),
-          sass({
-            outputStyle: conf.minify ? 'compressed' : 'expanded'
-          }).on('error', sass.logError),
-        )
+          function (err) {
+            cb(err);
+          }
+        ),
+        sass({
+          outputStyle: conf.minify ? 'compressed' : 'expanded'
+        }).on('error', sass.logError)
       )
-      .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
-      .pipe(autoprefixer())
-      .pipe(rename({ extname: ".dist.css" }))
-      .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
-      .pipe(
-        rename(function (path) {
-          path.dirname = path.dirname.replace('scss', 'css');
+    )
+    .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
+    .pipe(autoprefixer())
+    .pipe(rename({ extname: '.dist.css' }))
+    .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
+    .pipe(
+      rename(function (path) {
+        path.dirname = path.dirname.replace('scss', 'css');
+      })
+    )
+    .pipe(dest(conf.distPath));
+};
+const renameTask = function () {
+  return src(conf.distPath + `/vendor/css/**/*.css`)
+    .pipe(rename({ suffix: '.dist' }))
+    .pipe(dest(conf.distPath + `/vendor/css`));
+};
+
+// Build JS
+// -------------------------------------------------------------------------------
+const webpackJsTask = function (cb) {
+  setTimeout(function () {
+    webpack(require('./webpack.config'), (err, stats) => {
+      if (err) {
+        log(colors.gray('Webpack error:'), colors.red(err.stack || err));
+        if (err.details) log(colors.gray('Webpack error details:'), err.details);
+        return cb();
+      }
+
+      const info = stats.toJson();
+
+      if (stats.hasErrors()) {
+        info.errors.forEach(e => log(colors.gray('Webpack compilation error:'), colors.red(e)));
+      }
+
+      if (stats.hasWarnings()) {
+        info.warnings.forEach(w => log(colors.gray('Webpack compilation warning:'), colors.yellow(w)));
+      }
+
+      // Print log
+      log(
+        stats.toString({
+          colors: colors.enabled,
+          hash: false,
+          timings: false,
+          chunks: false,
+          chunkModules: false,
+          modules: false,
+          children: true,
+          version: true,
+          cached: false,
+          cachedAssets: false,
+          reasons: false,
+          source: false,
+          errorDetails: false
         })
-      )
-      .pipe(dest(conf.distPath));
+      );
 
-  };
-  const renameTask = function() {
-    return src(conf.distPath+`/vendor/css/**/*.css`)
-      .pipe(rename({ suffix: '.dist' }))
-      .pipe(dest(conf.distPath+`/vendor/css`));
-  };
-
-  // Build JS
-  // -------------------------------------------------------------------------------
-  const webpackJsTask = function (cb) {
-    setTimeout(function () {
-      webpack(require('./webpack.config'), (err, stats) => {
-        if (err) {
-          log(colors.gray('Webpack error:'), colors.red(err.stack || err));
-          if (err.details) log(colors.gray('Webpack error details:'), err.details);
-          return cb();
-        }
-
-        const info = stats.toJson();
-
-        if (stats.hasErrors()) {
-          info.errors.forEach(e => log(colors.gray('Webpack compilation error:'), colors.red(e)));
-        }
-
-        if (stats.hasWarnings()) {
-          info.warnings.forEach(w => log(colors.gray('Webpack compilation warning:'), colors.yellow(w)));
-        }
-
-        // Print log
-        log(
-          stats.toString({
-            colors: colors.enabled,
-            hash: false,
-            timings: false,
-            chunks: false,
-            chunkModules: false,
-            modules: false,
-            children: true,
-            version: true,
-            cached: false,
-            cachedAssets: false,
-            reasons: false,
-            source: false,
-            errorDetails: false
-          })
-        );
-
-        cb();
-        browserSync.reload();
-      });
-    }, 1);
-  };
-  const pageJsTask = function() {
-    return src(conf.distPath+`/js/**/!(*.dist).js`)
-      .pipe(uglify())
-      .pipe(rename({ suffix: '.dist' }))
-      .pipe(dest(conf.distPath+`/js`));
-  };
+      cb();
+      browserSync.reload();
+    });
+  }, 1);
+};
+const pageJsTask = function () {
+  return src(conf.distPath + `/js/**/!(*.dist).js`)
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.dist' }))
+    .pipe(dest(conf.distPath + `/js`));
+};
 
 // Clean build directory
 // -------------------------------------------------------------------------------
 
 const cleanTask = function () {
-  return del([
-    `${conf.distPath}/**/*.dist.js`,
-    `${conf.distPath}/**/*.dist.css`,
-    `!${conf.distPath}/vendor/fonts/*.dist.css`
-  ], {
-    force: true
-  })
-}
+  return del(
+    [`${conf.distPath}/**/*.dist.js`, `${conf.distPath}/**/*.dist.css`, `!${conf.distPath}/vendor/fonts/*.dist.css`],
+    {
+      force: true
+    }
+  );
+};
 
 const cleanSourcemapsTask = function () {
   return del([`${conf.distPath}/**/*.map`], {
@@ -161,24 +157,21 @@ const cleanSourcemapsTask = function () {
   });
 };
 
-const cleanAllTask = parallel(cleanTask, cleanSourcemapsTask)
+const cleanAllTask = parallel(cleanTask, cleanSourcemapsTask);
 
 // Watch
 // -------------------------------------------------------------------------------
 const watchTask = function () {
-  console.log('watch');
   watch(srcGlob('**/*.scss'), buildCssTask);
-  watch(srcGlob('**/*.js', '!**/*.dist.js'), buildJsTask);
+  watch(srcGlob('**/*.js', '!**/*.dist.js', '!js/**/*.js'), webpackJsTask);
+  watch(conf.distPath + `/js/**/!(*.dist).js`, pageJsTask);
 };
 
 // Build (Dev & Prod)
 // -------------------------------------------------------------------------------
-const buildJsTask = series(webpackJsTask,  pageJsTask)
+const buildJsTask = series(webpackJsTask, pageJsTask);
 
-const buildTasks = [
-  buildCssTask,
-  buildJsTask
-]
+const buildTasks = [buildCssTask, buildJsTask];
 const buildTask = conf.cleanDist
   ? series(cleanAllTask, parallel(buildTasks))
   : series(cleanAllTask, cleanSourcemapsTask, parallel(buildTasks));
@@ -187,7 +180,7 @@ const buildTask = conf.cleanDist
 // -------------------------------------------------------------------------------
 module.exports = {
   default: buildTask,
-  'clean': cleanAllTask,
+  clean: cleanAllTask,
   'build:js': buildJsTask,
   'build:css': buildCssTask,
   'build:ren': renameTask,
