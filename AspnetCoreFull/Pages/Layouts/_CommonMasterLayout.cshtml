@@ -1,17 +1,5 @@
-@{
-  TempData["appName"] = "MyAdmin";
-  TempData["authorName"] = "ThemeSelection";
-  TempData["appUrl"] = "https://themeselection.com";
-  @* Footer & Misc urls *@
-  TempData["licenseUrl"] = "https://themeselection.com/license/";
-  TempData["productPage"] = "https://themeselection.com/products/chameleon-admin-modern-bootstrap-webapp-dashboard-html-template-ui-kit/";
-  TempData["support"] = "https://themeselection.com/support/";
-  TempData["moreThemes"] = "https://themeselection.com/";
-  TempData["documentation"] = "https://themeselection.com/documentation";
-  @* Social Media URLs *@
-  TempData["twitterUrl"] = "https://twitterUrl.com";
-  TempData["instagramUrl"] = "https://instagramUrl.com";
-}
+@await Html.PartialAsync("Layouts/Sections/_Variables")
+
 
 <!DOCTYPE html>
 <html lang="en" class='light-style @ViewData["navbarFixed"] @ViewData["menuFixed"] @ViewData["menuCollapsed"] @ViewData["menuFlipped"] @ViewData["menuOffcanvas"] @ViewData["footerFixed"] @ViewData["customizerHidden"]' dir="ltr" data-theme="theme-default" data-assets-path="/" data-template='@((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "horizontal-menu-template" : "vertical-menu-template")'>

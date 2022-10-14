@@ -375,7 +375,7 @@
         <div class="mb-3 row">
           <label for="html5-text-input" class="col-md-2 col-form-label">Text</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" value="{{ templateName }}" id="html5-text-input" />
+            <input class="form-control" type="text" value='@TempData.Peek("appName")' id="html5-text-input" />
           </div>
         </div>
         <div class="mb-3 row">
@@ -393,7 +393,7 @@
         <div class="mb-3 row">
           <label for="html5-url-input" class="col-md-2 col-form-label">URL</label>
           <div class="col-md-10">
-            <input class="form-control" type="url" value="{{ creatorUrl }}" id="html5-url-input" />
+            <input class="form-control" type="url" value='@TempData.Peek("authorUrl")' id="html5-url-input" />
           </div>
         </div>
         <div class="mb-3 row">
