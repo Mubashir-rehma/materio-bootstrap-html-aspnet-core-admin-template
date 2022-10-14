@@ -84,7 +84,7 @@ function srcGlob(...src) {
       .pipe(dest(conf.distPath));
 
   };
-  const renameTask = function(cb) {
+  const renameTask = function() {
     return src(conf.distPath+`/vendor/css/**/*.css`)
       .pipe(rename({ suffix: '.dist' }))
       .pipe(dest(conf.distPath+`/vendor/css`));
@@ -135,8 +135,8 @@ function srcGlob(...src) {
       });
     }, 1);
   };
-  const pageJsTask = function(cb) {
-    return src(conf.distPath+`/js/**/*.js`)
+  const pageJsTask = function() {
+    return src(conf.distPath+`/js/**/!(*.dist).js`)
       .pipe(uglify())
       .pipe(rename({ suffix: '.dist' }))
       .pipe(dest(conf.distPath+`/js`));
@@ -166,8 +166,9 @@ const cleanAllTask = parallel(cleanTask, cleanSourcemapsTask)
 // Watch
 // -------------------------------------------------------------------------------
 const watchTask = function () {
-  watch(srcGlob('**/*.scss', '!fonts/**/*.scss'), buildTasks.css);
-  watch(srcGlob('**/*.@(js|es6)', '!**/*.dist.js'), buildTasks.js);
+  console.log('watch');
+  watch(srcGlob('**/*.scss'), buildCssTask);
+  watch(srcGlob('**/*.js', '!**/*.dist.js'), buildJsTask);
 };
 
 // Build (Dev & Prod)
