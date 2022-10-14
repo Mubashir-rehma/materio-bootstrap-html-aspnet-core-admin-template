@@ -106,6 +106,7 @@ wwwroot/audio/
 wwwroot/css/*
 !wwwroot/css/site.scss
 !wwwroot/js/*
+wwwroot/js/*.dist.js
 !wwwroot/js/site.js
 wwwroot/img/
 wwwroot/svg/
