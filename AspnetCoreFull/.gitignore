@@ -105,11 +105,13 @@ bld/
 wwwroot/audio/
 wwwroot/css/*
 !wwwroot/css/site.scss
-wwwroot/js/*
+!wwwroot/js/*
 !wwwroot/js/site.js
 wwwroot/img/
 wwwroot/svg/
-wwwroot/json/
+wwwroot/json/**/*
+!wwwroot/json/search-vertical.json
+!wwwroot/json/search-horizontal.json
 wwwroot/vendor/
 
 build-config.js
