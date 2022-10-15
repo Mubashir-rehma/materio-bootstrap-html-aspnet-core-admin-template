@@ -140,7 +140,7 @@ const webpackJsTask = function (cb) {
 };
 const pageJsTask = function () {
   return src(conf.distPath + `/js/**/!(*.dist).js`)
-    .pipe(uglify())
+    .pipe(gulpIf(conf.minify,uglify()))
     .pipe(rename({ suffix: '.dist' }))
     .pipe(dest(conf.distPath + `/js`));
 };
