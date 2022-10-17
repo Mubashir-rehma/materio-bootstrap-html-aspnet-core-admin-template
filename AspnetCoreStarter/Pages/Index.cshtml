@@ -1,11 +1,9 @@
-﻿@page
-@model IndexModel
+@page
+@model AspnetCoreStarter.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+  ViewData["Title"] = "Home - Starter Kit";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+@* ************** Content ************** *@
+<h4>Home Page</h4>
+<p>For more layout options refer <a href='@TempData.Peek("documentation")' target="_blank" rel="noopener noreferrer">documentation</a>.</p>
