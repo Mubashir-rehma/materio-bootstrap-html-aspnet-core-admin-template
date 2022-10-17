@@ -128,11 +128,12 @@ Properties/*.json
 build-config.js
 AspnetCoreStarter.csproj
 AspnetCoreStarter.sln
+appsettings.*
 Gulpfile.js
 Program.cs
 package.json
 webpack.config.js
-
+yarn.lock
 
 
 # Visual Studio 2017 auto generated files
