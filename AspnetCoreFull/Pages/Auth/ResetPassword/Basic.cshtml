@@ -24,7 +24,6 @@
 <script src="~/js/pages-auth.dist.js"></script>
 }
 @* ************** Content ************** *@
-
 <div class="container-xxl">
   <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner py-4">
@@ -37,27 +36,39 @@
         </a>
       </div>
       <!-- /Logo -->
-      <!-- Forgot Password -->
+      <!-- Reset Password -->
       <div class="card">
         <div class="card-body">
-          <h4 class="mb-2">Forgot Password? 🔒</h4>
-          <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-          <form id="formAuthentication" class="mb-3" action="/Auth/ResetPassword/Basic" method="POST">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" autofocus>
+          <h4 class="mb-2">Reset Password 🔒</h4>
+          <p class="mb-4">for <span class="fw-bold">john.doe@email.com</span></p>
+          <form id="formAuthentication" class="mb-3" action="/Auth/Login/Basic" method="POST">
+            <div class="mb-3 form-password-toggle">
+              <label class="form-label" for="password">New Password</label>
+              <div class="input-group input-group-merge">
+                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+              </div>
             </div>
-            <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
+            <div class="mb-3 form-password-toggle">
+              <label class="form-label" for="confirm-password">Confirm Password</label>
+              <div class="input-group input-group-merge">
+                <input type="password" id="confirm-password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+              </div>
+            </div>
+            <button class="btn btn-primary d-grid w-100 mb-3">
+              Set new password
+            </button>
+            <div class="text-center">
+              <a href="/Auth/Login/Basic">
+                <i class="bx bx-chevron-left scaleX-n1-rtl"></i>
+                Back to login
+              </a>
+            </div>
           </form>
-          <div class="text-center">
-            <a href="/Auth/Login/Basic" class="d-flex align-items-center justify-content-center">
-              <i class="bx bx-chevron-left scaleX-n1-rtl"></i>
-              Back to login
-            </a>
-          </div>
         </div>
       </div>
-      <!-- /Forgot Password -->
+      <!-- /Reset Password -->
     </div>
   </div>
 </div>
