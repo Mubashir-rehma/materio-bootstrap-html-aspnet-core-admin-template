@@ -98,8 +98,41 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+
+Pages/_Partials/*
+Pages/Layouts/Sections/**/*
+Pages/Layouts/_*.*
+Pages/Shared/**/*
+Pages/_*.cshtml
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
-#wwwroot/
+
+# Ignoring following files/folder only for master
+
+wwwroot/audio/
+wwwroot/css/*
+wwwroot/js/*
+wwwroot/img/
+wwwroot/svg/
+wwwroot/json/**/*
+wwwroot/json/search-vertical.json
+wwwroot/json/search-horizontal.json
+wwwroot/vendor/
+
+Properties/*.json
+
+.editorconfig
+.prettierignore
+.prettierrc.json
+build-config.js
+AspnetCoreStarter.csproj
+AspnetCoreStarter.sln
+Gulpfile.js
+Program.cs
+package.json
+webpack.config.js
+
+
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
