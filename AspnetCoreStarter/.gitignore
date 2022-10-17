@@ -100,7 +100,8 @@ bld/
 .vs/
 
 Pages/_Partials/*
-Pages/Layouts/Sections/**/*
+Pages/Layouts/Sections/*.*
+Pages/Layouts/Error.*
 Pages/Layouts/_*.*
 Pages/Shared/**/*
 Pages/_*.cshtml
