@@ -35,8 +35,14 @@ colors.enabled = require('color-support').hasBasic;
 // Utilities
 // -------------------------------------------------------------------------------
 
+function normalize(p) {
+  return p.replace(/\\/g, '/');
+}
+
 function root(p) {
-  return p.startsWith('!') ? `!${path.join(__dirname, 'wwwroot', p.slice(1))}` : path.join(__dirname, 'wwwroot', p);
+  return p.startsWith('!')
+    ? normalize(`!${path.join(__dirname, 'wwwroot', p.slice(1))}`)
+    : normalize(path.join(__dirname, 'wwwroot', p));
 }
 
 function srcGlob(...src) {
@@ -48,7 +54,7 @@ function srcGlob(...src) {
 // Build CSS
 // -------------------------------------------------------------------------------
 const buildCssTask = function (cb) {
-  return src(srcGlob('**/*.scss', '!**/_*.scss'))
+  return src(srcGlob('**/*.scss', '!**/_*.scss'), { base: root('.') })
     .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
     .pipe(
       // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
@@ -134,7 +140,7 @@ const webpackJsTask = function (cb) {
 };
 const pageJsTask = function () {
   return src(conf.distPath + `/js/**/!(*.dist).js`)
-    .pipe(uglify())
+    .pipe(gulpIf(conf.minify,uglify()))
     .pipe(rename({ suffix: '.dist' }))
     .pipe(dest(conf.distPath + `/js`));
 };
@@ -164,7 +170,7 @@ const cleanAllTask = parallel(cleanTask, cleanSourcemapsTask);
 const watchTask = function () {
   watch(srcGlob('**/*.scss'), buildCssTask);
   watch(srcGlob('**/*.js', '!**/*.dist.js', '!js/**/*.js'), webpackJsTask);
-  watch(conf.distPath + `/js/**/!(*.dist).js`, pageJsTask);
+  watch(srcGlob('/js/**/!(*.dist).js'), pageJsTask);
 };
 
 // Build (Dev & Prod)
