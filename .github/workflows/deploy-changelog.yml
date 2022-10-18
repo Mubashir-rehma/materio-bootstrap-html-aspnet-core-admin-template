@@ -15,15 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Delete old changelog
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSHKEY }}
-          script: rm -rf ${{ env.DEPLOY_DIR }}/changelog.html
-
       - name: Convert changelog.md to changelog.html
         uses: jd-0001/gh-action-md-to-html@v1.0.0
         with:
