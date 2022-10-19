@@ -20,4 +20,8 @@ namespace AspnetCoreFull.Pages.Apps.Invoice
   {
     public void OnGet() { }
   }
+  public class PrintInvoiceModel : PageModel
+  {
+    public void OnGet() { }
+  }
 }
