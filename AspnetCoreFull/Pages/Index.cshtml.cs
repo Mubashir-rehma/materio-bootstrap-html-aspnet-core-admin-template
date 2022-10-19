@@ -14,6 +14,7 @@ public class IndexModel : PageModel
 
   public void OnGet()
   {
-
+    // On Index page load, redirects to dashboard
+    Response.Redirect("Dashboards/Analytics");
   }
 }
