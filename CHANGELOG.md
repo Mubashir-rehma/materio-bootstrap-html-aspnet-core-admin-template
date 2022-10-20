@@ -1,3 +1,5 @@
+<!-- Available h3 headings: Added, Fixed, Updated, Removed, Deprecated -->
+
 # Changelog
 
 All notable changes to this template will be documented in this file
