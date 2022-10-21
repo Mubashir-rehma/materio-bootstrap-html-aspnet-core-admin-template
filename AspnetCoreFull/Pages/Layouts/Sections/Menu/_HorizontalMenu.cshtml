@@ -68,81 +68,81 @@
       </li>
 
       <!-- Apps -->
-      <li class='menu-item@(currentPage.StartsWith("/App/") ? " active" : "")'>
+      <li class='menu-item@(currentPage.StartsWith("/Apps/") ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class='menu-icon tf-icons bx bx-customize'></i>
           <div data-i18n="Apps">Apps</div>
         </a>
         <ul class="menu-sub">
-          <li class='menu-item@(currentPage == "/App/Calendar" ? " active" : "")'>
-            <a asp-page="/App/Calendar" class="menu-link">
+          <li class='menu-item@(currentPage == "/Apps/Calendar" ? " active" : "")'>
+            <a asp-page="/Apps/Calendar" class="menu-link">
               <div data-i18n="Calendar">Calendar</div>
             </a>
           </li>
-          <li class='menu-item@(currentPage.StartsWith("/App/Invoice/") ? " active" : "")'>
+          <li class='menu-item@(currentPage.StartsWith("/Apps/Invoice/") ? " active" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <div data-i18n="Invoice">Invoice</div>
             </a>
             <ul class="menu-sub">
-              <li class='menu-item@(currentPage == "/App/Invoice/List" ? " active" : "")'>
-                <a asp-page="/App/Invoice/List" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Invoice/List" ? " active" : "")'>
+                <a asp-page="/Apps/Invoice/List" class="menu-link">
                   <div data-i18n="List">List</div>
                 </a>
               </li>
-              <li class='menu-item@(currentPage == "/App/Invoice/Preview" ? " active" : "")'>
-                <a asp-page="/App/Invoice/Preview" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Invoice/Preview" ? " active" : "")'>
+                <a asp-page="/Apps/Invoice/Preview" class="menu-link">
                   <div data-i18n="Preview">Preview</div>
                 </a>
               </li>
-              <li class='menu-item@(currentPage == "/App/Invoice/Edit" ? " active" : "")'>
-                <a asp-page="/App/Invoice/Edit" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Invoice/Edit" ? " active" : "")'>
+                <a asp-page="/Apps/Invoice/Edit" class="menu-link">
                   <div data-i18n="Edit">Edit</div>
                 </a>
               </li>
-              <li class='menu-item@(currentPage == "/App/Invoice/Add" ? " active" : "")'>
-                <a asp-page="/App/Invoice/Add" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Invoice/Add" ? " active" : "")'>
+                <a asp-page="/Apps/Invoice/Add" class="menu-link">
                   <div data-i18n="Add">Add</div>
                 </a>
               </li>
             </ul>
           </li>
-          <li class='menu-item@(currentPage.StartsWith("/App/User/") ? " active" : "")'>
+          <li class='menu-item@(currentPage.StartsWith("/Apps/User/") ? " active" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <div data-i18n="Users">Users</div>
             </a>
             <ul class="menu-sub">
-              <li class='menu-item@(currentPage == "/App/User/List" ? " active" : "")'>
-                <a asp-page="/App/User/List" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/User/List" ? " active" : "")'>
+                <a asp-page="/Apps/User/List" class="menu-link">
                   <div data-i18n="List">List</div>
                 </a>
               </li>
-              <li class='menu-item@(currentPage.StartsWith("/App/User/View/") ? " active" : "")'>
+              <li class='menu-item@(currentPage.StartsWith("/Apps/User/View/") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <div data-i18n="View">View</div>
                 </a>
                 <ul class="menu-sub">
-                  <li class='menu-item@(currentPage == "/App/User/View/Account" ? " active" : "")'>
-                    <a asp-page="/App/User/View/Account" class="menu-link">
+                  <li class='menu-item@(currentPage == "/Apps/User/View/Account" ? " active" : "")'>
+                    <a asp-page="/Apps/User/View/Account" class="menu-link">
                       <div data-i18n="Account">Account</div>
                     </a>
                   </li>
-                  <li class='menu-item@(currentPage == "/App/User/View/Security" ? " active" : "")'>
-                    <a asp-page="/App/User/View/Security" class="menu-link">
+                  <li class='menu-item@(currentPage == "/Apps/User/View/Security" ? " active" : "")'>
+                    <a asp-page="/Apps/User/View/Security" class="menu-link">
                       <div data-i18n="Security">Security</div>
                     </a>
                   </li>
-                  <li class='menu-item@(currentPage == "/App/User/View/Billing" ? " active" : "")'>
-                    <a asp-page="/App/User/View/Billing" class="menu-link">
+                  <li class='menu-item@(currentPage == "/Apps/User/View/Billing" ? " active" : "")'>
+                    <a asp-page="/Apps/User/View/Billing" class="menu-link">
                       <div data-i18n="Billing & Plans">Billing & Plans</div>
                     </a>
                   </li>
-                  <li class='menu-item@(currentPage == "/App/User/View/Notifications" ? " active" : "")'>
-                    <a asp-page="/App/User/View/Notifications" class="menu-link">
+                  <li class='menu-item@(currentPage == "/Apps/User/View/Notifications" ? " active" : "")'>
+                    <a asp-page="/Apps/User/View/Notifications" class="menu-link">
                       <div data-i18n="Notifications">Notifications</div>
                     </a>
                   </li>
-                  <li class='menu-item@(currentPage == "/App/User/View/Connections" ? " active" : "")'>
-                    <a asp-page="/App/User/View/Connections" class="menu-link">
+                  <li class='menu-item@(currentPage == "/Apps/User/View/Connections" ? " active" : "")'>
+                    <a asp-page="/Apps/User/View/Connections" class="menu-link">
                       <div data-i18n="Connections">Connections</div>
                     </a>
                   </li>
@@ -150,18 +150,18 @@
               </li>
             </ul>
           </li>
-          <li class='menu-item@(currentPage.StartsWith("/App/Access/") ? " active" : "")'>
+          <li class='menu-item@(currentPage.StartsWith("/Apps/Access/") ? " active" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <div data-i18n="Roles & Permissions">Roles & Permission</div>
             </a>
             <ul class="menu-sub">
-              <li class='menu-item@(currentPage == "/App/Access/Roles" ? " active" : "")'>
-                <a asp-page="/App/Access/Roles" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Access/Roles" ? " active" : "")'>
+                <a asp-page="/Apps/Access/Roles" class="menu-link">
                   <div data-i18n="Roles">Roles</div>
                 </a>
               </li>
-              <li class='menu-item@(currentPage == "/App/Access/Permission" ? " active" : "")'>
-                <a asp-page="/App/Access/Permission" class="menu-link">
+              <li class='menu-item@(currentPage == "/Apps/Access/Permission" ? " active" : "")'>
+                <a asp-page="/Apps/Access/Permission" class="menu-link">
                   <div data-i18n="Permission">Permission</div>
                 </a>
               </li>
@@ -464,7 +464,7 @@
             </ul>
           </li>
           <li class='menu-item@(currentPage == "/Modals/Examples" ? " active" : "")'>
-            <a asp-page="/ModalExamples" class="menu-link">
+            <a asp-page="/Modals/Examples" class="menu-link">
               <div data-i18n="Modal Examples">Modal Examples</div>
             </a>
           </li>
@@ -828,8 +828,8 @@
               </li>
             </ul>
           </li>
-          <li class='menu-item@(currentPage == "/FormValidation" ? " active" : "")'>
-            <a asp-page="/FormValidation" class="menu-link">
+          <li class='menu-item@(currentPage == "/FormValidation/Validation" ? " active" : "")'>
+            <a asp-page="/FormValidation/Validation" class="menu-link">
               <div data-i18n="Form Validation">Form Validation</div>
             </a>
           </li>
