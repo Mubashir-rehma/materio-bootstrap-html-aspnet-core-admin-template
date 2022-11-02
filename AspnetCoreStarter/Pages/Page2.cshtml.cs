@@ -1,19 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspnetCoreStarter.Pages;
-
-public class Page2Model : PageModel
+namespace AspnetCoreStarter.Pages
 {
-  private readonly ILogger<Page2Model> _logger;
-
-  public Page2Model(ILogger<Page2Model> logger)
+  public class Page2Model : PageModel
   {
-    _logger = logger;
-  }
-
-  public void OnGet()
-  {
-
+    public void OnGet() { }
   }
 }
