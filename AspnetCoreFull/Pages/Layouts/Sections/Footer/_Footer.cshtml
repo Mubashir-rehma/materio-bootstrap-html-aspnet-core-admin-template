@@ -1,6 +1,6 @@
 @{
   TempData.Keep();
-  ViewData["containerNav"] ??= "container-fluid";
+  ViewData["containerNav"] = (ViewData["containerNav"] ??= "container-fluid");
 }
 
 <footer class="content-footer footer bg-footer-theme">
