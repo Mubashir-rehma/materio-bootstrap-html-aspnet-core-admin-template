@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     }
 
     // CVV
-    if (cvvMask.length) {
+    if (cvvMask) {
       new Cleave(cvvMask, {
         numeral: true,
         numeralPositiveOnly: true

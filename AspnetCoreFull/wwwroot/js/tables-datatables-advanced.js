@@ -93,6 +93,7 @@ $(function () {
 
   // Ajax Sourced Server-side
   // --------------------------------------------------------------------
+
   if (dt_ajax_table.length) {
     var dt_ajax = dt_ajax_table.dataTable({
       processing: true,

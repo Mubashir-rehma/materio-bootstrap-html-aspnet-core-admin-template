@@ -45,9 +45,10 @@
   }
 
   // CVV
-  if (cvvMask.length) {
+  if (cvvMask) {
     new Cleave(cvvMask, {
-      numeral: true
+      numeral: true,
+      numeralPositiveOnly: true
     });
   }
 

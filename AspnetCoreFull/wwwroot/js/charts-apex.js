@@ -994,7 +994,7 @@
         type: 'donut'
       },
       labels: ['Operational', 'Networking', 'Hiring', 'R&D'],
-      series: [85, 15, 50, 50],
+      series: [42, 7, 25, 25],
       colors: [
         chartColors.donut.series1,
         chartColors.donut.series4,
@@ -1047,7 +1047,7 @@
                 color: headingColor,
                 label: 'Operational',
                 formatter: function (w) {
-                  return '31%';
+                  return '42%';
                 }
               }
             }

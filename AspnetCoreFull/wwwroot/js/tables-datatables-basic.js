@@ -265,11 +265,11 @@ $(function () {
         {
           extend: 'collection',
           className: 'btn btn-label-primary dropdown-toggle me-2',
-          text: '<i class="bx bx-export me-sm-2"></i> <span class="d-none d-sm-inline-block">Export</span>',
+          text: '<i class="bx bx-export me-sm-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {
               extend: 'print',
-              text: '<i class="bx bx-printer me-2" ></i>Print',
+              text: '<i class="bx bx-printer me-1" ></i>Print',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [3, 4, 5, 6, 7],
@@ -306,7 +306,7 @@ $(function () {
             },
             {
               extend: 'csv',
-              text: '<i class="bx bx-file me-2" ></i>Csv',
+              text: '<i class="bx bx-file me-1" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [3, 4, 5, 6, 7],
@@ -354,7 +354,7 @@ $(function () {
             },
             {
               extend: 'pdf',
-              text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
+              text: '<i class="bx bxs-file-pdf me-1"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [3, 4, 5, 6, 7],
@@ -378,7 +378,7 @@ $(function () {
             },
             {
               extend: 'copy',
-              text: '<i class="bx bx-copy me-2" ></i>Copy',
+              text: '<i class="bx bx-copy me-1" ></i>Copy',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [3, 4, 5, 6, 7],
@@ -403,7 +403,7 @@ $(function () {
           ]
         },
         {
-          text: '<i class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">Add New Record</span>',
+          text: '<i class="bx bx-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Add New Record</span>',
           className: 'create-new btn btn-primary'
         }
       ],

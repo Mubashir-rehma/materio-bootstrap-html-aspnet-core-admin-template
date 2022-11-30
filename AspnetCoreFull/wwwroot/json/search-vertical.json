@@ -66,6 +66,21 @@
       "url": "/Apps/Calendar"
     },
     {
+      "name": "kanban",
+      "icon": "bx-grid",
+      "url": "/Apps/kanban"
+    },
+    {
+      "name": "Email",
+      "icon": "bx-envelope",
+      "url": "/Apps/Email"
+    },
+    {
+      "name": "Chat",
+      "icon": "bx-chat",
+      "url": "/Apps/Chat"
+    },
+    {
       "name": "User List",
       "icon": "bx-list-ol",
       "url": "/Apps/Users/List"

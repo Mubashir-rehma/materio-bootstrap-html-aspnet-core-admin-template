@@ -206,7 +206,7 @@ $(function () {
       // Buttons with Dropdown
       buttons: [
         {
-          text: '<i class="bx bx-plus me-md-2"></i><span class="d-md-inline-block d-none">Create Invoice</span>',
+          text: '<i class="bx bx-plus me-md-1"></i><span class="d-md-inline-block d-none">Create Invoice</span>',
           className: 'btn btn-primary',
           action: function (e, dt, button, config) {
             window.location = '/Apps/Invoice/Add';

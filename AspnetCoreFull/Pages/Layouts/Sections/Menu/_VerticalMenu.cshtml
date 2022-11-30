@@ -35,6 +35,7 @@
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
         <div data-i18n="Dashboards">Dashboards</div>
+        <div class="badge bg-label-primary rounded-pill ms-auto">3</div>
       </a>
       <ul class="menu-sub">
         <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
@@ -122,16 +123,35 @@
     <li class="menu-header small fw-semibold">
       <span class="menu-header-text">Apps &amp; Pages</span>
     </li>
+    <li class='menu-item@(currentPage == "/Apps/Email" ? " active" : "")'>
+      <a asp-page="/Apps/Email" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-envelope"></i>
+        <div data-i18n="Email">Email</div>
+      </a>
+    </li>
+    <li class='menu-item@(currentPage == "/Apps/Chat" ? " active" : "")'>
+      <a asp-page="/Apps/Chat" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-chat"></i>
+        <div data-i18n="Chat">Chat</div>
+      </a>
+    </li>
     <li class='menu-item@(currentPage == "/Apps/Calendar" ? " active" : "")'>
       <a asp-page="/Apps/Calendar" class="menu-link">
         <i class="menu-icon tf-icons bx bx-calendar"></i>
         <div data-i18n="Calendar">Calendar</div>
       </a>
     </li>
+    <li class='menu-item@(currentPage == "/Apps/Kanban" ? " active" : "")'>
+      <a asp-page="/Apps/Kanban" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-grid"></i>
+        <div data-i18n="Kanban">Kanban</div>
+      </a>
+    </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Invoice/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class='menu-icon tf-icons bx bx-food-menu'></i>
         <div data-i18n="Invoice">Invoice</div>
+        <div class="badge bg-label-danger rounded-pill ms-auto">4</div>
       </a>
       <ul class="menu-sub">
         <li class='menu-item@(currentPage == "/Apps/Invoice/List" ? " active" : "")'>
@@ -500,6 +520,7 @@
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-collection"></i>
         <div data-i18n="Cards">Cards</div>
+        <div class="badge bg-label-primary rounded-pill ms-auto">6</div>
       </a>
       <ul class="menu-sub">
         <li class='menu-item@(currentPage == "/Cards/Basic" ? " active" : "")'>

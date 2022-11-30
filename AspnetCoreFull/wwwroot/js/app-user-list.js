@@ -193,7 +193,7 @@ $(function () {
         {
           extend: 'collection',
           className: 'btn btn-outline-secondary dropdown-toggle mx-3',
-          text: '<i class="bx bx-export me-2"></i>Export',
+          text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {
               extend: 'print',
@@ -331,7 +331,7 @@ $(function () {
           ]
         },
         {
-          text: '<i class="bx bx-plus me-0 me-sm-2"></i><span class="d-none d-sm-inline-block">Add New User</span>',
+          text: '<i class="bx bx-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add New User</span>',
           className: 'add-new btn btn-primary',
           attr: {
             'data-bs-toggle': 'offcanvas',
