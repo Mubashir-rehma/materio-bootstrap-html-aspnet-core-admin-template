@@ -113,6 +113,9 @@ if (document.getElementById('layout-menu')) {
       }
       switchImage('dark');
     }
+  } else {
+    // Removed style switcher element if not using template customizer
+    styleSwitcherToggleEl.parentElement.remove();
   }
 
   // Update light/dark image based on current style

@@ -305,7 +305,7 @@ $(function () {
             },
             {
               extend: 'excel',
-              text: 'Excel',
+              text: '<i class="bx bxs-file-export me-2"></i>Excel',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             },
