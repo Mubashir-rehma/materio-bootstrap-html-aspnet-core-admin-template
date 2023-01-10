@@ -1,8 +1,10 @@
+<!-- Available h3 headings: Added, Fixed, Updated, Removed, Deprecated -->
+
 # Changelog
 
 All notable changes to this template will be documented in this file
 
-## [1.0.0](https://github.com/themeselection/$gh_repo_name/releases/tag/v$version) (YYYY-MM-DD)
+## v1.0.0 (YYYY-MM-DD)
 
 ### Added
 
