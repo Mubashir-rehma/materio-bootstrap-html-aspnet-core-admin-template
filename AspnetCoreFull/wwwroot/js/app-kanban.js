@@ -138,6 +138,8 @@
               "'" +
               '>' +
               "<img src='" +
+              assetsPath +
+              'img/avatars/' +
               img +
               "' alt='Avatar' class='rounded-circle " +
               $transition +
@@ -296,7 +298,7 @@
       const element = "<span class='kanban-text'>" + el.textContent + '</span>';
       let img = '';
       if (el.getAttribute('data-image') !== null) {
-        img = "<img class='img-fluid mt-2' src='" + el.getAttribute('data-image') + "'>";
+        img = "<img class='img-fluid mt-2' src='" + assetsPath + 'img/elements/' + el.getAttribute('data-image') + "'>";
       }
       el.textContent = '';
       if (el.getAttribute('data-badge') !== undefined && el.getAttribute('data-badge-text') !== undefined) {

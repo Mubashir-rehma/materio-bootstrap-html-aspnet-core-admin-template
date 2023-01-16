@@ -109,17 +109,25 @@ document.addEventListener('DOMContentLoaded', function () {
       emailListItemInputs.forEach(emailListItemInput => {
         emailListItemInput.addEventListener('click', e => {
           e.stopPropagation();
-          if (e.currentTarget.checked) {
-            selectAllEmails.indeterminate = true;
-          } else {
-            // Check input count to reset the indeterminate state
-            let emailListItemInputCount = 0;
-            emailListItemInputs.forEach(emailListItemInput => {
-              if (emailListItemInput.checked) {
-                emailListItemInputCount++;
-              }
-            });
+          // Check input count to reset the indeterminate state
+          let emailListItemInputCount = 0;
+          emailListItemInputs.forEach(emailListItemInput => {
+            if (emailListItemInput.checked) {
+              emailListItemInputCount++;
+            }
+          });
+
+          if (emailListItemInputCount < emailListItemInputs.length) {
             if (emailListItemInputCount == 0) {
+              selectAllEmails.indeterminate = false;
+            } else {
+              selectAllEmails.indeterminate = true;
+            }
+          } else {
+            if (emailListItemInputCount == emailListItemInputs.length) {
+              selectAllEmails.indeterminate = false;
+              selectAllEmails.checked = true;
+            } else {
               selectAllEmails.indeterminate = false;
             }
           }
