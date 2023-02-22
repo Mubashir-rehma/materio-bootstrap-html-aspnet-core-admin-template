@@ -1,8 +1,6 @@
 {
   "editor.wordWrap": "off",
-  "editor.formatOnSave": true,
-  "files.autoSave": "off",
-  "git.confirmSync": false,
+  "editor.formatOnSave": true,  
   "files.trimFinalNewlines": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "cSpell.language": "en",
@@ -36,8 +34,7 @@
   },
   // Extension: Git
   "git.rebaseWhenSync": true,
-  "git.enableSmartCommit": true,
-  "gitlens.views.repositories.files.layout": "tree",
+  "git.enableSmartCommit": true,  
   // Extension: npm
   "npm.packageManager": "yarn",
 }
