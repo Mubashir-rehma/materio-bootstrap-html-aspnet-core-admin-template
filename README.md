@@ -35,7 +35,7 @@ Check out our live [Documentation]($documentation_url)
 We use GitHub issues as support tickets to manage Item support.
 
 1. In order to raise the GitHub issue, you must have our Premium Item repository access. [Get repo access](https://tools.themeselection.com/github/github-access).
-2. Make sure you use our [Raise Support](https://themeselection.com/tools/github/raise-support) form to create an issue.
+2. Make sure you use our [Raise Support](https://tools.themeselection.com/github/raise-support) form to create an issue.
 
 ## Why forking is disabled? 🔒
 
