@@ -63,13 +63,14 @@ Cheers 🥂
 
 Contributions are always welcome and recommended! Here is how:
 
-- Fork the repository ([here is the guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
-- Clone to your machine `git clone https://github.com/YOUR_USERNAME/REPO_URL` Make your changes
-- Create a pull request
+- Clone our repo `git clone $product_repo_url`
+- create a new branch based on branch you want to make Pull request to. For example if you want to make pull request to main branch, create new branch based on main branch.
+- Push your changes to new branch
+- Create pull request
 
 ### Contribution Requirements 🧰
 
-- When you contribute, you agree to give a non-exclusive license to Pixinvent to use that contribution in any context as we (Pixinvent) see appropriate.
+- When you contribute, you agree to give a non-exclusive license to ThemeSelection to use that contribution in any context as we (ThemeSelection) see appropriate.
 - If you use content provided by another party, it must be appropriately licensed using an open source license.
 - Contributions are only accepted through Github pull requests.
 - Finally, contributed code must work in all supported browsers.
