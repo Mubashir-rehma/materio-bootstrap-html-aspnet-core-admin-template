@@ -35,7 +35,7 @@ Check out our live [Documentation]($documentation_url)
 We use GitHub issues as support tickets to manage Item support.
 
 1. In order to raise the GitHub issue, you must have our Premium Item repository access. [Get repo access](https://tools.themeselection.com/github/github-access).
-2. Make sure you use our [Raise Support](https://themeselection.com/tools/github/raise-support) form to create an issue.
+2. Make sure you use our [Raise Support](https://tools.themeselection.com/github/raise-support) form to create an issue.
 
 ## Why forking is disabled? 🔒
 
@@ -52,12 +52,12 @@ However, you can still keep your repo even after your support expires by setting
 3. Navigate to cloned directory
 4. Remove our repo as origin by running command: `git remote remove origin`
 5. Add your newly created repo as origin by running command: `git remote add origin YOUR_NEWLY_CREATE_REPO_GIT_URL`
-5. Add our repo as upstream by running command: `git remote add upstream $product_repo_url`
-6. Push the code to GitHub by running command: `git push -u origin main`
+6. Add our repo as upstream by running command: `git remote add upstream $product_repo_url`
+7. Push the code to GitHub by running command: `git push -u origin main`
 
 Now, whenever you want to pull the latest changes from our repo just pull the changes by running command: `git pull upstream main`
 
-Cheers 🥂 
+Cheers 🥂
 
 ## Contributing 🦸
 
@@ -80,9 +80,9 @@ Contributions are always welcome and recommended! Here is how:
 
 ## Useful Links 🎁
 
-* [Freebies](https://themeselection.com/products/category/download-free-admin-templates/)
-* [Download Free Admin Templates](https://themeselection.com/products/category/download-free-admin-templates/)
-* [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
+- [Freebies](https://themeselection.com/products/category/download-free-admin-templates/)
+- [Download Free Admin Templates](https://themeselection.com/products/category/download-free-admin-templates/)
+- [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ## Social Media 🌍
 
