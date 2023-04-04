@@ -32,10 +32,10 @@
       <!-- Email Sidebar -->
       <div class="col app-email-sidebar border-end flex-grow-0" id="app-email-sidebar">
         <div class="btn-compost-wrapper d-grid border-bottom">
-          <button class="btn btn-primary btn-compose" data-bs-toggle="modal" data-bs-target="#emailComposeSidebar">Compose</button>
+          <button class="btn btn-primary btn-compose" data-bs-toggle="modal" data-bs-target="#emailComposeSidebar" id="emailComposeSidebarLabel">Compose</button>
         </div>
         <!-- Email Filters -->
-        <div class="email-filters pt-3">
+        <div class="email-filters pt-3 pb-2">
           <!-- Email Filters: Folder -->
           <ul class="email-filter-folders list-unstyled">
             <li class="active d-flex justify-content-between" data-target="inbox">
@@ -133,8 +133,9 @@
               <div class="d-flex align-items-center mb-0 mb-md-2">
                 <i class="bx bx-rotate-left scaleX-n1-rtl cursor-pointer email-refresh me-2"></i>
                 <div class="dropdown">
-                  <i class="bx bx-dots-vertical-rounded cursor-pointer" id="emailsActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  </i>
+                  <button class="btn p-0" type="button" id="emailsActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                  </button>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="emailsActions">
                     <a class="dropdown-item" href="javascript:void(0)">Mark as read</a>
                     <a class="dropdown-item" href="javascript:void(0)">Mark as unread</a>
@@ -155,8 +156,10 @@
                 <i class="bx bx-trash-alt email-list-delete cursor-pointer me-2"></i>
                 <i class="bx bx-envelope-open email-list-read cursor-pointer me-2"></i>
                 <div class="dropdown me-2">
-                  <i class="bx bx-folder cursor-pointer" id="dropdownMenuFolder" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolder">
+                  <button class="btn p-0" type="button" id="dropdownMenuFolderTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-folder"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolderTwo">
                     <a class="dropdown-item" href="javascript:void(0)">
                       <i class="bx bx-error-circle bx-xs me-1"></i>
                       <span class="align-middle">Spam</span>
@@ -172,9 +175,10 @@
                   </div>
                 </div>
                 <div class="dropdown">
-                  <i class="bx bx-purchase-tag cursor-pointer" id="dropdownLabel" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  </i>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabel">
+                  <button class="btn p-0" type="button" id="dropdownLabelOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-purchase-tag"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabelOne">
                     <a class="dropdown-item" href="javascript:void(0)">
                       <i class="bx bx-radio-circle text-success bx-xs me-1"></i>
                       <span class="align-middle">Workshop</span>
@@ -213,7 +217,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/1.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Chandler Bing</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
                   </div>
@@ -236,7 +240,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/2.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Ross Geller</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Dessert soufflé tootsie roll soufflé carrot cake halvah jelly.</span>
                   </div>
@@ -261,7 +265,7 @@
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-success">BS</span>
                   </div>
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Barney Stinson</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Soufflé apple pie caramels soufflé tiramisu bear claw.</span>
                   </div>
@@ -285,7 +289,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/3.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Pheobe Buffay</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Tart croissant jujubes gummies macaroon Icing sweet.</span>
                   </div>
@@ -308,7 +312,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/4.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Ted Mosby</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love Pudding cookie chocolate sweet tiramisu jujubes I love danish.</span>
                   </div>
@@ -333,7 +337,7 @@
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-info">Sk</span>
                   </div>
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Stacy Cooper</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love.</span>
                   </div>
@@ -356,7 +360,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/5.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Rachel Green</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding chocolate bar ice cream bonbon lollipop.</span>
                   </div>
@@ -379,7 +383,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/6.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Grace Shelby</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Icing gummi bears ice cream croissant dessert wafer.</span>
                   </div>
@@ -405,7 +409,7 @@
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-danger">JF</span>
                   </div>
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Jacob Frye</span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding chocolate bar ice cream Sweet.</span>
                   </div>
@@ -428,7 +432,7 @@
                   </div>
                   <i class="email-list-item-bookmark bx bx-star d-sm-inline-block d-none cursor-pointer mx-2"></i>
                   <img src="~/img/avatars/9.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
-                  <div class="email-list-item-content ms-2 ms-md-0">
+                  <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2">Alistair Crowley </span>
                     <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love.</span>
                   </div>
@@ -460,12 +464,13 @@
               <h6 class="text-truncate mb-0 me-2">Focused impactful open issues</h6>
               <span class="badge bg-label-danger">Private</span>
             </div>
-            <!-- Email View : Action  bar-->
+            <!-- Email View : Action bar-->
             <div class="d-flex">
               <i class='bx bx-printer d-sm-block d-none'></i>
               <div class="dropdown ms-3">
-                <i class="bx bx-dots-vertical-rounded cursor-pointer" id="dropdownMoreOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </i>
+                <button class="btn p-0" type="button" id="dropdownMoreOptions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMoreOptions">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="bx bx-envelope-open bx-xs me-1"></i>
@@ -501,9 +506,10 @@
               <i class='bx bx-trash-alt cursor-pointer me-3' data-bs-toggle="sidebar" data-target="#app-email-view"></i>
               <i class='bx bx-envelope-open cursor-pointer me-3'></i>
               <div class="dropdown me-3">
-                <i class="bx bx-folder cursor-pointer" id="dropdownMenuFolder" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </i>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolder">
+                <button class="btn p-0" type="button" id="dropdownMenuFolderOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-folder"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolderOne">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="bx bx-error-circle bx-xs me-1"></i>
                     <span class="align-middle">Spam</span>
@@ -519,9 +525,10 @@
                 </div>
               </div>
               <div class="dropdown me-3">
-                <i class="bx bx-purchase-tag cursor-pointer" id="dropdownLabel" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </i>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabel">
+                <button class="btn p-0" type="button" id="dropdownLabelTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-purchase-tag"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabelTwo">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="bx bx-radio-circle text-success bx-xs me-1"></i>
                     <span class="align-middle">Workshop</span>
@@ -563,9 +570,10 @@
                 <i class="bx bx-paperclip cursor-pointer me-2"></i>
                 <i class="email-list-item-bookmark bx bx-star cursor-pointer me-2"></i>
                 <div class="dropdown me-3">
-                  <i class="bx bx-dots-vertical-rounded cursor-pointer" id="dropdownEmail" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  </i>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmail">
+                  <button class="btn p-0" type="button" id="dropdownEmailOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-dots-vertical-rounded "></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmailOne">
                     <a class="dropdown-item scroll-to-reply" href="javascript:void(0)">
                       <i class="bx bx-share me-1"></i>
                       <span class="align-middle">Reply</span>
@@ -624,8 +632,10 @@
                 <i class="bx bx-paperclip cursor-pointer me-2"></i>
                 <i class="email-list-item-bookmark bx bx-star cursor-pointer me-2"></i>
                 <div class="dropdown me-3">
-                  <i class="bx bx-dots-vertical-rounded cursor-pointer" id="dropdownEmail" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmail">
+                  <button class="btn p-0" type="button" id="dropdownEmailTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-dots-vertical-rounded "></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmailTwo">
                     <a class="dropdown-item scroll-to-reply" href="javascript:void(0)">
                       <i class="bx bx-share me-1"></i>
                       <span class="align-middle">Reply</span>
@@ -786,7 +796,9 @@
               </div>
               <div class="d-flex align-items-center">
                 <div class="dropdown">
-                  <i class="bx bx-dots-vertical-rounded cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                  <button class="btn p-0" type="button" id="dropdownMoreActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-dots-vertical-rounded "></i>
+                  </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMoreActions">
                     <li><button type="button" class="dropdown-item">Add Label</button></li>
                     <li><button type="button" class="dropdown-item">Plain text mode</button></li>

@@ -313,7 +313,6 @@
               <i class="bx bx-menu bx-sm cursor-pointer d-lg-none d-block me-2" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-contacts"></i>
               <div class="flex-shrink-0 avatar">
                 <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right">
-                <i class="bx bx-x bx-sm cursor-pointer close-sidebar" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-left"></i>
               </div>
               <div class="chat-contact-info flex-grow-1 ms-3">
                 <h5 class="m-0">Felecia Rower</h5>
@@ -325,8 +324,9 @@
               <i class="bx bx-video cursor-pointer d-sm-block d-none me-3"></i>
               <i class="bx bx-search cursor-pointer d-sm-block d-none me-3"></i>
               <div class="dropdown">
-                <i class="bx bx-dots-vertical-rounded cursor-pointer" id="chat-header-actions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </i>
+                <button class="btn p-0" type="button" id="chat-header-actions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bx bx-dots-vertical-rounded "></i>
+                </button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="chat-header-actions">
                   <a class="dropdown-item" href="javascript:void(0);">View Contact</a>
                   <a class="dropdown-item" href="javascript:void(0);">Mute Notifications</a>
@@ -540,7 +540,7 @@
         <div class="avatar avatar-xl avatar-online">
           <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle">
         </div>
-        <h5 class="my-2">Felecia Rower</h6>
+        <h5 class="my-2">Felecia Rower</h5>
           <span class="text-muted">NextJS Developer</span>
           <i class="bx bx-x bx-sm cursor-pointer close-sidebar d-block" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right"></i>
       </div>
