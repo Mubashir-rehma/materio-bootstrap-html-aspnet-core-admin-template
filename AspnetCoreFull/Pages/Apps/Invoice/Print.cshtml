@@ -18,8 +18,10 @@
 
   <div class="d-flex justify-content-between flex-row">
     <div class="mb-4">
-      <div class="d-flex svg-illustration mb-3 gap-2">
-        @await Html.PartialAsync("../../_Partials/_Macros")
+     <div class="d-flex svg-illustration mb-3 gap-2 align-items-center">
+        <div class="app-brand-logo demo bg-primary">
+          @await Html.PartialAsync("../../_Partials/_Macros")
+        </div>
         <span class="app-brand-text fw-bold">
           @TempData.Peek("appName")
         </span>
