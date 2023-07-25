@@ -1,5 +1,5 @@
 /**
- * Page User List
+ * App eCommerce customer all
  */
 
 'use strict';
@@ -19,36 +19,30 @@ $(function () {
   }
 
   // Variable declaration for table
-  var dt_user_table = $('.datatables-users'),
+  var dt_customer_table = $('.datatables-customers'),
     select2 = $('.select2'),
-    userView = '/Apps/Users/View/Account',
-    statusObj = {
-      1: { title: 'Pending', class: 'bg-label-warning' },
-      2: { title: 'Active', class: 'bg-label-success' },
-      3: { title: 'Inactive', class: 'bg-label-secondary' }
-    };
-
+    customerView = 'app-ecommerce-customer-details-overview.html';
   if (select2.length) {
     var $this = select2;
     $this.wrap('<div class="position-relative"></div>').select2({
-      placeholder: 'Select Country',
+      placeholder: 'United States ',
       dropdownParent: $this.parent()
     });
   }
 
-  // Users datatable
-  if (dt_user_table.length) {
-    var dt_user = dt_user_table.DataTable({
-      ajax: assetsPath + 'json/user-list.json', // JSON file to add data
+  // customers datatable
+  if (dt_customer_table.length) {
+    var dt_customer = dt_customer_table.DataTable({
+      ajax: assetsPath + 'json/ecommerce-customer-all.json', // JSON file to add data
       columns: [
         // columns according to JSON
         { data: '' },
-        { data: 'full_name' },
-        { data: 'role' },
-        { data: 'current_plan' },
-        { data: 'billing' },
-        { data: 'status' },
-        { data: 'action' }
+        { data: 'id' },
+        { data: 'customer' },
+        { data: 'customer_id' },
+        { data: 'country' },
+        { data: 'order' },
+        { data: 'total_spent' }
       ],
       columnDefs: [
         {
@@ -63,13 +57,28 @@ $(function () {
           }
         },
         {
-          // User full name and email
+          // For Checkboxes
           targets: 1,
-          responsivePriority: 4,
+          orderable: false,
+          searchable: false,
+          responsivePriority: 3,
+          checkboxes: true,
+          render: function () {
+            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+          },
+          checkboxes: {
+            selectAllRender: '<input type="checkbox" class="form-check-input">'
+          }
+        },
+        {
+          // customer full name and email
+          targets: 2,
+          responsivePriority: 1,
           render: function (data, type, full, meta) {
-            var $name = full['full_name'],
+            var $name = full['customer'],
               $email = full['email'],
-              $image = full['avatar'];
+              $image = full['image'];
+
             if ($image) {
               // For Avatar image
               var $output =
@@ -79,23 +88,23 @@ $(function () {
               var stateNum = Math.floor(Math.random() * 6);
               var states = ['success', 'danger', 'warning', 'info', 'dark', 'primary', 'secondary'];
               var $state = states[stateNum],
-                $name = full['full_name'],
+                $name = full['customer'],
                 $initials = $name.match(/\b\w/g) || [];
               $initials = (($initials.shift() || '') + ($initials.pop() || '')).toUpperCase();
               $output = '<span class="avatar-initial rounded-circle bg-label-' + $state + '">' + $initials + '</span>';
             }
             // Creates full output for row
             var $row_output =
-              '<div class="d-flex justify-content-start align-items-center user-name">' +
+              '<div class="d-flex justify-content-start align-items-center customer-name">' +
               '<div class="avatar-wrapper">' +
-              '<div class="avatar avatar-sm me-3">' +
+              '<div class="avatar me-2">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
               '<a href="' +
-              userView +
-              '" class="text-body text-truncate"><span class="fw-medium">' +
+              customerView +
+              '" ><span class="fw-medium">' +
               $name +
               '</span></a>' +
               '<small class="text-muted">' +
@@ -107,92 +116,83 @@ $(function () {
           }
         },
         {
-          // User Role
-          targets: 2,
+          // customer Role
+          targets: 3,
           render: function (data, type, full, meta) {
-            var $role = full['role'];
-            var roleBadgeObj = {
-              Subscriber:
-                '<span class="badge badge-center rounded-pill bg-label-warning me-2"><i class="bx bx-user bx-xs"></i></span>',
-              Author:
-                '<span class="badge badge-center rounded-pill bg-label-success me-2"><i class="bx bx-cog bx-xs"></i></span>',
-              Maintainer:
-                '<span class="badge badge-center rounded-pill bg-label-primary me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>',
-              Editor:
-                '<span class="badge badge-center rounded-pill bg-label-info me-2"><i class="bx bx-edit bx-xs"></i></span>',
-              Admin:
-                '<span class="badge badge-center rounded-pill bg-label-secondary me-2"><i class="bx bx-mobile-alt bx-xs"></i></span>'
-            };
-            return "<span class='text-truncate d-flex align-items-center'>" + roleBadgeObj[$role] + $role + '</span>';
+            var $id = full['customer_id'];
+
+            return "<span class='fw-medium'>#" + $id + '</span>';
           }
         },
         {
           // Plans
-          targets: 3,
+          targets: 4,
           render: function (data, type, full, meta) {
-            var $plan = full['current_plan'];
+            var $plan = full['country'];
+            var $code = full['country_code'];
 
-            return '<span class="fw-medium">' + $plan + '</span>';
+            if ($code) {
+              var $output_code = `<i class ="fis fi fi-${$code} rounded-circle me-2 fs-3"></i>`;
+            } else {
+              // For Avatar badge
+              var $output_code = `<i class ="fis fi fi-xx rounded-circle me-2 fs-3"></i>`;
+            }
+
+            var $row_output =
+              '<div class="d-flex justify-content-start align-items-center customer-country">' +
+              '<div>' +
+              $output_code +
+              '</div>' +
+              '<div>' +
+              '<span>' +
+              $plan +
+              '</span>' +
+              '</div>' +
+              '</div>';
+            return $row_output;
           }
         },
         {
-          // User Status
+          // customer Status
           targets: 5,
           render: function (data, type, full, meta) {
-            var $status = full['status'];
+            var $status = full['order'];
 
-            return (
-              '<span class="badge ' +
-              statusObj[$status].class +
-              '" text-capitalized>' +
-              statusObj[$status].title +
-              '</span>'
-            );
+            return '<span>' + $status + '</span>';
           }
         },
         {
-          // Actions
-          targets: -1,
-          title: 'Actions',
-          searchable: false,
-          orderable: false,
+          // customer Spent
+          targets: 6,
           render: function (data, type, full, meta) {
-            return (
-              '<div class="d-inline-block text-nowrap">' +
-              '<button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>' +
-              '<button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button>' +
-              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button>' +
-              '<div class="dropdown-menu dropdown-menu-end m-0">' +
-              '<a href="' +
-              userView +
-              '" class="dropdown-item">View</a>' +
-              '<a href="javascript:;" class="dropdown-item">Suspend</a>' +
-              '</div>' +
-              '</div>'
-            );
+            var $spent = full['total_spent'];
+
+            return '<span class="fw-medium">' + $spent + '</span>';
           }
         }
       ],
-      order: [[1, 'desc']],
+      order: [[2, 'desc']],
       dom:
-        '<"row mx-2"' +
-        '<"col-md-2"<"me-3"l>>' +
-        '<"col-md-10"<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-end flex-md-row flex-column mb-3 mb-md-0"fB>>' +
+        //
+        '<"card-header d-flex flex-wrap"' +
+        '<"d-flex align-items-center me-5"f>' +
+        '<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-md-end gap-3 gap-sm-2 flex-wrap flex-sm-nowrap"lB>' +
         '>t' +
         '<"row mx-2"' +
         '<"col-sm-12 col-md-6"i>' +
         '<"col-sm-12 col-md-6"p>' +
         '>',
+
       language: {
         sLengthMenu: '_MENU_',
         search: '',
-        searchPlaceholder: 'Search..'
+        searchPlaceholder: 'Search Order'
       },
       // Buttons with Dropdown
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle mx-3',
+          className: 'btn btn-label-secondary dropdown-toggle ms-2 ms-sm-0 me-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {
@@ -200,7 +200,7 @@ $(function () {
               text: '<i class="bx bx-printer me-2" ></i>Print',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4, 5, 6],
                 // prevent avatar to be print
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -208,7 +208,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -237,7 +237,7 @@ $(function () {
               text: '<i class="bx bx-file me-2" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4, 5, 6],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -245,7 +245,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -261,7 +261,7 @@ $(function () {
               text: '<i class="bx bxs-file-export me-2"></i>Excel',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4, 5, 6],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -269,7 +269,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -285,7 +285,7 @@ $(function () {
               text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4, 5, 6],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -293,7 +293,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -309,7 +309,7 @@ $(function () {
               text: '<i class="bx bx-copy me-2" ></i>Copy',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4, 5, 6],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -317,7 +317,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -331,11 +331,11 @@ $(function () {
           ]
         },
         {
-          text: '<i class="bx bx-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add New User</span>',
+          text: '<i class="bx bx-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Customer</span>',
           className: 'add-new btn btn-primary',
           attr: {
             'data-bs-toggle': 'offcanvas',
-            'data-bs-target': '#offcanvasAddUser'
+            'data-bs-target': '#offcanvasEcommerceCustomerAdd'
           }
         }
       ],
@@ -345,7 +345,7 @@ $(function () {
           display: $.fn.dataTable.Responsive.display.modal({
             header: function (row) {
               var data = row.data();
-              return 'Details of ' + data['full_name'];
+              return 'Details of ' + data['customer'];
             }
           }),
           type: 'column',
@@ -371,87 +371,15 @@ $(function () {
             return data ? $('<table class="table"/><tbody />').append(data) : false;
           }
         }
-      },
-      initComplete: function () {
-        // Adding role filter once table initialized
-        this.api()
-          .columns(2)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
-            )
-              .appendTo('.user_role')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append('<option value="' + d + '">' + d + '</option>');
-              });
-          });
-        // Adding plan filter once table initialized
-        this.api()
-          .columns(3)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="UserPlan" class="form-select text-capitalize"><option value=""> Select Plan </option></select>'
-            )
-              .appendTo('.user_plan')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append('<option value="' + d + '">' + d + '</option>');
-              });
-          });
-        // Adding status filter once table initialized
-        this.api()
-          .columns(5)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="FilterTransaction" class="form-select text-capitalize"><option value=""> Select Status </option></select>'
-            )
-              .appendTo('.user_status')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append(
-                  '<option value="' +
-                    statusObj[d].title +
-                    '" class="text-capitalize">' +
-                    statusObj[d].title +
-                    '</option>'
-                );
-              });
-          });
       }
     });
+    $('.dataTables_length').addClass('ms-2 mt-0 mt-md-3 me-2');
+    $('.dt-action-buttons').addClass('pt-0');
   }
 
   // Delete Record
-  $('.datatables-users tbody').on('click', '.delete-record', function () {
-    dt_user.row($(this).parents('tr')).remove().draw();
+  $('.datatables-customers tbody').on('click', '.delete-record', function () {
+    dt_customer.row($(this).parents('tr')).remove().draw();
   });
 
   // Filter form control to default size
@@ -465,7 +393,7 @@ $(function () {
 // Validation & Phone mask
 (function () {
   const phoneMaskList = document.querySelectorAll('.phone-mask'),
-    addNewUserForm = document.getElementById('addNewUserForm');
+    eCommerceCustomerAddForm = document.getElementById('eCommerceCustomerAddForm');
 
   // Phone Number
   if (phoneMaskList) {
@@ -476,17 +404,17 @@ $(function () {
       });
     });
   }
-  // Add New User Form Validation
-  const fv = FormValidation.formValidation(addNewUserForm, {
+  // Add New customer Form Validation
+  const fv = FormValidation.formValidation(eCommerceCustomerAddForm, {
     fields: {
-      userFullname: {
+      customerName: {
         validators: {
           notEmpty: {
             message: 'Please enter fullname '
           }
         }
       },
-      userEmail: {
+      customerEmail: {
         validators: {
           notEmpty: {
             message: 'Please enter your email'

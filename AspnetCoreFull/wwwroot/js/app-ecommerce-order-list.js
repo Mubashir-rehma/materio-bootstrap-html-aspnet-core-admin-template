@@ -1,10 +1,11 @@
 /**
- * Page User List
+ * app-ecommerce-order-list Script
  */
 
 'use strict';
 
 // Datatable (jquery)
+
 $(function () {
   let borderColor, bodyBg, headingColor;
 
@@ -19,36 +20,37 @@ $(function () {
   }
 
   // Variable declaration for table
-  var dt_user_table = $('.datatables-users'),
-    select2 = $('.select2'),
-    userView = '/Apps/Users/View/Account',
+
+  var dt_order_table = $('.datatables-order'),
     statusObj = {
-      1: { title: 'Pending', class: 'bg-label-warning' },
-      2: { title: 'Active', class: 'bg-label-success' },
-      3: { title: 'Inactive', class: 'bg-label-secondary' }
+      1: { title: 'Dispatched', class: 'bg-label-warning' },
+      2: { title: 'Delivered', class: 'bg-label-success' },
+      3: { title: 'Out for Delivery', class: 'bg-label-primary' },
+      4: { title: 'Ready to Pickup', class: 'bg-label-info' }
+    },
+    paymentObj = {
+      1: { title: 'Paid', class: 'text-success' },
+      2: { title: 'Pending', class: 'text-warning' },
+      3: { title: 'Failed', class: 'text-danger' },
+      4: { title: 'Cancelled', class: 'text-secondary' }
     };
 
-  if (select2.length) {
-    var $this = select2;
-    $this.wrap('<div class="position-relative"></div>').select2({
-      placeholder: 'Select Country',
-      dropdownParent: $this.parent()
-    });
-  }
+  // E-commerce Products datatable
 
-  // Users datatable
-  if (dt_user_table.length) {
-    var dt_user = dt_user_table.DataTable({
-      ajax: assetsPath + 'json/user-list.json', // JSON file to add data
+  if (dt_order_table.length) {
+    var dt_products = dt_order_table.DataTable({
+      ajax: assetsPath + 'json/ecommerce-customer-order.json', // JSON file to add data
       columns: [
         // columns according to JSON
-        { data: '' },
-        { data: 'full_name' },
-        { data: 'role' },
-        { data: 'current_plan' },
-        { data: 'billing' },
+        { data: 'id' },
+        { data: 'id' },
+        { data: 'order' },
+        { data: 'date' },
+        { data: 'customer' }, //email //avatar
+        { data: 'payment' },
         { data: 'status' },
-        { data: 'action' }
+        { data: 'method' }, //method_number
+        { data: '' }
       ],
       columnDefs: [
         {
@@ -63,41 +65,77 @@ $(function () {
           }
         },
         {
-          // User full name and email
+          // For Checkboxes
           targets: 1,
-          responsivePriority: 4,
+          orderable: false,
+          checkboxes: {
+            selectAllRender: '<input type="checkbox" class="form-check-input">'
+          },
+          render: function () {
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
+          },
+          searchable: false
+        },
+        {
+          // Order ID
+          targets: 2,
           render: function (data, type, full, meta) {
-            var $name = full['full_name'],
+            var $order_id = full['order'];
+            // Creates full output for row
+            var $row_output =
+              '<a href="app-ecommerce-order-details.html"><span class="fw-medium">#' + $order_id + '</span></a>';
+            return $row_output;
+          }
+        },
+        {
+          // Date and Time
+          targets: 3,
+          render: function (data, type, full, meta) {
+            var date = new Date(full.date); // convert the date string to a Date object
+            var timeX = full['time'].substring(0, 5);
+            var formattedDate = date.toLocaleDateString('en-US', {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric',
+              time: 'numeric'
+            });
+            return '<span class="text-nowrap">' + formattedDate + ', ' + timeX + '</span>';
+          }
+        },
+        {
+          // Customers
+          targets: 4,
+          responsivePriority: 1,
+          render: function (data, type, full, meta) {
+            var $name = full['customer'],
               $email = full['email'],
-              $image = full['avatar'];
-            if ($image) {
+              $avatar = full['avatar'];
+            if ($avatar) {
               // For Avatar image
               var $output =
-                '<img src="' + assetsPath + 'img/avatars/' + $image + '" alt="Avatar" class="rounded-circle">';
+                '<img src="' + assetsPath + 'img/avatars/' + $avatar + '" alt="Avatar" class="rounded-circle">';
             } else {
               // For Avatar badge
               var stateNum = Math.floor(Math.random() * 6);
               var states = ['success', 'danger', 'warning', 'info', 'dark', 'primary', 'secondary'];
               var $state = states[stateNum],
-                $name = full['full_name'],
+                $name = full['customer'],
                 $initials = $name.match(/\b\w/g) || [];
               $initials = (($initials.shift() || '') + ($initials.pop() || '')).toUpperCase();
               $output = '<span class="avatar-initial rounded-circle bg-label-' + $state + '">' + $initials + '</span>';
             }
             // Creates full output for row
             var $row_output =
-              '<div class="d-flex justify-content-start align-items-center user-name">' +
+              '<div class="d-flex justify-content-start align-items-center order-name text-nowrap">' +
               '<div class="avatar-wrapper">' +
-              '<div class="avatar avatar-sm me-3">' +
+              '<div class="avatar me-2">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<a href="' +
-              userView +
-              '" class="text-body text-truncate"><span class="fw-medium">' +
+              '<h6 class="m-0"><a href="pages-profile-user.html" class="text-body">' +
               $name +
-              '</span></a>' +
+              '</a></h6>' +
               '<small class="text-muted">' +
               $email +
               '</small>' +
@@ -107,46 +145,61 @@ $(function () {
           }
         },
         {
-          // User Role
-          targets: 2,
-          render: function (data, type, full, meta) {
-            var $role = full['role'];
-            var roleBadgeObj = {
-              Subscriber:
-                '<span class="badge badge-center rounded-pill bg-label-warning me-2"><i class="bx bx-user bx-xs"></i></span>',
-              Author:
-                '<span class="badge badge-center rounded-pill bg-label-success me-2"><i class="bx bx-cog bx-xs"></i></span>',
-              Maintainer:
-                '<span class="badge badge-center rounded-pill bg-label-primary me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>',
-              Editor:
-                '<span class="badge badge-center rounded-pill bg-label-info me-2"><i class="bx bx-edit bx-xs"></i></span>',
-              Admin:
-                '<span class="badge badge-center rounded-pill bg-label-secondary me-2"><i class="bx bx-mobile-alt bx-xs"></i></span>'
-            };
-            return "<span class='text-truncate d-flex align-items-center'>" + roleBadgeObj[$role] + $role + '</span>';
-          }
-        },
-        {
-          // Plans
-          targets: 3,
-          render: function (data, type, full, meta) {
-            var $plan = full['current_plan'];
-
-            return '<span class="fw-medium">' + $plan + '</span>';
-          }
-        },
-        {
-          // User Status
           targets: 5,
+          render: function (data, type, full, meta) {
+            var $payment = full['payment'],
+              $paymentObj = paymentObj[$payment];
+            if ($paymentObj) {
+              return (
+                '<h6 class="mb-0 w-px-100 ' +
+                $paymentObj.class +
+                '">' +
+                '<i class="bx bxs-circle fs-tiny me-2"></i>' +
+                $paymentObj.title +
+                '</h6>'
+              );
+            }
+            return data;
+          }
+        },
+        {
+          // Status
+          targets: -3,
           render: function (data, type, full, meta) {
             var $status = full['status'];
 
             return (
-              '<span class="badge ' +
+              '<span class="badge px-2 ' +
               statusObj[$status].class +
               '" text-capitalized>' +
               statusObj[$status].title +
               '</span>'
+            );
+          }
+        },
+        {
+          // Payment Method
+          targets: -2,
+          render: function (data, type, full, meta) {
+            var $method = full['method'];
+            var $method_number = full['method_number'];
+
+            if ($method == 'paypal_logo') {
+              $method_number = '@gmail.com';
+            }
+            return (
+              '<div class="d-flex align-items-center text-nowrap">' +
+              '<img src="' +
+              assetsPath +
+              'img/icons/payments/' +
+              $method +
+              '.png" alt="' +
+              $method +
+              '" class="me-2" width="16">' +
+              '<span><i class="bx bx-dots-horizontal-rounded"></i>' +
+              $method_number +
+              '</span>' +
+              '</div>'
             );
           }
         },
@@ -158,41 +211,39 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<div class="d-inline-block text-nowrap">' +
-              '<button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>' +
-              '<button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button>' +
-              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button>' +
+              '<div class="d-flex justify-content-sm-center align-items-sm-center">' +
+              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>' +
               '<div class="dropdown-menu dropdown-menu-end m-0">' +
-              '<a href="' +
-              userView +
-              '" class="dropdown-item">View</a>' +
-              '<a href="javascript:;" class="dropdown-item">Suspend</a>' +
+              '<a href="app-ecommerce-order-details.html" class="dropdown-item">View</a>' +
+              '<a href="javascript:0;" class="dropdown-item delete-record">' +
+              'Delete' +
+              '</a>' +
               '</div>' +
               '</div>'
             );
           }
         }
       ],
-      order: [[1, 'desc']],
+      order: [3, 'asc'], //set any columns order asc/desc
       dom:
-        '<"row mx-2"' +
-        '<"col-md-2"<"me-3"l>>' +
-        '<"col-md-10"<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-end flex-md-row flex-column mb-3 mb-md-0"fB>>' +
+        '<"card-header d-flex flex-column flex-md-row align-items-start align-items-md-center"<f><"d-flex align-items-md-center justify-content-md-end mt-2 mt-md-0 ps-1 ms-1"l<"dt-action-buttons"B>>' +
         '>t' +
         '<"row mx-2"' +
         '<"col-sm-12 col-md-6"i>' +
         '<"col-sm-12 col-md-6"p>' +
         '>',
+      lengthMenu: [10, 40, 60, 80, 100], //for length of menu
       language: {
         sLengthMenu: '_MENU_',
         search: '',
-        searchPlaceholder: 'Search..'
+        searchPlaceholder: 'Search Order',
+        info: 'Displaying _START_ to _END_ of _TOTAL_ entries'
       },
       // Buttons with Dropdown
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle mx-3',
+          className: 'btn btn-label-secondary dropdown-toggle me-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {
@@ -200,15 +251,14 @@ $(function () {
               text: '<i class="bx bx-printer me-2" ></i>Print',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
-                // prevent avatar to be print
+                columns: [2, 3, 4, 5, 6, 7],
                 format: {
                   body: function (inner, coldex, rowdex) {
                     if (inner.length <= 0) return inner;
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('order-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -219,7 +269,7 @@ $(function () {
                 }
               },
               customize: function (win) {
-                //customize print view for dark
+                // Customize print view for dark
                 $(win.document.body)
                   .css('color', headingColor)
                   .css('border-color', borderColor)
@@ -237,15 +287,14 @@ $(function () {
               text: '<i class="bx bx-file me-2" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
-                // prevent avatar to be display
+                columns: [2, 3, 4, 5, 6, 7],
                 format: {
                   body: function (inner, coldex, rowdex) {
                     if (inner.length <= 0) return inner;
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('order-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -261,15 +310,14 @@ $(function () {
               text: '<i class="bx bxs-file-export me-2"></i>Excel',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
-                // prevent avatar to be display
+                columns: [2, 3, 4, 5, 6, 7],
                 format: {
                   body: function (inner, coldex, rowdex) {
                     if (inner.length <= 0) return inner;
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('order-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -285,15 +333,14 @@ $(function () {
               text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
-                // prevent avatar to be display
+                columns: [2, 3, 4, 5, 6, 7],
                 format: {
                   body: function (inner, coldex, rowdex) {
                     if (inner.length <= 0) return inner;
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('order-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -309,15 +356,14 @@ $(function () {
               text: '<i class="bx bx-copy me-2" ></i>Copy',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
-                // prevent avatar to be display
+                columns: [2, 3, 4, 5, 6, 7],
                 format: {
                   body: function (inner, coldex, rowdex) {
                     if (inner.length <= 0) return inner;
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('order-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -329,14 +375,6 @@ $(function () {
               }
             }
           ]
-        },
-        {
-          text: '<i class="bx bx-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add New User</span>',
-          className: 'add-new btn btn-primary',
-          attr: {
-            'data-bs-toggle': 'offcanvas',
-            'data-bs-target': '#offcanvasAddUser'
-          }
         }
       ],
       // For responsive popup
@@ -345,7 +383,7 @@ $(function () {
           display: $.fn.dataTable.Responsive.display.modal({
             header: function (row) {
               var data = row.data();
-              return 'Details of ' + data['full_name'];
+              return 'Details of ' + data['customer'];
             }
           }),
           type: 'column',
@@ -371,87 +409,15 @@ $(function () {
             return data ? $('<table class="table"/><tbody />').append(data) : false;
           }
         }
-      },
-      initComplete: function () {
-        // Adding role filter once table initialized
-        this.api()
-          .columns(2)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
-            )
-              .appendTo('.user_role')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append('<option value="' + d + '">' + d + '</option>');
-              });
-          });
-        // Adding plan filter once table initialized
-        this.api()
-          .columns(3)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="UserPlan" class="form-select text-capitalize"><option value=""> Select Plan </option></select>'
-            )
-              .appendTo('.user_plan')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append('<option value="' + d + '">' + d + '</option>');
-              });
-          });
-        // Adding status filter once table initialized
-        this.api()
-          .columns(5)
-          .every(function () {
-            var column = this;
-            var select = $(
-              '<select id="FilterTransaction" class="form-select text-capitalize"><option value=""> Select Status </option></select>'
-            )
-              .appendTo('.user_status')
-              .on('change', function () {
-                var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                column.search(val ? '^' + val + '$' : '', true, false).draw();
-              });
-
-            column
-              .data()
-              .unique()
-              .sort()
-              .each(function (d, j) {
-                select.append(
-                  '<option value="' +
-                    statusObj[d].title +
-                    '" class="text-capitalize">' +
-                    statusObj[d].title +
-                    '</option>'
-                );
-              });
-          });
       }
     });
+    $('.dataTables_length').addClass('mt-0 mt-md-3 me-3');
+    $('.dt-action-buttons').addClass('pt-0');
   }
 
   // Delete Record
-  $('.datatables-users tbody').on('click', '.delete-record', function () {
-    dt_user.row($(this).parents('tr')).remove().draw();
+  $('.datatables-order tbody').on('click', '.delete-record', function () {
+    dt_products.row($(this).parents('tr')).remove().draw();
   });
 
   // Filter form control to default size
@@ -461,56 +427,3 @@ $(function () {
     $('.dataTables_length .form-select').removeClass('form-select-sm');
   }, 300);
 });
-
-// Validation & Phone mask
-(function () {
-  const phoneMaskList = document.querySelectorAll('.phone-mask'),
-    addNewUserForm = document.getElementById('addNewUserForm');
-
-  // Phone Number
-  if (phoneMaskList) {
-    phoneMaskList.forEach(function (phoneMask) {
-      new Cleave(phoneMask, {
-        phone: true,
-        phoneRegionCode: 'US'
-      });
-    });
-  }
-  // Add New User Form Validation
-  const fv = FormValidation.formValidation(addNewUserForm, {
-    fields: {
-      userFullname: {
-        validators: {
-          notEmpty: {
-            message: 'Please enter fullname '
-          }
-        }
-      },
-      userEmail: {
-        validators: {
-          notEmpty: {
-            message: 'Please enter your email'
-          },
-          emailAddress: {
-            message: 'The value is not a valid email address'
-          }
-        }
-      }
-    },
-    plugins: {
-      trigger: new FormValidation.plugins.Trigger(),
-      bootstrap5: new FormValidation.plugins.Bootstrap5({
-        // Use this for enabling/changing valid/invalid class
-        eleValidClass: '',
-        rowSelector: function (field, ele) {
-          // field is the field name & ele is the field element
-          return '.mb-3';
-        }
-      }),
-      submitButton: new FormValidation.plugins.SubmitButton(),
-      // Submit the form when all fields are valid
-      // defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
-      autoFocus: new FormValidation.plugins.AutoFocus()
-    }
-  });
-})();
