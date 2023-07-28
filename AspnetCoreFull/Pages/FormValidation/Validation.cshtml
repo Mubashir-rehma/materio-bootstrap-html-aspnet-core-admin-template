@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="~/vendor/libs/flatpickr/flatpickr.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/typeahead-js/typeahead.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts{
@@ -20,9 +20,9 @@
 <script src="~/vendor/libs/flatpickr/flatpickr.dist.js"></script>
 <script src="~/vendor/libs/typeahead-js/typeahead.dist.js"></script>
 <script src="~/vendor/libs/tagify/tagify.dist.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageScripts {
@@ -30,7 +30,7 @@
 }
 
 @* ************** Content ************** *@
-<h4 class="fw-bold py-3 mb-4">
+<h4 class="py-3 mb-4">
   <span class="text-muted fw-light">Forms /</span> Validation
 </h4>
 <div class="row mb-4">
@@ -221,7 +221,7 @@
           <!-- Account Details -->
 
           <div class="col-12">
-            <h6 class="fw-semibold">1. Account Details</h6>
+            <h6>1. Account Details</h6>
             <hr class="mt-0" />
           </div>
 
@@ -258,7 +258,7 @@
           <!-- Personal Info -->
 
           <div class="col-12">
-            <h6 class="mt-2 fw-semibold">2. Personal Info</h6>
+            <h6 class="mt-2">2. Personal Info</h6>
             <hr class="mt-0" />
           </div>
 
@@ -340,7 +340,7 @@
           <!-- Choose Your Plan -->
 
           <div class="col-12">
-            <h6 class="mt-2 fw-semibold">3. Choose Your Plan</h6>
+            <h6 class="mt-2">3. Choose Your Plan</h6>
             <hr class="mt-0" />
           </div>
           <div class="row gy-3 mt-0">
@@ -352,7 +352,7 @@
                     <span class="custom-option-title"> Starter </span>
                     <small> Get 5gb of space and 1 team member. </small>
                   </span>
-                  <input name="formValidationPlan" class="form-check-input" type="radio" value="" id="basicPlanMain1" checked />
+                  <input name="formValidationPlan-x1" class="form-check-input" type="radio" value="" id="basicPlanMain1" checked />
                 </label>
               </div>
             </div>
@@ -364,7 +364,7 @@
                     <span class="custom-option-title"> Personal </span>
                     <small> Get 15gb of space and 5 team member. </small>
                   </span>
-                  <input name="formValidationPlan" class="form-check-input" type="radio" value="" id="basicPlanMain2" />
+                  <input name="formValidationPlan-x1" class="form-check-input" type="radio" value="" id="basicPlanMain2" />
                 </label>
               </div>
             </div>
@@ -376,7 +376,7 @@
                     <span class="custom-option-title"> Premium </span>
                     <small> Get 25gb of space and 15 members. </small>
                   </span>
-                  <input name="formValidationPlan" class="form-check-input" type="radio" value="" id="basicPlanMain3" />
+                  <input name="formValidationPlan-x1" class="form-check-input" type="radio" value="" id="basicPlanMain3" />
                 </label>
               </div>
             </div>

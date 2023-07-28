@@ -8,16 +8,16 @@
 <link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/bootstrap-select/bootstrap-select.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts{
 <script src="~/vendor/libs/bs-stepper/bs-stepper.dist.js"></script>
 <script src="~/vendor/libs/bootstrap-select/bootstrap-select.dist.js"></script>
 <script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageScripts {
@@ -26,7 +26,7 @@
 }
 
 @* ************** Content ************** *@
-<h4 class="fw-bold py-3 mb-4">
+<h4 class="py-3 mb-4">
   <span class="text-muted fw-light">Form Wizard/</span> Numbered
 </h4>
 <!-- Default -->
@@ -37,7 +37,7 @@
 
   <!-- Default Wizard -->
   <div class="col-12 mb-4">
-    <small class="text-light fw-semibold">Basic</small>
+    <small class="text-light fw-medium">Basic</small>
     <div class="bs-stepper wizard-numbered mt-2">
       <div class="bs-stepper-header">
         <div class="step" data-target="#account-details">
@@ -196,7 +196,7 @@
 
   <!-- Validation Wizard -->
   <div class="col-12 mb-4">
-    <small class="text-light fw-semibold">Validation</small>
+    <small class="text-light fw-medium">Validation</small>
     <div id="wizard-validation" class="bs-stepper mt-2">
       <div class="bs-stepper-header">
         <div class="step" data-target="#account-details-validation">
@@ -345,7 +345,7 @@
 
   <!-- Vertical Wizard -->
   <div class="col-12 mb-4">
-    <small class="text-light fw-semibold">Vertical</small>
+    <small class="text-light fw-medium">Vertical</small>
     <div class="bs-stepper wizard-vertical vertical mt-2">
       <div class="bs-stepper-header">
         <div class="step" data-target="#account-details-1">
@@ -498,7 +498,7 @@
 
   <!-- Modern Wizard -->
   <div class="col-12 mb-4">
-    <small class="text-light fw-semibold mt-2">Basic</small>
+    <small class="text-light fw-medium mt-2">Basic</small>
     <div class="bs-stepper wizard-modern wizard-modern-example mt-2">
       <div class="bs-stepper-header">
         <div class="step" data-target="#account-details-modern">
@@ -647,7 +647,7 @@
 
   <!-- Modern Vertical Wizard -->
   <div class="col-12">
-    <small class="text-light fw-semibold">Vertical</small>
+    <small class="text-light fw-medium">Vertical</small>
     <div class="bs-stepper vertical wizard-modern wizard-modern-vertical mt-2">
       <div class="bs-stepper-header">
         <div class="step" data-target="#account-details-modern-vertical">
