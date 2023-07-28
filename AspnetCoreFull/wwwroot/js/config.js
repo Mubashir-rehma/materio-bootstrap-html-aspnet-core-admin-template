@@ -76,7 +76,7 @@ TemplateCustomizer.LANGUAGES.fr = { ... };
  * displayCustomizer: true(Show customizer), false(Hide customizer)
  * lang: To set default language, Add more langues and set default. Fallback language is 'en'
  * controls: [ 'rtl', 'style', 'headerType', 'contentLayout', 'layoutCollapsed', 'layoutNavbarOptions', 'themes' ] | Show/Hide customizer controls
- * defaultTheme: 0(Default), 1(Semi Dark), 2(Bordered)
+ * defaultTheme: 0(Default), 1(Bordered), 2(Semi Dark)
  * defaultStyle: 'light', 'dark', 'system' (Mode)
  * defaultTextDir: 'ltr', 'rtl' (rtlSupport must be true for rtl mode)
  * defaultContentLayout: 'compact', 'wide' (compact=container-xxl, wide=container-fluid)

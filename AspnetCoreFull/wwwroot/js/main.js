@@ -340,6 +340,8 @@ if (document.getElementById('layout-menu')) {
   if (typeof TemplateCustomizer !== 'undefined') {
     if (window.templateCustomizer.settings.defaultMenuCollapsed) {
       window.Helpers.setCollapsed(true, false);
+    } else {
+      window.Helpers.setCollapsed(false, false);
     }
   }
 
