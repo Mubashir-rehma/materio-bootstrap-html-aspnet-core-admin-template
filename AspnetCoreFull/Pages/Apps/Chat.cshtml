@@ -36,7 +36,7 @@
         <small class="text-muted">UI/UX Designer</small>
         <i class="bx bx-x bx-sm cursor-pointer close-sidebar" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-left"></i>
       </div>
-      <div class="sidebar-body px-4">
+      <div class="sidebar-body px-4 pb-4">
         <div class="my-4">
           <p class="text-muted text-uppercase">About</p>
           <textarea id="chat-sidebar-left-user-about" class="form-control chat-sidebar-left-user-about mt-3" rows="4" maxlength="120">Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.</textarea>
@@ -70,7 +70,7 @@
                 <i class='bx bx-message-square-detail me-1'></i>
                 <span class="align-middle">Two-step Verification</span>
               </div>
-              <label class="switch switch-primary me-4">
+              <label class="switch switch-primary me-4 switch-sm">
                 <input type="checkbox" class="switch-input" checked="" />
                 <span class="switch-toggle-slider">
                   <span class="switch-on"></span>
@@ -83,7 +83,7 @@
                 <i class='bx bx-bell me-1'></i>
                 <span class="align-middle">Notification</span>
               </div>
-              <label class="switch switch-primary me-4">
+              <label class="switch switch-primary me-4 switch-sm">
                 <input type="checkbox" class="switch-input" />
                 <span class="switch-toggle-slider">
                   <span class="switch-on"></span>
@@ -111,7 +111,7 @@
     <!-- Chat & Contacts -->
     <div class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end" id="app-chat-contacts">
       <div class="sidebar-header pt-3 px-4">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center me-3 me-lg-0">
           <div class="flex-shrink-0 avatar avatar-online me-3" data-bs-toggle="sidebar" data-overlay="app-overlay-ex" data-target="#app-chat-sidebar-left">
             <img class="user-avatar rounded-circle cursor-pointer" src="~/img/avatars/1.png" alt="Avatar">
           </div>
@@ -120,7 +120,7 @@
             <input type="text" class="form-control chat-search-input" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
           </div>
         </div>
-        <i class="bx bx-x cursor-pointer close-sidebar d-lg-none d-block" data-overlay data-bs-toggle="sidebar" data-target="#app-chat-contacts"></i>
+        <i class="bx bx-x cursor-pointer position-absolute top-0 end-0 mt-2 me-1 fs-4  d-lg-none d-block" data-overlay data-bs-toggle="sidebar" data-target="#app-chat-contacts"></i>
       </div>
       <hr class="container-m-nx mt-4 mb-0">
       <div class="sidebar-body">
@@ -485,7 +485,7 @@
                 </div>
                 <div class="chat-message-wrapper flex-grow-1">
                   <div class="chat-message-text">
-                    <p class="mb-0">Do you have design files for Vuexy?</p>
+                    <p class="mb-0">Do you have design files for @TempData.Peek("appName")?</p>
                   </div>
                   <div class="text-muted">
                     <small>10:15 AM</small>
@@ -541,8 +541,8 @@
           <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle">
         </div>
         <h5 class="my-2">Felecia Rower</h5>
-          <span class="text-muted">NextJS Developer</span>
-          <i class="bx bx-x bx-sm cursor-pointer close-sidebar d-block" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right"></i>
+        <span class="text-muted">NextJS Developer</span>
+        <i class="bx bx-x bx-sm cursor-pointer close-sidebar d-block" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right"></i>
       </div>
       <div class="sidebar-body px-4">
         <div class="my-4">
@@ -552,15 +552,15 @@
         <div class="my-4">
           <p class="text-muted text-uppercase">Personal Information</p>
           <ul class="list-unstyled d-grid gap-2 mt-3">
-            <li>
+            <li class="d-flex align-items-center">
               <i class='bx bx-envelope'></i>
               <span class="align-middle ms-2">josephGreen@email.com</span>
             </li>
-            <li>
+            <li class="d-flex align-items-center">
               <i class='bx bx-phone-call'></i>
               <span class="align-middle ms-2">+1(123) 456 - 7890</span>
             </li>
-            <li>
+            <li class="d-flex align-items-center">
               <i class='bx bx-time-five'></i>
               <span class="align-middle ms-2">Mon - Fri 10AM - 8PM</span>
             </li>
@@ -569,23 +569,23 @@
         <div class="my-4">
           <p class="text-muted text-uppercase">Options</p>
           <ul class="list-unstyled d-grid gap-2 mt-3">
-            <li class="cursor-pointer">
+            <li class="cursor-pointer d-flex align-items-center">
               <i class='bx bx-tag'></i>
               <span class="align-middle ms-2">Add Tag</span>
             </li>
-            <li class="cursor-pointer">
+            <li class="cursor-pointer d-flex align-items-center">
               <i class='bx bx-star'></i>
               <span class="align-middle ms-2">Important Contact</span>
             </li>
-            <li class="cursor-pointer">
+            <li class="cursor-pointer d-flex align-items-center">
               <i class='bx bx-image'></i>
               <span class="align-middle ms-2">Shared Media</span>
             </li>
-            <li class="cursor-pointer">
+            <li class="cursor-pointer d-flex align-items-center">
               <i class='bx bx-trash'></i>
               <span class="align-middle ms-2">Delete Contact</span>
             </li>
-            <li class="cursor-pointer">
+            <li class="cursor-pointer d-flex align-items-center">
               <i class='bx bx-block'></i>
               <span class="align-middle ms-2">Block Contact</span>
             </li>
