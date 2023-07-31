@@ -6,13 +6,13 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css">
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageStyles {
@@ -32,7 +32,7 @@
       <div class="app-brand justify-content-center mb-5">
         <a href="/" class="app-brand-link gap-2">
           <span class="app-brand-logo demo bg-primary">@await Html.PartialAsync("../_Partials/_Macros")</span>
-          <span class="app-brand-text demo text-body fw-bold">@TempData.Peek("appName")</span>
+          <span class="app-brand-text demo text-body fw-medium">@TempData.Peek("appName")</span>
         </a>
       </div>
       <!-- /Logo -->

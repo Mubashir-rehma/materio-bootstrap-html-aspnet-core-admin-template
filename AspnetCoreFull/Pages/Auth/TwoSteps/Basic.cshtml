@@ -7,22 +7,22 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css">
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageStyles {
-<link rel="stylesheet" href="~/vendor/css/pages/page-auth.dist.css">
+  <link rel="stylesheet" href="~/vendor/css/pages/page-auth.dist.css">
 }
 
 @section PageScripts {
-<script src="~/js/pages-auth.dist.js"></script>
+  <script src="~/js/pages-auth.dist.js"></script>
 }
 @* ************** Content ************** *@
 
@@ -42,9 +42,9 @@
         <h4 class="mb-2">Two Step Verification 💬</h4>
         <p class="text-start mb-4">
           We sent a verification code to your mobile. Enter the code from the mobile in the field below.
-          <span class="fw-bold d-block mt-2">******1234</span>
+          <span class="fw-medium d-block mt-2">******1234</span>
         </p>
-        <p class="mb-0 fw-semibold">Type your 6 digit security code</p>
+        <p class="mb-0 fw-medium">Type your 6 digit security code</p>
         <form id="twoStepsForm" action="/">
           <div class="mb-3">
             <div class="auth-input-wrapper d-flex align-items-center justify-content-sm-between numeral-mask-wrapper">
