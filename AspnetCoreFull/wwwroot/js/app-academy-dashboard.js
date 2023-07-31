@@ -366,7 +366,7 @@
               logoObj[$logo] +
               '</span>' +
               '<div>' +
-              '<a class="text-body text-truncate fw-medium mb-2 text-wrap" href="app-academy-course-details.html">' +
+              '<a class="text-body text-truncate fw-medium mb-2 text-wrap" href="/Apps/Academy/CourseDetails">' +
               $course +
               '</a>' +
               '<div class="d-flex align-items-center mt-1">' +
