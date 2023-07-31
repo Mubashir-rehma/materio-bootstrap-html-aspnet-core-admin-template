@@ -377,7 +377,7 @@ $(function () {
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<a class="text-body fw-medium" href="app-logistics-fleet.html">VOL-' +
+              '<a class="text-body fw-medium" href="/Apps/Logistics/Fleet">VOL-' +
               $location +
               '</a>' +
               '</div>' +

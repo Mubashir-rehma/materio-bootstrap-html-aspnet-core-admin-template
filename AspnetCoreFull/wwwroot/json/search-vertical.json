@@ -178,17 +178,17 @@
     {
       "name": "Academy - Dashboard",
       "icon": "bx-book-open",
-      "url": "app-academy-dashboard.html"
+      "url": "/Apps/Academy/Dashboard"
     },
     {
       "name": "Academy - My Course",
       "icon": "bx-list-ul",
-      "url": "app-academy-course.html"
+      "url": "/Apps/Academy/MyCourse"
     },
     {
       "name": "Academy - Course Details",
       "icon": "bx-detail",
-      "url": "app-academy-course-details.html"
+      "url": "/Apps/Academy/CourseDetails"
     },
     {
       "name": "User List",
@@ -233,12 +233,12 @@
     {
       "name": "Logistics Dashboard",
       "icon": "bx-book-reader",
-      "url": "app-logistics-dashboard.html"
+      "url": "/Apps/Logistics/Dashboard"
     },
     {
       "name": "Logistics Fleet",
       "icon": "bx-car",
-      "url": "app-logistics-fleet.html"
+      "url": "/Apps/Logistics/Fleet"
     },
     {
       "name": "Invoice List",
