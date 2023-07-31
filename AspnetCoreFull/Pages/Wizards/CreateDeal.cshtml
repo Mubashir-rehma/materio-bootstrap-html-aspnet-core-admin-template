@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/flatpickr/flatpickr.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 @section VendorScripts {
 <script src="~/vendor/libs/bs-stepper/bs-stepper.dist.js"></script>
 <script src="~/vendor/libs/select2/select2.dist.js"></script>
 <script src="~/vendor/libs/flatpickr/flatpickr.dist.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 @section PageScripts {
 <script src="~/js/wizard-ex-create-deal.dist.js"></script>
 }
 
 @* ************** Content ************** *@
-<h4 class="fw-bold py-3 mb-4">
+<h4 class="py-3 mb-4">
   <span class="text-muted fw-light">Wizard examples /</span> Create Deal
 </h4>
 
@@ -287,26 +287,26 @@
                 <table class="table table-borderless">
                   <tbody>
                     <tr>
-                      <td class="ps-0 align-top text-nowrap py-1"><strong>Deal Type</strong></td>
+                      <td class="ps-0 align-top text-nowrap py-1"><span class="fw-medium">Deal Type</span></td>
                       <td class="px-0 py-1">Percentage</td>
                     </tr>
                     <tr>
-                      <td class="ps-0 align-top text-nowrap py-1"><strong>Amount</strong></td>
+                      <td class="ps-0 align-top text-nowrap py-1"><span class="fw-medium">Amount</span></td>
                       <td class="px-0 py-1">25%</td>
                     </tr>
                     <tr>
-                      <td class="ps-0 align-top text-nowrap py-1"><strong>Deal Code</strong></td>
+                      <td class="ps-0 align-top text-nowrap py-1"><span class="fw-medium">Deal Code</span></td>
                       <td class="px-0 py-1">
                         <div class="badge bg-label-warning">25PEROFF</div>
                       </td>
                     </tr>
                     <tr>
-                      <td class="ps-0 align-top text-nowrap py-1"><strong>Deal Title</strong></td>
+                      <td class="ps-0 align-top text-nowrap py-1"><span class="fw-medium">Deal Title</span></td>
                       <td class="px-0 py-1">Black friday sale, 25% OFF</td>
                     </tr>
                     <tr>
-                      <td class="ps-0 align-top text-nowrap py-1"><strong>Deal Duration</strong></td>
-                      <td class="px-0 py-1"><span class="fw-semibold">2021-07-14</span> to <span class="fw-semibold">2021-07-30</span></td>
+                      <td class="ps-0 align-top text-nowrap py-1"><span class="fw-medium">Deal Duration</span></td>
+                      <td class="px-0 py-1"><span class="fw-medium">2021-07-14</span> to <span class="fw-medium">2021-07-30</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -315,7 +315,7 @@
             </div>
           </div>
           <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img class="img-fluid w-px-200" src="~/img/illustrations/man-with-laptop-light.png" alt="deal image cap" data-app-light-img="illustrations/man-with-laptop-light.png" data-app-dark-img="illustrations/man-with-laptop-dark.png" />
+            <img class="img-fluid w-px-200" src="{{assetsPath}}img/illustrations/man-with-laptop-light.png" alt="deal image cap" data-app-light-img="illustrations/man-with-laptop-light.png" data-app-dark-img="illustrations/man-with-laptop-dark.png" />
           </div>
           <div class="col-md-12">
             <label class="switch">

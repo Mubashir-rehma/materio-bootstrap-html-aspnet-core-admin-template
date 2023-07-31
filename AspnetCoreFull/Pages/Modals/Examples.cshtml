@@ -5,16 +5,16 @@
 }
 @section VendorStyles {
 <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 <link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.dist.css" />
 }
 @section VendorScripts {
 <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
 <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
 <script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 <script src="~/vendor/libs/select2/select2.dist.js"></script>
 <script src="~/vendor/libs/bs-stepper/bs-stepper.dist.js"></script>
 }
@@ -29,7 +29,7 @@
 }
 
 @* ************** Content ************** *@
-<h4 class="fw-bold py-3 mb-4">Modal Examples</h4>
+<h4 class="py-3 mb-4">Modal Examples</h4>
 
 <div class="row mb-4">
   <!--  Pricing -->
@@ -111,7 +111,7 @@
   <!--/  Enable OTP -->
 
   <!--  Share Project -->
-  <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4 mb-4">
     <div class="card">
       <div class="card-body text-center">
         <i class='mb-3 bx bx-md bx-file'></i>
@@ -124,7 +124,7 @@
   <!--/  Share Project -->
 
   <!--  Create App -->
-  <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4 mb-4">
     <div class="card">
       <div class="card-body text-center">
         <i class='mb-3 bx bx-md bx-cube'></i>
@@ -137,7 +137,7 @@
   <!--/  Create App -->
 
   <!--  Two Factor Auth -->
-  <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4 mb-4">
     <div class="card">
       <div class="card-body text-center">
         <i class="mb-3 bx bx-lock bx-md"></i>
@@ -148,6 +148,33 @@
     </div>
   </div>
   <!--/  Two Factor Auth -->
+
+  <!--  Payment providers -->
+  <div class="col-12 col-sm-6 col-lg-4 mb-4 mb-sm-0">
+    <div class="card">
+      <div class="card-body text-center">
+        <i class="mb-3 bx bx-credit-card-alt bx-md"></i>
+        <h5>Payment providers</h5>
+        <p>Elegant payment options modal popup example, easy to use in any page.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentProvider"> Show </button>
+      </div>
+    </div>
+  </div>
+  <!--/  Payment providers -->
+
+  <!--  Payment methods -->
+  <div class="col-12 col-sm-6 col-lg-4">
+    <div class="card">
+      <div class="card-body text-center">
+        <i class="mb-3 bx bx-credit-card bx-md"></i>
+        <h5>Add Payment Method</h5>
+        <p>Elegant payment methods modal popup example, easy to use in any page.</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentMethods"> Show </button>
+      </div>
+    </div>
+  </div>
+  <!--/  Payment methods -->
+
 </div>
 
 <!-- All Modals -->
@@ -160,3 +187,5 @@
 @await Html.PartialAsync("../_Partials/_Modals/ModalShareProject")
 @await Html.PartialAsync("../_Partials/_Modals/ModalCreateApp")
 @await Html.PartialAsync("../_Partials/_Modals/ModalTwoFactorAuth")
+@await Html.PartialAsync("../_Partials/_Modals/ModalSelectPaymentProviders")
+@await Html.PartialAsync("../_Partials/_Modals/ModalSelectPaymentMethods")
