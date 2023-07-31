@@ -82,7 +82,7 @@ TemplateCustomizer.LANGUAGES.fr = { ... };
  * defaultContentLayout: 'compact', 'wide' (compact=container-xxl, wide=container-fluid)
  * defaultHeaderType: 'static', 'fixed' (for horizontal layout only)
  * defaultMenuCollapsed: true, false (For vertical layout only)
- * defaultNavbarType: 'sticky', 'static', 'hidden'
+ * defaultNavbarType: 'sticky', 'static', 'hidden' (For vertical layout only)
  * defaultFooterFixed: true, false (For vertical layout only)
  * defaultShowDropdownOnHover : true, false (for horizontal layout only)
  */
