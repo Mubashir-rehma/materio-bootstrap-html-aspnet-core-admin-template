@@ -8,8 +8,4 @@ namespace AspnetCoreFull.Pages.Dashboards
   {
     public void OnGet() { }
   }
-  public class EcommerceModel : PageModel
-  {
-    public void OnGet() { }
-  }
 }
