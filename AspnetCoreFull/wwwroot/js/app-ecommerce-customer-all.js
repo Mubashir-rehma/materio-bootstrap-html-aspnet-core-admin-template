@@ -21,7 +21,7 @@ $(function () {
   // Variable declaration for table
   var dt_customer_table = $('.datatables-customers'),
     select2 = $('.select2'),
-    customerView = 'app-ecommerce-customer-details-overview.html';
+    customerView = '/Apps/Ecommerce/Customer/CustomerOverview';
   if (select2.length) {
     var $this = select2;
     $this.wrap('<div class="position-relative"></div>').select2({
@@ -192,7 +192,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-secondary dropdown-toggle ms-2 ms-sm-0 me-3',
+          className: 'btn btn-outline-secondary dropdown-toggle ms-2 ms-sm-0 me-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {
