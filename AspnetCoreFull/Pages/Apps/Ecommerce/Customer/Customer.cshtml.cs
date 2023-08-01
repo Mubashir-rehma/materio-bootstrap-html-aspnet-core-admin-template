@@ -8,20 +8,4 @@ namespace AspnetCoreFull.Pages.Apps.Ecommerce.Customer
   {
     public void OnGet() { }
   }
-  public class  CustomerOverviewModel : PageModel
-  {
-    public void OnGet() { }
-  }
-  public class  CustomerSecurityModel : PageModel
-  {
-    public void OnGet() { }
-  }
-  public class  CustomerBillingModel : PageModel
-  {
-    public void OnGet() { }
-  }
-  public class  CustomerNotificationsModel : PageModel
-  {
-    public void OnGet() { }
-  }
 }

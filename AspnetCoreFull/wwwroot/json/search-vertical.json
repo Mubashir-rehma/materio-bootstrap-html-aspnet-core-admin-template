@@ -106,29 +106,29 @@
       "url": "/Apps/Ecommerce/Order/OrderDetails"
     },
     {
-      "name": "eCommerce - Customer",
+      "name": "eCommerce - Customer All",
       "icon": "bx-user",
       "url": "/Apps/Ecommerce/Customer/CustomerAll"
     },
     {
-      "name": "eCommerce - Customer Overview",
+      "name": "eCommerce - Customer Details Overview",
       "icon": "bx-list-ol",
-      "url": "/Apps/Ecommerce/Customer/CustomerOverview"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"
     },
     {
-      "name": "eCommerce - Customer Security",
+      "name": "eCommerce - Customer Details Security",
       "icon": "bx-shield-plus",
-      "url": "/Apps/Ecommerce/Customer/CustomerSecurity"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"
     },
     {
-      "name": "eCommerce - Customer Address and Billing",
+      "name": "eCommerce - Customer Details Address and Billing",
       "icon": "bx-current-location",
-      "url": "/Apps/Ecommerce/Customer/CustomerBilling"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling"
     },
     {
-      "name": "eCommerce - Customer Notifications",
+      "name": "eCommerce - Customer Details Notifications",
       "icon": "bx-bell",
-      "url": "/Apps/Ecommerce/Customer/CustomerNotifications"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications"
     },
     {
       "name": "eCommerce - Manage Reviews",

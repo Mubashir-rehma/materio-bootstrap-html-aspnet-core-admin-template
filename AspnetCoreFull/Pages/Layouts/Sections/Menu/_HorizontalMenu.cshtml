@@ -155,7 +155,7 @@
                   </li>
                 </ul>
               </li>
-              <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer") ? " active" : "")'>
+              <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
                   <div data-i18n='Customer'>Customer</div>
                 </a>
@@ -171,26 +171,26 @@
                     </a>
                     <ul class='menu-sub'>
                       <li
-                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerOverview" ? " active" : "")'>
-                        <a asp-page='/Apps/Ecommerce/Customer/CustomerOverview' class='menu-link'>
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
+                        <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview' class='menu-link'>
                           <div data-i18n='Overview'>Overview</div>
                         </a>
                       </li>
                       <li
-                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerSecurity" ? " active" : "")'>
-                        <a asp-page='/Apps/Ecommerce/Customer/CustomerSecurity' class='menu-link'>
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
+                        <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity' class='menu-link'>
                           <div data-i18n='Security'>Security</div>
                         </a>
                       </li>
                       <li
-                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerBilling" ? " active" : "")'>
-                        <a asp-page='/Apps/Ecommerce/Customer/CustomerBilling' class='menu-link'>
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
+                        <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling' class='menu-link'>
                           <div data-i18n='Billing & Address'>Billing & Address</div>
                         </a>
                       </li>
                       <li
-                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerNotifications" ? " active" : "")'>
-                        <a asp-page='/Apps/Ecommerce/Customer/CustomerNotifications' class='menu-link'>
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications" ? " active" : "")'>
+                        <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications' class='menu-link'>
                           <div data-i18n='Notifications'>Notifications</div>
                         </a>
                       </li>
