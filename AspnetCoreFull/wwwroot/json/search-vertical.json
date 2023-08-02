@@ -78,117 +78,112 @@
     {
       "name": "eCommerce Dashboard",
       "icon": "bx-home-circle",
-      "url": "/Dashboards/Ecommerce"
-    },
-    {
-      "name": "eCommerce - Product",
-      "icon": "bx-cart-alt",
-      "url": "app-ecommerce-product-list.html"
+      "url": "/Apps/Ecommerce/Dashboard"
     },
     {
       "name": "eCommerce - Product List",
       "icon": "bxl-product-hunt",
-      "url": "app-ecommerce-product-list.html"
+      "url": "/Apps/Ecommerce/Products/ProductList"
     },
     {
-      "name": "eCommerce - Add Product",
+      "name": "eCommerce - Product Add",
       "icon": "bx-plus-circle",
-      "url": "app-ecommerce-product-add.html"
+      "url": "/Apps/Ecommerce/Products/ProductAdd"
     },
     {
       "name": "eCommerce - Category List",
       "icon": "bx-list-ol",
-      "url": "app-ecommerce-category-list.html"
+      "url": "/Apps/Ecommerce/Products/CategoryList"
     },
     {
       "name": "eCommerce - Order List",
       "icon": "bx-list-ol",
-      "url": "app-ecommerce-order-list.html"
+      "url": "/Apps/Ecommerce/Order/OrderList"
     },
     {
       "name": "eCommerce - Orders Details",
       "icon": "bx-list-check",
-      "url": "app-ecommerce-order-details.html"
+      "url": "/Apps/Ecommerce/Order/OrderDetails"
     },
     {
-      "name": "eCommerce - Customers",
+      "name": "eCommerce - Customer All",
       "icon": "bx-user",
-      "url": "app-ecommerce-customer-all.html"
+      "url": "/Apps/Ecommerce/Customer/CustomerAll"
     },
     {
-      "name": "eCommerce - Customers Overview",
+      "name": "eCommerce - Customer Details Overview",
       "icon": "bx-list-ol",
-      "url": "app-ecommerce-customer-details-overview.html"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"
     },
     {
-      "name": "eCommerce - Customers Security",
+      "name": "eCommerce - Customer Details Security",
       "icon": "bx-shield-plus",
-      "url": "app-ecommerce-customer-details-security.html"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"
     },
     {
-      "name": "eCommerce - Customers Address and Billing",
+      "name": "eCommerce - Customer Details Address and Billing",
       "icon": "bx-current-location",
-      "url": "app-ecommerce-customer-details-billing.html"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling"
     },
     {
-      "name": "eCommerce - Customers Notifications",
+      "name": "eCommerce - Customer Details Notifications",
       "icon": "bx-bell",
-      "url": "app-ecommerce-customer-details-notifications.html"
+      "url": "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications"
     },
     {
       "name": "eCommerce - Manage Reviews",
       "icon": "bx-message-square-detail",
-      "url": "app-ecommerce-manage-reviews.html"
+      "url": "/Apps/Ecommerce/Reviews"
     },
     {
       "name": "eCommerce - Referrals",
       "icon": "bxs-business",
-      "url": "app-ecommerce-referral.html"
+      "url": "/Apps/Ecommerce/Referrals"
     },
     {
-      "name": "eCommerce - Settings Store Details",
+      "name": "eCommerce Settings - Store Details",
       "icon": "bx-detail",
-      "url": "app-ecommerce-settings-detail.html"
+      "url": "/Apps/Ecommerce/Settings/StoreDetails"
     },
     {
-      "name": "eCommerce - Settings Store Payments",
+      "name": "eCommerce Settings - Store Payments",
       "icon": "bx-money",
-      "url": "app-ecommerce-settings-payments.html"
+      "url": "/Apps/Ecommerce/Settings/Payments"
     },
     {
-      "name": "eCommerce - Settings Store Checkout",
+      "name": "eCommerce Settings - Store Checkout",
       "icon": "bx-cart",
-      "url": "app-ecommerce-settings-checkout.html"
+      "url": "/Apps/Ecommerce/Settings/Checkout"
     },
     {
-      "name": "eCommerce - Settings Shipping & Delivery",
+      "name": "eCommerce Settings - Shipping & Delivery",
       "icon": "bx-car",
-      "url": "app-ecommerce-settings-shipping.html"
+      "url": "/Apps/Ecommerce/Settings/Shipping"
     },
     {
-      "name": "eCommerce - Settings Locations",
+      "name": "eCommerce Settings - Locations",
       "icon": "bx-location-plus",
-      "url": "app-ecommerce-settings-locations.html"
+      "url": "/Apps/Ecommerce/Settings/Locations"
     },
     {
-      "name": "eCommerce - Settings Notifications",
+      "name": "eCommerce Settings - Notifications",
       "icon": "bx-bell",
-      "url": "app-ecommerce-settings-notifications.html"
+      "url": "/Apps/Ecommerce/Settings/Notifications"
     },
     {
       "name": "Academy - Dashboard",
       "icon": "bx-book-open",
-      "url": "app-academy-dashboard.html"
+      "url": "/Apps/Academy/Dashboard"
     },
     {
       "name": "Academy - My Course",
       "icon": "bx-list-ul",
-      "url": "app-academy-course.html"
+      "url": "/Apps/Academy/MyCourse"
     },
     {
       "name": "Academy - Course Details",
       "icon": "bx-detail",
-      "url": "app-academy-course-details.html"
+      "url": "/Apps/Academy/CourseDetails"
     },
     {
       "name": "User List",
@@ -233,12 +228,12 @@
     {
       "name": "Logistics Dashboard",
       "icon": "bx-book-reader",
-      "url": "app-logistics-dashboard.html"
+      "url": "/Apps/Logistics/Dashboard"
     },
     {
       "name": "Logistics Fleet",
       "icon": "bx-car",
-      "url": "app-logistics-fleet.html"
+      "url": "/Apps/Logistics/Fleet"
     },
     {
       "name": "Invoice List",

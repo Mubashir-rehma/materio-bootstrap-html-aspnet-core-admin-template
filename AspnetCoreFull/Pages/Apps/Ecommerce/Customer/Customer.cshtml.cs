@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspnetCoreFull.Pages.Dashboards
+namespace AspnetCoreFull.Pages.Apps.Ecommerce.Customer
 {
-  public class AnalyticsModel : PageModel
+  public class CustomerAllModel : PageModel
   {
     public void OnGet() { }
   }
