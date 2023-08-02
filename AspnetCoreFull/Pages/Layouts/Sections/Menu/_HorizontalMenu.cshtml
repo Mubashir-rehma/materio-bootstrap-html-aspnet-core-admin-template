@@ -385,6 +385,39 @@
           <div data-i18n="Pages">Pages</div>
         </a>
         <ul class="menu-sub">
+         <!-- Front Pages -->
+    <li class='menu-item@(currentPage.StartsWith("/FrontPages/") ? " active open" : "")'>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <div data-i18n="Front Pages">Front Pages</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(currentPage == "/FrontPages/LandingPage" ? " active" : "")'>
+          <a asp-page="/FrontPages/LandingPage" class="menu-link" target="_blank">
+            <div data-i18n="Landing Page">Landing Page</div>
+          </a>
+        </li>
+        <li class='menu-item@(currentPage == "/FrontPages/PricingPage" ? " active" : "")'>
+          <a asp-page="/FrontPages/PricingPage" class="menu-link" target="_blank">
+            <div data-i18n="Pricing Page">Pricing Page</div>
+          </a>
+        </li>
+        <li class='menu-item@(currentPage == "/FrontPages/PaymentPage" ? " active" : "")'>
+          <a asp-page="/FrontPages/PaymentPage" class="menu-link" target="_blank">
+            <div data-i18n="Payment Page">Payment Page</div>
+          </a>
+        </li>
+        <li class='menu-item@(currentPage == "/FrontPages/CheckoutPage" ? " active" : "")'>
+          <a asp-page="/FrontPages/CheckoutPage" class="menu-link" target="_blank">
+            <div data-i18n="Checkout Page">Checkout Page</div>
+          </a>
+        </li>
+        <li class='menu-item@(currentPage == "/FrontPages/HelpCenterLanding" ? " active" : "")'>
+          <a asp-page="/FrontPages/HelpCenterLanding" class="menu-link" target="_blank">
+            <div data-i18n="Help Center">Help Center</div>
+          </a>
+        </li>
+      </ul>
+    </li>
           <li class='menu-item@(currentPage.StartsWith("/Pages/Profile") ? " active" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <div data-i18n="User Profile">User Profile</div>
@@ -448,28 +481,6 @@
             <a asp-page="/Pages/FAQ" class="menu-link">
               <div data-i18n="FAQ">FAQ</div>
             </a>
-          </li>
-          <li class='menu-item@(currentPage.StartsWith("/Pages/HelpCenter") ? " active" : "")'>
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <div data-i18n="Help Center">Help Center</div>
-            </a>
-            <ul class="menu-sub">
-              <li class='menu-item@(currentPage == "/Pages/HelpCenter/Landing" ? " active" : "")'>
-                <a asp-page="/Pages/HelpCenter/Landing" class="menu-link">
-                  <div data-i18n="Landing">Landing</div>
-                </a>
-              </li>
-              <li class='menu-item@(currentPage == "/Pages/HelpCenter/Categories" ? " active" : "")'>
-                <a asp-page="/Pages/HelpCenter/Categories" class="menu-link">
-                  <div data-i18n="Categories">Categories</div>
-                </a>
-              </li>
-              <li class='menu-item@(currentPage == "/Pages/HelpCenter/Article" ? " active" : "")'>
-                <a asp-page="/Pages/HelpCenter/Article" class="menu-link">
-                  <div data-i18n="Article">Article</div>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class='menu-item@(currentPage == "/Pages/Pricing" ? " active" : "")'>
             <a asp-page="/Pages/Pricing" class="menu-link">

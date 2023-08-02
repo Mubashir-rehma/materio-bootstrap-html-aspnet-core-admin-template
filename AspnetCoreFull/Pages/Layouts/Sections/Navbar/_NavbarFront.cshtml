@@ -27,7 +27,7 @@
       <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="tf-icons bx bx-x bx-sm"></i>
       </button>
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto p-3 p-lg-0">
         <li class="nav-item">
           <a class="nav-link fw-medium" aria-current="page" asp-controller="LandingPage" asp-fragment="landingHero">Home</a>
         </li>
@@ -57,26 +57,26 @@
                   <span class="ps-1">Other</span>
                 </div>
                 <ul class="nav flex-column">
-                  <li class='nav-item@(currentPage == "/Pages/Pricing"  ? " active" : "")'>
-                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/Pricing">
+                  <li class='nav-item@(currentPage == "/FrontPages/PricingPage"  ? " active" : "")'>
+                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/PricingPage">
                       <i class='bx bx-radio-circle me-2'></i>
                       <span data-i18n="Pricing">Pricing</span>
                     </a>
                   </li>
-                  <li class='nav-item@(currentPage == "/Pages/Payment"  ? " active" : "")'>
-                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/Payment">
+                  <li class='nav-item@(currentPage == "/FrontPages/PaymentPage"  ? " active" : "")'>
+                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/PaymentPage">
                       <i class='bx bx-radio-circle me-2'></i>
                       <span data-i18n="Payment">Payment</span>
                     </a>
                   </li>
-                  <li class='nav-item@(currentPage == "/Pages/Checkout"  ? " active" : "")'>
-                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/Checkout">
+                  <li class='nav-item@(currentPage == "/FrontPages/CheckoutPage"  ? " active" : "")'>
+                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/CheckoutPage">
                       <i class='bx bx-radio-circle me-2'></i>
                       <span data-i18n="Checkout">Checkout</span>
                     </a>
                   </li>
-                  <li class='nav-item@(currentPage == "/Pages/HelpCenter"  ? " active" : "")'>
-                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/HelpCenter">
+                  <li class='nav-item@(currentPage == "/FrontPages/HelpCenterLanding"  ? " active" : "")'>
+                    <a class="nav-link mega-dropdown-link" asp-page="/FrontPages/HelpCenterLanding">
                       <i class='bx bx-radio-circle me-2'></i>
                       <span data-i18n="Help Center">Help Center</span>
                     </a>
@@ -122,25 +122,25 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Forgot/Password" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/ForgotPassword/Basic" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Forgot Password (Basic)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Forgot/Password" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/ForgotPassword/Cover" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Forgot Password (Cover)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Reset/Password" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/ResetPassword/Basic" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Reset Password (Basic)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Reset/Password" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/ResetPassword/Cover" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Reset Password (Cover)
                     </a>
@@ -156,49 +156,49 @@
                 </div>
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Misc/Error" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Pages/Misc/Error" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Error
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Misc/Under.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Pages/Misc/UnderMaintenance" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Under Maintenance
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Misc/Comingsoon" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Pages/Misc/ComingSoon" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Coming Soon
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Misc/Not.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Pages/Misc/NotAuthorized" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Not Authorized
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Verify/Email.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/VerifyEmail/Basic" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Verify Email (Basic)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Verify/Email.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/VerifyEmail/Cover" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Verify Email (Cover)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Two/Steps.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/TwoSteps/Basic" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Two Steps (Basic)
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/Two/Steps.html" target="_blank">
+                    <a class="nav-link mega-dropdown-link" asp-page="/Auth/TwoSteps/Cover" target="_blank">
                       <i class='bx bx-radio-circle me-2'></i>
                       Two Steps (Cover)
                     </a>
@@ -214,7 +214,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-medium" asp-page="/Auth/Index/Html" target="_blank">Admin</a>
+          <a class="nav-link fw-medium" asp-page="/Apps/Ecommerce/Dashboard" target="_blank">Admin</a>
         </li>
       </ul>
     </div>

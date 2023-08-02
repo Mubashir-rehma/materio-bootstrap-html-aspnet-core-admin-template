@@ -398,27 +398,27 @@
     {
       "name": "Help Center Front",
       "icon": "bx-help-circle",
-      "url": "../front-pages/help-center-landing.html"
+      "url": "/FrontPages/HelpCenterLanding"
     },
     {
       "name": "Landing Front",
       "icon": "bx-store",
-      "url": "../front-pages/landing-page.html"
+      "url": "/FrontPages/LandingPage"
     },
     {
       "name": "Pricing Front",
       "icon": "bx-dollar",
-      "url": "../front-pages/pricing-page.html"
+      "url": "/FrontPages/PricingPage"
     },
     {
       "name": "Checkout Front",
       "icon": "bx-check",
-      "url": "../front-pages/checkout-page.html"
+      "url": "/FrontPages/CheckoutPage"
     },
     {
       "name": "Payment Front",
       "icon": "bx-credit-card-front",
-      "url": "../front-pages/payment-page.html"
+      "url": "/FrontPages/PaymentPage"
     },
     {
       "name": "Modal Examples",

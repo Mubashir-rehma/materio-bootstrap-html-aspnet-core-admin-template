@@ -26,19 +26,19 @@
           <h6 class="footer-title mb-4">Demos</h6>
           <ul class="list-unstyled">
             <li class="mb-3">
-              <a href="javascript:;" target="_blank" class="footer-link">Vertical Layout</a>
+              <a href="javascript:void(0);" class="footer-link">Vertical Layout</a>
             </li>
             <li class="mb-3">
-              <a href="javascript:;" target="_blank" class="footer-link">Horizontal Layout</a>
+              <a href="javascript:void(0);" class="footer-link">Horizontal Layout</a>
             </li>
             <li class="mb-3">
-              <a href="javascript:;" target="_blank" class="footer-link">Bordered Layout</a>
+              <a href="javascript:void(0);" class="footer-link">Bordered Layout</a>
             </li>
             <li class="mb-3">
-              <a href="javascript:;" target="_blank" class="footer-link">Semi Dark Layout</a>
+              <a href="javascript:void(0);" class="footer-link">Semi Dark Layout</a>
             </li>
             <li class="mb-3">
-              <a href="javascript:;" target="_blank" class="footer-link">Dark Layout</a>
+              <a href="javascript:void(0);" class="footer-link">Dark Layout</a>
             </li>
           </ul>
         </div>
@@ -46,19 +46,19 @@
           <h6 class="footer-title mb-4">Pages</h6>
           <ul class="list-unstyled">
             <li class="mb-3">
-              <a asp-page="pricing-page.html" class="footer-link">Pricing</a>
+              <a asp-page="PricingPage" class="footer-link">Pricing</a>
             </li>
             <li class="mb-3">
-              <a asp-page="payment-page.html" class="footer-link">Payment<span class="badge rounded-pill bg-primary ms-2">New</span></a>
+              <a asp-page="PaymentPage" class="footer-link">Payment<span class="badge rounded-pill bg-primary ms-2">New</span></a>
             </li>
             <li class="mb-3">
-              <a asp-page="checkout-page.html" class="footer-link">Checkout</a>
+              <a asp-page="CheckoutPage" class="footer-link">Checkout</a>
             </li>
             <li class="mb-3">
-              <a asp-page="help-center-landing.html" class="footer-link">Help Center</a>
+              <a asp-page="HelpCenterLanding" class="footer-link">Help Center</a>
             </li>
             <li class="mb-3">
-              <a asp-page="../vertical-menu-template/auth-login-cover.html" target="_blank" class="footer-link">Login/Register</a>
+              <a asp-page="/Auth/Register/Basic" target="_blank" class="footer-link">Login/Register</a>
             </li>
           </ul>
         </div>
@@ -80,13 +80,13 @@
           </script>
           , Made with <i class="bx bxs-heart text-danger"></i> by
         </span>
-        <a href='@TempData.Peek("creatorUrl")' target="_blank" class="footer-link fw-medium footer-theme-link">@TempData.Peek("creatorName")</a>
+        <a href='@TempData.Peek("authorUrl")' target="_blank" class="footer-link fw-medium footer-theme-link">@TempData.Peek("authorName")</a>
       </div>
       <div>
-        <a href='@TempData.Peek(" githubFreeUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-github bx-sm"></i></a>
-        <a href='@TempData.Peek(" facebookUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-facebook bx-sm"></i></a>
-        <a href='@TempData.Peek(" twitterUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-twitter bx-sm"></i></a>
-        <a href='@TempData.Peek(" instagramUrl")' class="footer-link" target="_blank"><i class='bx bxl-instagram bx-sm'></i></a>
+        <a href='@TempData.Peek("githubFreeUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-github bx-sm"></i></a>
+        <a href='@TempData.Peek("facebookUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-facebook bx-sm"></i></a>
+        <a href='@TempData.Peek("twitterUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-twitter bx-sm"></i></a>
+        <a href='@TempData.Peek("instagramUrl")' class="footer-link" target="_blank"><i class='bx bxl-instagram bx-sm'></i></a>
       </div>
     </div>
   </div>
