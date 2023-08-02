@@ -19,7 +19,7 @@
 }
 
 @section PageScripts {
-<script src="~/js/pages-profile.dist.js"></script>
+<script src="~/js/app-user-view-account.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -430,19 +430,18 @@
       </div>
       <!--/ Teams -->
     </div>
-    <!-- Projects table -->
+     <!-- Projects table -->
     <div class="card mb-4">
-      <div class="card-datatable table-responsive">
-        <table class="datatables-projects table">
-          <thead>
+      <h5 class="card-header">Projects List</h5>
+      <div class="table-responsive mb-3">
+        <table class="table datatable-project">
+          <thead class="table-light">
             <tr>
               <th></th>
-              <th></th>
-              <th>Name</th>
-              <th>Leader</th>
-              <th>Team</th>
-              <th class="w-px-200">Status</th>
-              <th>Action</th>
+              <th>Project</th>
+              <th class="text-nowrap">Total Task</th>
+              <th>Progress</th>
+              <th>Hours</th>
             </tr>
           </thead>
         </table>
