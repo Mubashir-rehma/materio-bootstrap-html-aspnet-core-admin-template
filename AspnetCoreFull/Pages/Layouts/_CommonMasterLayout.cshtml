@@ -4,7 +4,7 @@
   ViewData["main"] = (isFront) ? "front-" : "";
   ViewData["frontVar"] = (isFront) ? "Front" : "";
   @* Compact/Fluid class *@
-  ViewData["contentType"] = (ViewData["container"] == "container-xxl") ? "layout-compact" : "layout-fluid";
+  ViewData["contentType"] = (ViewData["container"] == "container-xxl") ? "layout-compact" : "layout-wide";
 }
 
 @await Html.PartialAsync("Layouts/Sections/_Variables")
