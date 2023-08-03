@@ -83,7 +83,7 @@ $(function () {
             var $order_id = full['order'];
             // Creates full output for row
             var $row_output =
-              '<a href="app-ecommerce-order-details.html"><span class="fw-medium">#' + $order_id + '</span></a>';
+              '<a href="/Apps/Ecommerce/Order/OrderDetails"><span class="fw-medium">#' + $order_id + '</span></a>';
             return $row_output;
           }
         },
@@ -133,7 +133,7 @@ $(function () {
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<h6 class="m-0"><a href="pages-profile-user.html" class="text-body">' +
+              '<h6 class="m-0"><a href="/Pages/Profile/User" class="text-body">' +
               $name +
               '</a></h6>' +
               '<small class="text-muted">' +
@@ -214,7 +214,7 @@ $(function () {
               '<div class="d-flex justify-content-sm-center align-items-sm-center">' +
               '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>' +
               '<div class="dropdown-menu dropdown-menu-end m-0">' +
-              '<a href="app-ecommerce-order-details.html" class="dropdown-item">View</a>' +
+              '<a href="/Apps/Ecommerce/Order/OrderDetails" class="dropdown-item">View</a>' +
               '<a href="javascript:0;" class="dropdown-item delete-record">' +
               'Delete' +
               '</a>' +
