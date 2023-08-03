@@ -253,7 +253,7 @@ $(function () {
 
   // Variable declaration for table
   var dt_customer_review = $('.datatables-review'),
-    customerView = 'app-ecommerce-customer-details-overview.html',
+    customerView = '/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview',
     statusObj = {
       Pending: { title: 'Pending', class: 'bg-label-warning' },
       Published: { title: 'Published', class: 'bg-label-success' }

@@ -21,7 +21,7 @@ $(function () {
   // Variable declaration for table
   var dt_customer_table = $('.datatables-customers'),
     select2 = $('.select2'),
-    customerView = 'app-ecommerce-customer-details-overview.html';
+    customerView = '/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview';
   if (select2.length) {
     var $this = select2;
     $this.wrap('<div class="position-relative"></div>').select2({

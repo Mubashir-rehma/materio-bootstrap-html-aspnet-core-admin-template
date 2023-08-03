@@ -20,7 +20,7 @@ $(function () {
 
   // Variable declaration for table
   var dt_user_table = $('.datatables-referral'),
-    customerView = 'app-ecommerce-customer-details-overview.html',
+    customerView = '/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview',
     statusObj = {
       1: { title: 'Paid', class: 'bg-label-success' },
       2: { title: 'Unpaid', class: 'bg-label-warning' },

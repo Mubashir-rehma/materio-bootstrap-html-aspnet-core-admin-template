@@ -20,7 +20,7 @@ $(function () {
 
   // Variable declaration for table
   var dt_product_table = $('.datatables-products'),
-    productAdd = 'app-ecommerce-product-add.html',
+    productAdd = '/Apps/Ecommerce/Products/ProductAdd',
     statusObj = {
       1: { title: 'Scheduled', class: 'bg-label-warning' },
       2: { title: 'Publish', class: 'bg-label-success' },
