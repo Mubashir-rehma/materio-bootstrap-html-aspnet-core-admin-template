@@ -20,7 +20,7 @@ $(function () {
 
   // Variable declaration for table
   var dt_product_table = $('.datatables-products'),
-    productAdd = '/Apps/Ecommerce/Products/ProductAdd',
+    productAdd = 'app-ecommerce-product-add.html',
     statusObj = {
       1: { title: 'Scheduled', class: 'bg-label-warning' },
       2: { title: 'Publish', class: 'bg-label-success' },
@@ -283,7 +283,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle me-3',
+          className: 'btn btn-label-secondary dropdown-toggle me-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {

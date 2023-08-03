@@ -21,7 +21,7 @@ $(function () {
   // Variable declaration for table
   var dt_user_table = $('.datatables-users'),
     select2 = $('.select2'),
-    userView = '/Apps/Users/View/Account',
+    userView = 'app-user-view-account.html',
     statusObj = {
       1: { title: 'Pending', class: 'bg-label-warning' },
       2: { title: 'Active', class: 'bg-label-success' },
@@ -192,7 +192,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle mx-3',
+          className: 'btn btn-label-secondary dropdown-toggle mx-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {

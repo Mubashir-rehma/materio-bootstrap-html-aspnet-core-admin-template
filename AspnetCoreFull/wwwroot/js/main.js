@@ -291,6 +291,16 @@ if (document.getElementById('layout-menu')) {
   // Init PerfectScrollbar in Navbar Dropdown (i.e notification)
   window.Helpers.initNavbarDropdownScrollbar();
 
+  let horizontalMenuTemplate = document.querySelector("[data-template^='horizontal-menu']");
+  if (horizontalMenuTemplate) {
+    // if screen size is small then set navbar fixed
+    if (window.innerWidth < window.Helpers.LAYOUT_BREAKPOINT) {
+      window.Helpers.setNavbarFixed('fixed');
+    } else {
+      window.Helpers.setNavbarFixed('');
+    }
+  }
+
   // On window resize listener
   // -------------------------
   window.addEventListener(
@@ -304,8 +314,13 @@ if (document.getElementById('layout-menu')) {
         }
       }
       // Horizontal Layout : Update menu based on window size
-      let horizontalMenuTemplate = document.querySelector("[data-template^='horizontal-menu']");
       if (horizontalMenuTemplate) {
+        // if screen size is small then set navbar fixed
+        if (window.innerWidth < window.Helpers.LAYOUT_BREAKPOINT) {
+          window.Helpers.setNavbarFixed('fixed');
+        } else {
+          window.Helpers.setNavbarFixed('');
+        }
         setTimeout(function () {
           if (window.innerWidth < window.Helpers.LAYOUT_BREAKPOINT) {
             if (document.getElementById('layout-menu')) {
@@ -541,7 +556,7 @@ if (typeof $ !== 'undefined') {
                 header: '<h6 class="suggestions-header text-primary mb-0 mx-3 mt-3 pb-2">Members</h6>',
                 suggestion: function ({ name, src, subtitle }) {
                   return (
-                    '<a href="/Apps/Users/View/Account">' +
+                    '<a href="app-user-view-account.html">' +
                     '<div class="d-flex align-items-center">' +
                     '<img class="rounded-circle me-3" src="' +
                     assetsPath +

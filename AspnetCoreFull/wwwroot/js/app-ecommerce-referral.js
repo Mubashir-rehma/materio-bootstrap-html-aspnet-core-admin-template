@@ -20,7 +20,7 @@ $(function () {
 
   // Variable declaration for table
   var dt_user_table = $('.datatables-referral'),
-    customerView = '/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview',
+    customerView = 'app-ecommerce-customer-details-overview.html',
     statusObj = {
       1: { title: 'Paid', class: 'bg-label-success' },
       2: { title: 'Unpaid', class: 'bg-label-warning' },
@@ -170,7 +170,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle me-3',
+          className: 'btn btn-label-secondary dropdown-toggle me-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {
