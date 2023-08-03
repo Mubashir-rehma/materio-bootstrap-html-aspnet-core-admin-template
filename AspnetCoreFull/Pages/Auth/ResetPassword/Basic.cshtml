@@ -7,13 +7,13 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/formvalidation/dist/css/formValidation.min.css">
+<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="~/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageStyles {
@@ -40,7 +40,7 @@
       <div class="card">
         <div class="card-body">
           <h4 class="mb-2">Reset Password 🔒</h4>
-          <p class="mb-4">for <span class="fw-bold">john.doe@email.com</span></p>
+          <p class="mb-4">for <span class="fw-medium">john.doe@email.com</span></p>
           <form id="formAuthentication" class="mb-3" action="/Auth/Login/Basic" method="POST">
             <div class="mb-3 form-password-toggle">
               <label class="form-label" for="password">New Password</label>

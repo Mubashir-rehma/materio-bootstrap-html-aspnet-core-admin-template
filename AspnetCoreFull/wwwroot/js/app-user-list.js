@@ -21,7 +21,7 @@ $(function () {
   // Variable declaration for table
   var dt_user_table = $('.datatables-users'),
     select2 = $('.select2'),
-    userView = '/Apps/Users/View/Account',
+    userView = 'app-user-view-account.html',
     statusObj = {
       1: { title: 'Pending', class: 'bg-label-warning' },
       2: { title: 'Active', class: 'bg-label-success' },
@@ -95,7 +95,7 @@ $(function () {
               '<div class="d-flex flex-column">' +
               '<a href="' +
               userView +
-              '" class="text-body text-truncate"><span class="fw-semibold">' +
+              '" class="text-body text-truncate"><span class="fw-medium">' +
               $name +
               '</span></a>' +
               '<small class="text-muted">' +
@@ -132,7 +132,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $plan = full['current_plan'];
 
-            return '<span class="fw-semibold">' + $plan + '</span>';
+            return '<span class="fw-medium">' + $plan + '</span>';
           }
         },
         {
@@ -161,7 +161,7 @@ $(function () {
               '<div class="d-inline-block text-nowrap">' +
               '<button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>' +
               '<button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button>' +
-              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>' +
+              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded me-2"></i></button>' +
               '<div class="dropdown-menu dropdown-menu-end m-0">' +
               '<a href="' +
               userView +
@@ -192,7 +192,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle mx-3',
+          className: 'btn btn-label-secondary dropdown-toggle mx-3',
           text: '<i class="bx bx-export me-1"></i>Export',
           buttons: [
             {

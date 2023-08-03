@@ -1,19 +1,18 @@
 using System;
-
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspnetCoreFull.Pages.Pages.HelpCenter
+namespace AspnetCoreFull.Pages.Apps.Ecommerce.Products
 {
-  public class LandingModel : PageModel
+  public class ProductListModel : PageModel
   {
     public void OnGet() { }
   }
-  public class CategoriesModel : PageModel
+  public class ProductAddModel : PageModel
   {
     public void OnGet() { }
   }
-  public class ArticleModel : PageModel
+  public class CategoryListModel : PageModel
   {
     public void OnGet() { }
   }

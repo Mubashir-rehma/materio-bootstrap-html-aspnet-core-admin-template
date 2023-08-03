@@ -41,7 +41,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $invoice_id = full['invoice_id'];
             // Creates full output for row
-            var $row_output = '<a href="/Apps/Invoice/Preview"><strong>#' + $invoice_id + '</strong></a>';
+            var $row_output = '<a href="/Apps/Invoice/Preview"><span class="fw-medium">#' + $invoice_id + '</span></a>';
             return $row_output;
           }
         },
@@ -67,9 +67,9 @@ $(function () {
             return (
               "<span data-bs-toggle='tooltip' data-bs-html='true' title='<span>" +
               $invoice_status +
-              '<br> <strong>Balance:</strong> ' +
+              '<br> <span class="fw-medium">Balance:</span> ' +
               $balance +
-              '<br> <strong>Due Date:</strong> ' +
+              '<br> <span class="fw-medium">Due Date:</span> ' +
               $due_date +
               "</span>'>" +
               roleBadgeObj[$invoice_status] +
@@ -110,9 +110,9 @@ $(function () {
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<a href="/Pages/Profile/User" class="text-body text-truncate"><strong>' +
+              '<a href="/Pages/Profile/User" class="text-body text-truncate"><span class="fw-medium">' +
               $name +
-              '</strong></a>' +
+              '</span></a>' +
               '<small class="text-truncate text-muted">' +
               $service +
               '</small>' +

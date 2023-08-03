@@ -1,0 +1,533 @@
+@page
+@model AspnetCoreFull.Pages.FrontPages.HelpCenterLandingModel
+@{
+  Layout = "Layouts/_FrontLayout";
+  ViewData["Title"] = "Pricing - Front Pages";
+}
+
+@section PageStyles {
+<link rel="stylesheet" href="~/vendor/css/pages/front-page-help-center.dist.css" />
+}
+
+@* ************** Content ************** *@
+<!-- Help Center Header: Start -->
+<section class="section-py first-section-pt help-center-header">
+  <h3 class="text-center"> Hello, how can we help? </h3>
+  <div class="input-wrapper my-3 input-group input-group-merge position-relative mx-auto">
+    <span class="input-group-text" id="basic-addon1"><i class="bx bx-search-alt"></i></span>
+    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" />
+  </div>
+  <p class="text-muted text-center px-3 mb-0">Common troubleshooting topics: eCommerce, Blogging to payment</p>
+</section>
+<!-- Help Center Header: End -->
+
+<!-- Popular Articles: Start -->
+<section class="section-py">
+  <div class="container">
+    <h4 class="text-center mb-4">Popular Articles</h4>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="card border">
+              <div class="card-body text-center">
+                <img class="mb-3" src="~/img/illustrations/page-help-center-rocket-light.png" height="60" alt="Help center articles">
+                <h5>Getting Started</h5>
+                <p> Whether you're new or you're a power user, this article will… </p>
+                <a class="btn btn-label-primary" href="HelpCenterArticle">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-md-0 mb-4">
+            <div class="card border">
+              <div class="card-body text-center">
+                <img class="mb-3" src="~/img/illustrations/page-help-center-badge-light.png" height="60" alt="Help center articles">
+                <h5>First Steps</h5>
+                <p> Are you a new customer wondering how to get started? </p>
+                <a class="btn btn-label-primary" href="HelpCenterArticle">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border">
+              <div class="card-body text-center">
+                <img class="mb-3" src="~/img/illustrations/page-help-center-content-light.png" height="60" alt="Help center articles">
+                <h5>Add External Content</h5>
+                <p> This article will show you how to expand the functionality of... </p>
+                <a class="btn btn-label-primary" href="HelpCenterArticle">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Popular Articles: End -->
+
+<!-- Knowledge Base: Start -->
+<section class="section-py bg-body">
+  <div class="container">
+    <h4 class="text-center mb-4">Knowledge Base</h4>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-success p-2 rounded me-2"><i class="bx bx-cart bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Buying</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        What are Favourites?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do I purchase an item?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do i add or change my details?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do refunds work?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Can I Get A Refund?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        I'm trying to find a specific item
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 10 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-info p-2 rounded me-2"><i class="bx bx-laptop bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Item Support</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        What is Item Support?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How to contact an author
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Where Is My Purchase Code?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Extend or renew Item Support
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Item Support FAQ
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Why has my item been removed?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 14 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-primary p-2 rounded me-2"><i class="bx bx-dollar bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Licenses</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="text-truncate" class="me-1">
+                        Can I use the same license for the same item on multiple sites?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do licenses work for any plugins
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        For logo what license do I need?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="text-truncate" class="me-1">
+                        I’m making a test site - it’s not for a client. Which license do I need?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        which license do I need?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        I want to make multiple end products
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 8 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-danger p-2 rounded me-2"><i class="bx bx-world bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Template Kits</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Template Kits
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="text-truncate" class="me-1">
+                        Elementor Template Kits: PHP Zip File Missing
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="text-truncate" class="me-1">
+                        Template Kits - Imported template is blank or broken
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Troubleshooting Import Problems
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How to use the WordPress Plugin
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="text-truncate" class="me-1">
+                        How to use the Template Kit Importer Plugin
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 5 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-warning p-2 rounded me-2"><i class="bx bx-mobile-alt bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Account & Password</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Signing in with a social account
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Locked Out of Account
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        I'm not receiving the verification email
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Forgotten Username Or Password
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        New password not accepted
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        What is Sign In Verification?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 16 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <span class="badge bg-label-secondary p-2 rounded me-2"><i class="bx bx-user bx-sm"></i></span>
+                  <h5 class="mb-0 ms-1">Account Settings</h5>
+                </div>
+                <ul class="list-unstyled my-4">
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do I change my password?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do I change my username?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do I close my account?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How do I change my email address?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        How can I regain access to my account?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="HelpCenterArticle" class="text-heading d-flex justify-content-between align-items-center">
+                      <span class="me-1">
+                        Are RSS feeds available on Market?
+                      </span>
+                      <i class="bx bx-chevron-right scaleX-n1-rtl text-muted"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="mb-0 fw-medium mt-4">
+                  <a href="HelpCenterArticle" class="d-flex align-items-center">
+                    <span class="me-2">See all 12 articles</span>
+                    <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Knowledge Base: End -->
+
+<!-- Keep Learning: Start -->
+<section class="section-py">
+  <div class="container">
+    <h4 class="text-center mb-4">Keep Learning</h4>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-4 text-center">
+            <i class='bx bx-detail bx-lg'></i>
+            <h4 class="my-3">Blogging</h4>
+            <p class="mb-1"> Expert tips and tools to improve your website or online store using our blog. </p>
+            <a href="HelpCenterArticle" class="d-flex align-items-center justify-content-center">
+              <span class="align-middle me-1">Learn More</span>
+              <i class="bx bx-right-arrow-circle scaleX-n1-rtl"></i></a>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4 text-center">
+            <i class='bx bx-bulb bx-lg'></i>
+            <h4 class="my-3">Inspiration Center</h4>
+            <p class="mb-1"> Inspiration from experts to help you start and grow your big ideas. </p>
+            <a href="HelpCenterArticle" class="d-flex align-items-center justify-content-center">
+              <span class="align-middle me-1">Learn More</span>
+              <i class="bx bx-right-arrow-circle scaleX-n1-rtl"></i></a>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class='bx bx-group bx-lg'></i>
+            <h4 class="my-3">Community</h4>
+            <p class="mb-1"> A group of people living in the same place or having a particular. </p>
+            <a href="HelpCenterArticle" class="d-flex align-items-center justify-content-center">
+              <span class="align-middle me-1">Learn More</span>
+              <i class="bx bx-right-arrow-circle scaleX-n1-rtl"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Keep Learning: End -->
+
+<!-- Help Area: Start -->
+<section class="section-py bg-body">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <h4>Still need help?</h4>
+        <p class="mb-4"> Our specialists are always happy to help. Contact us during standard business hours or email us 24/7 and we'll get back to you. </p>
+        <div class="d-flex justify-content-center flex-wrap gap-4">
+          <a href="javascript:void(0);" class="btn btn-label-primary">Visit our community</a>
+          <a href="javascript:void(0);" class="btn btn-label-primary">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Help Area: End -->

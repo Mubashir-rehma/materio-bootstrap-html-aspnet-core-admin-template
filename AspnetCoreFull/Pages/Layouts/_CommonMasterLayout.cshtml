@@ -1,8 +1,17 @@
+@{
+  @* using this variables to load front pages assets *@
+  bool isFront = ViewData["isFront"] != null && Convert.ToBoolean(ViewData["isFront"]);
+  ViewData["main"] = (isFront) ? "front-" : "";
+  ViewData["frontVar"] = (isFront) ? "Front" : "";
+  @* Compact/Fluid class *@
+  ViewData["contentType"] = (ViewData["container"] == "container-xxl") ? "layout-compact" : "layout-wide";
+}
+
 @await Html.PartialAsync("Layouts/Sections/_Variables")
 @inject IHttpContextAccessor httpContextAccessor
 
 <!DOCTYPE html>
-<html lang="en" class='light-style @ViewData["navbarFixed"] @ViewData["menuFixed"] @ViewData["menuCollapsed"] @ViewData["menuFlipped"] @ViewData["menuOffcanvas"] @ViewData["footerFixed"] @ViewData["customizerHidden"]' dir="ltr" data-theme="theme-default"  data-assets-path='@(httpContextAccessor.HttpContext.Request.PathBase + "/")' data-template='@((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "horizontal-menu-template" : "vertical-menu-template")'>
+<html lang="en" class='light-style @ViewData["navbarType"] @ViewData["menuFixed"] @ViewData["menuCollapsed"] @ViewData["menuFlipped"] @ViewData["contentType"] @ViewData["menuOffcanvas"] @ViewData["footerFixed"] @ViewData["customizerHidden"]' dir="ltr" data-theme="theme-default"  data-assets-path='@(httpContextAccessor.HttpContext.Request.PathBase + "/")' data-template='@((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "horizontal-menu-template" : "vertical-menu-template")'>
 
 <head>
   <meta charset="utf-8" />
@@ -17,7 +26,8 @@
   <link rel="icon" type="image/x-icon" href="~/img/favicon/favicon.ico" />
 
   <!-- Core Styles -->
-  @await Html.PartialAsync("Layouts/Sections/_Styles")
+  @await Html.PartialAsync("Layouts/Sections/_Styles" + ViewData["frontVar"])
+
 
   <!-- Vendor Styles -->
   @RenderSection("VendorStyles", required: false)
@@ -26,7 +36,7 @@
   @RenderSection("PageStyles", required: false)
 
   <!-- Include Scripts for customizer, helper, analytics, config -->
-  @await Html.PartialAsync("Layouts/Sections/_ScriptsIncludes")
+  @await Html.PartialAsync("Layouts/Sections/_ScriptsIncludes" + ViewData["frontVar"])
 </head>
 
 <body>
@@ -35,19 +45,21 @@
   <!--/ Layout Content -->
 
   <!-- Core Scripts -->
-  @await Html.PartialAsync("Layouts/Sections/_Scripts")
+  @await Html.PartialAsync("Layouts/Sections/_Scripts" + ViewData["frontVar"])
 
   <!-- Vendor Scripts -->
   @RenderSection("VendorScripts", required: false)
 
-  <script src="~/js/main.dist.js"></script>
+  <script src='~/js/@ViewData["main"]main.dist.js'></script>
 
   <!-- Page Scripts-->
   @RenderSection("PageScripts", required: false)
 
+@if (!isFront) {
   <script>
     feather.replace();
   </script>
+}
 
 
 </body>

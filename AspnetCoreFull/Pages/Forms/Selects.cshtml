@@ -26,7 +26,7 @@
 }
 @* ************** Content ************** *@
 
-<h4 class="fw-bold py-3 mb-4">
+<h4 class="py-3 mb-4">
   <span class="text-muted fw-light">Forms /</span> Selects and tags
 </h4>
 
@@ -289,7 +289,7 @@
           <!-- Readonly Mode -->
           <div class="col-md-6 mb-4">
             <label for="TagifyReadonly" class="form-label">Readonly</label>
-            <input id="TagifyReadonly" class="form-control" readonly value="Tag1, Tag2, Tag3" />
+            <input id="TagifyReadonly" class="form-control readonlyMix" name="TagifyReadonly" readonly value='[{"value" : "tag1","readonly" : true, "title" : "Non-editable Read-only tag"},{"value" : "tag2","title" : "Editable read-only tag"},{"value" : "tag3","readonly" : true,"title" : "Another readonly tag"}]' />
           </div>
           <!-- Custom Suggestions: Inline -->
           <div class="col-md-6 mb-4">
@@ -487,4 +487,6 @@
     </div>
   </div>
   <!-- /Bootstrap Select -->
+
+
 </div>
