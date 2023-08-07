@@ -56,30 +56,10 @@ function srcGlob(...src) {
 const buildCssTask = function (cb) {
   return src(srcGlob('**/*.scss', '!**/_*.scss'), { base: root('.') })
     .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))
-    .pipe(
-      // If sass is installed on your local machine, it will use command line to compile sass else it will use dart sass npm which 3 time slower
-      gulpIf(
-        !localSass,
-        exec(
-          // If conf.minify == true, generate compressed style without sourcemap
-          gulpIf(
-            conf.minify,
-            `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --style compressed --no-source-map`,
-            `sass ${conf.distPath}/vendor/scss:${conf.distPath}/vendor/css ${conf.distPath}/vendor/libs:${conf.distPath}/vendor/libs --no-source-map`
-          ),
-          function (err) {
-            cb(err);
-          }
-        ),
-        sass({
-          outputStyle: conf.minify ? 'compressed' : 'expanded'
-        }).on('error', sass.logError)
-      )
-    )
+    .pipe(sass({ outputStyle: conf.minify ? 'compressed' : 'expanded' }))
     .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
     .pipe(autoprefixer())
     .pipe(rename({ extname: '.dist.css' }))
-    .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))
     .pipe(
       rename(function (path) {
         path.dirname = path.dirname.replace('scss', 'css');
