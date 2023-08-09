@@ -45,13 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
       eventDescription = document.querySelector('#eventDescription'),
       allDaySwitch = document.querySelector('.allDay-switch'),
       selectAll = document.querySelector('.select-all'),
-      filterInput = [].slice.call(document.querySelectorAll('.input-filter')),
-      inlineCalendar = document.querySelector('.inline-calendar');
+      filterInput = [].slice.call(document.querySelectorAll('.input-filter'));
 
     let eventToUpdate,
       currentEvents = events, // Assign app-calendar-events.js file events (assume events from API) to currentEvents (browser store/object) to manage and update calender events
-      isFormValid = false,
-      inlineCalInstance;
+      isFormValid = false;
 
     // Init event Offcanvas
     const bsAddEventSidebar = new bootstrap.Offcanvas(addEventSidebar);
@@ -68,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return $badge;
       }
+      select2Focus(eventLabel);
       eventLabel.wrap('<div class="position-relative"></div>').select2({
         placeholder: 'Select value',
         dropdownParent: eventLabel.parent(),
@@ -100,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return $avatar;
       }
+      select2Focus(eventGuests);
       eventGuests.wrap('<div class="position-relative"></div>').select2({
         placeholder: 'Select value',
         dropdownParent: eventGuests.parent(),
@@ -135,14 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
             instance.mobileInput.setAttribute('step', null);
           }
         }
-      });
-    }
-
-    // Inline sidebar calendar (flatpicker)
-    if (inlineCalendar) {
-      inlineCalInstance = inlineCalendar.flatpickr({
-        monthSelectorType: 'static',
-        inline: true
       });
     }
 
@@ -199,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
       fcSidebarToggleButton.setAttribute('data-bs-toggle', 'sidebar');
       fcSidebarToggleButton.setAttribute('data-overlay', '');
       fcSidebarToggleButton.setAttribute('data-target', '#app-calendar-sidebar');
-      fcSidebarToggleButton.insertAdjacentHTML('beforeend', '<i class="bx bx-menu bx-sm text-heading"></i>');
+      fcSidebarToggleButton.insertAdjacentHTML('beforeend', '<i class="mdi mdi-menu mdi-24px text-body"></i>');
     }
 
     // Filter events by calender
@@ -339,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
           eleValidClass: '',
           rowSelector: function (field, ele) {
             // field is the field name & ele is the field element
-            return '.mb-3';
+            return '.mb-4';
           }
         }),
         submitButton: new FormValidation.plugins.SubmitButton(),
@@ -559,13 +551,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     }
-
-    // Jump to date on sidebar(inline) calendar change
-    inlineCalInstance.config.onChange.push(function (date) {
-      calendar.changeView(calendar.view.type, moment(date[0]).format('YYYY-MM-DD'));
-      modifyToggler();
-      appCalendarSidebar.classList.remove('show');
-      appOverlay.classList.remove('show');
-    });
   })();
 });

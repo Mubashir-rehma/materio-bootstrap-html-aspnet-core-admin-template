@@ -80,17 +80,17 @@ $(function () {
             }
             // Creates full output for Product name and product_brand
             var $row_output =
-              '<div class="d-flex justify-content-start align-items-center text-nowrap">' +
-              '<div class="avatar-wrapper">' +
-              '<div class="avatar me-2">' +
+              '<div class="d-flex justify-content-start align-items-center product-name">' +
+              '<div class="avatar-wrapper me-3">' +
+              '<div class="avatar rounded-2 bg-label-secondary">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<h6 class="text-body mb-0">' +
+              '<span class="text-nowrap text-heading fw-medium">' +
               $name +
-              '</h6>' +
-              '<small class="text-muted">' +
+              '</span>' +
+              '<small class="text-truncate d-none d-sm-block">' +
               $product_brand +
               '</small>' +
               '</div>' +
@@ -116,7 +116,7 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             var $qty = full['qty'];
-            var $output = '<span class="text-body">' + $qty + '</span>';
+            var $output = '<span>' + $qty + '</span>';
             return $output;
           }
         },
@@ -127,7 +127,7 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             var $total = full['qty'] * full['price'];
-            var $output = '<h6 class="mb-0">$' + $total + '</h6>';
+            var $output = '<span>$' + $total + '</span>';
             return $output;
           }
         }
@@ -190,8 +190,8 @@ $(function () {
         showCancelButton: true,
         confirmButtonText: 'Yes, Delete order!',
         customClass: {
-          confirmButton: 'btn btn-primary me-2',
-          cancelButton: 'btn btn-label-secondary'
+          confirmButton: 'btn btn-primary me-2 waves-effect waves-light',
+          cancelButton: 'btn btn-outline-secondary waves-effect'
         },
         buttonsStyling: false
       }).then(function (result) {
@@ -201,7 +201,7 @@ $(function () {
             title: 'Deleted!',
             text: 'Order has been removed.',
             customClass: {
-              confirmButton: 'btn btn-success'
+              confirmButton: 'btn btn-success waves-effect'
             }
           });
         } else if (result.dismiss === Swal.DismissReason.cancel) {

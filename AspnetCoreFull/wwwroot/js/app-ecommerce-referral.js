@@ -92,18 +92,18 @@ $(function () {
             // Creates full output for row
             var $row_output =
               '<div class="d-flex justify-content-start align-items-center customer-name">' +
-              '<div class="avatar-wrapper">' +
-              '<div class="avatar me-2">' +
+              '<div class="avatar-wrapper me-3">' +
+              '<div class="avatar avatar-sm">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
               '<a href="' +
               customerView +
-              '"><span class="fw-medium">' +
+              '"><span class="text-heading fw-medium text-truncate">' +
               $name +
               '</span></a>' +
-              '<small class="text-muted text-nowrap">' +
+              '<small class="text-nowrap">' +
               $email +
               '</small>' +
               '</div>' +
@@ -117,7 +117,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $role = full['referred_id'];
 
-            return '<span>' + $role + '</span>';
+            return '<span class="text-heading">' + $role + '</span>';
           }
         },
 
@@ -128,7 +128,7 @@ $(function () {
             var $status = full['status'];
 
             return (
-              '<span class="badge ' +
+              '<span class="badge rounded-pill ' +
               statusObj[$status].class +
               '" text-capitalized>' +
               statusObj[$status].title +
@@ -142,7 +142,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $plan = full['value'];
 
-            return '<span>' + $plan + '</span>';
+            return '<span  class="text-heading">' + $plan + '</span>';
           }
         },
         {
@@ -151,13 +151,13 @@ $(function () {
           render: function (data, type, full, meta) {
             var $earn = full['earning'];
 
-            return '<span class="fw-medium">' + $earn + '</span > ';
+            return '<span class="text-heading">' + $earn + '</span > ';
           }
         }
       ],
       order: [[2, 'asc']],
       dom:
-        '<"card-header d-flex flex-column flex-sm-row pb-md-0 align-items-start align-items-sm-center pt-md-2"<"head-label"><"d-flex align-items-sm-center justify-content-end mt-2 mt-sm-0"l<"dt-action-buttons"B>>' +
+        '<"card-header d-flex flex-column flex-sm-row pb-md-0 align-items-start align-items-sm-center pt-md-2"<"head-label"><"d-flex align-items-sm-center justify-content-end mt-2 mt-sm-0 gap-3"l<"dt-action-buttons"B>>' +
         '>t' +
         '<"row mx-2"' +
         '<"col-sm-12 col-md-6"i>' +
@@ -170,12 +170,12 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-secondary dropdown-toggle me-3',
-          text: '<i class="bx bx-export me-1"></i>Export',
+          className: 'btn btn-primary dropdown-toggle',
+          text: '<i class="mdi mdi-export-variant me-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {
               extend: 'print',
-              text: '<i class="bx bx-printer me-2" ></i>Print',
+              text: '<i class="mdi mdi-printer-outline me-1" ></i>Print',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [1, 2, 3, 4, 5],
@@ -186,7 +186,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -212,7 +212,7 @@ $(function () {
             },
             {
               extend: 'csv',
-              text: '<i class="bx bx-file me-2" ></i>Csv',
+              text: '<i class="mdi mdi-file-document-outline me-1" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [1, 2, 3, 4, 5],
@@ -223,7 +223,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -236,7 +236,7 @@ $(function () {
             },
             {
               extend: 'excel',
-              text: '<i class="bx bxs-file-export me-2"></i>Excel',
+              text: '<i class="mdi mdi-file-excel-outline me-1"></i>Excel',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [1, 2, 3, 4, 5],
@@ -247,7 +247,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -260,7 +260,7 @@ $(function () {
             },
             {
               extend: 'pdf',
-              text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
+              text: '<i class="mdi mdi-file-pdf-box me-1"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [1, 2, 3, 4, 5],
@@ -271,7 +271,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -284,7 +284,7 @@ $(function () {
             },
             {
               extend: 'copy',
-              text: '<i class="bx bx-copy me-2" ></i>Copy',
+              text: '<i class="mdi mdi-content-copy me-1"></i>Copy',
               className: 'dropdown-item',
               exportOptions: {
                 columns: [1, 2, 3, 4, 5],
@@ -295,7 +295,7 @@ $(function () {
                     var el = $.parseHTML(inner);
                     var result = '';
                     $.each(el, function (index, item) {
-                      if (item.classList !== undefined && item.classList.contains('user-name')) {
+                      if (item.classList !== undefined && item.classList.contains('customer-name')) {
                         result = result + item.lastChild.firstChild.textContent;
                       } else if (item.innerText === undefined) {
                         result = result + item.textContent;
@@ -344,7 +344,7 @@ $(function () {
       }
     });
     $('div.head-label').html('<h5 class="card-title text-nowrap mb-2 mb-sm-0">Referred users</h5>');
-    $('.dataTables_length').addClass('mt-0 mt-md-3 me-3');
+    $('.dataTables_length').addClass('mt-0 mt-md-3');
     $('.dt-action-buttons').addClass('pt-0');
   }
 

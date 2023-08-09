@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
           value = e.currentTarget.value;
         //Update status in left sidebar user avatar
         chatLeftSidebarUserAvatar.removeAttribute('class');
-        Helpers._addClass('avatar avatar-xl ' + userStatusObj[value] + '', chatLeftSidebarUserAvatar);
+        Helpers._addClass('avatar avatar-xl w-px-75 h-px-75 ' + userStatusObj[value] + '', chatLeftSidebarUserAvatar);
         //Update status in contacts sidebar user avatar
         let chatContactsUserAvatar = document.querySelector('.app-chat-contacts .avatar');
         chatContactsUserAvatar.removeAttribute('class');

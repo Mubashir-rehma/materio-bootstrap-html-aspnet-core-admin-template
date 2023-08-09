@@ -24,6 +24,7 @@
   // select2 (Country)
 
   if (plCountry) {
+    select2Focus(plCountry);
     plCountry.wrap('<div class="position-relative"></div>');
     plCountry.select2({
       placeholder: 'Select country',
@@ -32,7 +33,9 @@
   }
 
   if (flatpickrRange) {
-    flatpickrRange.flatpickr();
+    flatpickrRange.flatpickr({
+      minDate: 'today'
+    });
   }
 
   // Tagify (Furnishing details)
@@ -179,6 +182,7 @@
     // select2 (Property type)
     const plPropertyType = $('#plPropertyType');
     if (plPropertyType.length) {
+      select2Focus(plPropertyType);
       plPropertyType.wrap('<div class="position-relative"></div>');
       plPropertyType
         .select2({

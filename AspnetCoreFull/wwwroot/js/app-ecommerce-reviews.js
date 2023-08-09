@@ -6,18 +6,12 @@
 
 // apex-chart
 (function () {
-  let cardColor, shadeColor, labelColor, headingColor;
+  let labelColor;
 
   if (isDarkStyle) {
-    cardColor = config.colors_dark.cardColor;
     labelColor = config.colors_dark.textMuted;
-    headingColor = config.colors_dark.headingColor;
-    shadeColor = 'dark';
   } else {
-    cardColor = config.colors.cardColor;
     labelColor = config.colors.textMuted;
-    headingColor = config.colors.headingColor;
-    shadeColor = '';
   }
 
   // Visitor Bar Chart
@@ -333,15 +327,15 @@ $(function () {
             var $row_output =
               '<div class="d-flex justify-content-start align-items-center customer-name">' +
               '<div class="avatar-wrapper">' +
-              '<div class="avatar me-2 rounded-2 bg-label-secondary">' +
+              '<div class="avatar me-3 rounded-2 bg-label-secondary">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<span class="fw-medium text-nowrap">' +
+              '<span class="text-nowrap text-heading fw-medium">' +
               $product +
               '</span></a>' +
-              '<small class="text-muted">' +
+              '<small>' +
               $company_name +
               '</small>' +
               '</div>' +
@@ -375,8 +369,8 @@ $(function () {
             // Creates full output for row
             var $row_output =
               '<div class="d-flex justify-content-start align-items-center customer-name">' +
-              '<div class="avatar-wrapper">' +
-              '<div class="avatar me-2">' +
+              '<div class="avatar-wrapper me-3">' +
+              '<div class="avatar avatar-sm">' +
               $output +
               '</div>' +
               '</div>' +
@@ -386,7 +380,7 @@ $(function () {
               '"><span class="fw-medium">' +
               $name +
               '</span></a>' +
-              '<small class="text-muted text-nowrap">' +
+              '<small class="text-nowrap">' +
               $email +
               '</small>' +
               '</div>' +
@@ -418,9 +412,9 @@ $(function () {
             var $review =
               '<div>' +
               $readOnlyRatings.prop('outerHTML') + // Get the HTML string of the rateYo plugin
-              '<p class="fw-medium mb-1 text-truncate text-capitalize">' +
+              '<h6 class="mb-1 text-truncate text-capitalize">' +
               $heading +
-              '</p>' +
+              '</h6>' +
               '<small class="text-break pe-3">' +
               $comment +
               '</small>' +
@@ -445,7 +439,7 @@ $(function () {
             var $status = full['status'];
 
             return (
-              '<span class="badge ' +
+              '<span class="badge rounded-pill ' +
               statusObj[$status].class +
               '" text-capitalized>' +
               statusObj[$status].title +
@@ -462,9 +456,9 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<div class="text-xxl-center">' +
+              '<div>' +
               '<div class="dropdown">' +
-              '<a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>' +
+              '<a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>' +
               '<div class="dropdown-menu dropdown-menu-end">' +
               '<a href="javascript:;" class="dropdown-item">Download</a>' +
               '<a href="javascript:;" class="dropdown-item">Edit</a>' +
@@ -480,7 +474,7 @@ $(function () {
       ],
       order: [[2, 'asc']],
       dom:
-        '<"card-header d-flex align-items-md-center pb-md-2 flex-wrap"' +
+        '<"card-header d-flex align-items-md-center flex-wrap"' +
         '<"me-5 ms-n2"f>' +
         '<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-end align-items-md-center justify-content-md-end pt-0 gap-3 flex-wrap"l<"review_filter"> <"mx-0 me-md-n3 mt-sm-0"B>>' +
         '>t' +
@@ -498,15 +492,15 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-secondary dropdown-toggle me-3',
-          text: '<i class="bx bx-export me-1"></i>Export',
+          className: 'btn btn-primary dropdown-toggle me-3',
+          text: '<i class="mdi mdi-export-variant me-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {
               extend: 'print',
-              text: '<i class="bx bx-printer me-2" ></i>Print',
+              text: '<i class="mdi mdi-printer-outline me-1" ></i>Print',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5, 6],
+                columns: [1, 2, 3, 4, 5],
                 // prevent avatar to be print
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -540,10 +534,10 @@ $(function () {
             },
             {
               extend: 'csv',
-              text: '<i class="bx bx-file me-2" ></i>Csv',
+              text: '<i class="mdi mdi-file-document-outline me-1" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5, 6],
+                columns: [1, 2, 3, 4, 5],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -564,10 +558,10 @@ $(function () {
             },
             {
               extend: 'excel',
-              text: '<i class="bx bxs-file-export me-2"></i>Excel',
+              text: '<i class="mdi mdi-file-excel-outline me-1"></i>Excel',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5, 6],
+                columns: [1, 2, 3, 4, 5],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -588,10 +582,10 @@ $(function () {
             },
             {
               extend: 'pdf',
-              text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
+              text: '<i class="mdi mdi-file-pdf-box me-1"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5, 6],
+                columns: [1, 2, 3, 4, 5],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -612,10 +606,10 @@ $(function () {
             },
             {
               extend: 'copy',
-              text: '<i class="bx bx-copy me-2" ></i>Copy',
+              text: '<i class="mdi mdi-content-copy me-1"></i>Copy',
               className: 'dropdown-item',
               exportOptions: {
-                columns: [1, 2, 3, 4, 5, 6],
+                columns: [1, 2, 3, 4, 5],
                 // prevent avatar to be display
                 format: {
                   body: function (inner, coldex, rowdex) {
@@ -643,7 +637,7 @@ $(function () {
           display: $.fn.dataTable.Responsive.display.modal({
             header: function (row) {
               var data = row.data();
-              return 'Details of ' + data['customer'];
+              return 'Details of ' + data['product'];
             }
           }),
           type: 'column',

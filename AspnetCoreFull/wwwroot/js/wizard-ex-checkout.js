@@ -13,7 +13,8 @@ $(function () {
     readOnlyRating.rateYo({
       rtl: isRtl,
       rating: 4,
-      starWidth: '20px'
+      starWidth: '20px',
+      spacing: '5px'
     });
   }
 });

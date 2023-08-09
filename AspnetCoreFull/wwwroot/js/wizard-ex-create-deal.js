@@ -76,6 +76,7 @@
     // select2 (Region)
     const dealRegion = $('#dealRegion');
     if (dealRegion.length) {
+      select2Focus(dealRegion);
       dealRegion.wrap('<div class="position-relative"></div>');
       dealRegion
         .select2({
@@ -135,6 +136,7 @@
     // select2 (Offered Item)
     const dealOfferedItem = $('#dealOfferedItem');
     if (dealOfferedItem.length) {
+      select2Focus(dealOfferedItem);
       dealOfferedItem.wrap('<div class="position-relative"></div>');
       dealOfferedItem
         .select2({

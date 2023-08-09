@@ -28,6 +28,7 @@ $(function () {
           '</div>';
         return optionEle;
       }
+      select2Focus(select2ShareProject);
       select2ShareProject.wrap('<div class="position-relative"></div>').select2({
         dropdownParent: shareProject,
         templateResult: renderAvatar,

@@ -11,6 +11,7 @@ $(function () {
   if (select2.length) {
     select2.each(function () {
       var $this = $(this);
+      select2Focus($this);
       $this.wrap('<div class="position-relative"></div>').select2({
         dropdownParent: $this.parent(),
         placeholder: $this.data('placeholder') // for dynamic placeholder

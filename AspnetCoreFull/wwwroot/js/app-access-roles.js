@@ -23,9 +23,10 @@ $(function () {
         // columns according to JSON
         { data: '' },
         { data: 'full_name' },
+        { data: 'full_name' },
+        { data: 'email' },
         { data: 'role' },
         { data: 'current_plan' },
-        { data: 'billing' },
         { data: 'status' },
         { data: '' }
       ],
@@ -42,12 +43,23 @@ $(function () {
           }
         },
         {
-          // User full name and email
+          // For Checkboxes
           targets: 1,
+          orderable: false,
+          render: function () {
+            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+          },
+          checkboxes: {
+            selectAllRender: '<input type="checkbox" class="form-check-input">'
+          }
+        },
+        {
+          // User full name and email
+          targets: 2,
           responsivePriority: 4,
           render: function (data, type, full, meta) {
             var $name = full['full_name'],
-              $email = full['email'],
+              $user = full['username'],
               $image = full['avatar'];
             if ($image) {
               // For Avatar image
@@ -74,11 +86,11 @@ $(function () {
               '<div class="d-flex flex-column">' +
               '<a href="' +
               userView +
-              '" class="text-body text-truncate"><span class="fw-medium">' +
+              '"><span class="text-heading fw-medium text-truncate">' +
               $name +
               '</span></a>' +
-              '<small class="text-muted">@' +
-              $email +
+              '<small class="text-muted">' +
+              $user +
               '</small>' +
               '</div>' +
               '</div>';
@@ -86,42 +98,45 @@ $(function () {
           }
         },
         {
+          // User email
+          targets: 3,
+          render: function (data, type, full, meta) {
+            var $email = full['email'];
+            return '<span >' + $email + '</span>';
+          }
+        },
+        {
           // User Role
-          targets: 2,
+          targets: 4,
           render: function (data, type, full, meta) {
             var $role = full['role'];
             var roleBadgeObj = {
-              Subscriber:
-                '<span class="badge badge-center rounded-pill bg-label-warning me-2"><i class="bx bx-user bx-xs"></i></span>',
-              Author:
-                '<span class="badge badge-center rounded-pill bg-label-success me-2"><i class="bx bx-cog bx-xs"></i></span>',
-              Maintainer:
-                '<span class="badge badge-center rounded-pill bg-label-primary me-2"><i class="bx bx-pie-chart-alt bx-xs"></i></span>',
-              Editor:
-                '<span class="badge badge-center rounded-pill bg-label-info me-2"><i class="bx bx-edit bx-xs"></i></span>',
-              Admin:
-                '<span class="badge badge-center rounded-pill bg-label-secondary me-2"><i class="bx bx-mobile-alt bx-xs"></i></span>'
+              Subscriber: '<i class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>',
+              Author: '<i class="mdi mdi-cog-outline mdi-20px text-warning me-2"></i>',
+              Maintainer: '<i class="mdi mdi-chart-donut mdi-20px text-success me-2"></i>',
+              Editor: '<i class="mdi mdi-pencil-outline mdi-20px text-info me-2"></i>',
+              Admin: '<i class="mdi mdi-laptop mdi-20px text-danger me-2"></i>'
             };
             return "<span class='text-truncate d-flex align-items-center'>" + roleBadgeObj[$role] + $role + '</span>';
           }
         },
         {
           // Plans
-          targets: 3,
+          targets: 5,
           render: function (data, type, full, meta) {
             var $plan = full['current_plan'];
 
-            return '<span class="fw-medium">' + $plan + '</span>';
+            return '<span class="text-heading">' + $plan + '</span>';
           }
         },
         {
           // User Status
-          targets: 5,
+          targets: 6,
           render: function (data, type, full, meta) {
             var $status = full['status'];
 
             return (
-              '<span class="badge ' +
+              '<span class="badge rounded-pill ' +
               statusObj[$status].class +
               '" text-capitalized>' +
               statusObj[$status].title +
@@ -136,23 +151,27 @@ $(function () {
           searchable: false,
           orderable: false,
           render: function (data, type, full, meta) {
-            return '<a href="' + userView + '" class="btn btn-sm btn-icon"><i class="bx bx-show"></i></a>';
+            return (
+              '<a href="' +
+              userView +
+              '" class="btn btn-sm btn-icon btn-text-secondary rounded-pill"><i class="mdi mdi-eye-outline mdi-20px"></i></a>'
+            );
           }
         }
       ],
-      order: [[1, 'desc']],
+      order: [[2, 'desc']],
       dom:
-        '<"row mx-2"' +
+        '<"row mx-1"' +
         '<"col-sm-12 col-md-4 col-lg-6" l>' +
-        '<"col-sm-12 col-md-8 col-lg-6"<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-md-end justify-content-center align-items-center flex-sm-nowrap flex-wrap me-1"<"me-3"f><"user_role w-px-200 pb-3 pb-sm-0">>>' +
+        '<"col-sm-12 col-md-8 col-lg-6"<"dt-action-buttons d-flex align-items-center justify-content-md-end justify-content-center flex-column flex-sm-row flex-wrap"<"me-1 me-sm-3"f><"user_role w-px-200 pb-3 pb-sm-0">>>' +
         '>t' +
-        '<"row mx-2"' +
+        '<"row mx-1"' +
         '<"col-sm-12 col-md-6"i>' +
         '<"col-sm-12 col-md-6"p>' +
         '>',
       language: {
         sLengthMenu: 'Show _MENU_',
-        search: 'Search',
+        search: '',
         searchPlaceholder: 'Search..'
       },
       // For responsive popup
@@ -191,7 +210,7 @@ $(function () {
       initComplete: function () {
         // Adding role filter once table initialized
         this.api()
-          .columns(2)
+          .columns(4)
           .every(function () {
             var column = this;
             var select = $(
@@ -213,6 +232,9 @@ $(function () {
           });
       }
     });
+    $('.add-new').html(
+      "<button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#editUser'><i class='mdi mdi-plus me-0 me-sm-1'></i><span class= 'd-none d-sm-inline-block'> Add User </span ></button>"
+    );
   }
 
   // Filter form control to default size

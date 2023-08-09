@@ -44,7 +44,7 @@ $(function () {
           targets: 2,
           render: function (data, type, full, meta) {
             var $name = full['name'];
-            return '<span class="text-nowrap">' + $name + '</span>';
+            return '<h6 class="text-nowrap mb-0 fw-normal">' + $name + '</h6>';
           }
         },
         {
@@ -94,32 +94,32 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<span class="text-nowrap"><button class="btn btn-sm btn-icon me-2" data-bs-target="#editPermissionModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="bx bx-edit"></i></button>' +
-              '<button class="btn btn-sm btn-icon delete-record"><i class="bx bx-trash"></i></button></span>'
+              '<span class="text-nowrap"><button class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon me-2" data-bs-target="#editPermissionModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-pencil-outline mdi-20px"></i></button>' +
+              '<button class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon delete-record"><i class="mdi mdi-delete-outline mdi-20px"></i></button></span>'
             );
           }
         }
       ],
       order: [[1, 'asc']],
       dom:
-        '<"row mx-1"' +
-        '<"col-sm-12 col-md-3" l>' +
-        '<"col-sm-12 col-md-9"<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-md-end justify-content-center flex-wrap me-1"<"me-3"f>B>>' +
+        '<"d-flex justify-content-sm-between justify-content-center align-items-center mx-3 px-1 flex-column flex-sm-row"' +
+        '<"me-sm-3 me-0"f>' +
+        '<"dt-action-buttons "B>' +
         '>t' +
-        '<"row mx-2"' +
+        '<"row mx-1"' +
         '<"col-sm-12 col-md-6"i>' +
         '<"col-sm-12 col-md-6"p>' +
         '>',
       language: {
         sLengthMenu: 'Show _MENU_',
-        search: 'Search',
-        searchPlaceholder: 'Search..'
+        search: 'Search:',
+        searchPlaceholder: ''
       },
-      // Buttons with Dropdown
+      // Buttons for modal
       buttons: [
         {
           text: 'Add Permission',
-          className: 'add-new btn btn-primary mb-3 mb-md-0',
+          className: 'add-new btn btn-primary mb-3 mb-sm-0',
           attr: {
             'data-bs-toggle': 'modal',
             'data-bs-target': '#addPermissionModal'

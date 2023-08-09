@@ -1,10 +1,9 @@
 /**
  * App User View - Account (jquery)
  */
+'use strict';
 
 $(function () {
-  'use strict';
-
   // Variable declaration for table
   var dt_project_table = $('.datatable-project'),
     dt_invoice_table = $('.datatable-invoice');
@@ -68,10 +67,10 @@ $(function () {
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<span class="text-truncate fw-medium">' +
+              '<span class="text-truncate fw-medium text-heading">' +
               $name +
               '</span>' +
-              '<small class="text-muted">' +
+              '<small>' +
               $framework +
               '</small>' +
               '</div>' +
@@ -80,8 +79,12 @@ $(function () {
           }
         },
         {
+          // Task
           targets: 2,
-          orderable: false
+          render: function (data, type, full, meta) {
+            var $task = full['total_task'];
+            return '<span class="text-heading">' + $task + '</span>';
+          }
         },
         {
           // Label
@@ -89,27 +92,34 @@ $(function () {
           responsivePriority: 3,
           render: function (data, type, full, meta) {
             var $progress = full['progress'] + '%',
-              $color;
+              $color,
+              $labelColor;
             switch (true) {
               case full['progress'] < 25:
                 $color = 'bg-danger';
+                $labelColor = 'bg-label-danger';
                 break;
               case full['progress'] < 50:
                 $color = 'bg-warning';
+                $labelColor = 'bg-label-warning';
                 break;
               case full['progress'] < 75:
                 $color = 'bg-info';
+                $labelColor = 'bg-label-info';
                 break;
               case full['progress'] <= 100:
                 $color = 'bg-success';
+                $labelColor = 'bg-label-success';
                 break;
             }
             return (
-              '<div class="d-flex flex-column"><small class="mb-1">' +
+              '<div class="d-flex flex-column"><p class="mb-1 text-heading">' +
               $progress +
-              '</small>' +
-              '<div class="progress w-100 me-3" style="height: 6px;">' +
-              '<div class="progress-bar ' +
+              '</p>' +
+              '<div class="progress rounded ' +
+              $labelColor +
+              ' w-100 me-3" style="height: 6px;">' +
+              '<div class="progress-bar rounded ' +
               $color +
               '" style="width: ' +
               $progress +
@@ -128,11 +138,8 @@ $(function () {
       ],
       order: [[1, 'desc']],
       dom:
-        '<"d-flex justify-content-between align-items-center flex-column flex-sm-row mx-4 row"' +
-        '<"col-sm-4 col-12 d-flex align-items-center justify-content-sm-start justify-content-center"l>' +
-        '<"col-sm-8 col-12 d-flex align-items-center justify-content-sm-end justify-content-center"f>' +
-        '>t' +
-        '<"d-flex justify-content-between mx-4 row"' +
+        't' +
+        '<"d-flex justify-content-between mx-1 row"' +
         '<"col-sm-12 col-md-6"i>' +
         '<"col-sm-12 col-md-6"p>' +
         '>',
@@ -209,7 +216,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $invoice_id = full['invoice_id'];
             // Creates full output for row
-            var $row_output = '<a href="/Apps/Invoice/Preview"><span class="fw-medium">#' + $invoice_id + '</span></a>';
+            var $row_output = '<a href="/Apps/Invoice/Preview"><span>#' + $invoice_id + '</span></a>';
             return $row_output;
           }
         },
@@ -221,19 +228,19 @@ $(function () {
               $due_date = full['due_date'],
               $balance = full['balance'];
             var roleBadgeObj = {
-              Sent: '<span class="badge badge-center rounded-pill bg-label-secondary"><i class="bx bx-mail-send"></i></span>',
+              Sent: '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-email-outline"></i></span></span>',
               Draft:
-                '<span class="badge badge-center rounded-pill bg-label-primary"><i class="bx bxs-save"></i></span>',
+                '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-primary"><i class="mdi mdi-folder-outline"></i></span></span>',
               'Past Due':
-                '<span class="badge badge-center rounded-pill bg-label-danger"><i class="bx bx-info-circle"></i></span>',
+                '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-danger"><i class="mdi mdi-alert-circle-outline"></i></span></span>',
               'Partial Payment':
-                '<span class="badge badge-center rounded-pill bg-label-success"><i class="bx bx-adjust"></i></span>',
-              Paid: '<span class="badge badge-center rounded-pill bg-label-warning"><i class="bx bx-pie-chart-alt"></i></span>',
+                '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-success"><i class="mdi mdi-check"></i></span></span>',
+              Paid: '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-warning"><i class="mdi mdi-chart-pie-outline"></i></span></span>',
               Downloaded:
-                '<span class="badge badge-center rounded-pill bg-label-info"><i class="bx bx-down-arrow-circle"></i></span>'
+                '<span class="avatar avatar-sm"> <span class="avatar-initial rounded-circle bg-label-info"><i class="mdi mdi-arrow-down"></i></span></span>'
             };
             return (
-              "<span data-bs-toggle='tooltip' data-bs-html='true' title='<span>" +
+              "<div class='d-inline-flex' data-bs-toggle='tooltip' data-bs-html='true' title='<span>" +
               $invoice_status +
               '<br> <span class="fw-medium">Balance:</span> ' +
               $balance +
@@ -241,7 +248,7 @@ $(function () {
               $due_date +
               "</span>'>" +
               roleBadgeObj[$invoice_status] +
-              '</span>'
+              '</div>'
             );
           }
         },
@@ -260,25 +267,23 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<div class="d-flex align-items-center">' +
-              '<a href="javascript:;" class="text-body" data-bs-toggle="tooltip" title="Send Mail"><i class="bx bx-send mx-1"></i></a>' +
-              '<a href="/Apps/Invoice/Preview" class="text-body" data-bs-toggle="tooltip" title="Preview"><i class="bx bx-show mx-1"></i></a>' +
-              '<a href="javascript:;" class="text-body" data-bs-toggle="tooltip" title="Download"><i class="bx bx-download mx-1"></i></a>' +
+              '<div class="d-flex align-items-center gap-3">' +
+              '<a href="javascript:;" class="btn btn-sm btn-icon btn-text-secondary rounded-pill text-body" data-bs-toggle="tooltip" title="Delete Invoice"><i class="mdi mdi-delete-outline mdi-24px mx-1"></i></a>' +
+              '<a href="/Apps/Invoice/Preview" class="btn btn-sm btn-icon btn-text-secondary rounded-pill text-body" data-bs-toggle="tooltip" title="Preview"><i class="mdi mdi-eye-outline mdi-24px mx-1"></i></a>' +
+              '<button class="btn btn-sm btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-24px"></i></button>' +
+              '<div class="dropdown-menu dropdown-menu-end m-0">' +
+              '<a href="javascript:;" class="dropdown-item"><i class="mdi mdi-download-outline me-2"></i><span>Download</span></a>' +
+              '<a href="javascript:;" class="dropdown-item"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a>' +
+              '<a href="javascript:;" class="dropdown-item delete-record"><i class="mdi mdi-checkbox-multiple-blank-outline me-2"></i><span>Duplicate</span></a>' +
+              '</div>' +
               '</div>'
             );
           }
         }
       ],
       order: [[1, 'desc']],
-      dom:
-        '<"row mx-4"' +
-        '<"col-sm-6 col-12 d-flex align-items-center justify-content-center justify-content-sm-start mb-3 mb-md-0"l>' +
-        '<"col-sm-6 col-12 d-flex align-items-center justify-content-center justify-content-sm-end"B>' +
-        '>t' +
-        '<"row mx-4"' +
-        '<"col-md-12 col-lg-6 text-center text-lg-start pb-md-2 pb-lg-0"i>' +
-        '<"col-md-12 col-lg-6 d-flex justify-content-center justify-content-lg-end"p>' +
-        '>',
+      dom: '<"card-header d-flex"<"head-label"><"dt-action-buttons text-end pt-0"B>>+t<"row mx-1"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
+      displayLength: 7,
       language: {
         sLengthMenu: 'Show _MENU_',
         search: '',
@@ -288,36 +293,36 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle float-sm-end mb-3 mb-sm-0',
-          text: '<i class="bx bx-export me-2"></i>Export',
+          className: 'btn btn-primary dropdown-toggle float-end  mb-0',
+          text: '<i class="mdi mdi-export-variant me-1"></i>Export',
           buttons: [
             {
               extend: 'print',
-              text: '<i class="bx bx-printer me-2" ></i>Print',
+              text: '<i class="mdi mdi-printer-outline me-1" ></i>Print',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             },
             {
               extend: 'csv',
-              text: '<i class="bx bx-file me-2" ></i>Csv',
+              text: '<i class="mdi mdi-file-document-outline me-1" ></i>Csv',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             },
             {
               extend: 'excel',
-              text: '<i class="bx bxs-file-export me-2"></i>Excel',
+              text: '<i class="mdi mdi-file-excel-outline me-1"></i>Excel',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             },
             {
               extend: 'pdf',
-              text: '<i class="bx bxs-file-pdf me-2"></i>Pdf',
+              text: '<i class="mdi mdi-file-pdf-box me-1"></i>Pdf',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             },
             {
               extend: 'copy',
-              text: '<i class="bx bx-copy me-2" ></i>Copy',
+              text: '<i class="mdi mdi-content-copy me-1" ></i>Copy',
               className: 'dropdown-item',
               exportOptions: { columns: [1, 2, 3, 4] }
             }
@@ -358,6 +363,7 @@ $(function () {
         }
       }
     });
+    $('div.head-label').html('<h5 class="card-title mb-0">Invoice List</h5>');
   }
   // On each datatable draw, initialize tooltip
   dt_invoice_table.on('draw.dt', function () {

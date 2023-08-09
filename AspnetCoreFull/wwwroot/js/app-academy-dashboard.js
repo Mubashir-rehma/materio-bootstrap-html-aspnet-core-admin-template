@@ -7,27 +7,29 @@
 // Hour pie chart
 
 (function () {
-  let labelColor, headingColor, borderColor;
+  let labelColor, headingColor, borderColor, currentTheme;
 
   if (isDarkStyle) {
     labelColor = config.colors_dark.textMuted;
     headingColor = config.colors_dark.headingColor;
     borderColor = config.colors_dark.borderColor;
+    currentTheme = 'dark';
   } else {
     labelColor = config.colors.textMuted;
     headingColor = config.colors.headingColor;
     borderColor = config.colors.borderColor;
+    currentTheme = 'light';
   }
 
   // Donut Chart Colors
   const chartColors = {
     donut: {
-      series1: '#22A95E',
-      series2: '#24B364',
+      series1: '#56ca00d9',
+      series2: '#56ca00b3',
       series3: config.colors.success,
-      series4: '#53D28C',
-      series5: '#7EDDA9',
-      series6: '#A9E9C5'
+      series4: '#56ca008c',
+      series5: '#56ca0066',
+      series6: '#56ca0033'
     }
   };
 
@@ -37,7 +39,8 @@
         height: 157,
         width: 130,
         parentHeightOffset: 0,
-        type: 'donut'
+        type: 'donut',
+        opacity: 1
       },
       labels: ['36h', '56h', '16h', '32h', '56h', '16h'],
       series: [23, 35, 10, 20, 35, 23],
@@ -62,7 +65,7 @@
         show: false
       },
       tooltip: {
-        theme: false
+        theme: currentTheme
       },
       grid: {
         padding: {
@@ -77,7 +80,7 @@
               show: true,
               value: {
                 fontSize: '1.5rem',
-                fontFamily: 'Open Sans',
+                fontFamily: 'Inter',
                 color: headingColor,
                 fontWeight: 500,
                 offsetY: -15,
@@ -87,7 +90,7 @@
               },
               name: {
                 offsetY: 20,
-                fontFamily: 'Open Sans'
+                fontFamily: 'Inter'
               },
               total: {
                 show: true,
@@ -161,7 +164,7 @@
           colors: ['#fff'],
           fontWeight: 200,
           fontSize: '13px',
-          fontFamily: 'Open Sans'
+          fontFamily: 'Inter'
         },
         formatter: function (val, opts) {
           return horizontalBarChartConfig.labels[opts.dataPointIndex];
@@ -201,7 +204,7 @@
         labels: {
           style: {
             colors: [labelColor],
-            fontFamily: 'Open Sans',
+            fontFamily: 'Inter',
             fontSize: '13px'
           }
         }
@@ -247,7 +250,7 @@
               offsetY: -10,
               fontSize: '15px',
               fontWeight: 500,
-              fontFamily: 'Open Sans',
+              fontFamily: 'Inter',
               color: headingColor
             }
           },
@@ -291,11 +294,15 @@
   // Variable declaration for table
   var dt_academy_course = $('.datatables-academy-course'),
     logoObj = {
-      angular: '<span class="badge bg-label-danger p-2"><i class="bx bxl-angular fs-3"></i></span>',
-      figma: '<span class="badge bg-label-warning p-2"><i class="bx bxl-figma fs-3"></i></span>',
-      react: '<span class="badge bg-label-info p-2"><i class="bx bxl-react fs-3"></i></span>',
-      art: '<span class="badge bg-label-success p-2"><i class="bx bxs-color fs-3"></i></span>',
-      fundamentals: '<span class="badge bg-label-primary p-2"><i class="bx bx-diamond fs-3"></i></span>'
+      angular:
+        '<div class="avatar"><div class="avatar-initial bg-label-danger rounded"><i class="mdi mdi-angularjs mdi-24px"></i></div></div>',
+      figma:
+        '<div class="avatar"><div class="avatar-initial bg-label-warning rounded"><i class="mdi mdi-draw mdi-24px"></i></div></div>',
+      react:
+        '<div class="avatar"><div class="avatar-initial bg-label-info rounded"><i class="mdi mdi-react mdi-24px"></i></div></div>',
+      art: '<div class="avatar"><div class="avatar-initial bg-label-success rounded"><i class="mdi mdi-palette mdi-24px"></i></div></div>',
+      fundamentals:
+        '<div class="avatar"><div class="avatar-initial bg-label-primary rounded"><i class="mdi mdi mdi-star-outline mdi-24px"></i></div></div>'
     };
 
   // orders datatable
@@ -366,16 +373,16 @@
               logoObj[$logo] +
               '</span>' +
               '<div>' +
-              '<a class="text-body text-truncate fw-medium mb-2 text-wrap" href="/Apps/Academy/CourseDetails">' +
+              '<a href="/Apps/Ecommerce/Order/OrderDetails"><span class="text-heading mb-2 text-wrap fw-medium">' +
               $course +
-              '</a>' +
+              '</span></a>' +
               '<div class="d-flex align-items-center mt-1">' +
               '<div class="avatar-wrapper me-2">' +
               '<div class="avatar avatar-xs">' +
               $output +
               '</div>' +
               '</div>' +
-              '<span class="text-nowrap">' +
+              '<span class="text-nowrap text-heading">' +
               $user +
               '</span>' +
               '</div>' +
@@ -392,7 +399,7 @@
             var Hs = Math.floor(duration.asHours());
             var minutes = Math.floor(duration.asMinutes()) - Hs * 60;
             var formattedTime = Hs + 'h ' + minutes + 'm';
-            return '<span class="fw-medium text-nowrap">' + formattedTime + '</span>';
+            return '<h6 class="mb-0 text-nowrap">' + formattedTime + '</h6>';
           }
         },
         {
@@ -404,10 +411,10 @@
 
             return (
               '<div class="d-flex align-items-center gap-3">' +
-              '<p class="fw-medium mb-0">' +
+              '<h6 class="mb-0">' +
               $status_number +
-              '</p>' +
-              '<div class="progress w-100" style="height: 8px;">' +
+              '</h6>' +
+              '<div class="progress w-100 rounded-pill" style="height: 8px;">' +
               '<div class="progress-bar" style="width: ' +
               $status_number +
               '" aria-valuenow="' +
@@ -431,15 +438,15 @@
             return (
               '<div class="d-flex align-items-center justify-content-between">' +
               '<div class="w-px-50 d-flex align-items-center">' +
-              '<i class="bx bx-user bx-xs me-2 text-primary"></i>' +
+              '<i class="mdi mdi-account-outline mdi-24px me-2 text-primary"></i>' +
               $user_number +
               '</div>' +
               '<div class="w-px-50 d-flex align-items-center">' +
-              '<i class="bx bx-book-open bx-xs me-2 text-info" ></i>' +
+              '<i class="mdi mdi-laptop mdi-24px me-2 text-info" ></i>' +
               $note +
               '</div>' +
               '<div class="w-px-50 d-flex align-items-center">' +
-              '<i class="bx bx-video bx-xs me-2 text-danger" ></i>' +
+              '<i class="mdi mdi-video-outline mdi-24px me-2 text-danger scaleX-n1-rtl" ></i>' +
               $view +
               '</div>' +
               '</div>'
@@ -459,7 +466,7 @@
       language: {
         sLengthMenu: '_MENU_',
         search: '',
-        searchPlaceholder: 'Placeholder'
+        searchPlaceholder: 'Course name'
       },
       // Buttons with Dropdown
 
@@ -469,7 +476,7 @@
           display: $.fn.dataTable.Responsive.display.modal({
             header: function (row) {
               var data = row.data();
-              return 'Details of ' + data['order'];
+              return 'Details of ' + data['user_number'];
             }
           }),
           type: 'column',

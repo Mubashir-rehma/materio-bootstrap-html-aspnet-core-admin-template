@@ -63,7 +63,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $id = full['order'];
 
-            return "<a href='" + order_details + "' class='fw-medium'><span>#" + $id + '</span></a>';
+            return "<a href='" + order_details + "'><span>#" + $id + '</span></a>';
           }
         },
         {
@@ -82,7 +82,7 @@ $(function () {
             var $status = full['status'];
 
             return (
-              '<span class="badge ' +
+              '<span class="badge rounded-pill ' +
               statusObj[$status].class +
               '" text-capitalized>' +
               statusObj[$status].title +
@@ -107,8 +107,8 @@ $(function () {
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<div class="text-xxl-center">' +
-              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>' +
+              '<div>' +
+              '<button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></button>' +
               '<div class="dropdown-menu dropdown-menu-end m-0">' +
               '<a href="javascript:;" class="dropdown-item">View</a>' +
               '<a href="javascript:;" class="dropdown-item  delete-record">Delete</a>' +

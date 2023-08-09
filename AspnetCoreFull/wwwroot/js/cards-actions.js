@@ -21,8 +21,8 @@
         new bootstrap.Collapse(collapseElement.closest('.card').querySelector('.collapse'));
         // Toggle collapsed class in `.card-header` element
         collapseElement.closest('.card-header').classList.toggle('collapsed');
-        // Toggle class bx-chevron-down & bx-chevron-up
-        Helpers._toggleClass(collapseElement.firstElementChild, 'bx-chevron-down', 'bx-chevron-up');
+        // Toggle class mdi-chevron-down & mdi-chevron-up
+        Helpers._toggleClass(collapseElement.firstElementChild, 'mdi-chevron-down', 'mdi-chevron-up');
       });
     });
   }
@@ -33,8 +33,8 @@
     expandElementList.map(function (expandElement) {
       expandElement.addEventListener('click', event => {
         event.preventDefault();
-        // Toggle class bx-fullscreen & bx-exit-fullscreen
-        Helpers._toggleClass(expandElement.firstElementChild, 'bx-fullscreen', 'bx-exit-fullscreen');
+        // Toggle class mdi-fullscreen & mdi-fullscreen-exit
+        Helpers._toggleClass(expandElement.firstElementChild, 'mdi-fullscreen', 'mdi-fullscreen-exit');
 
         expandElement.closest('.card').classList.toggle('card-fullscreen');
       });
@@ -47,13 +47,13 @@
     //Esc button
     if (event.key === 'Escape') {
       const cardFullscreen = document.querySelector('.card-fullscreen');
-      // Toggle class bx-fullscreen & bx-exit-fullscreen
+      // Toggle class mdi-fullscreen & mdi-fullscreen-exit
 
       if (cardFullscreen) {
         Helpers._toggleClass(
           cardFullscreen.querySelector('.card-expand').firstChild,
-          'bx-fullscreen',
-          'bx-exit-fullscreen'
+          'mdi-fullscreen',
+          'mdi-fullscreen-exit'
         );
         cardFullscreen.classList.toggle('card-fullscreen');
       }

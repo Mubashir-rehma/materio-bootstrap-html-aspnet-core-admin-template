@@ -88,7 +88,7 @@ $(function () {
 
   // Set topSpacing if the navbar is fixed
   if (Helpers.isNavbarFixed()) {
-    topSpacing = $('.layout-navbar').height() + 7;
+    topSpacing = $('.layout-navbar').height() - 3;
   } else {
     topSpacing = 0;
   }
@@ -106,6 +106,7 @@ $(function () {
   if (select2.length) {
     select2.each(function () {
       var $this = $(this);
+      select2Focus($this);
       $this.wrap('<div class="position-relative"></div>').select2({
         placeholder: 'Select value',
         dropdownParent: $this.parent()

@@ -50,6 +50,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
       });
     }
 
+    // Disable Button till checkbox checked
+
+    const accountActivation = document.querySelector('#accountActivation');
+
     if (deactivateAcc) {
       const fv = FormValidation.formValidation(deactivateAcc, {
         fields: {
@@ -69,12 +73,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
           submitButton: new FormValidation.plugins.SubmitButton(),
           fieldStatus: new FormValidation.plugins.FieldStatus({
             onStatusChanged: function (areFieldsValid) {
-              areFieldsValid
-                ? // Enable the submit button
-                  // so user has a chance to submit the form again
-                  deactivateButton.removeAttribute('disabled')
-                : // Disable the submit button
-                  deactivateButton.setAttribute('disabled', 'disabled');
+              if (areFieldsValid && accountActivation.checked == true) {
+                // Enable the submit button if all fields are valid and checkbox is not checked
+                deactivateButton.removeAttribute('disabled', 'disabled');
+                deactivateButton.classList.add('btn-danger');
+                deactivateButton.classList.remove('btn-secondary');
+              } else {
+                // Disable the submit button if any field is invalid or checkbox is checked
+                deactivateButton.setAttribute('disabled', 'disabled');
+              }
             }
           }),
           // Submit the form when all fields are valid
@@ -92,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
     }
 
     // Deactivate account alert
-    const accountActivation = document.querySelector('#accountActivation');
 
     // Alert With Functional Confirm Button
     if (deactivateButton) {
@@ -104,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
             showCancelButton: true,
             confirmButtonText: 'Yes',
             customClass: {
-              confirmButton: 'btn btn-primary me-2',
-              cancelButton: 'btn btn-label-secondary'
+              confirmButton: 'btn btn-primary me-2 waves-effect waves-light',
+              cancelButton: 'btn btn-outline-secondary waves-effect'
             },
             buttonsStyling: false
           }).then(function (result) {
@@ -115,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
                 title: 'Deleted!',
                 text: 'Your file has been deleted.',
                 customClass: {
-                  confirmButton: 'btn btn-success'
+                  confirmButton: 'btn btn-success waves-effect'
                 }
               });
             } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -124,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
                 text: 'Deactivation Cancelled!!',
                 icon: 'error',
                 customClass: {
-                  confirmButton: 'btn btn-success'
+                  confirmButton: 'btn btn-success waves-effect'
                 }
               });
             }
@@ -180,6 +186,7 @@ $(function () {
   if (select2.length) {
     select2.each(function () {
       var $this = $(this);
+      select2Focus($this);
       $this.wrap('<div class="position-relative"></div>');
       $this.select2({
         dropdownParent: $this.parent()

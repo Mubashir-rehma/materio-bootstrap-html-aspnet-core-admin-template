@@ -15,6 +15,45 @@ if (document.getElementById('layout-menu')) {
 }
 
 (function () {
+  // Button & Pagination Waves effect
+  if (typeof Waves !== 'undefined') {
+    Waves.init();
+    Waves.attach(
+      ".btn[class*='btn-']:not(.position-relative):not([class*='btn-outline-']):not([class*='btn-label-'])",
+      ['waves-light']
+    );
+    Waves.attach("[class*='btn-outline-']:not(.position-relative)");
+    Waves.attach("[class*='btn-label-']:not(.position-relative)");
+    Waves.attach('.pagination .page-item .page-link');
+    Waves.attach('.dropdown-menu .dropdown-item');
+    Waves.attach('.light-style .list-group .list-group-item-action');
+    Waves.attach('.dark-style .list-group .list-group-item-action', ['waves-light']);
+    Waves.attach('.nav-tabs:not(.nav-tabs-widget) .nav-item .nav-link');
+    Waves.attach('.nav-pills .nav-item .nav-link', ['waves-light']);
+    Waves.attach('.menu-vertical .menu-item .menu-link.menu-toggle');
+  }
+
+  // Window scroll function for navbar
+  function onScroll() {
+    var layoutPage = document.querySelector('.layout-page');
+    if (layoutPage) {
+      if (window.pageYOffset > 0) {
+        layoutPage.classList.add('window-scrolled');
+      } else {
+        layoutPage.classList.remove('window-scrolled');
+      }
+    }
+  }
+  // On load time out
+  setTimeout(() => {
+    onScroll();
+  }, 200);
+
+  // On window scroll
+  window.onscroll = function () {
+    onScroll();
+  };
+
   setTimeout(function () {
     window.Helpers.initCustomOptionCheck();
   }, 1000);
@@ -133,26 +172,25 @@ if (document.getElementById('layout-menu')) {
     const styleSwitcherIcon = styleSwitcher.querySelector('i');
 
     if (storedStyle === 'light') {
-      styleSwitcherIcon.classList.add('bx-sun');
+      styleSwitcherIcon.classList.add('mdi-weather-sunny');
       new bootstrap.Tooltip(styleSwitcherIcon, {
         title: 'Light Mode',
         fallbackPlacements: ['bottom']
       });
     } else if (storedStyle === 'dark') {
-      styleSwitcherIcon.classList.add('bx-moon');
+      styleSwitcherIcon.classList.add('mdi-weather-night');
       new bootstrap.Tooltip(styleSwitcherIcon, {
         title: 'Dark Mode',
         fallbackPlacements: ['bottom']
       });
     } else {
-      styleSwitcherIcon.classList.add('bx-desktop');
+      styleSwitcherIcon.classList.add('mdi-monitor');
       new bootstrap.Tooltip(styleSwitcherIcon, {
         title: 'System Mode',
         fallbackPlacements: ['bottom']
       });
     }
   }
-
   // Run switchImage function based on the stored style
   switchImage(storedStyle);
 
@@ -288,6 +326,9 @@ if (document.getElementById('layout-menu')) {
   // Speech To Text
   window.Helpers.initSpeechToText();
 
+  // Nav tabs animation
+  window.Helpers.navTabsAnimation();
+
   // Init PerfectScrollbar in Navbar Dropdown (i.e notification)
   window.Helpers.initNavbarDropdownScrollbar();
 
@@ -337,6 +378,8 @@ if (document.getElementById('layout-menu')) {
           }
         }, 100);
       }
+
+      window.Helpers.navTabsAnimation();
     },
     true
   );
@@ -489,7 +532,7 @@ if (typeof $ !== 'undefined') {
                     url +
                     '">' +
                     '<div>' +
-                    '<i class="bx ' +
+                    '<i class="mdi ' +
                     icon +
                     ' me-2"></i>' +
                     '<span class="align-middle">' +
@@ -502,7 +545,7 @@ if (typeof $ !== 'undefined') {
                 notFound:
                   '<div class="not-found px-3 py-2">' +
                   '<h6 class="suggestions-header text-primary mb-2">Pages</h6>' +
-                  '<p class="py-2 mb-0"><i class="bx bx-error-circle bx-xs me-2"></i> No Results Found</p>' +
+                  '<p class="py-2 mb-0"><i class="mdi mdi-alert-circle-outline me-2 mdi-14px"></i> No Results Found</p>' +
                   '</div>'
               }
             },
@@ -542,7 +585,7 @@ if (typeof $ !== 'undefined') {
                 notFound:
                   '<div class="not-found px-3 py-2">' +
                   '<h6 class="suggestions-header text-primary mb-2">Files</h6>' +
-                  '<p class="py-2 mb-0"><i class="bx bx-error-circle bx-xs me-2"></i> No Results Found</p>' +
+                  '<p class="py-2 mb-0"><i class="mdi mdi-alert-circle-outline me-2 mdi-14px"></i> No Results Found</p>' +
                   '</div>'
               }
             },
@@ -556,7 +599,7 @@ if (typeof $ !== 'undefined') {
                 header: '<h6 class="suggestions-header text-primary mb-0 mx-3 mt-3 pb-2">Members</h6>',
                 suggestion: function ({ name, src, subtitle }) {
                   return (
-                    '<a href="app-user-view-account.html">' +
+                    '<a href="/Apps/Users/View/Account">' +
                     '<div class="d-flex align-items-center">' +
                     '<img class="rounded-circle me-3" src="' +
                     assetsPath +
@@ -579,7 +622,7 @@ if (typeof $ !== 'undefined') {
                 notFound:
                   '<div class="not-found px-3 py-2">' +
                   '<h6 class="suggestions-header text-primary mb-2">Members</h6>' +
-                  '<p class="py-2 mb-0"><i class="bx bx-error-circle bx-xs me-2"></i> No Results Found</p>' +
+                  '<p class="py-2 mb-0"><i class="mdi mdi-alert-circle-outline me-2 mdi-14px"></i> No Results Found</p>' +
                   '</div>'
               }
             }

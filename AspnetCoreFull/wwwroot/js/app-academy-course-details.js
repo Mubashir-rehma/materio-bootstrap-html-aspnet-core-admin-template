@@ -6,6 +6,7 @@
   // video
   const videoPlayer = new Plyr('#plyr-video-player');
   document.getElementsByClassName('plyr')[0].style.borderRadius = '7px';
+  document.getElementsByClassName('plyr__poster')[0].style.display = 'none';
 
   // content sticky
 
@@ -19,9 +20,5 @@
       stick.classList.remove('course-content-fixed');
     }
   }
-
-  TopSticky();
-  window.onscroll = function () {
-    TopSticky();
-  };
+  window.addEventListener('scroll', TopSticky);
 })();

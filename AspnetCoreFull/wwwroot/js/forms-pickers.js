@@ -180,7 +180,8 @@ $(function () {
     bsRangePickerTime = $('#bs-rangepicker-time'),
     bsRangePickerRange = $('#bs-rangepicker-range'),
     bsRangePickerWeekNum = $('#bs-rangepicker-week-num'),
-    bsRangePickerDropdown = $('#bs-rangepicker-dropdown');
+    bsRangePickerDropdown = $('#bs-rangepicker-dropdown'),
+    bsRangePickerCancelBtn = document.getElementsByClassName('cancelBtn');
 
   // Basic
   if (bsRangePickerBasic.length) {
@@ -236,6 +237,12 @@ $(function () {
       showDropdowns: true,
       opens: isRtl ? 'left' : 'right'
     });
+  }
+
+  // Adding btn-outline-secondary class in cancel btn
+  for (var i = 0; i < bsRangePickerCancelBtn.length; i++) {
+    bsRangePickerCancelBtn[i].classList.remove('btn-default');
+    bsRangePickerCancelBtn[i].classList.add('btn-outline-secondary');
   }
 
   // jQuery Timepicker
@@ -313,13 +320,13 @@ $(function () {
     pickr.create({
       el: classicPicker,
       theme: 'classic',
-      default: 'rgba(102, 108, 232, 1)',
+      default: 'rgba(144, 85, 253, 1)',
       swatches: [
-        'rgba(102, 108, 232, 1)',
-        'rgba(40, 208, 148, 1)',
-        'rgba(255, 73, 97, 1)',
-        'rgba(255, 145, 73, 1)',
-        'rgba(30, 159, 242, 1)'
+        'rgba(144, 85, 253, 1)',
+        'rgba(86, 202, 0, 1)',
+        'rgba(255, 76, 81, 1)',
+        'rgba(255, 180, 0, 1)',
+        'rgba(22, 177, 255, 1)'
       ],
       components: {
         // Main components
@@ -347,13 +354,13 @@ $(function () {
     pickr.create({
       el: monolithPicker,
       theme: 'monolith',
-      default: 'rgba(40, 208, 148, 1)',
+      default: 'rgba(86, 202, 0, 1)',
       swatches: [
-        'rgba(102, 108, 232, 1)',
-        'rgba(40, 208, 148, 1)',
-        'rgba(255, 73, 97, 1)',
-        'rgba(255, 145, 73, 1)',
-        'rgba(30, 159, 242, 1)'
+        'rgba(144, 85, 253, 1)',
+        'rgba(86, 202, 0, 1)',
+        'rgba(255, 76, 81, 1)',
+        'rgba(255, 180, 0, 1)',
+        'rgba(22, 177, 255, 1)'
       ],
       components: {
         // Main components
@@ -381,13 +388,13 @@ $(function () {
     pickr.create({
       el: nanoPicker,
       theme: 'nano',
-      default: 'rgba(255, 73, 97, 1)',
+      default: 'rgba(255, 76, 81, 1)',
       swatches: [
-        'rgba(102, 108, 232, 1)',
-        'rgba(40, 208, 148, 1)',
-        'rgba(255, 73, 97, 1)',
-        'rgba(255, 145, 73, 1)',
-        'rgba(30, 159, 242, 1)'
+        'rgba(144, 85, 253, 1)',
+        'rgba(86, 202, 0, 1)',
+        'rgba(255, 76, 81, 1)',
+        'rgba(255, 180, 0, 1)',
+        'rgba(22, 177, 255, 1)'
       ],
       components: {
         // Main components

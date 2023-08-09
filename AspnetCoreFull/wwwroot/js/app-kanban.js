@@ -49,6 +49,7 @@
 
     select2.each(function () {
       var $this = $(this);
+      select2Focus($this);
       $this.wrap("<div class='position-relative'></div>").select2({
         placeholder: 'Select Label',
         dropdownParent: $this.parent(),
@@ -76,11 +77,11 @@
   function renderBoardDropdown() {
     return (
       "<div class='dropdown'>" +
-      "<i class='dropdown-toggle bx bx-dots-vertical-rounded cursor-pointer' id='board-dropdown' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'></i>" +
+      "<i class='dropdown-toggle mdi mdi-dots-vertical mdi-24px text-muted cursor-pointer' id='board-dropdown' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'></i>" +
       "<div class='dropdown-menu dropdown-menu-end' aria-labelledby='board-dropdown'>" +
-      "<a class='dropdown-item delete-board' href='javascript:void(0)'> <i class='bx bx-trash bx-xs'></i> <span class='align-middle'>Delete</span></a>" +
-      "<a class='dropdown-item' href='javascript:void(0)'><i class='bx bx-rename bx-xs'></i> <span class='align-middle'>Rename</span></a>" +
-      "<a class='dropdown-item' href='javascript:void(0)'><i class='bx bx-archive bx-xs'></i> <span class='align-middle'>Archive</span></a>" +
+      "<a class='dropdown-item delete-board' href='javascript:void(0)'> <i class='mdi mdi-delete-outline'></i> <span class='align-middle'>Delete</span></a>" +
+      "<a class='dropdown-item' href='javascript:void(0)'><i class='mdi mdi-rename-outline'></i> <span class='align-middle'>Rename</span></a>" +
+      "<a class='dropdown-item' href='javascript:void(0)'><i class='mdi mdi-archive-outline'></i> <span class='align-middle'>Archive</span></a>" +
       '</div>' +
       '</div>'
     );
@@ -89,7 +90,7 @@
   function renderDropdown() {
     return (
       "<div class='dropdown kanban-tasks-item-dropdown'>" +
-      "<i class='dropdown-toggle bx bx-dots-vertical-rounded' id='kanban-tasks-item-dropdown' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'></i>" +
+      "<i class='dropdown-toggle mdi mdi-dots-vertical' id='kanban-tasks-item-dropdown' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'></i>" +
       "<div class='dropdown-menu dropdown-menu-end' aria-labelledby='kanban-tasks-item-dropdown'>" +
       "<a class='dropdown-item' href='javascript:void(0)'>Copy task link</a>" +
       "<a class='dropdown-item' href='javascript:void(0)'>Duplicate task</a>" +
@@ -101,8 +102,8 @@
   // Render header
   function renderHeader(color, text) {
     return (
-      "<div class='d-flex justify-content-between flex-wrap align-items-center mb-3'>" +
-      "<div class='item-badges'> " +
+      "<div class='d-flex justify-content-between flex-wrap align-items-center mb-2 pb-1'>" +
+      "<div class='item-badges d-flex'> " +
       "<div class='badge rounded-pill bg-label-" +
       color +
       "'> " +
@@ -153,15 +154,15 @@
   // Render footer
   function renderFooter(attachments, comments, assigned, members) {
     return (
-      "<div class='d-flex justify-content-between align-items-center flex-wrap mt-3'>" +
-      "<div class='text-muted'> <span class='align-middle me-2'><i class='bx bx-link bx-xs me-1'></i>" +
-      "<small class='attachments'>" +
+      "<div class='d-flex justify-content-between align-items-center flex-wrap mt-2 pt-1'>" +
+      "<div> <span class='align-middle me-2'><i class='mdi mdi-paperclip me-1 text-heading'></i>" +
+      "<span class='attachments'>" +
       attachments +
-      '</small>' +
-      "</span> <span class='align-middle'><i class='bx bx-message bx-xs me-1'></i>" +
-      '<small> ' +
+      '</span>' +
+      "</span> <span class='align-middle'><i class='mdi mdi-message-outline me-1 text-heading'></i>" +
+      '<span> ' +
       comments +
-      ' </small>' +
+      ' </span>' +
       '</span></div>' +
       "<div class='avatar-group d-flex align-items-center assigned-avatar'>" +
       renderAvatar(assigned, true, 'xs', null, members) +
@@ -182,7 +183,7 @@
     itemAddOptions: {
       enabled: true, // add a button to board for easy item creation
       content: '+ Add New Item', // text or html content of the board button
-      class: 'kanban-title-button btn btn-default btn-xs', // default class of the button
+      class: 'kanban-title-button btn btn-default shadow-none text-capitalize', // default class of the button
       footer: false // position the button on footer
     },
     click: function (el) {
@@ -217,7 +218,7 @@
           'afterbegin',
           renderAvatar(avatars, false, 'sm', '2', el.getAttribute('data-members')) +
             "<div class='avatar avatar-sm ms-2'>" +
-            "<span class='avatar-initial rounded-circle'><i class='bx bx-plus'></i></span>" +
+            "<span class='avatar-initial rounded-circle bg-label-secondary'><i class='mdi mdi-plus'></i></span>" +
             '</div>'
         );
     },
@@ -227,11 +228,11 @@
       addNew.setAttribute('class', 'new-item-form');
       addNew.innerHTML =
         '<div class="mb-3">' +
-        '<textarea class="form-control add-new-item" rows="2" placeholder="Add Content" autofocus required></textarea>' +
+        '<textarea class="form-control add-new-item" rows="3" placeholder="Add Content" autofocus required></textarea>' +
         '</div>' +
         '<div class="mb-3">' +
         '<button type="submit" class="btn btn-primary btn-sm me-2">Add</button>' +
-        '<button type="button" class="btn btn-label-secondary btn-sm cancel-add-item">Cancel</button>' +
+        '<button type="button" class="btn btn-outline-secondary btn-sm cancel-add-item">Cancel</button>' +
         '</div>';
       kanban.addForm(boardId, addNew);
 
@@ -298,13 +299,18 @@
       const element = "<span class='kanban-text'>" + el.textContent + '</span>';
       let img = '';
       if (el.getAttribute('data-image') !== null) {
-        img = "<img class='img-fluid mt-2' src='" + assetsPath + 'img/elements/' + el.getAttribute('data-image') + "'>";
+        img =
+          "<img class='img-fluid mb-2 rounded-3' src='" +
+          assetsPath +
+          'img/elements/' +
+          el.getAttribute('data-image') +
+          "'>";
       }
       el.textContent = '';
       if (el.getAttribute('data-badge') !== undefined && el.getAttribute('data-badge-text') !== undefined) {
         el.insertAdjacentHTML(
           'afterbegin',
-          renderHeader(el.getAttribute('data-badge'), el.getAttribute('data-badge-text')) + element + img
+          renderHeader(el.getAttribute('data-badge'), el.getAttribute('data-badge-text')) + img + element
         );
       }
       if (

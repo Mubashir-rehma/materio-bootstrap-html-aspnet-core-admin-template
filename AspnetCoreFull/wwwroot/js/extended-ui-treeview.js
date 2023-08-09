@@ -100,19 +100,19 @@ $(function () {
       plugins: ['types'],
       types: {
         default: {
-          icon: 'bx bx-folder'
+          icon: 'mdi mdi-folder-outline'
         },
         html: {
-          icon: 'bx bxl-html5 text-danger'
+          icon: 'mdi mdi-language-html5 text-danger'
         },
         css: {
-          icon: 'bx bxl-css3 text-info'
+          icon: 'mdi mdi-language-css3 text-info'
         },
         img: {
-          icon: 'bx bx-image text-success'
+          icon: 'mdi mdi-image-outline text-success'
         },
         js: {
-          icon: 'bx bxl-nodejs text-warning'
+          icon: 'mdi mdi-nodejs text-warning'
         }
       }
     });
@@ -194,19 +194,19 @@ $(function () {
       plugins: ['types', 'contextmenu'],
       types: {
         default: {
-          icon: 'bx bx-folder'
+          icon: 'mdi mdi-folder-outline'
         },
         html: {
-          icon: 'bx bxl-html5 text-danger'
+          icon: 'mdi mdi-language-html5 text-danger'
         },
         css: {
-          icon: 'bx bxl-css3 text-info'
+          icon: 'mdi mdi-language-css3 text-info'
         },
         img: {
-          icon: 'bx bx-image text-success'
+          icon: 'mdi mdi-image-outline text-success'
         },
         js: {
-          icon: 'bx bxl-nodejs text-warning'
+          icon: 'mdi mdi-nodejs text-warning'
         }
       }
     });
@@ -288,19 +288,19 @@ $(function () {
       plugins: ['types', 'dnd'],
       types: {
         default: {
-          icon: 'bx bx-folder'
+          icon: 'mdi mdi-folder-outline'
         },
         html: {
-          icon: 'bx bxl-html5 text-danger'
+          icon: 'mdi mdi-language-html5 text-danger'
         },
         css: {
-          icon: 'bx bxl-css3 text-info'
+          icon: 'mdi mdi-language-css3 text-info'
         },
         img: {
-          icon: 'bx bx-image text-success'
+          icon: 'mdi mdi-image-outline text-success'
         },
         js: {
-          icon: 'bx bxl-nodejs text-warning'
+          icon: 'mdi mdi-nodejs text-warning'
         }
       }
     });
@@ -381,19 +381,19 @@ $(function () {
       plugins: ['types', 'checkbox', 'wholerow'],
       types: {
         default: {
-          icon: 'bx bx-folder'
+          icon: 'mdi mdi-folder-outline'
         },
         html: {
-          icon: 'bx bxl-html5 text-danger'
+          icon: 'mdi mdi-language-html5 text-danger'
         },
         css: {
-          icon: 'bx bxl-css3 text-info'
+          icon: 'mdi mdi-language-css3 text-info'
         },
         img: {
-          icon: 'bx bx-image text-success'
+          icon: 'mdi mdi-image-outline text-success'
         },
         js: {
-          icon: 'bx bxl-nodejs text-warning'
+          icon: 'mdi mdi-nodejs text-warning'
         }
       }
     });
@@ -420,19 +420,19 @@ $(function () {
       plugins: ['types', 'state'],
       types: {
         default: {
-          icon: 'bx bx-folder'
+          icon: 'mdi mdi-folder-outline'
         },
         html: {
-          icon: 'bx bxl-html5 text-danger'
+          icon: 'mdi mdi-language-html5 text-danger'
         },
         css: {
-          icon: 'bx bxl-css3 text-info'
+          icon: 'mdi mdi-language-css3 text-info'
         },
         img: {
-          icon: 'bx bx-image text-success'
+          icon: 'mdi mdi-image-outline text-success'
         },
         js: {
-          icon: 'bx bxl-nodejs text-warning'
+          icon: 'mdi mdi-nodejs text-warning'
         }
       }
     });

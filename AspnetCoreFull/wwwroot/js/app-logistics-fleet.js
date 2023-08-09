@@ -1,7 +1,7 @@
 /**
  * Logistic Fleet
  */
-('use strict');
+'use strict';
 
 (function () {
   // Mapbox Access Token

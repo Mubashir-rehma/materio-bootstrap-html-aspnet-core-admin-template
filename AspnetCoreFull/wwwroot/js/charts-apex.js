@@ -29,15 +29,16 @@
       bg: '#f8d3ff'
     },
     donut: {
-      series1: '#fee802',
-      series2: '#3fd0bd',
-      series3: '#826bf8',
-      series4: '#2b9bf4'
+      series1: '#fdd835',
+      series2: '#32baff',
+      series3: '#ffa1a1',
+      series4: '#7367f0',
+      series5: '#29dac7'
     },
     area: {
-      series1: '#29dac7',
-      series2: '#60f2ca',
-      series3: '#a5f8cd'
+      series1: '#ab7efd',
+      series2: '#b992fe',
+      series3: '#e0cffe'
     }
   };
 
@@ -64,6 +65,7 @@
     areaChartConfig = {
       chart: {
         height: 400,
+        fontFamily: 'Inter',
         type: 'area',
         parentHeightOffset: 0,
         toolbar: {
@@ -135,7 +137,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -143,7 +145,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -166,6 +168,7 @@
     barChartConfig = {
       chart: {
         height: 400,
+        fontFamily: 'Inter',
         type: 'bar',
         stacked: true,
         parentHeightOffset: 0,
@@ -234,7 +237,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -242,7 +245,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -261,6 +264,7 @@
     scatterChartConfig = {
       chart: {
         height: 400,
+        fontFamily: 'Inter',
         type: 'scatter',
         zoom: {
           enabled: true,
@@ -359,7 +363,7 @@
           },
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -367,7 +371,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       }
@@ -383,6 +387,7 @@
     lineChartConfig = {
       chart: {
         height: 400,
+        fontFamily: 'Inter',
         type: 'line',
         parentHeightOffset: 0,
         zoom: {
@@ -453,7 +458,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -461,7 +466,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       }
@@ -477,6 +482,7 @@
     horizontalBarChartConfig = {
       chart: {
         height: 400,
+        fontFamily: 'Inter',
         type: 'bar',
         toolbar: {
           show: false
@@ -522,7 +528,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -530,7 +536,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       }
@@ -543,9 +549,14 @@
   // Candlestick Chart
   // --------------------------------------------------------------------
   const candlestickEl = document.querySelector('#candleStickChart'),
+    candlestickColors = {
+      series1: '#28c76f',
+      series2: '#ea5455'
+    },
     candlestickChartConfig = {
       chart: {
         height: 410,
+        fontFamily: 'Inter',
         type: 'candlestick',
         parentHeightOffset: 0,
         toolbar: {
@@ -625,7 +636,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -636,7 +647,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       },
@@ -654,8 +665,8 @@
       plotOptions: {
         candlestick: {
           colors: {
-            upward: config.colors.success,
-            downward: config.colors.danger
+            upward: candlestickColors.series1,
+            downward: candlestickColors.series2
           }
         },
         bar: {
@@ -674,6 +685,7 @@
     heatMapChartConfig = {
       chart: {
         height: 350,
+        fontFamily: 'Inter',
         type: 'heatmap',
         parentHeightOffset: 0,
         toolbar: {
@@ -690,37 +702,37 @@
                 from: 0,
                 to: 10,
                 name: '0-10',
-                color: '#90B3F3'
+                color: '#b9b3f8'
               },
               {
                 from: 11,
                 to: 20,
                 name: '10-20',
-                color: '#7EA6F1'
+                color: '#aba4f6'
               },
               {
                 from: 21,
                 to: 30,
                 name: '20-30',
-                color: '#6B9AEF'
+                color: '#9d95f5'
               },
               {
                 from: 31,
                 to: 40,
                 name: '30-40',
-                color: '#598DEE'
+                color: '#8f85f3'
               },
               {
                 from: 41,
                 to: 50,
                 name: '40-50',
-                color: '#4680EC'
+                color: '#8176f2'
               },
               {
                 from: 51,
                 to: 60,
                 name: '50-60',
-                color: '#3474EA'
+                color: '#7367f0'
               }
             ]
           }
@@ -734,8 +746,7 @@
       },
       legend: {
         show: true,
-        position: 'top',
-        horizontalAlign: 'start',
+        position: 'bottom',
         labels: {
           colors: legendColor,
           useSeriesColors: false
@@ -751,7 +762,7 @@
       },
       stroke: {
         curve: 'smooth',
-        width: 4,
+        width: 2,
         lineCap: 'round',
         colors: [cardColor]
       },
@@ -811,7 +822,7 @@
           show: false,
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         },
         axisBorder: {
@@ -825,7 +836,7 @@
         labels: {
           style: {
             colors: labelColor,
-            fontSize: '13px'
+            fontSize: '11px'
           }
         }
       }
@@ -841,6 +852,7 @@
     radialBarChartConfig = {
       chart: {
         height: 380,
+        fontFamily: 'Inter',
         type: 'radialBar'
       },
       colors: [chartColors.donut.series1, chartColors.donut.series2, chartColors.donut.series4],
@@ -856,18 +868,16 @@
           },
           dataLabels: {
             name: {
-              fontSize: '2rem',
-              fontFamily: 'Open Sans'
+              fontSize: '2rem'
             },
             value: {
               fontSize: '1.2rem',
-              color: legendColor,
-              fontFamily: 'Open Sans'
+              color: legendColor
             },
             total: {
               show: true,
               fontWeight: 400,
-              fontSize: '1.3rem',
+              fontSize: '1.125rem',
               color: headingColor,
               label: 'Comments',
               formatter: function (w) {
@@ -880,8 +890,8 @@
       grid: {
         borderColor: borderColor,
         padding: {
-          top: -25,
-          bottom: -20
+          top: -29,
+          bottom: -31
         }
       },
       legend: {
@@ -909,6 +919,7 @@
     radarChartConfig = {
       chart: {
         height: 350,
+        fontFamily: 'Inter',
         type: 'radar',
         toolbar: {
           show: false
@@ -950,15 +961,14 @@
           data: [65, 46, 42, 25, 58, 63, 76, 43]
         }
       ],
-      colors: [chartColors.donut.series1, chartColors.donut.series3],
+      colors: [chartColors.donut.series4, chartColors.donut.series3],
       xaxis: {
         categories: ['Battery', 'Brand', 'Camera', 'Memory', 'Storage', 'Display', 'OS', 'Price'],
         labels: {
           show: true,
           style: {
             colors: [labelColor, labelColor, labelColor, labelColor, labelColor, labelColor, labelColor, labelColor],
-            fontSize: '13px',
-            fontFamily: 'Open Sans'
+            fontSize: '11px'
           }
         }
       },
@@ -991,15 +1001,16 @@
     donutChartConfig = {
       chart: {
         height: 390,
+        fontFamily: 'Inter',
         type: 'donut'
       },
       labels: ['Operational', 'Networking', 'Hiring', 'R&D'],
       series: [42, 7, 25, 25],
       colors: [
         chartColors.donut.series1,
-        chartColors.donut.series4,
         chartColors.donut.series3,
-        chartColors.donut.series2
+        chartColors.donut.series4,
+        chartColors.donut.series5
       ],
       stroke: {
         show: false,
@@ -1030,13 +1041,12 @@
             labels: {
               show: true,
               name: {
-                fontSize: '2rem',
-                fontFamily: 'Open Sans'
+                fontSize: '2rem'
               },
               value: {
-                fontSize: '1.2rem',
+                fontSize: '1.5rem',
                 color: legendColor,
-                fontFamily: 'Open Sans',
+                fontFamily: 'Inter',
                 formatter: function (val) {
                   return parseInt(val, 10) + '%';
                 }

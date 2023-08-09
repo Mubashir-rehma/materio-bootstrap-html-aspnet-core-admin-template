@@ -5,23 +5,25 @@
 'use strict';
 
 (function () {
-  let labelColor, headingColor;
+  let labelColor, headingColor, currentTheme;
 
   if (isDarkStyle) {
     labelColor = config.colors_dark.textMuted;
     headingColor = config.colors_dark.headingColor;
+    currentTheme = 'dark';
   } else {
     labelColor = config.colors.textMuted;
     headingColor = config.colors.headingColor;
+    currentTheme = 'light';
   }
 
   // Chart Colors
   const chartColors = {
     donut: {
       series1: config.colors.success,
-      series2: '#4fddaa',
-      series3: '#8ae8c7',
-      series4: '#c4f4e3'
+      series2: '#56ca00cc',
+      series3: '#56ca0099',
+      series4: '#56ca0066'
     },
     line: {
       series1: config.colors.warning,
@@ -87,7 +89,7 @@
           vertical: 0
         },
         fontSize: '15px',
-        fontFamily: 'Open Sans',
+        fontFamily: 'Inter',
         fontWeight: 400,
         labels: {
           colors: headingColor,
@@ -120,7 +122,7 @@
           style: {
             colors: labelColor,
             fontSize: '13px',
-            fontFamily: 'Open Sans',
+            fontFamily: 'Inter',
             fontWeight: 400
           }
         },
@@ -139,7 +141,7 @@
           style: {
             colors: labelColor,
             fontSize: '13px',
-            fontFamily: 'Open Sans',
+            fontFamily: 'Inter',
             fontWeight: 400
           },
           formatter: function (val) {
@@ -172,7 +174,7 @@
           }
         },
         {
-          breakpoint: 1025,
+          breakpoint: 1399,
           options: {
             chart: {
               height: 415
@@ -252,7 +254,7 @@
           vertical: 5
         },
         fontSize: '13px',
-        fontFamily: 'Open Sans',
+        fontFamily: 'Inter',
         fontWeight: 400,
         labels: {
           colors: headingColor,
@@ -260,7 +262,7 @@
         }
       },
       tooltip: {
-        theme: false
+        theme: currentTheme
       },
       grid: {
         padding: {
@@ -274,8 +276,8 @@
             labels: {
               show: true,
               value: {
-                fontSize: '26px',
-                fontFamily: 'Open Sans',
+                fontSize: '1.625rem',
+                fontFamily: 'Inter',
                 color: headingColor,
                 fontWeight: 500,
                 offsetY: -30,
@@ -285,7 +287,7 @@
               },
               name: {
                 offsetY: 20,
-                fontFamily: 'Open Sans'
+                fontFamily: 'Inter'
               },
               total: {
                 show: true,
@@ -373,11 +375,11 @@ $(function () {
               '<div class="d-flex justify-content-start align-items-center user-name">' +
               '<div class="avatar-wrapper">' +
               '<div class="avatar me-2">' +
-              '<span class="avatar-initial rounded-circle bg-label-secondary"><i class="bx bxs-truck"></i></span>' +
+              '<span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-bus"></i></span>' +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<a class="text-body fw-medium" href="/Apps/Logistics/Fleet">VOL-' +
+              '<a class="text-heading fw-medium" href="/Apps/Logistics/Fleet">VOL-' +
               $location +
               '</a>' +
               '</div>' +
@@ -424,7 +426,7 @@ $(function () {
               return data;
             }
             return (
-              '<span class="badge rounded ' +
+              '<span class="badge rounded-pill ' +
               $status[$status_number].class +
               '">' +
               $status[$status_number].title +
@@ -439,7 +441,7 @@ $(function () {
             var $progress = full['progress'];
             var $progress_output =
               '<div class="d-flex align-items-center">' +
-              '<div div class="progress w-100" style="height: 8px;">' +
+              '<div div class="progress rounded-pill w-100" style="height: 8px;">' +
               '<div class="progress-bar" role="progressbar" style="width:' +
               $progress +
               '%;" aria-valuenow="' +
@@ -492,4 +494,10 @@ $(function () {
     });
     $('.dataTables_info').addClass('pt-0');
   }
+  // Filter form control to default size
+  // ? setTimeout used for multilingual table initialization
+  setTimeout(() => {
+    $('.dataTables_filter .form-control').removeClass('form-control-sm');
+    $('.dataTables_length .form-select').removeClass('form-select-sm');
+  }, 300);
 });
