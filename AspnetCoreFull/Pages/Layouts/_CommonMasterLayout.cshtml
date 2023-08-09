@@ -11,7 +11,7 @@
 @inject IHttpContextAccessor httpContextAccessor
 
 <!DOCTYPE html>
-<html lang="en" class='light-style @ViewData["navbarType"] @ViewData["menuFixed"] @ViewData["menuCollapsed"] @ViewData["menuFlipped"] @ViewData["contentType"] @ViewData["menuOffcanvas"] @ViewData["footerFixed"] @ViewData["customizerHidden"]' dir="ltr" data-theme="theme-default"  data-assets-path='@(httpContextAccessor.HttpContext.Request.PathBase + "/")' data-template='@((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "horizontal-menu-template" : "vertical-menu-template")'>
+<html lang="en" class='light-style @ViewData["navbarType"] @ViewData["menuFixed"] @ViewData["menuCollapsed"] @ViewData["contentType"] @ViewData["footerFixed"] @ViewData["customizerHidden"]' dir="ltr" data-theme="theme-default" data-assets-path='@(httpContextAccessor.HttpContext.Request.PathBase + "/")' data-template='@((Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True") ? "horizontal-menu-template" : "vertical-menu-template")'>
 
 <head>
   <meta charset="utf-8" />
@@ -54,12 +54,6 @@
 
   <!-- Page Scripts-->
   @RenderSection("PageScripts", required: false)
-
-@if (!isFront) {
-  <script>
-    feather.replace();
-  </script>
-}
 
 
 </body>

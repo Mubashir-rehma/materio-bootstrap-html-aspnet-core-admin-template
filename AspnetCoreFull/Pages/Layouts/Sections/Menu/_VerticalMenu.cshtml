@@ -10,7 +10,7 @@
   @* ! Hide app brand if navbar-full *@
   <div class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
     <a asp-page="/Index" class="app-brand-link">
-      <span class="app-brand-logo demo bg-primary">
+      <span class="app-brand-logo demo">
         @await Html.PartialAsync("../_Partials/_Macros")
       </span>
       <span class="app-brand-text demo menu-text fw-bold ms-2">@TempData.Peek("appName")</span>
