@@ -102,22 +102,12 @@ bld/
 
 # Ignoring following files/folder only for master
 
-wwwroot/audio/
-wwwroot/css/*
-!wwwroot/css/site.scss
-!wwwroot/js/*
+wwwroot/css/*.dist.css
 wwwroot/js/*.dist.js
-!wwwroot/js/site.js
-wwwroot/img/
-wwwroot/svg/
-wwwroot/json/**/*
-!wwwroot/json/search-vertical.json
-!wwwroot/json/search-horizontal.json
-wwwroot/vendor/
-
-build-config.js
-package.json
-webpack.config.js
+wwwroot/vendor/**/*.dist.css
+!wwwroot/vendor/fonts/*.dist.css
+wwwroot/vendor/**/*.dist.js
+wwwroot/vendor/css
 
 
 

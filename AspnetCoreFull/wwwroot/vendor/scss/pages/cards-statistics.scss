@@ -1,0 +1,36 @@
+// * Cards Statistics
+// *******************************************************************************
+
+@use '../_bootstrap-extended/include' as light;
+@use '../_bootstrap-extended/include-dark' as dark;
+@import '../_custom-variables/pages';
+
+// card illustration position image
+.card-img-position {
+  height: 115%;
+}
+
+// transparent card avatar background color
+@if $enable-light-style {
+  .light-style {
+    .transparent-card {
+      .avatar {
+        .avatar-initial {
+          background-color: light.$card-bg;
+        }
+      }
+    }
+  }
+}
+
+@if $enable-dark-style {
+  .dark-style {
+    .transparent-card {
+      .avatar {
+        .avatar-initial {
+          background-color: dark.$card-bg;
+        }
+      }
+    }
+  }
+}
