@@ -26,16 +26,6 @@
       "url": "/LayoutExamples/ContentNavbarWithSidebar"
     },
     {
-      "name": "Layout Navbar full",
-      "icon": "mdi-window-maximize",
-      "url": "/LayoutExamples/NavbarFull"
-    },
-    {
-      "name": "Layout Navbar full + Sidebar",
-      "icon": "mdi-window-maximize",
-      "url": "/LayoutExamples/NavbarFullWithSidebar"
-    },
-    {
       "name": "Layout Without menu",
       "icon": "mdi-window-maximize",
       "url": "/LayoutExamples/WithoutMenu"

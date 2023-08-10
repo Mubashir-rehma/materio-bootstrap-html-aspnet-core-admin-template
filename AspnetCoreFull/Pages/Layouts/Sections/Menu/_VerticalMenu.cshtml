@@ -13,12 +13,11 @@
       <span class="app-brand-logo demo">
         @await Html.PartialAsync("../_Partials/_Macros")
       </span>
-      <span class="app-brand-text demo menu-text fw-bold ms-2">@TempData.Peek("appName")</span>
+      <span class="app-brand-text demo menu-text fw-semibold ms-2">@TempData.Peek("appName")</span>
     </a>
 
-    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-      <i class="bx bx-menu d-none d-xl-block bx-sm align-middle"></i>
-      <i class="bx bx-x d-block d-xl-none bx-sm align-middle"></i>
+   <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+      <i class="mdi menu-toggle-icon d-xl-block align-middle mdi-20px"></i>
     </a>
   </div>
 
@@ -33,12 +32,17 @@
     <!-- Dashboards -->
     <li class='menu-item@(currentPage.StartsWith("/Dashboards/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
         <div data-i18n="Dashboards">Dashboards</div>
-        <div class="badge bg-label-primary rounded-pill ms-auto">5</div>
+        <div class="badge bg-danger rounded-pill ms-auto">5</div>
       </a>
       <ul class="menu-sub">
-        <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
+        <li class='menu-item@(currentPage == "/Dashboards/CRM" ? " active" : "")'>
+          <a asp-page="/Dashboards/CRM" class="menu-link">
+            <div data-i18n="CRM">CRM</div>
+          </a>
+        </li>
+       <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
           <a asp-page="/Dashboards/Analytics" class="menu-link">
             <div data-i18n="Analytics">Analytics</div>
           </a>
@@ -64,8 +68,8 @@
     <!-- Layouts -->
     <li class='menu-item@(currentPage.StartsWith("/LayoutExamples/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-layout"></i>
-        <div data-i18n="Layout Examples">Layout Examples</div>
+        <i class="menu-icon tf-icons mdi mdi-window-maximize"></i>
+        <div data-i18n="Layouts">Layouts</div>
       </a>
 
       <ul class="menu-sub">
@@ -83,16 +87,6 @@
         <li class='menu-item@(currentPage == "/LayoutExamples/ContentNavbarWithSidebar" ? " active" : "")'>
           <a asp-page="/LayoutExamples/ContentNavbarWithSidebar" class="menu-link">
             <div data-i18n="Content nav + Sidebar">Content nav + Sidebar</div>
-          </a>
-        </li>
-        <li class='menu-item@(currentPage == "/LayoutExamples/NavbarFull" ? " active" : "")'>
-          <a asp-page="/LayoutExamples/NavbarFull" class="menu-link">
-            <div data-i18n="Navbar full">Navbar full</div>
-          </a>
-        </li>
-        <li class='menu-item@(currentPage == "/LayoutExamples/NavbarFullWithSidebar" ? " active" : "")'>
-          <a asp-page="/LayoutExamples/NavbarFullWithSidebar" class="menu-link">
-            <div data-i18n="Navbar full + Sidebar">Navbar full + Sidebar</div>
           </a>
         </li>
         <li class='menu-item@(currentPage == "/LayoutExamples/HorizontalMenu" ? " active" : "")'>
@@ -131,7 +125,7 @@
     <!-- Front Pages -->
     <li class='menu-item@(currentPage.StartsWith("/FrontPages/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class='menu-icon tf-icons mdi mdi-flip-to-front'></i>
         <div data-i18n="Front Pages">Front Pages</div>
       </a>
       <ul class="menu-sub">
@@ -165,38 +159,37 @@
 
 
     <!-- Apps & Pages -->
-    <li class="menu-divider mb-1"></li>
-    <li class="menu-header small fw-semibold">
+    <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">Apps &amp; Pages</span>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Email" ? " active" : "")'>
       <a asp-page="/Apps/Email" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-envelope"></i>
+        <i class="menu-icon tf-icons mdi mdi-email-outline"></i>
         <div data-i18n="Email">Email</div>
       </a>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Chat" ? " active" : "")'>
       <a asp-page="/Apps/Chat" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-chat"></i>
+        <i class="menu-icon tf-icons mdi mdi-message-outline"></i>
         <div data-i18n="Chat">Chat</div>
       </a>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Calendar" ? " active" : "")'>
       <a asp-page="/Apps/Calendar" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
+        <i class="menu-icon tf-icons mdi mdi-calendar-blank-outline"></i>
         <div data-i18n="Calendar">Calendar</div>
       </a>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Kanban" ? " active" : "")'>
       <a asp-page="/Apps/Kanban" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-grid"></i>
+        <i class="menu-icon tf-icons mdi mdi-view-grid-outline"></i>
         <div data-i18n="Kanban">Kanban</div>
       </a>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/") ? " active open" : "")'>
       <a href='javascript:void(0);' class='menu-link menu-toggle'>
-        <i class='menu-icon tf-icons bx bx-cart-alt'></i>
-        <div data-i18n='eCommerce'>eCommerce</div>
+        <i class='menu-icon tf-icons mdi mdi-domain'></i>
+        <div data-i18n="eCommerce">eCommerce</div>
       </a>
       <ul class='menu-sub'>
         <li class='menu-item@(currentPage == "/Apps/Ecommerce/Dashboard" ? " active" : "")'>
@@ -334,7 +327,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Academy/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons bx bx-book-open'></i>
+        <i class='menu-icon tf-icons mdi mdi-notebook-outline'></i>
         <div data-i18n="Academy">Academy</div>
       </a>
       <ul class="menu-sub">
@@ -357,7 +350,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Logistics/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons bx bx-car'></i>
+        <i class='menu-icon tf-icons mdi mdi-truck-outline'></i>
         <div data-i18n="Logistics">Logistics</div>
       </a>
       <ul class="menu-sub">
@@ -375,9 +368,9 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Invoice/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <i class='menu-icon tf-icons mdi mdi-content-paste'></i>
         <div data-i18n="Invoice">Invoice</div>
-        <div class="badge bg-label-danger rounded-pill ms-auto">4</div>
+        <div class="badge bg-danger rounded-pill ms-auto">4</div>
       </a>
       <ul class="menu-sub">
         <li class='menu-item@(currentPage == "/Apps/Invoice/List" ? " active" : "")'>
@@ -404,7 +397,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Users/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-user"></i>
+        <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
         <div data-i18n="Users">Users</div>
       </a>
       <ul class="menu-sub">
@@ -449,7 +442,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Apps/Access/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons bx bx-check-shield'></i>
+        <i class='menu-icon tf-icons mdi mdi-cog-outline'></i>
         <div data-i18n="Roles & Permissions">Roles & Permissions</div>
       </a>
       <ul class="menu-sub">
@@ -467,7 +460,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Pages/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-dock-top"></i>
+        <i class="menu-icon tf-icons mdi mdi-file-document-multiple-outline"></i>
         <div data-i18n="Pages">Pages</div>
       </a>
       <ul class="menu-sub">
@@ -565,13 +558,18 @@
                 <div data-i18n="Not Authorized">Not Authorized</div>
               </a>
             </li>
+            <li class='menu-item@(currentPage == "/Pages/Misc/ServerError" ? " active" : "")'>
+              <a asp-page="/Pages/Misc/ServerError" class="menu-link" target="_blank">
+                <div data-i18n="Server Error">Server Error</div>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Auth/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-user-check"></i>
+        <i class="menu-icon tf-icons mdi mdi-lock-open-outline"></i>
         <div data-i18n="Authentications">Authentications</div>
       </a>
       <ul class="menu-sub">
@@ -686,7 +684,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Wizards/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-spreadsheet"></i>
+        <i class="menu-icon tf-icons mdi mdi-dots-horizontal"></i>
         <div data-i18n="Wizard Examples">Wizard Examples</div>
       </a>
       <ul class="menu-sub">
@@ -709,22 +707,21 @@
     </li>
     <li class='menu-item@(currentPage == "/Modals/Examples" ? " active" : "")'>
       <a asp-page="/Modals/Examples" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-window-open"></i>
+        <i class="menu-icon tf-icons mdi mdi-open-in-new"></i>
         <div data-i18n="Modal Examples">Modal Examples</div>
       </a>
     </li>
 
     <!-- Components -->
-    <li class="menu-divider mb-1"></li>
-    <li class="menu-header small fw-semibold">
+    <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">Components</span>
     </li>
     <!-- Cards -->
     <li class='menu-item@(currentPage.StartsWith("/Cards/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-collection"></i>
+        <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
         <div data-i18n="Cards">Cards</div>
-        <div class="badge bg-label-primary rounded-pill ms-auto">6</div>
+        <div class="badge bg-primary rounded-pill ms-auto">6</div>
       </a>
       <ul class="menu-sub">
         <li class='menu-item@(currentPage == "/Cards/Basic" ? " active" : "")'>
@@ -762,7 +759,7 @@
     <!-- User interface -->
     <li class='menu-item@(currentPage.StartsWith("/Ui/") ? " active open" : "")'>
       <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-box"></i>
+        <i class="menu-icon tf-icons mdi mdi-archive-outline"></i>
         <div data-i18n="User interface">User interface</div>
       </a>
       <ul class="menu-sub">
@@ -867,7 +864,7 @@
     <!-- Extended components -->
     <li class='menu-item@(currentPage.StartsWith("/ExtendedUi/") ? " active open" : "")'>
       <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-copy"></i>
+        <i class="menu-icon tf-icons mdi mdi-star-outline"></i>
         <div data-i18n="Extended UI">Extended UI</div>
       </a>
       <ul class="menu-sub">
@@ -947,39 +944,21 @@
     </li>
 
     <!-- Icons -->
-    <li class='menu-item@(currentPage.StartsWith("/Icons/") ? " active open" : "")'>
-      <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-crown"></i>
+    <li class='menu-item@(currentPage == "/Icons/MdiIcons" ? " active" : "")'>
+      <a asp-page="/Icons/MdiIcons" class="menu-link">
+        <i class="menu-icon tf-icons mdi mdi-google-circles-extended"></i>
         <div data-i18n="Icons">Icons</div>
       </a>
-      <ul class="menu-sub">
-        <li class='menu-item@(currentPage == "/Icons/Boxicons" ? " active" : "")'>
-          <a asp-page="/Icons/Boxicons" class="menu-link">
-            <div data-i18n="Boxicons">Boxicons</div>
-          </a>
-        </li>
-        <li class='menu-item@(currentPage == "/Icons/Feather" ? " active" : "")'>
-          <a asp-page="/Icons/Feather" class="menu-link">
-            <div data-i18n="Feather">Feather</div>
-          </a>
-        </li>
-        <li class='menu-item@(currentPage == "/Icons/FontAwesome" ? " active" : "")'>
-          <a asp-page="/Icons/FontAwesome" class="menu-link">
-            <div data-i18n="Fontawesome">Fontawesome</div>
-          </a>
-        </li>
-      </ul>
     </li>
 
     <!-- Forms & Tables -->
-    <li class="menu-divider mb-1"></li>
-    <li class="menu-header small fw-semibold">
+    <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">Forms &amp; Tables</span>
     </li>
     <!-- Forms -->
     <li class='menu-item@(currentPage.StartsWith("/Forms/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-detail"></i>
+        <i class="menu-icon tf-icons mdi mdi-form-select"></i>
         <div data-i18n="Form Elements">Form Elements</div>
       </a>
       <ul class="menu-sub">
@@ -1037,7 +1016,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/FormLayouts/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-detail"></i>
+        <i class="menu-icon tf-icons mdi mdi-cube-outline"></i>
         <div data-i18n="Form Layouts">Form Layouts</div>
       </a>
       <ul class="menu-sub">
@@ -1060,7 +1039,7 @@
     </li>
     <li class='menu-item@(currentPage.StartsWith("/FormWizard/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-carousel"></i>
+        <i class="menu-icon tf-icons mdi mdi-dots-horizontal"></i>
         <div data-i18n="Form Wizard">Form Wizard</div>
       </a>
       <ul class="menu-sub">
@@ -1078,20 +1057,20 @@
     </li>
     <li class='menu-item@(currentPage == "/FormValidation/Validation" ? " active" : "")'>
       <a asp-page="/FormValidation/Validation" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-list-check"></i>
+        <i class="menu-icon tf-icons mdi mdi-checkbox-marked-circle-outline"></i>
         <div data-i18n="Form Validation">Form Validation</div>
       </a>
     </li>
     <!-- Tables -->
     <li class='menu-item@(currentPage == "/Tables/Basic" ? " active" : "")'>
       <a asp-page="/Tables/Basic" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-table"></i>
+        <i class="menu-icon tf-icons mdi mdi-table"></i>
         <div data-i18n="Tables">Tables</div>
       </a>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Tables/DataTables/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-grid"></i>
+        <i class="menu-icon tf-icons mdi mdi-grid"></i>
         <div data-i18n="Datatables">Datatables</div>
       </a>
       <ul class="menu-sub">
@@ -1114,13 +1093,12 @@
     </li>
 
     <!-- Charts & Maps -->
-    <li class="menu-divider mb-1"></li>
-    <li class="menu-header small fw-semibold">
+    <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">Charts &amp; Maps</span>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Charts/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-chart"></i>
+        <i class="menu-icon tf-icons mdi mdi mdi-chart-donut"></i>
         <div data-i18n="Charts">Charts</div>
       </a>
       <ul class="menu-sub">
@@ -1138,25 +1116,24 @@
     </li>
     <li class='menu-item@(currentPage == "/Maps/Leaflet" ? " active" : "")'>
       <a asp-page="/Maps/Leaflet" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-map-alt"></i>
+        <i class="menu-icon tf-icons mdi mdi-map-outline"></i>
         <div data-i18n="Leaflet Maps">Leaflet Maps</div>
       </a>
     </li>
 
     <!-- Misc -->
-    <li class="menu-divider mb-1"></li>
-    <li class="menu-header small fw-semibold">
+    <li class="menu-header fw-medium mt-4">
       <span class="menu-header-text">Misc</span>
     </li>
     <li class="menu-item">
       <a href='@TempData.Peek("support")' target="_blank" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-support"></i>
+        <i class="menu-icon tf-icons mdi mdi-lifebuoy"></i>
         <div data-i18n="Support">Support</div>
       </a>
     </li>
     <li class="menu-item">
       <a href='@TempData.Peek("documentation")' target="_blank" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-file"></i>
+        <i class="menu-icon tf-icons mdi mdi-file-document-multiple-outline"></i>
         <div data-i18n="Documentation">Documentation</div>
       </a>
     </li>

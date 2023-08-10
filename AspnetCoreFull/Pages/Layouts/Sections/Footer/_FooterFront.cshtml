@@ -4,27 +4,29 @@
     <div class="container">
       <div class="row gx-0 gy-4 g-md-5">
         <div class="col-lg-5">
-          <a asp-page="/Index" class="app-brand-link gap-2 mb-4">
+          <a asp-page="/" class="app-brand-link gap-2 mb-4">
             <span class="app-brand-logo demo">
               @await Html.PartialAsync("../_Partials/_Macros")
             </span>
-            <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">@TempData.Peek("appName")</span>
+            <span class="app-brand-text demo footer-link fw-semibold ms-2 ps-1">@TempData.Peek("appName")</span>
           </a>
           <p class="footer-text footer-logo-description mb-4">
             Most Powerful & Comprehensive 🤩 React NextJS Admin Template with Elegant Material Design & Unique
             Layouts.
           </p>
           <form>
-            <label for="footer-email" class="footer-text">Subscribe to newsletter</label>
-            <div class="d-flex mt-2 me-lg-5">
-              <input type="email" class="form-control footer-text bg-transparent me-2" id="footer-email" placeholder="Your email" />
+            <div class="d-flex mt-2 gap-3">
+              <div class="form-floating form-floating-outline w-px-250">
+                <input type="text" class="form-control bg-transparent" id="newsletter-1" placeholder="Your email" />
+                <label for="newsletter-1">Subscribe to newsletter</label>
+              </div>
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </div>
           </form>
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6">
           <h6 class="footer-title mb-4">Demos</h6>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled mb-0">
             <li class="mb-3">
               <a href="javascript:void(0);" class="footer-link">Vertical Layout</a>
             </li>
@@ -44,7 +46,7 @@
         </div>
         <div class="col-lg-2 col-md-4 col-sm-6">
           <h6 class="footer-title mb-4">Pages</h6>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled mb-0">
             <li class="mb-3">
               <a asp-page="PricingPage" class="footer-link">Pricing</a>
             </li>
@@ -58,7 +60,7 @@
               <a asp-page="HelpCenterLanding" class="footer-link">Help Center</a>
             </li>
             <li class="mb-3">
-              <a asp-page="/Auth/Register/Basic" target="_blank" class="footer-link">Login/Register</a>
+              <a asp-page="/Auth/Register/Cover" target="_blank" class="footer-link">Login/Register</a>
             </li>
           </ul>
         </div>
@@ -78,15 +80,15 @@
           document.write(new Date().getFullYear());
 
           </script>
-          , Made with <i class="bx bxs-heart text-danger"></i> by
+          , Made with <i class="tf-icons mdi mdi-heart text-danger"></i> by
         </span>
         <a href='@TempData.Peek("authorUrl")' target="_blank" class="footer-link fw-medium footer-theme-link">@TempData.Peek("authorName")</a>
       </div>
       <div>
-        <a href='@TempData.Peek("githubFreeUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-github bx-sm"></i></a>
-        <a href='@TempData.Peek("facebookUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-facebook bx-sm"></i></a>
-        <a href='@TempData.Peek("twitterUrl")' class="footer-link me-2" target="_blank"><i class="bx bxl-twitter bx-sm"></i></a>
-        <a href='@TempData.Peek("instagramUrl")' class="footer-link" target="_blank"><i class='bx bxl-instagram bx-sm'></i></a>
+        <a href='@TempData.Peek("githubFreeUrl")' class="footer-link me-2" target="_blank"><i class="mdi mdi-github"></i></a>
+        <a href='@TempData.Peek("facebookUrl")' class="footer-link me-2" target="_blank"><i class="mdi mdi-facebook"></i></a>
+        <a href='@TempData.Peek("twitterUrl")' class="footer-link me-2" target="_blank"><i class="mdi mdi-twitter"></i></a>
+        <a href='@TempData.Peek("instagramUrl")' class="footer-link" target="_blank"><i class='mdi mdi-instagram'></i></a>
       </div>
     </div>
   </div>

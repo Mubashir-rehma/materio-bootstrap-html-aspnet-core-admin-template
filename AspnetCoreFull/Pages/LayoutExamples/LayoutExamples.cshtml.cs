@@ -44,16 +44,6 @@ namespace AspnetCoreFull.Pages.LayoutExamples
     public void OnGet() { }
   }
 
-  public class NavbarFullModel : PageModel
-  {
-    public void OnGet() { }
-  }
-
-  public class NavbarFullWithSidebarModel : PageModel
-  {
-    public void OnGet() { }
-  }
-
   public class WithoutMenuModel : PageModel
   {
     public void OnGet() { }
