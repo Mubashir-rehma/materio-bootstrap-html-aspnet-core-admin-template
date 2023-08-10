@@ -7,12 +7,14 @@
 @section VendorStyles {
 <link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.dist.css" />
 <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+<link rel="stylesheet" href="~/vendor/libs/rateyo/rateyo.dist.css" />
 }
 
 @section VendorScripts {
 <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
 <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
 <script src="~/vendor/libs/apex-charts/apexcharts.dist.js"></script>
+<script src="~/vendor/libs/rateyo/rateyo.dist.js"></script>
 <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
 <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
 <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
@@ -28,152 +30,14 @@
 </h4>
 
 <div class="row">
-  <!-- Employee List -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Employee List</h5>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="employeeList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeList">
-            <a class="dropdown-item" href="javascript:void(0);">Featured Employees</a>
-            <a class="dropdown-item" href="javascript:void(0);">Based on Task</a>
-            <a class="dropdown-item" href="javascript:void(0);">See All</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/20.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Alberta</h6>
-                  <small class="text-muted">UI Designer</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">100h:</h6> <span class="text-muted">138h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="secondary" data-series="85"></div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/3.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Paul</h6>
-                  <small class="text-muted">Branding</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">121h:</h6> <span class="text-muted">109h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="warning" data-series="70"></div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/15.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Nannie</h6>
-                  <small class="text-muted">iOS Developer</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">112h:</h6> <span class="text-muted">160h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="primary" data-series="25"></div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/14.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Rodney</h6>
-                  <small class="text-muted">iOS Developer</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">125h:</h6> <span class="text-muted">166h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="danger" data-series="75"></div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/7.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Martin</h6>
-                  <small class="text-muted">Product Designer</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">76h:</h6> <span class="text-muted">89h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="info" data-series="60"></div>
-            </div>
-          </li>
-          <li class="d-flex">
-            <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/avatars/18.png" alt="User" class="rounded">
-            </div>
-            <div class="d-flex w-100 align-items-start gap-2">
-              <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                <div>
-                  <h6 class="mb-0">Nancy</h6>
-                  <small class="text-muted">PHP Developer</small>
-                </div>
-
-                <div class="user-progress d-flex align-items-center gap-2">
-                  <h6 class="mb-0">22h:</h6> <span class="text-muted">45h</span>
-                </div>
-              </div>
-
-              <div class="chart-progress" data-color="warning" data-series="45"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Employee List -->
-
   <!-- Transactions -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card">
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="card-title m-0 me-2">Transactions</h5>
         <div class="dropdown">
           <button class="btn p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
             <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
@@ -184,87 +48,117 @@
       </div>
       <div class="card-body">
         <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/paypal.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-success rounded">
+                <div>
+                  <img src="~/img/icons/payments/credit-card.png" alt="credit-card">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Paypal</small>
-                <h6 class="mb-0">Send money</h6>
+                <h6 class="mb-0">Credit Card</h6>
+                <small>Digital Ocean</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">+82.6</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">-$850</h6>
+                <i class='mdi mdi-chevron-down mdi-24px text-danger'></i>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/wallet.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-primary rounded">
+                <div>
+                  <img src="~/img/icons/payments/paypal-primary.png" alt="paypal">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Wallet</small>
-                <h6 class="mb-0">Mac'D</h6>
+                <h6 class="mb-0">Paypal</h6>
+                <small>Received Money</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">+270.69</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">+$34,456</h6>
+                <i class='mdi mdi-chevron-up mdi-24px text-success'></i>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/chart.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-info rounded">
+                <div>
+                  <img src="~/img/icons/payments/mastercard-info.png" alt="mastercard">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Transfer</small>
-                <h6 class="mb-0">Refund</h6>
+                <h6 class="mb-0">Mastercard</h6>
+                <small>Netflix</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">+637.91</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">-$199</h6>
+                <i class='mdi mdi-chevron-down mdi-24px text-danger'></i>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/cc-success.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-danger rounded">
+                <div>
+                  <img src="~/img/icons/payments/wallet.png" alt="wallet">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Credit Card</small>
-                <h6 class="mb-0">Ordered Food</h6>
+                <h6 class="mb-0">Wallet</h6>
+                <small>Mac'D</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">-838.71</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">-$156</h6>
+                <i class='mdi mdi-chevron-down mdi-24px text-danger'></i>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/wallet.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-primary rounded">
+                <div>
+                  <img src="~/img/icons/payments/paypal-primary.png" alt="paypal">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Wallet</small>
-                <h6 class="mb-0">Starbucks</h6>
+                <h6 class="mb-0">Paypal</h6>
+                <small>Refund</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">+203.33</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">+$12,872</h6>
+                <i class='mdi mdi-chevron-up mdi-24px text-success'></i>
               </div>
             </div>
           </li>
           <li class="d-flex">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/img/icons/unicons/cc-warning.png" alt="User" class="rounded">
+              <div class="avatar-initial bg-label-warning rounded">
+                <div>
+                  <img src="~/img/icons/payments/stripe.png" alt="Stripe">
+                </div>
+              </div>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <small class="text-muted d-block mb-1">Mastercard</small>
-                <h6 class="mb-0">Ordered Food</h6>
+                <h6 class="mb-0">Stripe</h6>
+                <small>Buy Apple Watch</small>
               </div>
-              <div class="user-progress d-flex align-items-center gap-1">
-                <h6 class="mb-0">-92.45</h6> <span class="text-muted">USD</span>
+              <div class="user-progress d-flex align-items-center gap-3">
+                <h6 class="mb-0">-$299</h6>
+                <i class='mdi mdi-chevron-down mdi-24px text-danger'></i>
               </div>
             </div>
           </li>
@@ -273,819 +167,558 @@
     </div>
   </div>
   <!--/ Transactions -->
-  <!-- Shared Event -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header flex-grow-0">
-        <div class="d-flex">
-          <div class="avatar flex-shrink-0 me-3">
-            <img src="~/img/avatars/20.png" alt="User" class="rounded-circle">
-          </div>
-          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-1">
-            <div class="me-2">
-              <h5 class="mb-0">Olivia Shared Event</h5>
-              <small class="text-muted">07 Sep 2020 at 10:30 AM</small>
-            </div>
-            <div class="dropdown d-none d-sm-block">
-              <button class="btn p-0" type="button" id="eventList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="bx bx-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="eventList">
-                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img class="img-fluid" src="~/img/backgrounds/event.jpg" alt="Card image cap" />
-      <div class="featured-date mt-n4 ms-4 bg-white rounded w-px-50 shadow text-center p-1">
-        <h5 class="mb-0 text-dark">21</h5>
-        <span class="text-primary">May</span>
-      </div>
-      <div class="card-body">
-        <h5 class="text-truncate">How To Excel In A Technical Terminology?</h5>
-        <div class="d-flex gap-2">
-          <span class="badge bg-label-primary">Technical</span>
-          <span class="badge bg-label-primary">Account</span>
-          <span class="badge bg-label-primary">Excel</span>
-        </div>
-        <div class="d-flex my-3">
-          <ul class="list-unstyled m-0 d-flex align-items-center avatar-group">
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/5.png" alt="Avatar">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/12.png" alt="Avatar">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/6.png" alt="Avatar">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Darcey Nooner" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/10.png" alt="Avatar">
-            </li>
-          </ul>
-          <a href="javascript:;" class="btn btn-primary ms-auto" role="button">Join Now</a>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="card-actions">
-            <a href="javascript:;" class="text-muted me-3"><i class="bx bx-heart me-1"></i> 236</a>
-            <a href="javascript:;" class="text-muted"><i class="bx bx-message me-1"></i> 12</a>
-          </div>
-          <div class="dropup d-none d-sm-block">
-            <button class="btn p-0" type="button" id="sharedList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sharedList">
-              <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-              <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Shared Event -->
-  <!-- Payment Data -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Payment Data</h5>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="paymentDataList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="paymentDataList">
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
-            <a class="dropdown-item" href="javascript:void(0);">24 Hours</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <small class="text-muted">Price</small>
-        <div class="d-flex align-items-center mb-3">
-          <h5 class="text-primary me-3 mb-0">$455.60</h5>
-          <span class="badge bg-label-primary">35% OFF</span>
-        </div>
-        <form id="paymentMethodForm" class="row g-3" onsubmit="return false">
-          <div class="col-12">
-            <small class="text-muted d-block mb-2">Choose payment method:</small>
-            <div class="row gy-3 text-nowrap">
-              <div class="col">
-                <div class="form-check custom-option custom-option-basic">
-                  <label class="form-check-label custom-option-content py-2" for="customRadioPaypal">
-                    <input name="customRadioTemp" class="form-check-input" type="radio" value="" id="customRadioPaypal" checked />
-                    <span class="custom-option-header pb-0">
-                      <span>Paypal</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-check custom-option custom-option-basic">
-                  <label class="form-check-label custom-option-content py-2" for="customRadioCC">
-                    <input name="customRadioTemp" class="form-check-input" type="radio" value="" id="customRadioCC" />
-                    <span class="custom-option-header pb-0">
-                      <span>Credit Card</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <label class="form-label w-100" for="paymentAddCard">Card Number</label>
-            <div class="input-group input-group-merge">
-              <input id="paymentAddCard" name="paymentAddCard" class="form-control credit-card-payment" type="text" placeholder="1356 3215 6548 7898" aria-describedby="paymentAddCard2" />
-              <span class="input-group-text cursor-pointer p-1" id="paymentAddCard2"><span class="card-payment-type"></span></span>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <label class="form-label" for="paymentAddCardExpiryDate">Exp. Date</label>
-            <input type="text" id="paymentAddCardExpiryDate" class="form-control expiry-date-payment" placeholder="MM/YY" />
-          </div>
-          <div class="col-12 col-md-6">
-            <label class="form-label" for="paymentAddCardCvv">CVV Code</label>
-            <div class="input-group input-group-merge">
-              <input type="text" id="paymentAddCardCvv" class="form-control cvv-code-payment" maxlength="3" placeholder="654" />
-              <span class="input-group-text cursor-pointer" id="paymentAddCardCvv2"><i class="bx bx-help-circle text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
-            </div>
-          </div>
-          <div class="col-12">
-            <label class="form-label" for="paymentAddCardName">Name</label>
-            <input type="text" id="paymentAddCardName" class="form-control" placeholder="John Doe" />
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="defaultCheck3">
-              <label class="form-check-label" for="defaultCheck3">Save card?</label>
-            </div>
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary w-100 d-grid">Add Card</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!--/ Payment Data -->
-  <!-- Business Shark -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">For Business Sharks</h5>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="purchaseItemList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="purchaseItemList">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>Here, i focus ona range of items and featured that we use in life without them</p>
-        <h6>Basic price is $30</h6>
-        <form id="businessForm" onsubmit="return false">
-          <div class="form-check custom-option custom-option-basic mb-3">
-            <label class="form-check-label custom-option-content" for="brandingCheckbox">
-              <input class="form-check-input" type="checkbox" id="brandingCheckbox" />
-              <span class="custom-option-header pb-0">
-                <span class="fw-medium">Branding</span>
-                <span class="badge bg-label-success">+ $30</span>
-              </span>
-            </label>
-          </div>
-          <div class="form-check custom-option custom-option-basic mb-3">
-            <label class="form-check-label custom-option-content" for="marketingCheckbox">
-              <input class="form-check-input" type="checkbox" id="marketingCheckbox" checked />
-              <span class="custom-option-header pb-0">
-                <span class="fw-medium">Marketing</span>
-                <span class="badge bg-label-primary">+ $75</span>
-              </span>
-            </label>
-          </div>
-          <div class="form-check custom-option custom-option-basic mb-3">
-            <label class="form-check-label custom-option-content" for="appBuildingCheckbox">
-              <input class="form-check-input" type="checkbox" id="appBuildingCheckbox" />
-              <span class="custom-option-header pb-0">
-                <span class="fw-medium">App Building</span>
-                <span class="badge bg-label-success">+ $125</span>
-              </span>
-            </label>
-          </div>
-          <div class="form-check custom-option custom-option-basic mb-3">
-            <label class="form-check-label custom-option-content" for="seoCheckbox">
-              <input class="form-check-input" type="checkbox" id="seoCheckbox" />
-              <span class="custom-option-header pb-0">
-                <span class="fw-medium">SEO</span>
-                <span class="badge bg-label-primary">+ $48</span>
-              </span>
-            </label>
-          </div>
-          <div class="d-flex justify-content-between mb-1">
-            <span class="fw-medium">Vat Taxes</span>
-            <span class="fw-medium">$24</span>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span class="fw-medium">Total Amount</span>
-            <span class="h5 text-primary mb-0">$99</span>
-          </div>
-          <hr>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary w-100 d-grid">Purchase</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!--/ Business Shark -->
+
   <!-- Upgrade Plan -->
-  <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100">
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card">
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
         <div class="dropdown">
           <button class="btn p-0" type="button" id="upgradePlanCard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="upgradePlanCard">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <p class="mb-4">Please make the payment to start enjoying all the features of our premium plan as soon as possible.</p>
-        <div class="d-flex border-primary p-2 border rounded mb-4">
-          <div class="avatar flex-shrink-0 me-3">
-            <img src="~/img/icons/unicons/briefcase.png" alt="User" class="rounded">
-          </div>
-          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-            <div class="me-2">
-              <p class="mb-0">Business</p>
-              <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade Plan</a>
+        <small>Please make the payment to start enjoying all the features of our premium plan as soon as possible.</small>
+        <div class="bg-label-primary p-2 border rounded my-3">
+          <div class="d-flex px-1">
+            <div class="border border-2 border-primary rounded me-3 p-2 d-flex align-items-center justify-content-center w-px-40 h-px-40">
+              <i class="mdi mdi-star-outline mdi-24px"></i>
             </div>
-            <div class="user-progress">
-              <div class="d-flex justify-content-center">
-                <sup class="mt-3 mb-0 me-1">$</sup>
-                <h3 class="mb-0">2,124</h3>
-                <sub class="mt-auto mb-2"> /Year</sub>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+                <h6 class="mb-0">Platinum</h6>
+                <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade Plan</a>
+              </div>
+              <div class="user-progress">
+                <div class="d-flex justify-content-center">
+                  <sup class="mt-3 mb-0 text-heading small">$</sup>
+                  <h3 class="fw-medium mb-0">2,124</h3>
+                  <sub class="mt-auto mb-2 text-heading small"> /Year</sub>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <form id="paymentDetailsForm" onsubmit="return false" class="pt-2">
-          <h6 class="mb-4">Payment Details</h6>
-          <div class="d-flex mb-4">
+        <form id="paymentDetailsForm" onsubmit="return false">
+          <h6 class="mb-3 pb-1">Payment Details</h6>
+          <div class="d-flex mb-3">
             <div class="me-3">
-              <img src="~/img/icons/payments/visa-light.png" alt="Visa" data-app-light-img="icons/payments/visa-light.png" data-app-dark-img="icons/payments/visa-dark.png" height="30" />
+              <img src="~/img/icons/payments/logo-mastercard-small.png" alt="credit card" height="30">
             </div>
             <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-              <div class="d-flex flex-column">
-                <h6 class="mb-0">Visa Card</h6>
-                <small class="text-muted">8562 xxxx xxxx 4563</small>
+              <div>
+                <h6 class="mb-0">Credit Card</h6>
+                <small>5688 xxxx xxxx 2356</small>
               </div>
               <div class="w-px-75">
-                <input type="text" class="form-control cvv-code-payment" maxlength="3" placeholder="CVV" />
+                <input type="text" class="form-control form-control-lg cvv-code-payment" maxlength="3" placeholder="CVV" />
               </div>
             </div>
           </div>
-          <div class="d-flex mb-4">
+          <div class="d-flex mb-3">
             <div class="me-3">
-              <img src="~/img/icons/payments/master-light.png"  alt="master-card" data-app-light-img="icons/payments/master-light.png" data-app-dark-img="icons/payments/master-dark.png" height="30" />
+              <img src="~/img/icons/payments/logo-credit-card-2.png" alt="credit card" height="30">
             </div>
             <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-              <div class="d-flex flex-column">
-                <h6 class="mb-0">Master Card</h6>
-                <small class="text-muted">5688 xxxx xxxx 2356</small>
+              <div>
+                <h6 class="mb-0">Credit Card</h6>
+                <small>8562 xxxx xxxx 4563</small>
               </div>
               <div class="w-px-75">
-                <input type="text" class="form-control cvv-code-payment" maxlength="3" placeholder="CVV" />
+                <input type="text" class="form-control form-control-lg cvv-code-payment" maxlength="3" placeholder="CVV" />
               </div>
             </div>
           </div>
-          <a href="javascript:;" class="fw-medium d-block my-2" data-bs-toggle="modal" data-bs-target="#addNewCCModal"> Add Payment Method </a>
-          <div class="col-12 mb-4">
-            <input id="addEmail" name="addEmail" class="form-control" type="text" placeholder="Email Address" />
+          <a href="javascript:;" class="d-block my-2 small" data-bs-toggle="modal" data-bs-target="#addNewCCModal"> Add Payment Method </a>
+          <div class="col-12 mb-2 pb-2">
+            <input id="addEmail" name="addEmail" class="form-control form-control-lg" type="text" placeholder="Email Address" />
           </div>
           <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary w-100 d-grid">Process to payment</button>
+            <button type="submit" class="btn btn-primary w-100">
+              <span class="me-1">Process to payment</span>
+              <i class="mdi mdi-arrow-right scaleX-n1-rtl"></i> </button>
           </div>
         </form>
       </div>
     </div>
   </div>
   <!--/ Upgrade Plan -->
-</div>
-<div class="row">
-  <!-- Sales By Country -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
+
+  <!-- Meeting Schedule -->
+  <div class="col-md-6 col-xxl-4 mb-4 order-0 order-sm-2 order-xxl-0">
+    <div class="card">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="m-0 me-2">Sales by Countries</h5>
-          <small class="text-muted">Monthly Sales Overview</small>
-        </div>
+        <h5 class="card-title m-0 me-2">Meeting Schedule</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="salesByCountry" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+          <button class="btn p-0" type="button" id="meetingSchedule" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesByCountry">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="meetingSchedule">
+            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
           </div>
         </div>
       </div>
       <div class="card-body">
         <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/us.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/4.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$8,567k</h6>
-                  <small class="text-success fw-medium">
-                    <i class='bx bx-chevron-up'></i>
-                    25.8%
-                  </small>
-                </div>
-                <small class="text-muted">United states of america</small>
+                <h6 class="mb-0">Call with Woods</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">884k</h6>
-              </div>
+              <div class="badge bg-label-primary rounded-pill">Business</div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/br.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/5.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$2,415k</h6>
-                  <small class="text-danger fw-medium">
-                    <i class='bx bx-chevron-down'></i>
-                    6.2%
-                  </small>
-                </div>
-                <small class="text-muted">Brazil</small>
+                <h6 class="mb-0">Conference call</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">645k</h6>
-              </div>
+              <div class="badge bg-label-warning rounded-pill">Dinner</div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/in.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/3.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$865k</h6>
-                  <small class="text-success fw-medium">
-                    <i class='bx bx-chevron-up'></i>
-                    12.4%
-                  </small>
-                </div>
-                <small class="text-muted">India</small>
+                <h6 class="mb-0">Meeting with Mark</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">148k</h6>
-              </div>
+              <div class="badge bg-label-secondary rounded-pill">Meetup</div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/au.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/14.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$745k</h6>
-                  <small class="text-danger fw-medium">
-                    <i class='bx bx-chevron-down'></i>
-                    11.9%
-                  </small>
-                </div>
-                <small class="text-muted">Australia</small>
+                <h6 class="mb-0">Meeting in Oakland</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">86k</h6>
-              </div>
+              <div class="badge bg-label-danger rounded-pill">Dinner</div>
             </div>
           </li>
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4 pb-2">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/fr.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/8.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$45</h6>
-                  <small class="text-success fw-medium">
-                    <i class='bx bx-chevron-up'></i>
-                    16.2%
-                  </small>
-                </div>
-                <small class="text-muted">France</small>
+                <h6 class="mb-0">Call with hilda</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">42k</h6>
-              </div>
+              <div class="badge bg-label-success rounded-pill">Meditation</div>
             </div>
           </li>
           <li class="d-flex">
             <div class="avatar flex-shrink-0 me-3">
-              <img src="~/svg/flags/cn.svg" alt="User" class="rounded-circle">
+              <img src="~/img/avatars/1.png" alt="avatar" class="rounded-circle">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$12k</h6>
-                  <small class="text-success fw-medium">
-                    <i class='bx bx-chevron-up'></i>
-                    14.8%
-                  </small>
-                </div>
-                <small class="text-muted">China</small>
+                <h6 class="mb-0">Meeting with Carl</h6>
+                <small>
+                  <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                  <span>21 Jul | 08:20-10:30</span>
+                </small>
               </div>
-              <div class="user-progress">
-                <h6 class="mb-0">18k</h6>
-              </div>
+              <div class="badge bg-label-primary rounded-pill">Business</div>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <!--/ Sales By Country -->
-  <!-- Order Statistics -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
+  <!--/ Meeting Schedule -->
+
+  <!-- Team Members -->
+  <div class="col-xxl-5 mb-4">
+    <div class="card">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="m-0 me-2">Order Statistics</h5>
-          <small class="text-muted">42.82k Total Sales</small>
-        </div>
+        <h5 class="card-title m-0 me-2">Team Members</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+          <button class="btn p-0" type="button" id="teamMemberList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="teamMemberList">
             <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
             <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Project</th>
+              <th>Task</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="avatar me-2">
+                    <img src="~/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-truncate">Dean Hogan</h6><small class="text-truncate">IOS developer</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge bg-label-primary rounded-pill">Zipcar</span></td>
+              <td>
+                <p class="fw-medium"><span class="text-primary">87</span>/135</p>
+              </td>
+              <td>
+                <div class="chart-progress" data-color="primary" data-series="65"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="avatar me-2">
+                    <img src="~/img/avatars/8.png" alt="Avatar" class="rounded-circle">
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-truncate">Hilda Rice</h6><small class="text-truncate">Laravel developer</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge bg-label-success rounded-pill">Brandi</span></td>
+              <td>
+                <p class="fw-medium"><span class="text-primary">340</span>/420</p>
+              </td>
+              <td>
+                <div class="chart-progress" data-color="success" data-series="85"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="avatar me-2">
+                    <img src="~/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-truncate">Andrew O'Brian</h6><small class="text-truncate">React developer</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge bg-label-warning rounded-pill">Payers</span></td>
+              <td>
+                <p class="fw-medium"><span class="text-primary">50</span>/82</p>
+              </td>
+              <td>
+                <div class="chart-progress" data-color="warning" data-series="50"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="avatar me-2">
+                    <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle">
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-truncate">Elanor Price</h6><small class="text-truncate">Angular developer</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge bg-label-danger rounded-pill">Bitbank</span></td>
+              <td>
+                <p class="fw-medium"><span class="text-primary">96</span>/260</p>
+              </td>
+              <td>
+                <div class="chart-progress" data-color="danger" data-series="75"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="avatar me-2">
+                    <img src="~/img/avatars/11.png" alt="Avatar" class="rounded-circle">
+                  </div>
+                  <div>
+                    <h6 class="mb-0 text-truncate">Carl Oliver</h6><small class="text-truncate">VueJs developer</small>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge bg-label-secondary rounded-pill">Aviato</span></td>
+              <td>
+                <p class="fw-medium"><span class="text-primary">12</span>/25</p>
+              </td>
+              <td>
+                <div class="chart-progress" data-color="secondary" data-series="65"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!--/ Team Members -->
+
+  <!-- Deposit / Withdraw -->
+  <div class="col-xxl-7 mb-4">
+    <div class="card">
+      <div class="card-body row g-2">
+        <div class="col-12 col-md-6 card-separator pe-0 pe-md-3">
+          <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+            <h5 class="m-0 me-2">Deposit</h5>
+            <a class="fw-medium" href="javascript:void(0);">View all</a>
+          </div>
+          <div class="deposit-content pt-2">
+            <ul class="p-0 m-0">
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/gumroad.png" class="img-fluid" alt="gumroad" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Gumroad Account</h6>
+                    <small>Sell UI Kit</small>
+                  </div>
+                  <h6 class="text-success mb-0">+$4,650</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/mastercard-2.png" class="img-fluid" alt="mastercard" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Mastercard</h6>
+                    <small>Wallet deposit</small>
+                  </div>
+                  <h6 class="text-success mb-0">+$92,705</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/stripes.png" class="img-fluid" alt="stripes" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Stripe Account</h6>
+                    <small>iOS Application</small>
+                  </div>
+                  <h6 class="text-success mb-0">+$957</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/american-bank.png" class="img-fluid" alt="american" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">American Bank</h6>
+                    <small>Bank Transfer</small>
+                  </div>
+                  <h6 class="text-success mb-0">+$6,837</h6>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/citi.png" class="img-fluid" alt="citi" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Bank Account</h6>
+                    <small>Wallet deposit</small>
+                  </div>
+                  <h6 class="text-success mb-0">+$446</h6>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 ps-0 ps-md-3 mt-3 mt-md-2">
+          <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+            <h5 class="m-0 me-2">Withdraw</h5>
+            <a class="fw-medium" href="javascript:void(0);">View all</a>
+          </div>
+          <div class="withdraw-content pt-2">
+            <ul class="p-0 m-0">
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/brands/google.png" class="img-fluid" alt="google" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Google Adsense</h6>
+                    <small>Paypal deposit</small>
+                  </div>
+                  <h6 class="text-danger mb-0">-$145</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/brands/github.png" class="img-fluid" alt="github" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Github Enterprise</h6>
+                    <small>Security &amp; compliance</small>
+                  </div>
+                  <h6 class="text-danger mb-0">-$1870</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/brands/slack.png" class="img-fluid" alt="slack" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Upgrade Slack Plan</h6>
+                    <small>Debit card deposit</small>
+                  </div>
+                  <h6 class="text-danger mb-0">$450</h6>
+                </div>
+              </li>
+              <li class="d-flex mb-4 align-items-center pb-2">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/payments/digital-ocean.png" class="img-fluid" alt="digital" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">Digital Ocean</h6>
+                    <small>Cloud Hosting</small>
+                  </div>
+                  <h6 class="text-danger mb-0">-$540</h6>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="flex-shrink-0 me-3">
+                  <img src="~/img/icons/brands/aws.png" class="img-fluid" alt="aws" height="30" width="30">
+                </div>
+                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                  <div class="me-2">
+                    <h6 class="mb-0">AWS Account</h6>
+                    <small>Choosing a Cloud Platform</small>
+                  </div>
+                  <h6 class="text-danger mb-0">-$21</h6>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Deposit / Withdraw -->
+
+  <!-- Total Earnings -->
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2">Total Earning</h5>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="totalEarnings" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalEarnings">
+            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <div class="d-flex flex-column align-items-center gap-1">
-            <h2 class="mb-2">8,258</h2>
-            <span>Total Orders</span>
+        <div class="my-3">
+          <div class="d-flex align-items-center">
+            <h2 class="mb-0">$24,895</h2>
+            <span class="text-success ms-2 fw-medium">
+              <i class="mdi mdi-menu-up"></i>
+              <small>10%</small>
+            </span>
           </div>
-          <div id="orderStatisticsChart"></div>
+          <small class="mt-1">Compared to $84,325 last year</small>
         </div>
         <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-1">
+          <li class="d-flex mb-4">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-primary"><i class='bx bx-mobile-alt'></i></span>
+              <img src="~/img/icons/misc/zipcar.png" alt="zipcar" class="rounded">
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
-                <h6 class="mb-0">Electronic</h6>
-                <small class="text-muted">Mobile, Earbuds, TV</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">82.5k</small>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-success"><i class='bx bx-closet'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Fashion</h6>
-                <small class="text-muted">T-shirt, Jeans, Shoes</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">23.8k</small>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-info"><i class='bx bx-home-alt'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Decor</h6>
-                <small class="text-muted">Fine Art, Dining</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">849k</small>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-secondary"><i class='bx bx-football'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Sports</h6>
-                <small class="text-muted">Football, Cricket Kit</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">99</small>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Order Statistics -->
-  <!-- Earning Reports -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="m-0 me-2">Earning Reports</h5>
-          <small class="text-muted">Weekly Earnings Overview</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="earningReports" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="earningReports">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body pb-0">
-        <ul class="p-0 m-0">
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-primary"><i class='bx bx-trending-up'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Net Profit</h6>
-                <small class="text-muted">12.4k Sales</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">$1,619</small><i class='bx bx-chevron-up text-success ms-1'></i> <small class="text-muted">18.6%</small>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-success"><i class='bx bx-dollar'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Total Income</h6>
-                <small class="text-muted">Sales, Affiliation</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">$3,571</small><i class='bx bx-chevron-up text-success ms-1'></i> <small class="text-muted">39.6%</small>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-secondary"><i class='bx bx-credit-card'></i></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Total Expenses</h6>
-                <small class="text-muted">ADVT, Marketing</small>
-              </div>
-              <div class="user-progress">
-                <small class="fw-medium">$430</small><i class='bx bx-chevron-up text-success ms-1'></i> <small class="text-muted">52.8%</small>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div id="reportBarChart"></div>
-      </div>
-    </div>
-  </div>
-  <!--/ Earning Reports -->
-  <!-- Top Courses -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Top Courses</h5>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="topCourses" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="topCourses">
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Download</a>
-            <a class="dropdown-item" href="javascript:void(0);">View All</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled mb-0">
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-video"></i></span>
-            </div>
-            <div class="row w-100 align-items-center">
-              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
-                <h6 class="mb-0 lh-sm">Videography Basic Design Course</h6>
-              </div>
-              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
-                <div class="badge bg-label-secondary">1.2k Views</div>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-info"><i class="bx bx-code-alt"></i></span>
-            </div>
-            <div class="row w-100 align-items-center">
-              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
-                <h6 class="mb-0 lh-sm">Basic Front-end Development Course</h6>
-              </div>
-              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
-                <div class="badge bg-label-secondary">834 Views</div>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-success"><i class="bx bx-camera"></i></span>
-            </div>
-            <div class="row w-100 align-items-center">
-              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
-                <h6 class="mb-0 lh-sm">Basic Fundamentals of Photography</h6>
-              </div>
-              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
-                <div class="badge bg-label-secondary">3.7k Views</div>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-4 pb-1">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-warning"><i class="bx bx-basketball"></i></span>
-            </div>
-            <div class="row w-100 align-items-center">
-              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
-                <h6 class="mb-0 lh-sm">Advance Dribble Base Visual Design</h6>
-              </div>
-              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
-                <div class="badge bg-label-secondary">2.5k Views</div>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex">
-            <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-danger"><i class="bx bx-microphone"></i></span>
-            </div>
-            <div class="row w-100 align-items-center">
-              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
-                <h6 class="mb-0 lh-sm">Your First Singing Lesson</h6>
-              </div>
-              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
-                <div class="badge bg-label-secondary">948 Views</div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Top Courses -->
-  <!-- Upcoming Webinar -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <div class="bg-label-primary rounded-3 text-center mb-3 pt-4">
-          <img class="img-fluid w-60" src="~/img/illustrations/sitting-girl-with-laptop-dark.png" alt="Card girl image" />
-        </div>
-        <h4 class="mb-2 pb-1">Upcoming Webinar</h4>
-        <p class="small">Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
-        <div class="row mb-3 g-3">
-          <div class="col-6">
-            <div class="d-flex">
-              <div class="avatar flex-shrink-0 me-2">
-                <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-calendar-exclamation bx-sm"></i></span>
+                <h6 class="mb-0">Zipcar</h6>
+                <small>Vuejs, React & HTML</small>
               </div>
               <div>
-                <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
-                <small>Date</small>
+                <h6 class="mb-2">$24,895.65</h6>
+                <div class="progress bg-label-primary" style="height: 4px;">
+                  <div class="progress-bar bg-primary" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <div class="d-flex">
-              <div class="avatar flex-shrink-0 me-2">
-                <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-time-five bx-sm"></i></span>
+          </li>
+          <li class="d-flex mb-4">
+            <div class="avatar flex-shrink-0 me-3">
+              <img src="~/img/icons/misc/bitbank.png" alt="bitbank" class="rounded">
+            </div>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+                <h6 class="mb-0">Bitbank</h6>
+                <small>Sketch, Figma & XD</small>
               </div>
               <div>
-                <h6 class="mb-0 text-nowrap">32 minutes</h6>
-                <small>Duration</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 text-center">
-          <a href="javascript:void(0);" class="btn btn-primary w-100 d-grid">Join the event</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Upcoming Webinar -->
-  <!-- Assignment Progress -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Assignment Progress</h5>
-      </div>
-      <div class="card-body">
-        <ul class="p-0 m-0">
-          <li class="d-flex mb-3 pb-1">
-            <div class="chart-progress me-3" data-color="primary" data-series="72" data-progress_variant="true"></div>
-            <div class="row w-100 align-items-center">
-              <div class="col-9">
-                <div class="me-2">
-                  <h6 class="mb-2">User experience Design</h6>
-                  <small>120 Tasks</small>
+                <h6 class="mb-2">$8,6500.20</h6>
+                <div class="progress bg-label-info" style="height: 4px;">
+                  <div class="progress-bar bg-info" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-              </div>
-              <div class="col-3 text-end">
-                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                  <i class="bx bx-chevron-right scaleX-n1-rtl"></i>
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-3 pb-1">
-            <div class="chart-progress me-3" data-color="success" data-series="48" data-progress_variant="true"></div>
-            <div class="row w-100 align-items-center">
-              <div class="col-9">
-                <div class="me-2">
-                  <h6 class="mb-2">Basic fundamentals</h6>
-                  <small>32 Tasks</small>
-                </div>
-              </div>
-              <div class="col-3 text-end">
-                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                  <i class="bx bx-chevron-right scaleX-n1-rtl"></i>
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex mb-3 pb-1">
-            <div class="chart-progress me-3" data-color="danger" data-series="15" data-progress_variant="true"></div>
-            <div class="row w-100 align-items-center">
-              <div class="col-9">
-                <div class="me-2">
-                  <h6 class="mb-2">React native components</h6>
-                  <small>182 Tasks</small>
-                </div>
-              </div>
-              <div class="col-3 text-end">
-                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                  <i class="bx bx-chevron-right scaleX-n1-rtl"></i>
-                </button>
               </div>
             </div>
           </li>
           <li class="d-flex">
-            <div class="chart-progress me-3" data-color="info" data-series="24" data-progress_variant="true"></div>
-            <div class="row w-100 align-items-center">
-              <div class="col-9">
-                <div class="me-2">
-                  <h6 class="mb-2">Basic of music theory</h6>
-                  <small>56 Tasks</small>
-                </div>
+            <div class="avatar flex-shrink-0 me-3">
+              <img src="~/img/icons/misc/aviato.png" alt="aviato" class="rounded">
+            </div>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+              <div class="me-2">
+                <h6 class="mb-0">Aviato</h6>
+                <small>HTML & Angular</small>
               </div>
-              <div class="col-3 text-end">
-                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                  <i class="bx bx-chevron-right scaleX-n1-rtl"></i>
-                </button>
+              <div>
+                <h6 class="mb-2">$1,2450.80</h6>
+                <div class="progress bg-label-secondary" style="height: 4px;">
+                  <div class="progress-bar bg-secondary" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
               </div>
             </div>
           </li>
@@ -1093,18 +726,412 @@
       </div>
     </div>
   </div>
-  <!--/ Assignment Progress -->
+  <!--/ Total Earnings -->
+
+  <!-- Finance Summary -->
+  <div class="col-md-6 col-xxl-5 mb-4 ">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div>
+          <h5 class="card-title m-0 me-2">Finance Summary</h5>
+          <small>Check out each Column for more details</small>
+        </div>
+        <span class="badge bg-label-primary rounded-circle">
+          <i class="mdi mdi-help-circle-outline mdi-36px"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="row align-items-center g-4">
+          <div class="col-sm-6">
+            <p class="mb-1">Annual Companies Taxes</p>
+            <h5>$1450.35</h5>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-1">Next Tax Review Date</p>
+            <h5>July 14, 2021</h5>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-1">Average Product Price</p>
+            <h5>$85.50</h5>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-1">Satisfaction Rate</p>
+            <div class="d-flex align-items-center mb-3">
+              <div class="progress w-50 bg-label-primary" style="height: 6px;">
+                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p class="ms-2 mb-0">75%</p>
+            </div>
+          </div>
+          <div class="col-sm-6 pt-3">
+            <ul class="list-unstyled d-flex align-items-center avatar-group mb-0">
+              <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
+                <img class="rounded-circle" src="~/img/avatars/1.png" alt="Avatar">
+              </li>
+              <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
+                <img class="rounded-circle" src="~/img/avatars/5.png" alt="Avatar">
+              </li>
+              <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
+                <img class="rounded-circle" src="~/img/avatars/4.png" alt="Avatar">
+              </li>
+              <li class="avatar">
+                <span class="avatar-initial rounded-circle pull-up bg-lighter text-body" data-bs-toggle="tooltip" data-bs-placement="bottom" title="4 more">+4</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 pt-3">
+            <span class="badge bg-label-primary rounded-pill">5 Days Ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Finance Summary -->
+
+  <!-- Social Analytics -->
+  <div class="col-md-6 col-xxl-3 mb-4 order-0 order-sm-4 order-xxl-0">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2 text-nowrap">Social Analytics</h5>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="socialAnalytics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="socialAnalytics">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-4 pt-1">
+          <img src="~/img/icons/misc/heart{{style | replace('light', '-light')}}.png" height="40" alt="heart" data-app-light-img="icons/misc/heart-light.png" data-app-dark-img="icons/misc/heart-dark.png">
+          <div class="ms-3 d-flex flex-column">
+            <h5 class="mb-1">42.8k</h5>
+            <small>Number of like</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center mb-4">
+          <img src="~/img/icons/misc/chart{{style | replace('light', '-light')}}.png" height="40" alt="chart" data-app-light-img="icons/misc/chart-light.png" data-app-dark-img="icons/misc/chart-dark.png">
+          <div class="ms-3 d-flex flex-column">
+            <h5 class="mb-1">21.2k</h5>
+            <small>Number of Followers</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center mb-4">
+          <img src="~/img/icons/misc/message{{style | replace('light', '-light')}}.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+          <div class="ms-3 d-flex flex-column">
+            <h5 class="mb-1">2.4k</h5>
+            <small>Number of Comments</small>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <img src="~/img/icons/misc/user{{style | replace('light', '-light')}}.png" height="40" alt="user" data-app-light-img="icons/misc/user-light.png" data-app-dark-img="icons/misc/user-dark.png">
+          <div class="ms-3 d-flex flex-column">
+            <h5 class="mb-1">389.50k</h5>
+            <small>Number of Visits</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Social Analytics -->
+
+  <!-- Website Statistics -->
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2">Website Statistics</h5>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="webStatistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="webStatistics">
+            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between mb-2">
+          <div>
+            <h1 class="card-title display-3">4,590</h1>
+            <small>Total Traffic</small>
+          </div>
+          <div id="webVisitors"></div>
+        </div>
+        <div>
+          <div class="d-flex align-items-center border-top py-3">
+            <span class="text-success me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Direct</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">86,471</h6>
+            <h6 class="text-end me-2 mb-0">15%</h6>
+            <i class="mdi mdi-chevron-down text-danger mdi-24px"></i>
+          </div>
+          <div class="d-flex align-items-center border-top py-3">
+            <span class="text-primary me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Organic Search</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">57,484</h6>
+            <h6 class="text-end me-2 mb-0">85%</h6>
+            <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+          </div>
+          <div class="d-flex align-items-center border-top py-3">
+            <span class="text-warning me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Referral</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">2,534</h6>
+            <h6 class="text-end me-2 mb-0">48%</h6>
+            <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+          </div>
+          <div class="d-flex align-items-center border-top py-3">
+            <span class="text-danger me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Mail</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">977</h6>
+            <h6 class="text-end me-2 mb-0">36%</h6>
+            <i class="mdi mdi-chevron-down text-danger mdi-24px"></i>
+          </div>
+          <div class="d-flex align-items-center border-top py-3">
+            <span class="text-info me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Social</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">92</h6>
+            <h6 class="text-end me-2 mb-0">55%</h6>
+            <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+          </div>
+          <div class="d-flex align-items-center border-top pt-3">
+            <span class="text-secondary me-2">
+              <i class="mdi mdi-circle"></i>
+            </span>
+            <h6 class="fw-normal mb-0">Other</h6>
+            <div class="flex-grow-1"></div>
+            <h6 class="text-end me-4 mb-0">28</h6>
+            <h6 class="text-end me-2 mb-0">12%</h6>
+            <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Website Statistics -->
+
+  <!-- Developer Meetup -->
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card">
+      <img class="card-img-top h-px-200" src="~/img/elements/laptop.png" alt="laptop image cap" style="object-fit: cover;">
+      <div class="card-body">
+        <div class="d-flex border-bottom pb-3">
+          <div class="badge bg-label-primary d-flex flex-column justify-content-center px-3 rounded-3 me-3">
+            <h6 class="text-primary mb-2 fw-normal">Jan</h6>
+            <h5 class="text-primary mb-0">24</h5>
+          </div>
+          <div>
+            <h6 class="card-title mb-1">Developer Meetup</h6>
+            <small class="mb-0">The WordPress open source,free software project is the community behind the…</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between border-bottom mt-3">
+          <div class="text-center">
+            <span class="mdi mdi-star-outline mdi-24px"></span>
+            <p>Interested</p>
+          </div>
+          <div class="text-center">
+            <span class="mdi mdi-check-circle-outline mdi-24px"></span>
+            <p>Joined</p>
+          </div>
+          <div class="text-center text-primary">
+            <span class="mdi mdi-account mdi-24px"></span>
+            <p>Invited</p>
+          </div>
+          <div class="text-center">
+            <span class="mdi mdi-dots-horizontal mdi-24px"></span>
+            <p>More</p>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex mt-3 gap-2">
+            <span class="mdi mdi-clock-outline mdi-24px me-2"></span>
+            <div>
+              <p class="small mb-0">Tuesday, 24 january, 10:20 - 12:30</p>
+              <p class="small mb-0">After 1 week</p>
+            </div>
+          </div>
+          <div class="d-flex mt-3 gap-2">
+            <span class="mdi mdi-map-marker mdi-24px me-2"></span>
+            <div>
+              <p class="small mb-0">The Rochard NYC</p>
+              <p class="small mb-0">1305 Lexington Ave, New York</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!--/ Developer Meetup -->
+
+  <!-- Sales by Countries -->
+  <div class="col-md-6 col-xxl-4 mb-4 order-0 order-md-1 order-xl-0">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2">Sales by Countries</h5>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="saleStatus" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="saleStatus">
+            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-4">
+            <div class="avatar me-3">
+              <div class="avatar-initial bg-label-success rounded-circle">US</div>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">$8,656k</h6>
+                <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+                <small class="text-success">25.8%</small>
+              </div>
+              <small>United states of america</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">894k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-4">
+            <div class="avatar me-3">
+              <span class="avatar-initial bg-label-danger rounded-circle">UK</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">$2,415k</h6>
+                <i class="mdi mdi-chevron-down mdi-24px text-danger"></i>
+                <small class="text-danger">6.2%</small>
+              </div>
+              <small>United Kingdom</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">645k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-4">
+            <div class="avatar me-3">
+              <span class="avatar-initial bg-label-warning rounded-circle">IN</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">865k</h6>
+                <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+                <small class="text-success"> 12.4%</small>
+              </div>
+              <small>India</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">148k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-4">
+            <div class="avatar me-3">
+              <span class="avatar-initial bg-label-secondary rounded-circle">JA</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">$745k</h6>
+                <i class="mdi mdi-chevron-down mdi-24px text-danger"></i>
+                <small class="text-danger">11.9%</small>
+              </div>
+              <small>Japan</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">86k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center mb-4">
+            <div class="avatar me-3">
+              <span class="avatar-initial bg-label-danger rounded-circle">KO</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">$45k</h6>
+                <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+                <small class="text-success">16.2%</small>
+              </div>
+              <small>Korea</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">42k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="avatar me-3">
+              <span class="avatar-initial bg-label-primary rounded-circle">CH</span>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-1">
+                <h6 class="mb-0">$12k</h6>
+                <i class="mdi mdi-chevron-up mdi-24px text-success"></i>
+                <small class="text-success">14.8%</small>
+              </div>
+              <small>China</small>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-0">8k</h6>
+            <small>Sales</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Sales by Countries -->
+
   <!-- Delivery Performance -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
+  <div class="col-md-6 col-xxl-4 mb-4">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="card-title mb-0">
           <h5 class="m-0 me-2">Delivery Performance</h5>
-          <small class="text-muted">12% increase in this month</small>
+          <small class="text-body">12% increase in this month</small>
         </div>
         <div class="dropdown">
           <button class="btn p-0" type="button" id="deliveryPerformance" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="deliveryPerformance">
             <a class="dropdown-item" href="javascript:void(0);">Select All</a>
@@ -1117,13 +1144,13 @@
         <ul class="p-0 m-0">
           <li class="d-flex mb-4 pb-1">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-package"></i></span>
+              <span class="avatar-initial rounded bg-label-primary"><i class="mdi mdi-wallet-giftcard mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Packages in transit</h6>
                 <small class="text-success fw-normal d-block">
-                  <i class="bx bx-chevron-up"></i>
+                  <i class="mdi mdi-chevron-up"></i>
                   25.8%
                 </small>
               </div>
@@ -1134,13 +1161,13 @@
           </li>
           <li class="d-flex mb-4 pb-1">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-info"><i class="bx bxs-truck"></i></span>
+              <span class="avatar-initial rounded bg-label-info"><i class="mdi mdi-bus-school mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Packages out for delivery</h6>
                 <small class="text-success fw-normal d-block">
-                  <i class="bx bx-chevron-up"></i>
+                  <i class="mdi mdi-chevron-up"></i>
                   4.3%
                 </small>
               </div>
@@ -1151,13 +1178,13 @@
           </li>
           <li class="d-flex mb-4 pb-1">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-success"><i class="bx bx-check-circle"></i></span>
+              <span class="avatar-initial rounded bg-label-success"><i class="mdi mdi-check text-success mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Packages delivered</h6>
                 <small class="text-danger fw-normal d-block">
-                  <i class="bx bx-chevron-down"></i>
+                  <i class="mdi mdi-chevron-down"></i>
                   12.5
                 </small>
               </div>
@@ -1168,13 +1195,13 @@
           </li>
           <li class="d-flex mb-4 pb-1">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-warning"><i>%</i></span>
+              <span class="avatar-initial rounded bg-label-warning"><i class="mdi mdi-home-outline mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Delivery success rate</h6>
                 <small class="text-success fw-normal d-block">
-                  <i class="bx bx-chevron-up"></i>
+                  <i class="mdi mdi-chevron-up"></i>
                   35.6%
                 </small>
               </div>
@@ -1185,13 +1212,13 @@
           </li>
           <li class="d-flex mb-4 pb-1">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-time-five"></i></span>
+              <span class="avatar-initial rounded bg-label-secondary"><i class="mdi mdi-timer-outline mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Average delivery time</h6>
                 <small class="text-danger fw-normal d-block">
-                  <i class="bx bx-chevron-down"></i>
+                  <i class="mdi mdi-chevron-down"></i>
                   2.15
                 </small>
               </div>
@@ -1202,13 +1229,13 @@
           </li>
           <li class="d-flex">
             <div class="avatar flex-shrink-0 me-3">
-              <span class="avatar-initial rounded bg-label-danger"><i class="bx bx-group"></i></span>
+              <span class="avatar-initial rounded bg-label-danger"><i class="mdi mdi-account-outline mdi-24px"></i></span>
             </div>
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-1 fw-normal">Customer satisfaction</h6>
                 <small class="text-success fw-normal d-block">
-                  <i class="bx bx-chevron-up"></i>
+                  <i class="mdi mdi-chevron-up"></i>
                   5.7%
                 </small>
               </div>
@@ -1223,7 +1250,7 @@
   </div>
   <!--/ Delivery Performance -->
   <!-- Vehicles Condition -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
+  <div class="col-md-6 col-xxl-4 mb-4">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="card-title mb-0">
@@ -1231,7 +1258,7 @@
         </div>
         <div class="dropdown">
           <button class="btn p-0" type="button" id="vehiclesCondition" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="vehiclesCondition">
             <a class="dropdown-item" href="javascript:void(0);">Select All</a>
@@ -1252,7 +1279,7 @@
                 </div>
               </div>
               <div class="col-4 text-end">
-                <div class="badge bg-label-secondary">+10%</div>
+                <div class="badge bg-label-secondary rounded-pill">+10%</div>
               </div>
             </div>
           </li>
@@ -1266,7 +1293,7 @@
                 </div>
               </div>
               <div class="col-4 text-end">
-                <div class="badge bg-label-secondary">+8.1</div>
+                <div class="badge bg-label-secondary rounded-pill">+8.1</div>
               </div>
             </div>
           </li>
@@ -1280,7 +1307,7 @@
                 </div>
               </div>
               <div class="col-4 text-end">
-                <div class="badge bg-label-secondary">-2.5%</div>
+                <div class="badge bg-label-secondary rounded-pill">-2.5%</div>
               </div>
             </div>
           </li>
@@ -1294,7 +1321,7 @@
                 </div>
               </div>
               <div class="col-4 text-end">
-                <div class="badge bg-label-secondary">-3.4%</div>
+                <div class="badge bg-label-secondary rounded-pill">-3.4%</div>
               </div>
             </div>
           </li>
@@ -1308,7 +1335,7 @@
                 </div>
               </div>
               <div class="col-4 text-end">
-                <div class="badge bg-label-secondary">+12.6%</div>
+                <div class="badge bg-label-secondary rounded-pill">+12.6%</div>
               </div>
             </div>
           </li>
@@ -1317,8 +1344,8 @@
     </div>
   </div>
   <!--/ Vehicles Condition -->
-  <!-- Popular Instructors -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
+  <!--Popular Instructors -->
+  <div class="col-12 col-xxl-4 col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="card-title mb-0">
@@ -1326,7 +1353,7 @@
         </div>
         <div class="dropdown">
           <button class="btn p-0" type="button" id="popularInstructors" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="popularInstructors">
             <a class="dropdown-item" href="javascript:void(0);">Select All</a>
@@ -1347,12 +1374,12 @@
             <tr>
               <td>
                 <div class="d-flex justify-content-start align-items-center mt-lg-4">
-                  <div class="avatar me-3">
+                  <div class="avatar avatar-sm me-3">
                     <img src="~/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
                   </div>
                   <div class="d-flex flex-column">
                     <h6 class="mb-1 text-truncate">Maven Analytics</h6>
-                    <small class="text-truncate text-muted">Business Intelligence</small>
+                    <small class="text-truncate">Business Intelligence</small>
                   </div>
                 </div>
               </td>
@@ -1365,12 +1392,12 @@
             <tr>
               <td>
                 <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-3">
+                  <div class="avatar avatar-sm me-3">
                     <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
                   </div>
                   <div class="d-flex flex-column">
                     <h6 class="mb-1 text-truncate">Zsazsa McCleverty</h6>
-                    <small class="text-truncate text-muted">Digital Marketing</small>
+                    <small class="text-truncate">Digital Marketing</small>
                   </div>
                 </div>
               </td>
@@ -1383,12 +1410,12 @@
             <tr>
               <td>
                 <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-3">
+                  <div class="avatar avatar-sm me-3">
                     <img src="~/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
                   </div>
                   <div class="d-flex flex-column">
                     <h6 class="mb-1 text-truncate">Nathan Wagner</h6>
-                    <small class="text-truncate text-muted">UI/UX Design</small>
+                    <small class="text-truncate">UI/UX Design</small>
                   </div>
                 </div>
               </td>
@@ -1401,12 +1428,12 @@
             <tr>
               <td>
                 <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-3">
+                  <div class="avatar avatar-sm me-3">
                     <img src="~/img/avatars/4.png" alt="Avatar" class="rounded-circle" />
                   </div>
                   <div class="d-flex flex-column">
                     <h6 class="mb-1 text-truncate">Emma Bowen</h6>
-                    <small class="text-truncate text-muted">React Native</small>
+                    <small class="text-truncate">React Native</small>
                   </div>
                 </div>
               </td>
@@ -1457,547 +1484,87 @@
       </div>
     </div>
   </div>
-  <!--/ Popular Instructors -->
-  <!-- Team Members -->
-  <div class="col-md-6 mb-4">
+  <!--/Popular Instructors -->
+  <!-- Top Courses -->
+  <div class="col-12 col-xxl-4 col-md-6 mb-4">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Team Members</h5>
+        <h5 class="card-title m-0 me-2">Top Courses</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="teamMemberList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+          <button class="btn p-0" type="button" id="topCourses" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="teamMemberList">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="topCourses">
             <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
-          </div>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-borderless">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Project</th>
-              <th>Task</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-2">
-                    <img src="~/img/avatars/17.png" alt="Avatar" class="rounded-circle">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h6 class="mb-0 text-truncate">Nathan Wagner</h6><small class="text-truncate text-muted">iOS Developer</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="badge bg-label-primary rounded-pill text-uppercase">Zipcar</span></td>
-              <td><small class="fw-medium">87/135</small></td>
-              <td>
-                <div class="chart-progress" data-color="primary" data-series="65"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-2">
-                    <img src="~/img/avatars/8.png" alt="Avatar" class="rounded-circle">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h6 class="mb-0 text-truncate">Emma Bowen</h6><small class="text-truncate text-muted">UI/UX Designer</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="badge bg-label-danger rounded-pill text-uppercase">Bitbank</span></td>
-              <td><small class="fw-medium">320/440</small></td>
-              <td>
-                <div class="chart-progress" data-color="danger" data-series="85"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-2">
-                    <span class="avatar-initial rounded-circle bg-label-warning">AM</span>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h6 class="mb-0 text-truncate">Adrian McGuire</h6><small class="text-truncate text-muted">PHP Developer</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="badge bg-label-warning rounded-pill text-uppercase">Payers</span></td>
-              <td><small class="fw-medium">50/82</small></td>
-              <td>
-                <div class="chart-progress" data-color="warning" data-series="73"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-2">
-                    <img src="~/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h6 class="mb-0 text-truncate">Alma Gonzalez</h6><small class="text-truncate text-muted">Product Manager</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="badge bg-label-info rounded-pill text-uppercase">Brandi</span></td>
-              <td><small class="fw-medium">98/260</small></td>
-              <td>
-                <div class="chart-progress" data-color="info" data-series="61"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="d-flex justify-content-start align-items-center">
-                  <div class="avatar me-2">
-                    <img src="~/img/avatars/9.png" alt="Avatar" class="rounded-circle">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <h6 class="mb-0 text-truncate">Travis Collins</h6><small class="text-truncate text-muted">Java Developer</small>
-                  </div>
-                </div>
-              </td>
-              <td><span class="badge bg-label-success rounded-pill text-uppercase">Aviato</span></td>
-              <td><small class="fw-medium">120/185</small></td>
-              <td>
-                <div class="chart-progress" data-color="success" data-series="44"></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  <!--/ Team Members -->
-  <!-- pill table -->
-  <div class="col-md-6 mb-4">
-    <div class="card text-center h-100">
-      <div class="card-header">
-        <ul class="nav nav-pills nav- card-header-pills" role="tablist">
-          <li class="nav-item">
-            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-browser" aria-controls="navs-pills-browser" aria-selected="true">Browser</button>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-os" aria-controls="navs-pills-os" aria-selected="false">Operating System</button>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-country" aria-controls="navs-pills-country" aria-selected="false">Country</button>
-          </li>
-        </ul>
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane fade show active" id="navs-pills-browser" role="tabpanel">
-          <div class="table-responsive text-start text-nowrap">
-            <table class="table table-borderless">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Browser</th>
-                  <th>Visits</th>
-                  <th class="w-50">Data In Percentage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/chrome.png" alt="Chrome" height="24" class="me-2">
-                      <span>Chrome</span>
-                    </div>
-                  </td>
-                  <td>8.92k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 64.75%" aria-valuenow="64.75" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">64.75%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/safari.png" alt="Safari" height="24" class="me-2">
-                      <span>Safari</span>
-                    </div>
-                  </td>
-                  <td>1.29k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 18.43%" aria-valuenow="18.43" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">18.43%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/firefox.png" alt="Firefox" height="24" class="me-2">
-                      <span>Firefox</span>
-                    </div>
-                  </td>
-                  <td>328</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 8.37%" aria-valuenow="8.37" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">8.37%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/edge.png" alt="Edge" height="24" class="me-2">
-                      <span>Edge</span>
-                    </div>
-                  </td>
-                  <td>142</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 6.12%" aria-valuenow="6.12" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">6.12%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/opera.png" alt="Opera" height="24" class="me-2">
-                      <span>Opera</span>
-                    </div>
-                  </td>
-                  <td>82</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 1.94%" aria-valuenow="1.94" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">1.94%</small>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="navs-pills-os" role="tabpanel">
-          <div class="table-responsive text-start text-nowrap">
-            <table class="table table-borderless">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>System</th>
-                  <th>Visits</th>
-                  <th class="w-50">Data In Percentage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/windows.png" alt="Windows" height="24" class="me-2">
-                      <span>Windows</span>
-                    </div>
-                  </td>
-                  <td>875.24k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 61.50%" aria-valuenow="61.50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">61.50%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/mac.png" alt="Mac" height="24" class="me-2">
-                      <span>Mac</span>
-                    </div>
-                  </td>
-                  <td>89.68k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 16.67%" aria-valuenow="16.67" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">16.67%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/ubuntu.png" alt="Ubuntu" height="24" class="me-2">
-                      <span>Ubuntu</span>
-                    </div>
-                  </td>
-                  <td>37.68k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 12.82%" aria-valuenow="12.82" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">12.82%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/chrome.png" alt="Chrome" height="24" class="me-2">
-                      <span>Chrome</span>
-                    </div>
-                  </td>
-                  <td>8.34k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 6.25%" aria-valuenow="6.25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">6.25%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/img/icons/brands/cent.png" alt="Cent" height="24" class="me-2">
-                      <span>Cent</span>
-                    </div>
-                  </td>
-                  <td>2.25k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 2.76%" aria-valuenow="2.76" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">2.76%</small>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="navs-pills-country" role="tabpanel">
-          <div class="table-responsive text-start text-nowrap">
-            <table class="table table-borderless">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Country</th>
-                  <th>Visits</th>
-                  <th class="w-50">Data In Percentage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/svg/flags/us.svg" alt="USA" height="24" class="me-2">
-                      <span>USA</span>
-                    </div>
-                  </td>
-                  <td>87.24k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 38.12%" aria-valuenow="38.12" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">38.12%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/svg/flags/br.svg" alt="Brazil" height="24" class="me-2">
-                      <span>Brazil</span>
-                    </div>
-                  </td>
-                  <td>42.68k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 28.23%" aria-valuenow="28.23" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">28.23%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/svg/flags/in.svg" alt="India" height="24" class="me-2">
-                      <span>India</span>
-                    </div>
-                  </td>
-                  <td>12.58k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 14.82%" aria-valuenow="14.82" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">14.82%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/svg/flags/au.svg" alt="Australia" height="24" class="me-2">
-                      <span>Australia</span>
-                    </div>
-                  </td>
-                  <td>4.13k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 12.72%" aria-valuenow="12.72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">12.72%</small>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="~/svg/flags/fr.svg" alt="France" height="24" class="me-2">
-                      <span>France</span>
-                    </div>
-                  </td>
-                  <td>2.21k</td>
-                  <td>
-                    <div class="d-flex justify-content-between align-items-center gap-3">
-                      <div class="progress w-100" style="height:10px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 7.11%" aria-valuenow="7.11" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small class="fw-medium">7.11%</small>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ pill table -->
-  <!-- Conversion rate -->
-  <div class="col-md-6 col-lg-4 col-xl-4 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="m-0 me-2">Conversion Rate</h5>
-          <small class="text-muted">Compared To Last Month</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="conversionRate" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="conversionRate">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Download</a>
+            <a class="dropdown-item" href="javascript:void(0);">View All</a>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex flex-row align-items-center gap-1 mb-4">
-            <h2 class="mb-2">8.72%</h2>
-            <small class="text-success fw-medium">
-              <i class='bx bx-chevron-up'></i>
-              4.8%
-            </small>
-          </div>
-          <div id="conversionRateChart"></div>
-        </div>
-        <ul class="p-0 m-0">
-          <li class="d-flex mb-4">
-            <div class="d-flex w-100 flex-wrap justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Impressions</h6>
-                <small class="text-muted">12.4k Visits</small>
+        <ul class="list-unstyled mb-0">
+          <li class="d-flex mb-4 pb-1">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-primary"><i class="mdi mdi-video-outline mdi-24px"></i></span>
+            </div>
+            <div class="row w-100 align-items-center">
+              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
+                <h6 class="mb-0 lh-sm">Videography Basic Design Course</h6>
               </div>
-              <div class="user-progress">
-                <i class='bx bx-up-arrow-alt text-success me-2'></i> <small class="fw-medium">12.8%</small>
+              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
+                <div class="badge bg-label-secondary rounded-pill fw-normal">1.2k Views</div>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4">
-            <div class="d-flex w-100 flex-wrap justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Added To Cart</h6>
-                <small class="text-muted">32 Product in cart</small>
+          <li class="d-flex mb-4 pb-1">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-info"><i class="mdi mdi-code-tags mdi-24px"></i></span>
+            </div>
+            <div class="row w-100 align-items-center">
+              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
+                <h6 class="mb-0 lh-sm">Basic Front-end Development Course</h6>
               </div>
-              <div class="user-progress">
-                <i class='bx bx-down-arrow-alt text-danger me-2'></i> <small class="fw-medium">- 8.5% </small>
+              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
+                <div class="badge bg-label-secondary rounded-pill fw-normal">834 Views</div>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4">
-            <div class="d-flex w-100 flex-wrap justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Checkout</h6>
-                <small class="text-muted">21 Products checkout</small>
+          <li class="d-flex mb-4 pb-1">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-success"><i class="mdi mdi-camera mdi-24px"></i></span>
+            </div>
+            <div class="row w-100 align-items-center">
+              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
+                <h6 class="mb-0 lh-sm">Basic Fundamentals of Photography</h6>
               </div>
-              <div class="user-progress">
-                <i class='bx bx-up-arrow-alt text-success me-2'></i> <small class="fw-medium">9.12%</small>
+              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
+                <div class="badge bg-label-secondary rounded-pill fw-normal">3.7k Views</div>
               </div>
             </div>
           </li>
-          <li class="d-flex mb-4">
-            <div class="d-flex w-100 flex-wrap justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Purchased</h6>
-                <small class="text-muted">12 Orders</small>
+          <li class="d-flex mb-4 pb-1">
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-warning"><i class="mdi mdi-palette-outline mdi-24px"></i></span>
+            </div>
+            <div class="row w-100 align-items-center">
+              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
+                <h6 class="mb-0 lh-sm">Advance Dribble Base Visual Design</h6>
               </div>
-              <div class="user-progress">
-                <i class='bx bx-up-arrow-alt text-success me-2'></i> <small class="fw-medium">2.83%</small>
+              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
+                <div class="badge bg-label-secondary rounded-pill fw-normal">2.5k Views</div>
               </div>
             </div>
           </li>
           <li class="d-flex">
-            <div class="d-flex w-100 flex-wrap justify-content-between gap-2">
-              <div class="me-2">
-                <h6 class="mb-0">Delivered</h6>
-                <small class="text-muted">120 Orders</small>
+            <div class="avatar flex-shrink-0 me-3">
+              <span class="avatar-initial rounded bg-label-danger"><i class="mdi mdi-microphone mdi-24px"></i></span>
+            </div>
+            <div class="row w-100 align-items-center">
+              <div class="col-sm-8 col-lg-12 col-xxl-8 mb-1 mb-sm-0 mb-lg-1 mb-xxl-0">
+                <h6 class="mb-0 lh-sm">Your First Singing Lesson</h6>
               </div>
-              <div class="user-progress">
-                <i class='bx bx-up-arrow-alt text-success me-2'></i> <small class="fw-medium">12.1%</small>
+              <div class="col-sm-4 col-lg-12 col-xxl-4 text-sm-end text-lg-start text-xxl-end">
+                <div class="badge bg-label-secondary rounded-pill fw-normal">948 Views</div>
               </div>
             </div>
           </li>
@@ -2005,157 +1572,431 @@
       </div>
     </div>
   </div>
-  <!--/ Conversion rate -->
-  <!-- Activity Timeline -->
-  <div class="col-md-7 col-lg-8 mb-4">
-    <div class="card">
+  <!--/ Top Courses -->
+
+  <!-- Upcoming Webinar -->
+  <div class="col-12 col-xxl-4 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="bg-label-primary text-center mb-3 pt-2 rounded-3">
+          <img class="img-fluid w-px-150" src="~/img/illustrations/sitting-girl-with-laptop.png" alt="Card girl image" />
+        </div>
+        <h5 class="mb-2 pb-1">Upcoming Webinar</h5>
+        <p>Next Generation Frontend Architecture Using Layout Engine And React Native Web.</p>
+        <div class="row mb-4 g-3">
+          <div class="col-6">
+            <div class="d-flex">
+              <div class="avatar flex-shrink-0 me-2">
+                <span class="avatar-initial rounded bg-label-primary"><i class="mdi mdi-calendar-blank mdi-24px"></i></span>
+              </div>
+              <div>
+                <h6 class="mb-0 text-nowrap">17 Nov 23</h6>
+                <small>Date</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex">
+              <div class="avatar flex-shrink-0 me-2">
+                <span class="avatar-initial rounded bg-label-primary"><i class="mdi mdi-timer-outline mdi-24px"></i></span>
+              </div>
+              <div>
+                <h6 class="mb-0 text-nowrap">32 minutes</h6>
+                <small>Duration</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="btn btn-primary w-100">Join the event</a>
+      </div>
+    </div>
+  </div>
+  <!--/ Upcoming Webinar -->
+  <!-- Assignment Progress -->
+  <div class="col-12 col-xxl-4 col-md-6 mb-4 order-0 order-sm-3 order-xxl-0">
+    <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="card-title m-0 me-2">Activity Timeline</h5>
+        <h5 class="card-title m-0 me-2">Assignment Progress</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="timelineWapper" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="bx bx-dots-vertical-rounded"></i>
+          <button class="btn p-0" type="button" id="assignProgress" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="timelineWapper">
-            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="assignProgress">
             <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Download</a>
+            <a class="dropdown-item" href="javascript:void(0);">View All</a>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <!-- Activity Timeline -->
-        <ul class="timeline">
+        <ul class="p-0 m-0">
+          <li class="d-flex mb-3 pb-1">
+            <div class="chart-progress me-3" data-color="primary" data-series="72" data-progress_variant="true"></div>
+            <div class="row w-100 align-items-center">
+              <div class="col-9">
+                <div class="me-2">
+                  <h6 class="mb-2">User experience Design</h6>
+                  <p class="mb-0">120 Tasks</p>
+                </div>
+              </div>
+              <div class="col-3 text-end">
+                <button type="button" class="btn btn-sm btn-icon bg-lightest">
+                  <i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="d-flex mb-3 pb-1">
+            <div class="chart-progress me-3" data-color="success" data-series="48" data-progress_variant="true"></div>
+            <div class="row w-100 align-items-center">
+              <div class="col-9">
+                <div class="me-2">
+                  <h6 class="mb-2">Basic fundamentals</h6>
+                  <p class="mb-0">32 Tasks</p>
+                </div>
+              </div>
+              <div class="col-3 text-end">
+                <button type="button" class="btn btn-sm btn-icon bg-lightest">
+                  <i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="d-flex mb-3 pb-1">
+            <div class="chart-progress me-3" data-color="danger" data-series="15" data-progress_variant="true"></div>
+            <div class="row w-100 align-items-center">
+              <div class="col-9">
+                <div class="me-2">
+                  <h6 class="mb-2">React native components</h6>
+                  <p class="mb-0">182 Tasks</p>
+                </div>
+              </div>
+              <div class="col-3 text-end">
+                <button type="button" class="btn btn-sm btn-icon bg-lightest">
+                  <i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="d-flex">
+            <div class="chart-progress me-3" data-color="info" data-series="24" data-progress_variant="true"></div>
+            <div class="row w-100 align-items-center">
+              <div class="col-9">
+                <div class="me-2">
+                  <h6 class="mb-2">Basic of music theory</h6>
+                  <p class="mb-0">56 Tasks</p>
+                </div>
+              </div>
+              <div class="col-3 text-end">
+                <button type="button" class="btn btn-sm btn-icon bg-lightest">
+                  <i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/ Assignment Progress -->
+
+  <!-- Timeline -->
+  <div class="col-lg-6 col-xxl-8 mb-4">
+    <div class="card">
+      <img src="~/img/elements/activity-timeline.png" alt="timeline-image" class="card-img-top h-px-200" style="object-fit: cover;">
+      <div class="card-body">
+        <h4 class="mb-4">Activity Timeline</h4>
+        <ul class="timeline card-timeline mb-0">
           <li class="timeline-item timeline-item-transparent">
-            <span class="timeline-point timeline-point-primary"></span>
+            <span class="timeline-point timeline-point-danger"></span>
             <div class="timeline-event">
               <div class="timeline-header mb-1">
-                <h6 class="mb-0">12 Invoices have been paid</h6>
-                <span class="text-muted">12 min ago</span>
+                <h6 class="mb-0">8 Invoices have been paid</h6>
+                <small>Wednesday</small>
               </div>
-              <p class="text-muted mb-2">Invoices have been paid to the company</p>
+              <p class="mb-2">Invoices have been paid to the company</p>
               <div class="d-flex">
                 <a href="javascript:void(0)" class="me-3">
                   <img src="~/img/icons/misc/pdf.png" alt="PDF image" width="15" class="me-2">
-                  <span class="fw-medium text-body">invoices.pdf</span>
+                  <span class="fw-semibold">invoices.pdf</span>
                 </a>
               </div>
             </div>
           </li>
           <li class="timeline-item timeline-item-transparent">
-            <span class="timeline-point timeline-point-warning"></span>
+            <span class="timeline-point timeline-point-primary"></span>
             <div class="timeline-event">
               <div class="timeline-header mb-1">
-                <h6 class="mb-0">Client Meeting</h6>
-                <span class="text-muted">45 min ago</span>
+                <h6 class="mb-0">Create a new project for client 😎
+                </h6>
+                <small>April, 18</small>
               </div>
-              <p class="text-muted mb-2">Project meeting with john &#64;10:15am</p>
-              <div class="d-flex flex-wrap">
-                <div class="avatar me-3">
-                  <img src="~/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
+              <p class="mb-2">Invoices have been paid to the company.</p>
+              <div class="d-flex flex-wrap align-items-center">
+                <div class="avatar avatar-sm me-3">
+                  <img src="~/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
                 </div>
-                <div>
-                  <h6 class="mb-0">Lester McCarthy (Client)</h6>
-                  <span class="text-muted">CEO of @TempData.Peek("authorName")</span>
-                </div>
+                <h6 class="mb-0 text-body">John Doe (Client)</h6>
               </div>
             </div>
           </li>
-          <li class="timeline-item timeline-item-transparent">
+          <li class="timeline-item timeline-item-transparent border-transparent">
             <span class="timeline-point timeline-point-info"></span>
-            <div class="timeline-event">
+            <div class="timeline-event pb-1">
               <div class="timeline-header mb-1">
-                <h6 class="mb-0">Create a new project for client</h6>
-                <span class="text-muted">2 Day Ago</span>
+                <h6 class="mb-0">Order #37745 from September</h6>
+                <small>January, 10</small>
               </div>
-              <p class="text-muted mb-2">5 team members in a project</p>
-              <div class="d-flex align-items-center avatar-group">
-                <div class="avatar pull-up" data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy">
-                  <img src="~/img/avatars/5.png" alt="Avatar" class="rounded-circle">
-                </div>
-                <div class="avatar pull-up" data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Marrie Patty">
-                  <img src="~/img/avatars/12.png" alt="Avatar" class="rounded-circle">
-                </div>
-                <div class="avatar pull-up" data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Jimmy Jackson">
-                  <img src="~/img/avatars/9.png" alt="Avatar" class="rounded-circle">
-                </div>
-                <div class="avatar pull-up" data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Kristine Gill">
-                  <img src="~/img/avatars/6.png" alt="Avatar" class="rounded-circle">
-                </div>
-                <div class="avatar pull-up" data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Nelson Wilson">
-                  <img src="~/img/avatars/14.png" alt="Avatar" class="rounded-circle">
-                </div>
-              </div>
+              <p class="mb-0">Invoices have been paid to the company.</p>
             </div>
-          </li>
-          <li class="timeline-end-indicator">
-            <i class="bx bx-check-circle"></i>
           </li>
         </ul>
-        <!-- /Activity Timeline -->
       </div>
     </div>
   </div>
-  <!--/ Activity Timeline -->
-  <!-- Finance Summary -->
-  <div class="col-md-5 col-lg-6 mb-md-4 mb-0">
+  <!--/ Timeline -->
+  <!-- Cafe Badilico -->
+  <div class="col-md-6 col-xxl-4 mb-4">
+    <div class="card h-100">
+      <img class="card-img-top h-px-200" src="~/img/elements/cafe-bg.png" alt="cafe-bg" style="object-fit: cover;">
+      <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between">
+          <h5 class="mb-2">Cafe Badilico</h5>
+          <div class="dropdown">
+            <button class="btn p-0" type="button" id="cafeApp" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="mdi mdi-dots-vertical mdi-24px"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cafeApp">
+              <a class="dropdown-item" href="javascript:void(0);">Edit Title</a>
+              <a class="dropdown-item" href="javascript:void(0);">Edit Timings</a>
+              <a class="dropdown-item" href="javascript:void(0);">Edit Description</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="ratings px-0"></div>
+          <span class="mt-1">4 Star (12.4k)</span>
+        </div>
+        <p>Italian Cafe</p>
+        <p class="border-bottom pb-3">The refrigerated dairy aisle of your local grocery store can be a great source tasty, convenient selections for your.</p>
+        <p>Tonight’s availability</p>
+        <span class="badge bg-label-secondary rounded-pill p-2">5:30PM</span>
+        <span class="badge bg-label-secondary rounded-pill p-2 mx-3">7:00PM</span>
+        <span class="badge bg-label-secondary rounded-pill p-2">7:15PM</span>
+        <div class="mt-4">
+          <a class="text-primary text-uppercase" href="javascript:void(0);">Book Now</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--/ Cafe Badilico -->
+  <!-- Orders by Countries -->
+  <div class="col-md-6 col-xl-4">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="card-title mb-0">
-          <h5 class="mb-2 me-2">Finance Summary</h5>
-          <small class="text-muted">Check out each column for more details</small>
+          <h5 class="m-0 me-2">Orders by Countries</h5>
+          <small class="text-body">62 deliveries in progress</small>
         </div>
-        <span class="badge badge-center rounded-pill bg-label-primary p-4">
-          <i class='bx bx-dollar fs-5'></i>
-        </span>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="ordersCountries" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ordersCountries">
+            <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <div class="d-flex flex-wrap gap-2 mb-4 mt-2">
-          <div class="d-flex flex-column w-50 me-2">
-            <small class="text-muted text-nowrap d-block mb-2">Annual Companies Taxes</small>
-            <h6 class="mb-0">$500,00</h6>
-          </div>
-          <div class="d-flex flex-column">
-            <small class="text-muted text-nowrap d-block mb-2">Next Tax Review Date</small>
-            <h6 class="mb-0">July 24,2022</h6>
-          </div>
-        </div>
-        <div class="d-flex flex-wrap gap-2 my-4 py-3">
-          <div class="d-flex flex-column w-50 me-2">
-            <small class="text-muted text-nowrap d-block mb-2">Average Product Price</small>
-            <h6 class="mb-0">$89.90</h6>
-          </div>
-          <div class="d-flex flex-column flex-grow-1">
-            <small class="text-muted text-nowrap d-block mb-2">Satisfaction Rate</small>
-            <div class="d-flex align-items-center">
-              <div class="progress w-100 me-3" style="height: 10px;">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <small>75%</small>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-wrap align-items-center">
-          <ul class="list-unstyled w-50 me-2 d-flex align-items-center avatar-group mb-0">
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/5.png" alt="Avatar">
+      <div class="card-body p-0">
+        <div class="nav-align-top">
+          <ul class="nav nav-tabs nav-fill tabs-line border-bottom-0" role="tablist">
+            <li class="nav-item">
+              <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-new" aria-controls="navs-justified-new" aria-selected="true">New</button>
             </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/12.png" alt="Avatar">
+            <li class="nav-item">
+              <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-link-preparing" aria-controls="navs-justified-link-preparing" aria-selected="false">Preparing</button>
             </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/6.png" alt="Avatar">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Darcey Nooner" class="avatar pull-up">
-              <img class="rounded-circle" src="~/img/avatars/10.png" alt="Avatar">
+            <li class="nav-item">
+              <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-link-shipping" aria-controls="navs-justified-link-shipping" aria-selected="false">Shipping</button>
             </li>
           </ul>
-          <span class="badge bg-label-primary rounded">5 Days Ago</span>
+          <div class="tab-content border-0 pb-0 px-4 mx-1">
+            <div class="tab-pane fade show active" id="navs-justified-new" role="tabpanel">
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Myrtle Ullrich</h6>
+                    <p class="mb-0">101 Boulder, California(CA), 95959</p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Barry Schowalter</h6>
+                    <p class="mb-0">939 Orange, California(CA), 92118</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="border-1 border-light border-top border-dashed mb-2"></div>
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Veronica Herman</h6>
+                    <p class="mb-0">162 Windsor, California(CA), 95492</p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Helen Jacobs</h6>
+                    <p class="mb-0">487 Sunset, California(CA), 94043</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="navs-justified-link-preparing" role="tabpanel">
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Barry Schowalter</h6>
+                    <p class="mb-0">939 Orange, California(CA), 92118</p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent border-left-dashed">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Myrtle Ullrich</h6>
+                    <p class="mb-0">101 Boulder, California(CA), 95959 </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="border-1 border-light border-top border-dashed mb-2 "></div>
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Veronica Herman</h6>
+                    <p class="mb-0">162 Windsor, California(CA), 95492</p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Helen Jacobs</h6>
+                    <p class="mb-0">487 Sunset, California(CA), 94043</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="navs-justified-link-shipping" role="tabpanel">
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Veronica Herman</h6>
+                    <p class="mb-0">101 Boulder, California(CA), 95959</p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Barry Schowalter</h6>
+                    <p class="mb-0">939 Orange, California(CA), 92118</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="border-1 border-light border-top border-dashed mb-2 "></div>
+              <ul class="timeline mb-0">
+                <li class="timeline-item ps-4 border-left-dashed">
+                  <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                    <i class='mdi mdi-check-circle-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-success text-uppercase fw-medium">sender</small>
+                    </div>
+                    <h6 class="mb-2">Myrtle Ullrich</h6>
+                    <p class="mb-0">162 Windsor, California(CA), 95492 </p>
+                  </div>
+                </li>
+                <li class="timeline-item ps-4 border-transparent">
+                  <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                    <i class='mdi mdi-map-marker-outline'></i>
+                  </span>
+                  <div class="timeline-event ps-1">
+                    <div class="timeline-header">
+                      <small class="text-primary text-uppercase fw-medium">Receiver</small>
+                    </div>
+                    <h6 class="mb-2">Helen Jacobs</h6>
+                    <p class="mb-0">487 Sunset, California(CA), 94043</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Finance Summary -->
+  <!--/ Orders by Countries -->
 </div>
+
 
 <!-- Modal -->
 @await Html.PartialAsync("../_Partials/_Modals/ModalAddNewCc")

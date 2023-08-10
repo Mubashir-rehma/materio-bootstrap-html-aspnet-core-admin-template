@@ -6,489 +6,192 @@
 
 @section VendorStyles {
 <link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.dist.css">
+<link rel="stylesheet" href="~/vendor/libs/swiper/swiper.dist.css" />
 }
 
 @section VendorScripts {
 <script src="~/vendor/libs/apex-charts/apexcharts.dist.js"></script>
+<script src="~/vendor/libs/swiper/swiper.dist.js"></script>
 }
 
+@section PageStyles{
+<link rel="stylesheet" href="~/vendor/css/pages/cards-statistics.dist.css" />
+}
 @section PageScripts {
 <script src="~/js/cards-statistics.dist.js"></script>
 }
+
 @* ************** Content ************** *@
 
-<h4 class="py-3 mb-4"><span class="text-muted fw-light">UI Elements /</span> Cards Statistics
-</h4>
-<!-- Cards with few info -->
-<div class="row">
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
+<h4 class="py-3 mb-4"><span class="text-muted fw-light">UI Elements /</span> Cards Statistics</h4>
+<div class="row gy-4">
+  <!-- Cards with few info -->
+  <div class="col-lg-3 col-sm-6">
+    <div class="card transparent-card bg-transparent shadow-none border-1">
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <div class="avatar me-1">
+            <div class="avatar-initial rounded shadow-sm">
+              <i class="mdi mdi-account-outline text-primary mdi-24px"></i>
+            </div>
+          </div>
           <div class="card-info">
-            <p class="card-text">Session</p>
-            <div class="d-flex align-items-end mb-2">
-              <h4 class="card-title mb-0 me-2">58,352</h4>
-              <small class="text-success">(+29%)</small>
+            <small>New Customers</small>
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0">2,856</h5>
+              <i class="mdi mdi-chevron-down text-danger mdi-24px"></i>
+              <small class="text-danger">10.2%</small>
             </div>
-            <small>Last Week Analytics</small>
-          </div>
-          <div class="card-icon">
-            <span class="badge bg-label-primary rounded p-2">
-              <i class='bx bx-trending-up bx-sm'></i>
-            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
+  <div class="col-lg-3 col-sm-6">
+    <div class="card transparent-card bg-transparent shadow-none border-1">
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <div class="avatar me-1">
+            <div class="avatar-initial rounded shadow-sm">
+              <i class="mdi mdi-currency-usd text-success mdi-24px"></i>
+            </div>
+          </div>
           <div class="card-info">
-            <p class="card-text">Time On Site</p>
-            <div class="d-flex align-items-end mb-2">
-              <h4 class="card-title mb-0 me-2">28m 14s</h4>
-              <small class="text-success">(+18%)</small>
+            <small>Total Revenue</small>
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0">28.6K</h5>
+              <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+              <small class="text-success">25.8%</small>
             </div>
-            <small>Last Week Analytics</small>
-          </div>
-          <div class="card-icon">
-            <span class="badge bg-label-info rounded p-2">
-              <i class='bx bx-time-five bx-sm'></i>
-            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
+  <div class="col-lg-3 col-sm-6">
+    <div class="card transparent-card bg-transparent shadow-none border-1">
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <div class="avatar me-1">
+            <div class="avatar-initial rounded shadow-sm">
+              <i class="mdi mdi-trending-up text-info mdi-24px"></i>
+            </div>
+          </div>
           <div class="card-info">
-            <p class="card-text">Bounce Rate</p>
-            <div class="d-flex align-items-end mb-2">
-              <h4 class="card-title mb-0 me-2">62%</h4>
-              <small class="text-danger">(-14%)</small>
+            <small>New Transactions</small>
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0">16.6k</h5>
+              <i class="mdi mdi-chevron-down text-danger mdi-24px"></i>
+              <small class="text-danger">12.1%</small>
             </div>
-            <small>Last Week Analytics</small>
-          </div>
-          <div class="card-icon">
-            <span class="badge bg-label-danger rounded p-2">
-              <i class='bx bx-pie-chart-alt bx-sm'></i>
-            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
+  <div class="col-lg-3 col-sm-6">
+    <div class="card transparent-card bg-transparent shadow-none border-1">
       <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <div class="avatar me-1">
+            <div class="avatar-initial rounded shadow-sm">
+              <i class="mdi mdi-poll text-warning mdi-24px"></i>
+            </div>
+          </div>
           <div class="card-info">
-            <p class="card-text">Users</p>
-            <div class="d-flex align-items-end mb-2">
-              <h4 class="card-title mb-0 me-2">18,472</h4>
-              <small class="text-success">(+42%)</small>
+            <small>Total Profit</small>
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0">2,856</h5>
+              <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+              <small class="text-success">54.6%</small>
             </div>
-            <small>Last Week Analytics</small>
-          </div>
-          <div class="card-icon">
-            <span class="badge bg-label-success rounded p-2">
-              <i class='bx bx-user bx-sm'></i>
-            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!--/ Cards with few info -->
+  <!--/ Cards with few info -->
 
-<!-- Centered align Cards -->
-<div class="row">
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+  <!-- Cards with separator -->
+  <div class="col-12">
     <div class="card">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h6 class="card-title m-0 me-2">Total Sales</h6>
-        <div class="dropdown">
-          <button class="btn btn-sm p-0" type="button" id="totalSalesList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Today <i class="bx bx-chevron-down"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalSalesList">
-            <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+      <div class="card-widget-separator-wrapper">
+        <div class="card-body card-widget-separator">
+          <div class="row gy-4 gy-sm-1">
+            <div class="col-sm-6 col-lg-3">
+              <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
+                <div>
+                  <h3 class="mb-1">24</h3>
+                  <p class="mb-0">Clients</p>
+                </div>
+                <div class="avatar me-sm-4">
+                  <span class="avatar-initial rounded bg-label-secondary">
+                    <i class="mdi mdi-account-outline text-heading mdi-20px"></i>
+                  </span>
+                </div>
+              </div>
+              <hr class="d-none d-sm-block d-lg-none me-4">
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-3 pb-sm-0">
+                <div>
+                  <h3 class="mb-1">165</h3>
+                  <p class="mb-0">Invoices</p>
+                </div>
+                <div class="avatar  me-lg-4">
+                  <span class="avatar-initial rounded bg-label-secondary">
+                    <i class="mdi mdi-content-paste text-heading mdi-20px"></i>
+                  </span>
+                </div>
+              </div>
+              <hr class="d-none d-sm-block d-lg-none">
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="d-flex justify-content-between align-items-start border-end pb-3 pb-sm-0 card-widget-3">
+                <div>
+                  <h3 class="mb-1">$2.46k</h3>
+                  <p class="mb-0">Paid</p>
+                </div>
+                <div class="avatar me-sm-4">
+                  <span class="avatar-initial rounded bg-label-secondary">
+                    <i class="mdi mdi-currency-usd text-heading mdi-20px"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h3 class="mb-1">$876</h3>
+                  <p class="mb-0">Unpaid</p>
+                </div>
+                <div class="avatar">
+                  <span class="avatar-initial rounded bg-label-secondary">
+                    <i class="mdi mdi-currency-usd-off text-heading mdi-20px"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="card-body text-center">
-        <span class="badge bg-label-primary rounded-circle p-2 mb-4">
-          <i class='bx bx-trending-up bx-sm'></i>
-        </span>
-        <h3 class="card-title mb-1 me-2">8,352</h3>
-        <small class="d-block mb-2">12% of target</small>
-        <span class="text-success">+29% <i class='bx bx-chevron-up'></i></span>
-      </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h6 class="card-title m-0 me-2">Referral Income</h6>
-        <div class="dropdown">
-          <button class="btn btn-sm p-0" type="button" id="referralsList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Today <i class="bx bx-chevron-down"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="referralsList">
-            <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body text-center">
-        <span class="badge bg-label-info rounded-circle p-2 mb-4">
-          <i class='bx bx-dollar bx-sm'></i>
-        </span>
-        <h3 class="card-title mb-1 me-2">$1,271</h3>
-        <small class="d-block mb-2">34% of target</small>
-        <span class="text-danger">-23% <i class='bx bx-chevron-down'></i></span>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h6 class="card-title m-0 me-2">Customers</h6>
-        <div class="dropdown">
-          <button class="btn btn-sm p-0" type="button" id="customersList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Today <i class="bx bx-chevron-down"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="customersList">
-            <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body text-center">
-        <span class="badge bg-label-success rounded-circle p-2 mb-4">
-          <i class='bx bx-user bx-sm'></i>
-        </span>
-        <h3 class="card-title mb-1 me-2">24,680</h3>
-        <small class="d-block mb-2">29% of target</small>
-        <span class="text-success">+42% <i class='bx bx-chevron-up'></i></span>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
-      <div class="card-header d-flex align-items-center justify-content-between">
-        <h6 class="card-title m-0 me-2">Orders Received</h6>
-        <div class="dropdown">
-          <button class="btn btn-sm p-0" type="button" id="orderReceivedList" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Today <i class="bx bx-chevron-down"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orderReceivedList">
-            <a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
-            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body text-center">
-        <span class="badge bg-label-warning rounded-circle p-2 mb-4">
-          <i class='bx bx-archive bx-sm'></i>
-        </span>
-        <h3 class="card-title mb-1 me-2">1,862</h3>
-        <small class="d-block mb-2">47% of target</small>
-        <span class="text-success">+82% <i class='bx bx-chevron-up'></i></span>
-      </div>
-    </div>
-  </div>
-</div>
-<!--/ Centered align Cards -->
+  <!--/ Cards with separator -->
 
-<!-- Cards with unicons & charts -->
-<div class="row">
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="cardOpt1">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Transactions</span>
-        <h4 class="card-title mb-2">$14,857</h4>
-        <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +28.14%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/cube-secondary.png" alt="cube" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt2">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Order</span>
-        <h4 class="card-title mb-2">$1,286</h4>
-        <small class="text-danger fw-medium"><i class='bx bx-down-arrow-alt'></i> -13.24%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/chart-success.png" alt="chart success" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Profit</span>
-        <h4 class="card-title mb-2">$12,628</h4>
-        <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +72.80%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/paypal.png" alt="paypal" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Payments</span>
-        <h4 class="card-title mb-2">$2,456</h4>
-        <small class="text-danger fw-medium"><i class='bx bx-down-arrow-alt'></i> -14.82%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/computer.png" alt="computer" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt5">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Revenue</span>
-        <h4 class="card-title mb-2">$42,389</h4>
-        <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +52.18%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title d-flex align-items-start justify-content-between">
-          <div class="avatar flex-shrink-0">
-            <img src="~/img/icons/unicons/wallet-info.png" alt="wallet info" class="rounded">
-          </div>
-          <div class="dropdown">
-            <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-              <a class="dropdown-item" href="javascript:void(0);">View More</a>
-              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-            </div>
-          </div>
-        </div>
-        <span class="fw-medium d-block mb-1">Sales</span>
-        <h4 class="card-title mb-2">$4,679</h4>
-        <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +28.42%</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-0">
-        <span class="d-block fw-medium mb-2">Order</span>
-        <h3 class="card-title">276k</h3>
-      </div>
-      <div id="orderChart" class="mb-3"></div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-2">
-        <span class="d-block fw-medium mb-2">Revenue</span>
-        <h3 class="card-title mb-2">425k</h3>
-        <div id="revenueChart"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-2">
-        <span class="d-block fw-medium mb-2">Profit</span>
-        <h3 class="card-title mb-0">624k</h3>
-        <div id="profitChart"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-0">
-        <span class="d-block fw-medium mb-2">Sessions</span>
-        <h3 class="card-title mb-2">2,845</h3>
-      </div>
-      <div id="sessionsChart" class="mb-3"></div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-0">
-        <span class="d-block fw-medium mb-2">Expenses</span>
-      </div>
-      <div id="expensesChart" class="mb-2"></div>
-      <div class="p-3 pt-2">
-        <small class="text-muted d-block text-center">$21k Expenses more than last month</small>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <span class="d-block fw-medium mb-2">Sales</span>
-        <h3 class="card-title mb-2">482k</h3>
-        <span class="badge bg-label-info mb-4">+34%</span>
-        <small class="text-muted d-block">Sales Target</small>
-        <div class="d-flex align-items-center">
-          <div class="progress w-75 me-2" style="height: 8px;">
-            <div class="progress-bar bg-info" style="width: 78%" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <span>78%</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--/ Cards with unicons & charts -->
-
-<!-- Cards with charts & info -->
-<div class="row">
-  <div class="col-lg-8 mb-4">
-    <div class="card">
-      <div class="card-body row g-4">
-        <div class="col-md-6 pe-md-4 card-separator">
-          <div class="card-title d-flex align-items-start justify-content-between">
-            <h5 class="mb-0">New Visitors</h5>
-            <small>Last Week</small>
-          </div>
-          <div class="d-flex justify-content-between">
-            <div class="mt-auto">
-              <h2 class="mb-2">23%</h2>
-              <small class="text-danger text-nowrap fw-medium"><i class='bx bx-down-arrow-alt'></i> -13.24%</small>
-            </div>
-            <div id="visitorsChart"></div>
-          </div>
-        </div>
-        <div class="col-md-6 ps-md-4">
-          <div class="card-title d-flex align-items-start justify-content-between">
-            <h5 class="mb-0">Activity</h5>
-            <small>Last Week</small>
-          </div>
-          <div class="d-flex justify-content-between">
-            <div class="mt-auto">
-              <h2 class="mb-2">82%</h2>
-              <small class="text-success text-nowrap fw-medium"><i class='bx bx-up-arrow-alt'></i> 24.8%</small>
-            </div>
-            <div id="activityChart"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 mb-4">
-    <div class="card">
-      <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <div class="d-flex flex-column">
-            <div class="card-title mb-auto">
-              <h5 class="mb-0">Generated Leads</h5>
-              <small>Monthly Report</small>
-            </div>
-            <div class="chart-statistics">
-              <h3 class="card-title mb-1">4,230</h3>
-              <small class="text-success text-nowrap fw-medium"><i class='bx bx-up-arrow-alt'></i> +12.8%</small>
-            </div>
-          </div>
-          <div id="leadsReportChart"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--/ Cards with charts & info -->
-
-<!-- Card Border Shadow -->
-<div class="row g-4">
+  <!-- Card Border Shadow -->
   <div class="col-sm-6 col-lg-3">
     <div class="card card-border-shadow-primary h-100">
       <div class="card-body">
         <div class="d-flex align-items-center mb-2 pb-1">
           <div class="avatar me-2">
-            <span class="avatar-initial rounded bg-label-primary"><i class="bx bxs-truck"></i></span>
+            <span class="avatar-initial rounded bg-label-primary"><i class="mdi mdi-bus-school mdi-20px"></i></span>
           </div>
-          <h4 class="ms-1 mb-0">42</h4>
+          <h4 class="ms-1 mb-0 display-6">42</h4>
         </div>
-        <p class="mb-1">On route vehicles</p>
+        <p class="mb-0 text-heading">On route vehicles</p>
         <p class="mb-0">
-          <span class="fw-medium me-1">+18.2%</span>
+          <span class="me-1">+18.2%</span>
           <small class="text-muted">than last week</small>
         </p>
       </div>
@@ -499,13 +202,14 @@
       <div class="card-body">
         <div class="d-flex align-items-center mb-2 pb-1">
           <div class="avatar me-2">
-            <span class="avatar-initial rounded bg-label-warning"><i class='bx bx-error'></i></span>
+            <span class="avatar-initial rounded bg-label-warning">
+              <i class='mdi mdi-alert mdi-20px'></i></span>
           </div>
-          <h4 class="ms-1 mb-0">8</h4>
+          <h4 class="ms-1 mb-0 display-6">8</h4>
         </div>
-        <p class="mb-1">Vehicles with errors</p>
+        <p class="mb-0 text-heading">Vehicles with errors</p>
         <p class="mb-0">
-          <span class="fw-medium me-1">-8.7%</span>
+          <span class="me-1">-8.7%</span>
           <small class="text-muted">than last week</small>
         </p>
       </div>
@@ -516,13 +220,15 @@
       <div class="card-body">
         <div class="d-flex align-items-center mb-2 pb-1">
           <div class="avatar me-2">
-            <span class="avatar-initial rounded bg-label-danger"><i class='bx bx-git-repo-forked'></i></span>
+            <span class="avatar-initial rounded bg-label-danger">
+              <i class='mdi mdi-source-fork mdi-20px'></i>
+            </span>
           </div>
-          <h4 class="ms-1 mb-0">27</h4>
+          <h4 class="ms-1 mb-0 display-6">27</h4>
         </div>
-        <p class="mb-1">Deviated from route</p>
+        <p class="mb-0 text-heading">Deviated from route</p>
         <p class="mb-0">
-          <span class="fw-medium me-1">+4.3%</span>
+          <span class="me-1">+4.3%</span>
           <small class="text-muted">than last week</small>
         </p>
       </div>
@@ -533,17 +239,476 @@
       <div class="card-body">
         <div class="d-flex align-items-center mb-2 pb-1">
           <div class="avatar me-2">
-            <span class="avatar-initial rounded bg-label-info"><i class='bx bx-time-five'></i></span>
+            <span class="avatar-initial rounded bg-label-info"><i class='mdi mdi-timer-outline mdi-20px'></i></span>
           </div>
-          <h4 class="ms-1 mb-0">13</h4>
+          <h4 class="ms-1 mb-0 display-6">13</h4>
         </div>
-        <p class="mb-1">Late vehicles</p>
+        <p class="mb-0 text-heading">Late vehicles</p>
         <p class="mb-0">
-          <span class="fw-medium me-1">-2.5%</span>
+          <span class="me-1">-2.5%</span>
           <small class="text-muted">than last week</small>
         </p>
       </div>
     </div>
   </div>
+  <!--/ Card Border Shadow -->
+
+  <!-- Transactions -->
+  <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="card-title m-0 me-2">Transactions</h5>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-3 col-6">
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <div class="avatar-initial bg-primary rounded shadow">
+                  <i class="mdi mdi-trending-up mdi-24px"></i>
+                </div>
+              </div>
+              <div class="ms-3">
+                <div class="small mb-1">Sales</div>
+                <h5 class="mb-0">245k</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <div class="avatar-initial bg-success rounded shadow">
+                  <i class="mdi mdi-account-outline mdi-24px"></i>
+                </div>
+              </div>
+              <div class="ms-3">
+                <div class="small mb-1">Customers</div>
+                <h5 class="mb-0">12.5k</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <div class="avatar-initial bg-warning rounded shadow">
+                  <i class="mdi mdi-cellphone-link mdi-24px"></i>
+                </div>
+              </div>
+              <div class="ms-3">
+                <div class="small mb-1">Product</div>
+                <h5 class="mb-0">1.54k</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <div class="avatar-initial bg-info rounded shadow">
+                  <i class="mdi mdi-currency-usd mdi-24px"></i>
+                </div>
+              </div>
+              <div class="ms-3">
+                <div class="small mb-1">Revenue</div>
+                <h5 class="mb-0">$88k</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Transactions -->
+
+  <!-- Total Sales -->
+  <div class="col-xl-4 col-lg-6">
+    <div class="card h-100">
+      <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+        <div class="me-3">
+          <h5 class="mb-4">Total Sales</h5>
+          <div class="small mb-1">Calculated in last 7 days</div>
+          <div class="d-flex align-items-end">
+            <h4 class="mb-0 me-2">$25,980</h4>
+            <small class="text-success">+15.6%</small>
+          </div>
+        </div>
+        <div id="totalSalesDonutChart" class="mt-3 mt-md-0"></div>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Sales -->
+
+  <!-- Cards with icon profit and loss info -->
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-primary rounded-circle shadow-sm">
+            <i class="mdi mdi-wallet-travel mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">New Project</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">862</h4>
+          <small class="text-danger lh-sm">-18%</small>
+        </div>
+        <small>Yearly Project</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-secondary rounded-circle shadow">
+            <i class="mdi mdi-poll mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="totalProfitID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalProfitID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">Total Profit</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">$25.6k</h4>
+          <small class="text-success lh-sm">+42%</small>
+        </div>
+        <small>Weekly Project</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-success rounded-circle shadow">
+            <i class="mdi mdi-currency-usd mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="revenueID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="revenueID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">Revenue</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">$95.2k</h4>
+          <small class="text-success lh-sm">+12%</small>
+        </div>
+        <small>Revenue Increase</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-danger rounded-circle shadow">
+            <i class="mdi mdi-star-outline mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="logisticsID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="logisticsID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">Logistics</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">44.10k</h4>
+          <small class="text-success lh-sm">+42%</small>
+        </div>
+        <small>Regional Logistics</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-warning rounded-circle shadow">
+            <i class="mdi mdi-check mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="reportsID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="reportsID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">Reports</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">268</h4>
+          <small class="text-danger lh-sm">-28%</small>
+        </div>
+        <small>System Bugs</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial bg-info rounded-circle shadow">
+            <i class="mdi mdi-trending-up mdi-24px"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0" type="button" id="transactionsID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mdi mdi-dots-vertical mdi-24px"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionsID">
+            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+            <a class="dropdown-item" href="javascript:void(0);">Share</a>
+            <a class="dropdown-item" href="javascript:void(0);">Update</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <h6 class="mb-2">Transactions</h6>
+        <div class="d-flex flex-wrap mb-2 pb-1 align-items-center">
+          <h4 class="mb-0 me-2">1.2k</h4>
+          <small class="text-success lh-sm">+38%</small>
+        </div>
+        <small>Daily Transactions</small>
+      </div>
+    </div>
+  </div>
+  <!--/ Cards with icon profit and loss info -->
+
+  <!-- Ratings -->
+  <div class="col-xl-3 col-lg-6 col-sm-6 mt-5">
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <div class="card-body">
+            <div class="card-info">
+              <h6 class="mb-4 pb-1 text-nowrap">Ratings</h6>
+              <div class="d-flex align-items-center mb-3">
+                <h4 class="mb-0 me-2">13k</h4>
+                <small class="text-success lh-sm">+15.6%</small>
+              </div>
+              <div class="badge bg-label-primary rounded-pill">Year of 2021</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="h-100 position-relative">
+            <img src="~/img/illustrations/illustration-1.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="95">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Ratings -->
+
+  <!-- Sessions -->
+  <div class="col-xl-3 col-lg-6 col-sm-6 mt-5">
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <div class="card-body">
+            <div class="card-info">
+              <h6 class="mb-4 pb-1 text-nowrap">Sessions</h6>
+              <div class="d-flex align-items-center mb-3">
+                <h4 class="mb-0 me-2">24.5k</h4>
+                <small class="text-danger lh-sm">-20%</small>
+              </div>
+              <div class="badge bg-label-secondary rounded-pill">Last Week</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="h-100 position-relative">
+            <img src="~/img/illustrations/illustration-2.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="81">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Sessions -->
+
+  <!-- Customers -->
+  <div class="col-xl-3 col-lg-6 col-sm-6 mt-5">
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <div class="card-body">
+            <div class="card-info">
+              <h6 class="mb-4 pb-1 text-nowrap">Customers</h6>
+              <div class="d-flex align-items-center mb-3">
+                <h4 class="mb-0 me-2">2,856</h4>
+                <small class="text-success lh-sm">+59%</small>
+              </div>
+              <div class="badge bg-label-info rounded-pill">Daily Customers</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="h-100 position-relative">
+            <img src="~/img/illustrations/illustration-3.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="84">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Customers -->
+
+  <!-- Total Orders -->
+  <div class="col-xl-3 col-lg-6 col-sm-6 mt-5">
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <div class="card-body">
+            <div class="card-info">
+              <h6 class="mb-4 pb-1 text-nowrap">Total Orders</h6>
+              <div class="d-flex align-items-center mb-3">
+                <h4 class="mb-0 me-2">42.5k</h4>
+                <small class="text-success lh-sm">+26%</small>
+              </div>
+              <div class="badge bg-label-warning rounded-pill">Last Month</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="h-100 position-relative">
+            <img src="~/img/illustrations/illustration-4.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="78">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Orders -->
+
+  <!-- Total Revenue chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">$35.4k</h4>
+      </div>
+      <div class="card-body">
+        <div id="totalRevenueChart" class="mb-3"></div>
+        <h6 class="text-center mb-0">Total Revenue</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Revenue chart -->
+
+  <!-- Sessions group chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">4,350</h4>
+      </div>
+      <div class="card-body">
+        <div id="SessionsGroupChart" class="mb-3"></div>
+        <h6 class="text-center mb-0">Sessions</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Sessions group chart -->
+
+  <!-- Total Growth chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">42.5k</h4>
+      </div>
+      <div class="card-body">
+        <div id="totalGrowthAreaChart" class="mb-3"></div>
+        <h6 class="text-center mb-0">Total Growth</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Growth chart -->
+
+  <!-- Total Sales chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">135k</h4>
+      </div>
+      <div class="card-body">
+        <div id="totalSalesSemiDonutChart" class="mb-4"></div>
+        <h6 class="text-center mb-0">Total Sales</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Sales chart -->
+
+  <!-- Sessions chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">2,856</h4>
+      </div>
+      <div class="card-body">
+        <div id="sessionsColumnChart" class="mb-3"></div>
+        <h6 class="text-center mb-0">Sessions</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Sessions chart -->
+
+  <!-- Total Profit line chart -->
+  <div class="col-xl-2 col-md-4 col-sm-6">
+    <div class="card">
+      <div class="card-header pb-0">
+        <h4 class="mb-0">$86.4k</h4>
+      </div>
+      <div class="card-body">
+        <div id="totalProfitLineChart" class="mb-3"></div>
+        <h6 class="text-center mb-0">Total Profit</h6>
+      </div>
+    </div>
+  </div>
+  <!--/ Total Profit line chart -->
 </div>
-<!--/ Card Border Shadow -->

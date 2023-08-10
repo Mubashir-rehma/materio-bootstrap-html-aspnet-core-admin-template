@@ -277,7 +277,7 @@
     <div class="demo-inline-spacing">
       <div class="btn-group">
         <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -293,7 +293,7 @@
 
       <div class="btn-group">
         <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -309,7 +309,7 @@
 
       <div class="btn-group">
         <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -325,7 +325,7 @@
 
       <div class="btn-group">
         <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -341,7 +341,7 @@
 
       <div class="btn-group">
         <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -357,7 +357,7 @@
 
       <div class="btn-group">
         <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
@@ -421,15 +421,15 @@
         <small class="text-light fw-medium">With Icon</small>
         <div class="demo-inline-spacing">
           <div class="btn-group" id="dropdown-icon-demo">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-menu me-1"></i>With Icon</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-menu me-1"></i> With Icon</button>
             <ul class="dropdown-menu">
-              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="bx bx-chevron-right scaleX-n1-rtl"></i>Action</a></li>
-              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="bx bx-chevron-right scaleX-n1-rtl"></i>Another action</a></li>
-              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="bx bx-chevron-right scaleX-n1-rtl"></i>Something else here</a></li>
+              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>Action</a></li>
+              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>Another action</a></li>
+              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>Something else here</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="bx bx-chevron-right scaleX-n1-rtl"></i>Separated link</a></li>
+              <li><a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"><i class="mdi mdi-chevron-right scaleX-n1-rtl"></i>Separated link</a></li>
             </ul>
           </div>
         </div>
@@ -440,7 +440,7 @@
         <small class="text-light fw-medium">Icon Dropdown</small>
         <div class="demo-inline-spacing">
           <div class="btn-group">
-            <button type="button" class="btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
+            <button type="button" class="btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-vertical"></i></button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
               <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
@@ -694,13 +694,13 @@
             </button>
             <div class="dropdown-menu dropdown-menu-end w-px-300">
               <form class="p-4" onsubmit="return false">
-                <div class="mb-3">
-                  <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                <div class="form-floating form-floating-outline mb-4">
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email&#64;example.com">
+                  <label for="exampleDropdownFormEmail1">Email address</label>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                <div class="form-floating form-floating-outline mb-4">
                   <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                  <label for="exampleDropdownFormPassword1">Password</label>
                 </div>
                 <div class="mb-3">
                   <div class="form-check">

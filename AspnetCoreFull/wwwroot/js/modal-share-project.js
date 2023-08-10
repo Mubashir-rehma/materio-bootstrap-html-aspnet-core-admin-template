@@ -20,7 +20,7 @@ $(function () {
           '<img src="' +
           assetsPath +
           $(option.element).data('image') +
-          '" class="rounded-circle">' +
+          '" class="rounded">' +
           '</div>' +
           '<div class="name">' +
           $(option.element).data('name') +

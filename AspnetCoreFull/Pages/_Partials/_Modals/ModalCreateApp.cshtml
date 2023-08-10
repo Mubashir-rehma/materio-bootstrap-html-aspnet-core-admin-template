@@ -2,61 +2,77 @@
 <div class="modal fade" id="createApp" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered modal-simple modal-upgrade-plan">
     <div class="modal-content p-3 p-md-5">
-      <div class="modal-body p-2">
+      <div class="modal-body p-1">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="text-center">
-          <h3 class="mb-2">Create App</h3>
-          <p>Provide data with this form to create your app.</p>
+          <h3 class="mb-2 pb-1">Create App</h3>
+          <p class="mb-4">Provide data with this form to create your app.</p>
         </div>
         <!-- Property Listing Wizard -->
-        <div id="wizard-create-app" class="bs-stepper vertical mt-2 shadow-none">
+        <div id="wizard-create-app" class="bs-stepper vertical wizard-vertical-icons mt-2 shadow-none">
           <div class="bs-stepper-header border-0 p-1">
             <div class="step" data-target="#details">
               <button type="button" class="step-trigger">
-                <span class="bs-stepper-circle"><i class="bx bx-file fs-5"></i></span>
-                <span class="bs-stepper-label">
-                  <span class="bs-stepper-title text-uppercase">Details</span>
-                  <span class="bs-stepper-subtitle">Enter Details</span>
+                <span class="avatar">
+                  <span class="avatar-initial rounded-2">
+                    <i class="mdi mdi-content-paste mdi-24px"></i>
+                  </span>
+                </span>
+                <span class="bs-stepper-label flex-column align-items-start gap-1 ps-1 ms-2">
+                  <span class="bs-stepper-title text-uppercase fw-normal">Details</span>
+                  <small class="bs-stepper-subtitle text-muted">Enter Details</small>
                 </span>
               </button>
             </div>
-            <div class="line"></div>
             <div class="step" data-target="#frameworks">
               <button type="button" class="step-trigger">
-                <span class="bs-stepper-circle"><i class="bx bx-box fs-5"></i></span>
-                <span class="bs-stepper-label">
-                  <span class="bs-stepper-title text-uppercase">Frameworks</span>
-                  <span class="bs-stepper-subtitle">Select Framework</span>
+                <span class="avatar">
+                  <span class="avatar-initial rounded-2">
+                    <i class="mdi mdi-star-outline mdi-24px"></i>
+                  </span>
+                </span>
+                <span class="bs-stepper-label flex-column align-items-start gap-1 ps-1 ms-2">
+                  <span class="bs-stepper-title text-uppercase fw-normal">Frameworks</span>
+                  <small class="bs-stepper-subtitle text-muted">Select Framework</small>
                 </span>
               </button>
             </div>
-            <div class="line"></div>
             <div class="step" data-target="#database">
               <button type="button" class="step-trigger">
-                <span class="bs-stepper-circle"><i class="bx bx-data fs-5"></i></span>
-                <span class="bs-stepper-label">
-                  <span class="bs-stepper-title text-uppercase">Database</span>
-                  <span class="bs-stepper-subtitle">Select Database</span>
+                <span class="avatar">
+                  <span class="avatar-initial rounded-2">
+                    <i class="mdi mdi-chart-donut mdi-24px"></i>
+                  </span>
+                </span>
+                <span class="bs-stepper-label flex-column align-items-start gap-1 ps-1 ms-2">
+                  <span class="bs-stepper-title text-uppercase fw-normal">Database</span>
+                  <small class="bs-stepper-subtitle text-muted">Select Database</small>
                 </span>
               </button>
             </div>
-            <div class="line"></div>
             <div class="step" data-target="#billing">
               <button type="button" class="step-trigger">
-                <span class="bs-stepper-circle"><i class="bx bx-credit-card fs-5"></i></span>
-                <span class="bs-stepper-label">
-                  <span class="bs-stepper-title text-uppercase">Billing</span>
-                  <span class="bs-stepper-subtitle">Payment Details</span>
+                <span class="avatar">
+                  <span class="avatar-initial rounded-2">
+                    <i class="mdi mdi-credit-card-outline mdi-24px"></i>
+                  </span>
+                </span>
+                <span class="bs-stepper-label flex-column align-items-start gap-1 ps-1 ms-2">
+                  <span class="bs-stepper-title text-uppercase fw-normal">Billing</span>
+                  <small class="bs-stepper-subtitle text-muted">Payment Details</small>
                 </span>
               </button>
             </div>
-            <div class="line"></div>
             <div class="step" data-target="#submit">
               <button type="button" class="step-trigger">
-                <span class="bs-stepper-circle"><i class="bx bx-check fs-5"></i></span>
-                <span class="bs-stepper-label">
-                  <span class="bs-stepper-title text-uppercase">Submit</span>
-                  <span class="bs-stepper-subtitle">Submit</span>
+                <span class="avatar">
+                  <span class="avatar-initial rounded-2">
+                    <i class="mdi mdi-check mdi-24px"></i>
+                  </span>
+                </span>
+                <span class="bs-stepper-label flex-column align-items-start gap-1 ps-1 ms-2">
+                  <span class="bs-stepper-title text-uppercase fw-normal">Submit</span>
+                  <small class="bs-stepper-subtitle text-muted">Submit</small>
                 </span>
               </button>
             </div>
@@ -65,16 +81,17 @@
             <form onSubmit="return false">
               <!-- Details -->
               <div id="details" class="content pt-3 pt-lg-0">
-                <div class="mb-3">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Application Name">
+                <div class="form-floating form-floating-outline mb-3">
+                  <input type="email" class="form-control form-control-lg" id="modalAppName" placeholder="Application Name">
+                  <label for="modalAppName">Application Name</label>
                 </div>
-                <h5>Category</h5>
+                <h4>Category</h4>
                 <ul class="p-0 m-0">
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-info p-2 me-3 rounded"><i class="bx bx-file bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md bg-label-info d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-briefcase-outline mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">CRM Application</h6>
+                        <p class="mb-0">CRM Application</p>
                         <small class="text-muted">Scales with any business</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -84,11 +101,11 @@
                       </div>
                     </div>
                   </li>
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-success p-2 me-3 rounded"><i class="bx bx-cart bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md bg-label-success d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-cart-outline mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">eCommerce Platforms</h6>
+                        <p class="mb-0">eCommerce Platforms</p>
                         <small class="text-muted">Grow Your Business With App</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -98,11 +115,11 @@
                       </div>
                     </div>
                   </li>
-                  <li class="d-flex align-items-start">
-                    <div class="badge bg-label-danger p-2 me-3 rounded"><i class="bx bx-laptop bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center">
+                    <div class="avatar avatar-md bg-label-danger d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-medal-outline mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">Online Learning platform</h6>
+                        <p class="mb-0">Online Learning platform</p>
                         <small class="text-muted">Start learning today</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -114,22 +131,22 @@
                   </li>
                 </ul>
                 <div class="col-12 d-flex justify-content-between mt-4">
-                  <button class="btn btn-label-secondary btn-prev" disabled> <i class="bx bx-left-arrow-alt bx-xs me-sm-1 me-0"></i>
-                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                  <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-2"></i>
+                    <span class="align-middle">Previous</span>
                   </button>
-                  <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="bx bx-right-arrow-alt bx-xs"></i></button>
+                  <button class="btn btn-primary btn-next"> <span class="align-middle me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
                 </div>
               </div>
 
               <!-- Frameworks -->
               <div id="frameworks" class="content pt-3 pt-lg-0">
-                <h5>Category</h5>
+                <h4>Select Framework</h4>
                 <ul class="p-0 m-0">
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-info p-2 me-3 rounded"><i class="bx bxl-react bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md bg-label-info d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-react mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">React Native</h6>
+                        <p class="mb-0">React Native</p>
                         <small class="text-muted">Create truly native apps</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -139,11 +156,11 @@
                       </div>
                     </div>
                   </li>
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-danger p-2 me-3 rounded"><i class="bx bxl-angular bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md bg-label-danger d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-angular mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">Angular</h6>
+                        <p class="mb-0">Angular</p>
                         <small class="text-muted">Most suited for your application</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -153,11 +170,11 @@
                       </div>
                     </div>
                   </li>
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-warning p-2 me-3 rounded"><i class="bx bxl-html5 bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md bg-label-warning d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-language-html5 mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">HTML</h6>
+                        <p class="mb-0">HTML</p>
                         <small class="text-muted">Progressive Framework</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -168,10 +185,10 @@
                     </div>
                   </li>
                   <li class="d-flex align-items-start">
-                    <div class="badge bg-label-success p-2 me-3 rounded"><i class="bx bxl-vuejs bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                    <div class="avatar avatar-md bg-label-success d-flex align-items-center justify-content-center flex-shrink-0 me-3 rounded"><i class="mdi mdi-vuejs mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">VueJs</h6>
+                        <p class="mb-0">VueJs</p>
                         <small class="text-muted">JS web frameworks</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -184,23 +201,24 @@
                 </ul>
 
                 <div class="col-12 d-flex justify-content-between mt-4">
-                  <button class="btn btn-label-secondary btn-prev"> <i class="bx bx-left-arrow-alt bx-xs me-sm-1 me-0"></i> <span class="align-middle d-sm-inline-block d-none">Previous</span> </button>
-                  <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="bx bx-right-arrow-alt bx-xs"></i></button>
+                  <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-2"></i> <span class="align-middle">Previous</span> </button>
+                  <button class="btn btn-primary btn-next"> <span class="align-middle me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
                 </div>
               </div>
 
               <!-- Database -->
               <div id="database" class="content pt-3 pt-lg-0">
-                <div class="mb-3">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail2" placeholder="Database Name">
+                <div class="form-floating form-floating-outline mb-3">
+                  <input type="email" class="form-control form-control-lg" id="modalAppDatabaseName" placeholder="Database Name">
+                  <label for="modalAppDatabaseName">Database Name</label>
                 </div>
-                <h5>Select Database Engine</h5>
+                <h4>Select Database Engine</h4>
                 <ul class="p-0 m-0">
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-danger p-2 me-3 rounded"><i class="bx bxl-firebase bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md d-flex align-items-center justify-content-center flex-shrink-0 bg-label-danger me-3 rounded"><i class="mdi mdi-firebase mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">Firebase</h6>
+                        <p class="mb-0">Firebase</p>
                         <small class="text-muted">Cloud Firestone</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -210,11 +228,11 @@
                       </div>
                     </div>
                   </li>
-                  <li class="d-flex align-items-start mb-3">
-                    <div class="badge bg-label-warning p-2 me-3 rounded"><i class="bx bxl-amazon bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                  <li class="d-flex align-items-center mb-4">
+                    <div class="avatar avatar-md d-flex align-items-center justify-content-center flex-shrink-0 bg-label-warning me-3 rounded"><i class="mdi mdi-aws mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">AWS</h6>
+                        <p class="mb-0">AWS</p>
                         <small class="text-muted">Amazon Fast NoSQL Database</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -225,10 +243,10 @@
                     </div>
                   </li>
                   <li class="d-flex align-items-start">
-                    <div class="badge bg-label-info p-2 me-3 rounded"><i class="bx bx-data bx-sm"></i></div>
-                    <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
+                    <div class="avatar avatar-md d-flex align-items-center justify-content-center flex-shrink-0 bg-label-info me-3 rounded"><i class="mdi mdi-database mdi-24px"></i></div>
+                    <div class="d-flex justify-content-between w-100">
                       <div class="me-2">
-                        <h6 class="mb-0">MySQL</h6>
+                        <p class="mb-0">MySQL</p>
                         <small class="text-muted">Basic MySQL database</small>
                       </div>
                       <div class="d-flex align-items-center">
@@ -240,30 +258,42 @@
                   </li>
                 </ul>
                 <div class="col-12 d-flex justify-content-between mt-4">
-                  <button class="btn btn-label-secondary btn-prev"> <i class="bx bx-left-arrow-alt bx-xs me-sm-1 me-0"></i> <span class="align-middle d-sm-inline-block d-none">Previous</span> </button>
-                  <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="bx bx-right-arrow-alt bx-xs"></i></button>
+                  <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-2"></i> <span class="align-middle">Previous</span> </button>
+                  <button class="btn btn-primary btn-next"> <span class="align-middle me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
                 </div>
               </div>
 
               <!-- billing -->
               <div id="billing" class="content">
-                <div id="AppNewCCForm" class="row g-3 pt-3 pt-lg-0 mb-5" onsubmit="return false">
+                <div id="AppNewCCForm" class="row g-4 pt-3 pt-lg-0 mb-4" onsubmit="return false">
                   <div class="col-12">
                     <div class="input-group input-group-merge">
-                      <input class="form-control app-credit-card-mask" type="text" placeholder="1356 3215 6548 7898" aria-describedby="modalAppAddCard" />
+                      <div class="form-floating form-floating-outline">
+                        <input class="form-control app-credit-card-mask" id="modalAppAddCardNumber" type="text" placeholder="1356 3215 6548 7898" aria-describedby="modalAppAddCard" />
+                        <label for="modalAppAddCardNumber">Card Number</label>
+                      </div>
                       <span class="input-group-text cursor-pointer p-1" id="modalAppAddCard"><span class="app-card-type"></span></span>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <input type="text" class="form-control" placeholder="John Doe" />
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" class="form-control" id="modalAppAddCardName" placeholder="John Doe" />
+                      <label for="modalAppAddCardName">Name</label>
+                    </div>
                   </div>
                   <div class="col-6 col-md-3">
-                    <input type="text" class="form-control app-expiry-date-mask" placeholder="MM/YY" />
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" class="form-control app-expiry-date-mask" id="modalAppAddCardDate" placeholder="MM/YY" />
+                      <label for="modalAppAddCardDate">Exp. Date</label>
+                    </div>
                   </div>
                   <div class="col-6 col-md-3">
                     <div class="input-group input-group-merge">
-                      <input type="text" id="modalAppAddCardCvv" class="form-control app-cvv-code-mask" maxlength="3" placeholder="654" />
-                      <span class="input-group-text cursor-pointer" id="modalAppAddCardCvv2"><i class="text-muted bx bx-help-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalAppAddCardCvv" class="form-control app-cvv-code-mask" maxlength="3" placeholder="654" />
+                        <label for="modalAppAddCardCvv">CVV Code</label>
+                      </div>
+                      <span class="input-group-text cursor-pointer" id="modalAppAddCardCvv2"><i class="text-muted mdi mdi-help-circle-outline" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
                     </div>
                   </div>
                   <div class="col-12">
@@ -278,20 +308,20 @@
                   </div>
                 </div>
                 <div class="col-12 d-flex justify-content-between mt-4">
-                  <button class="btn btn-label-secondary btn-prev"> <i class="bx bx-left-arrow-alt bx-xs me-sm-1 me-0"></i> <span class="align-middle d-sm-inline-block d-none">Previous</span> </button>
-                  <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="bx bx-right-arrow-alt bx-xs"></i></button>
+                  <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-2"></i> <span class="align-middle">Previous</span> </button>
+                  <button class="btn btn-primary btn-next"> <span class="align-middle me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
                 </div>
               </div>
 
               <!-- submit -->
               <div id="submit" class="content text-center pt-3 pt-lg-0">
-                <h5 class="mb-2 mt-3">Submit</h5>
+                <h4 class="mb-2 mt-3">Submit</h4>
                 <p>Submit to kick start your project.</p>
                 <!-- image -->
                 <img src="~/img/illustrations/girl-doing-yoga-light.png" alt="Create App img" width="300" class="img-fluid" data-app-light-img="illustrations/girl-doing-yoga-light.png" data-app-dark-img="illustrations/girl-doing-yoga-dark.png">
                 <div class="col-12 d-flex justify-content-between mt-4 pt-2">
-                  <button class="btn btn-label-secondary btn-prev"> <i class="bx bx-left-arrow-alt bx-xs me-sm-1 me-0"></i> <span class="align-middle d-sm-inline-block d-none">Previous</span> </button>
-                  <button class="btn btn-success btn-submit"> <span class="align-middle d-sm-inline-block d-none">Submit</span> <i class="bx bx-check bx-xs ms-sm-1 ms-0"></i> </button>
+                  <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-2"></i> <span class="align-middle">Previous</span> </button>
+                  <button class="btn btn-succes btn-submit"><span class="align-middle">Submit</span><i class="mdi mdi-check ms-2"></i></button>
                 </div>
               </div>
             </form>
