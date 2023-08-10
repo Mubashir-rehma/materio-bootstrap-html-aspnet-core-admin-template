@@ -126,59 +126,59 @@ const pageJsTask = function () {
 };
 
 // Build fonts
-  // -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 
-  const FONT_TASKS = [
-    {
-      name: 'boxicons',
-      path: 'node_modules/boxicons/fonts/*'
-    },
-    {
-      name: 'fontawesome',
-      path: 'node_modules/@fortawesome/fontawesome-free/webfonts/*'
-    },
-    {
-      name: 'flags',
-      path: 'node_modules/flag-icons/flags/**/*'
-    }
-  ].reduce(function (tasks, font) {
-    const functionName = `buildFonts${font.name.replace(/^./, m => m.toUpperCase())}Task`;
-    const taskFunction = function () {
-      // return src(root(font.path))
-      return (
-        src(font.path)
-          // .pipe(dest(normalize(path.join(conf.distPath, 'fonts', font.name))))
-          .pipe(dest(path.join(conf.distPath + `/vendor/`, 'fonts', font.name)))
-      );
-    };
+const FONT_TASKS = [
+  {
+    name: 'boxicons',
+    path: 'node_modules/boxicons/fonts/*'
+  },
+  {
+    name: 'fontawesome',
+    path: 'node_modules/@fortawesome/fontawesome-free/webfonts/*'
+  },
+  {
+    name: 'flags',
+    path: 'node_modules/flag-icons/flags/**/*'
+  }
+].reduce(function (tasks, font) {
+  const functionName = `buildFonts${font.name.replace(/^./, m => m.toUpperCase())}Task`;
+  const taskFunction = function () {
+    // return src(root(font.path))
+    return (
+      src(font.path)
+        // .pipe(dest(normalize(path.join(conf.distPath, 'fonts', font.name))))
+        .pipe(dest(path.join(conf.distPath + `/vendor/`, 'fonts', font.name)))
+    );
+  };
 
-    Object.defineProperty(taskFunction, 'name', {
-      value: functionName
-    });
+  Object.defineProperty(taskFunction, 'name', {
+    value: functionName
+  });
 
-    return tasks.concat([taskFunction]);
-  }, []);
+  return tasks.concat([taskFunction]);
+}, []);
 
-  // Formula module requires KaTeX - Quill Editor
-  const KATEX_FONT_TASK = [
-    {
-      name: 'katex',
-      path: 'node_modules/katex/dist/fonts/*'
-    }
-  ].reduce(function (tasks, font) {
-    const functionName = `buildFonts${font.name.replace(/^./, m => m.toUpperCase())}Task`;
-    const taskFunction = function () {
-      return src(font.path).pipe(dest(path.join(conf.distPath, 'vendor/libs/quill/fonts')));
-    };
+// Formula module requires KaTeX - Quill Editor
+const KATEX_FONT_TASK = [
+  {
+    name: 'katex',
+    path: 'node_modules/katex/dist/fonts/*'
+  }
+].reduce(function (tasks, font) {
+  const functionName = `buildFonts${font.name.replace(/^./, m => m.toUpperCase())}Task`;
+  const taskFunction = function () {
+    return src(font.path).pipe(dest(path.join(conf.distPath, 'vendor/libs/quill/fonts')));
+  };
 
-    Object.defineProperty(taskFunction, 'name', {
-      value: functionName
-    });
+  Object.defineProperty(taskFunction, 'name', {
+    value: functionName
+  });
 
-    return tasks.concat([taskFunction]);
-  }, []);
+  return tasks.concat([taskFunction]);
+}, []);
 
-  const buildFontsTask = parallel(FONT_TASKS, KATEX_FONT_TASK);
+const buildFontsTask = parallel(FONT_TASKS, KATEX_FONT_TASK);
 
 // Clean build directory
 // -------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ module.exports = {
   clean: cleanAllTask,
   'build:js': buildJsTask,
   'build:css': buildCssTask,
-  'build:font': buildFontsTask,
+  'build:fonts': buildFontsTask,
   'build:ren': renameTask,
   build: buildTask,
   watch: watchTask
