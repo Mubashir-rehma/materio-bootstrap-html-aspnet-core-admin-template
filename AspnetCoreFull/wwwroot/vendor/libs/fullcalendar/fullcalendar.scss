@@ -6,6 +6,7 @@
 $fullcalendar-event-padding-y: 0.1rem !default;
 $fullcalendar-event-padding-x: 0.5rem !default;
 $fullcalendar-event-margin-x: 0.75rem !default;
+$fullcalendar-event-margin-top: 0.5rem !default;
 $fullcalendar-day-padding: 0.25rem !default;
 $fullcalendar-event-font-size: 0.875rem !default;
 $fullcalendar-event-font-weight: 500 !default;
@@ -117,12 +118,12 @@ $fullcalendar-today-background-dark: #373452 !default;
     min-height: 650px;
   }
   .fc-daygrid-day-events {
-    .fc-daygrid-event-harness {
-      &,
-      & + .fc-daygrid-event-harness {
-        margin-top: 0 !important;
-      }
-    }
+    // .fc-daygrid-event-harness {
+    //   &,
+    //   & + .fc-daygrid-event-harness {
+    //     margin-top: 0 !important;
+    //   }
+    // }
     .fc-event,
     .fc-more-link {
       margin-left: $fullcalendar-event-margin-x !important;
@@ -134,7 +135,7 @@ $fullcalendar-today-background-dark: #373452 !default;
     font-weight: $fullcalendar-event-font-weight;
   }
   .fc-daygrid-event-harness + .fc-daygrid-event-harness .fc-daygrid-event {
-    margin-top: $fullcalendar-event-padding-x !important;
+    margin-top: $fullcalendar-event-margin-top !important;
   }
 
   // To fix firefox thead border issue
@@ -211,9 +212,6 @@ $fullcalendar-today-background-dark: #373452 !default;
 
   .fc-timegrid-slot-label-cushion {
     padding-right: $fullcalendar-event-padding-x !important;
-  }
-  .fc-daygrid-event-harness + .fc-daygrid-event-harness {
-    margin-top: 0.3rem !important;
   }
   .fc-list {
     margin: 0 calc($fullcalendar-event-padding-x / 2);

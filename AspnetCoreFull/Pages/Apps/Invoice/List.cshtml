@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
 <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
 <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
+<link rel="stylesheet" href="~/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.dist.css">
 }
 
 @section VendorScripts {
@@ -33,12 +34,12 @@
         <div class="col-sm-6 col-lg-3">
           <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
             <div>
-              <h3 class="mb-1">24</h3>
+              <span class="mb-1 display-6 text-heading">24</span>
               <p class="mb-0">Clients</p>
             </div>
             <div class="avatar me-sm-4">
               <span class="avatar-initial rounded bg-label-secondary">
-                <i class="bx bx-user bx-sm"></i>
+                <i class="mdi mdi-account-outline text-heading mdi-24px"></i>
               </span>
             </div>
           </div>
@@ -47,12 +48,12 @@
         <div class="col-sm-6 col-lg-3">
           <div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-3 pb-sm-0">
             <div>
-              <h3 class="mb-1">165</h3>
+              <span class="mb-1 display-6 text-heading">165</span>
               <p class="mb-0">Invoices</p>
             </div>
-            <div class="avatar me-lg-4">
+            <div class="avatar  me-lg-4">
               <span class="avatar-initial rounded bg-label-secondary">
-                <i class="bx bx-file bx-sm"></i>
+                <i class="mdi mdi-content-paste text-heading mdi-24px"></i>
               </span>
             </div>
           </div>
@@ -61,12 +62,12 @@
         <div class="col-sm-6 col-lg-3">
           <div class="d-flex justify-content-between align-items-start border-end pb-3 pb-sm-0 card-widget-3">
             <div>
-              <h3 class="mb-1">$2.46k</h3>
+              <span class="mb-1 display-6 text-heading">$2.46k</span>
               <p class="mb-0">Paid</p>
             </div>
             <div class="avatar me-sm-4">
               <span class="avatar-initial rounded bg-label-secondary">
-                <i class="bx bx-check-double bx-sm"></i>
+                <i class="mdi mdi-currency-usd text-heading mdi-24px"></i>
               </span>
             </div>
           </div>
@@ -74,12 +75,12 @@
         <div class="col-sm-6 col-lg-3">
           <div class="d-flex justify-content-between align-items-start">
             <div>
-              <h3 class="mb-1">$876</h3>
+              <span class="mb-1 display-6 text-heading">$876</span>
               <p class="mb-0">Unpaid</p>
             </div>
             <div class="avatar">
               <span class="avatar-initial rounded bg-label-secondary">
-                <i class="bx bx-error-circle bx-sm"></i>
+                <i class="mdi mdi-currency-usd-off text-heading mdi-24px"></i>
               </span>
             </div>
           </div>
@@ -96,8 +97,9 @@
       <thead class="table-light">
         <tr>
           <th></th>
+          <th></th>
           <th>#ID</th>
-          <th><i class='bx bx-trending-up'></i></th>
+          <th><span class="mdi mdi-arrow-up ms-1"></span></th>
           <th>Client</th>
           <th>Total</th>
           <th class="text-truncate">Issued Date</th>

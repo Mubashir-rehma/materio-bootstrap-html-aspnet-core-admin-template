@@ -12,7 +12,7 @@ module.exports = {
     minify: false,
 
     // Generate sourcemaps.
-    sourcemaps: true,
+    sourcemaps: false,
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'eval-source-map',

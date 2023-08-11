@@ -41,33 +41,33 @@
 
     <!-- Map Menu Button when screen is < md -->
     <div class="flex-shrink-0 position-fixed m-4 d-md-none w-auto zindex-1">
-      <button class="btn btn-label-white border border-2 zindex-2 p-2" data-bs-toggle="sidebar" data-overlay="" data-target="#app-logistics-fleet-sidebar"><i class="bx bx-menu"></i></button>
+      <button class="btn btn-label-white border zindex-2 p-2" data-bs-toggle="sidebar" data-overlay="" data-target="#app-logistics-fleet-sidebar"><i class="mdi mdi-menu mdi-24px"></i></button>
     </div>
 
     <!-- Map Menu -->
-    <div class="app-logistics-fleet-sidebar col h-100" id="app-logistics-fleet-sidebar">
+    <div class="app-logistics-fleet-sidebar col h-100 rounded-0" id="app-logistics-fleet-sidebar">
       <div class="card-header border-0 pt-4 pb-2 d-flex justify-content-between">
         <h5 class="mb-0 card-title">Fleet</h5>
         <!-- Sidebar close button -->
-        <i class="bx bx-x bx-sm cursor-pointer close-sidebar d-md-none" data-bs-toggle="sidebar" data-overlay data-target="#app-logistics-fleet-sidebar"></i>
+        <i class="mdi mdi-close mdi-24px cursor-pointer close-sidebar d-md-none" data-bs-toggle="sidebar" data-overlay data-target="#app-logistics-fleet-sidebar"></i>
       </div>
       <!-- Sidebar when screen < md -->
       <div class="card-body p-2 pt-0 logistics-fleet-sidebar-body">
         <!-- Menu Accordion -->
         <div class="accordion" id="fleet" data-bs-toggle="sidebar" data-overlay data-target="#app-logistics-fleet-sidebar">
           <!-- Fleet 1 -->
-          <div class="accordion-item border-0 active mb-0" id="fl-1">
-            <div class="accordion-header" id="fleetOne">
-              <div role="button" class="accordion-button shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet1" aria-expanded="true" aria-controls="fleet1">
+          <div class="accordion-item shadow-none border-0 active my-0" id="fl-1">
+            <div class="accordion-header border-0" id="fleetOne">
+              <div role="button" class="accordion-button pe-0 shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet1" aria-expanded="true" aria-controls="fleet1">
                 <div class="d-flex align-items-center">
                   <div class="avatar-wrapper">
                     <div class="avatar me-3">
-                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="bx bxs-truck"></i></span>
+                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-bus mdi-24px"></i></span>
                     </div>
                   </div>
                   <span class="d-flex flex-column">
-                    <span class="h6 mb-0">VOL-342808</span>
-                    <span class="text-muted">Chelsea, NY, USA</span>
+                    <span class="text-heading mb-0">VOL-342808</span>
+                    <span class="text-body">Chelsea, NY, USA</span>
                   </span>
                 </div>
               </div>
@@ -76,46 +76,46 @@
               <div class="accordion-body pt-3 pb-0">
                 <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-1">Delivery Process</h6>
-                  <p class="text-body mb-1">88%</p>
+                  <p class="mb-1">88%</p>
                 </div>
-                <div class="progress" style="height: 5px;">
+                <div class="progress rounded-pill" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <ul class="timeline ps-3 mt-4">
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">tracking number created</small>
+                        <small class="text-success text-uppercase me-0">tracking number created</small>
                       </div>
                       <h6 class="mb-1">Veronica Herman</h6>
-                      <p class="text-muted mb-0">Sep 01, 7:53 AM</p>
+                      <p class="mb-0">Sep 01, 7:53 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">out for delivery</small>
+                        <small class="text-success text-uppercase">out for delivery</small>
                       </div>
                       <h6 class="mb-1">Veronica Herman</h6>
-                      <p class="text-muted mb-0">Sep 03, 8:02 AM</p>
+                      <p class="mb-0">Sep 03, 8:02 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-transparent">
-                    <span class="timeline-indicator-advanced timeline-indicator-primary border-0 shadow-none">
-                      <i class='bx bx-map mt-1'></i>
+                    <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                      <i class='mdi mdi-map-marker-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-primary text-uppercase fw-medium">arriving</small>
+                        <small class="text-primary text-uppercase">arriving</small>
                       </div>
                       <h6 class="mb-1">Veronica Herman</h6>
-                      <p class="text-muted mb-0">Sep 04, 8:18 AM</p>
+                      <p class="mb-0">Sep 04, 8:18 AM</p>
                     </div>
                   </li>
                 </ul>
@@ -123,19 +123,19 @@
             </div>
           </div>
           <!-- Fleet 2 -->
-          <div class="accordion-item border-0 mb-0" id="fl-2">
-            <div class="accordion-header" id="fleetTwo">
-              <div role="button" class="accordion-button collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet2" aria-expanded="true" aria-controls="fleet2">
+          <div class="accordion-item shadow-none border-0 my-0" id="fl-2">
+            <div class="accordion-header border-0" id="fleetTwo">
+              <div role="button" class="accordion-button pe-0 collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet2" aria-expanded="true" aria-controls="fleet2">
 
                 <div class="d-flex align-items-center">
                   <div class="avatar-wrapper">
                     <div class="avatar me-3">
-                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="bx bxs-truck"></i></span>
+                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-bus mdi-24px"></i></span>
                     </div>
                   </div>
                   <span class="d-flex flex-column">
-                    <span class="h6 mb-0">VOL-954784</span>
-                    <span class="text-muted">Lincoln Harbor, NY, USA</span>
+                    <span class="text-heading mb-0">VOL-954784</span>
+                    <span class="text-body">Lincoln Harbor, NY, USA</span>
                   </span>
                 </div>
               </div>
@@ -144,46 +144,46 @@
               <div class="accordion-body pt-3 pb-0">
                 <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-1">Delivery Process</h6>
-                  <p class="text-body mb-1">100%</p>
+                  <p class="mb-1">100%</p>
                 </div>
-                <div class="progress" style="height: 5px;">
+                <div class="progress rounded-pill" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <ul class="timeline ps-3 mt-4">
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">tracking number created</small>
+                        <small class="text-success text-uppercase me-0">tracking number created</small>
                       </div>
                       <h6 class="mb-1">Myrtle Ullrich</h6>
-                      <p class="text-muted mb-0">Sep 01, 7:53 AM</p>
+                      <p class="mb-0">Sep 01, 7:53 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">out for delivery</small>
+                        <small class="text-success text-uppercase">out for delivery</small>
                       </div>
                       <h6 class="mb-1">Myrtle Ullrich</h6>
-                      <p class="text-muted mb-0">Sep 03, 8:02 AM</p>
+                      <p class="mb-0">Sep 03, 8:02 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-transparent">
-                    <span class="timeline-indicator-advanced timeline-indicator-primary border-0 shadow-none">
-                      <i class='bx bx-map mt-1'></i>
+                    <span class="timeline-indicator-advanced text-primary border-0 shadow-none">
+                      <i class='mdi mdi-map-marker-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-primary text-uppercase fw-medium">arrived</small>
+                        <small class="text-primary text-uppercase">arrived</small>
                       </div>
                       <h6 class="mb-1">Myrtle Ullrich</h6>
-                      <p class="text-muted mb-0">Sep 04, 8:18 AM</p>
+                      <p class="mb-0">Sep 04, 8:18 AM</p>
                     </div>
                   </li>
                 </ul>
@@ -191,19 +191,19 @@
             </div>
           </div>
           <!-- Fleet 3 -->
-          <div class="accordion-item border-0 mb-0" id="fl-3">
-            <div class="accordion-header" id="fleetThree">
-              <div role="button" class="accordion-button collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet3" aria-expanded="true" aria-controls="fleet3">
+          <div class="accordion-item shadow-none border-0 my-0" id="fl-3">
+            <div class="accordion-header border-0" id="fleetThree">
+              <div role="button" class="accordion-button pe-0 collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet3" aria-expanded="true" aria-controls="fleet3">
 
                 <div class="d-flex align-items-center">
                   <div class="avatar-wrapper">
                     <div class="avatar me-3">
-                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="bx bxs-truck"></i></span>
+                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-bus mdi-24px"></i></span>
                     </div>
                   </div>
                   <span class="d-flex flex-column">
-                    <span class="h6 mb-0">VOL-342808</span>
-                    <span class="text-muted">Midtown East, NY, USA</span>
+                    <span class="text-heading mb-0">VOL-342808</span>
+                    <span class="text-body">Midtown East, NY, USA</span>
                   </span>
                 </div>
               </div>
@@ -212,46 +212,46 @@
               <div class="accordion-body pt-3 pb-0">
                 <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-1">Delivery Process</h6>
-                  <p class="text-body mb-1">60%</p>
+                  <p class="mb-1">60%</p>
                 </div>
-                <div class="progress" style="height: 5px;">
+                <div class="progress rounded-pill" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <ul class="timeline ps-3 mt-4">
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">tracking number created</small>
+                        <small class="text-success text-uppercase me-0">tracking number created</small>
                       </div>
                       <h6 class="mb-1">Barry Schowalter</h6>
-                      <p class="text-muted mb-0">Sep 01, 7:53 AM</p>
+                      <p class="mb-0">Sep 01, 7:53 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">out for delivery</small>
+                        <small class="text-success text-uppercase">out for delivery</small>
                       </div>
                       <h6 class="mb-1">Barry Schowalter</h6>
-                      <p class="text-muted mb-0">Sep 03, 8:02 AM</p>
+                      <p class="mb-0">Sep 03, 8:02 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-transparent">
-                    <span class="timeline-indicator-advanced timeline-indicator-secondary border-0 shadow-none">
-                      <i class='bx bx-map mt-1'></i>
+                    <span class="timeline-indicator-advanced text-secondary border-0 shadow-none">
+                      <i class='mdi mdi-map-marker-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-secondary text-uppercase fw-medium">arriving</small>
+                        <small class="text-secondary text-uppercase">arriving</small>
                       </div>
                       <h6 class="mb-1">Barry Schowalter</h6>
-                      <p class="text-muted mb-0">Sep 04, 8:18 AM</p>
+                      <p class="mb-0">Sep 04, 8:18 AM</p>
                     </div>
                   </li>
                 </ul>
@@ -259,19 +259,19 @@
             </div>
           </div>
           <!-- Fleet 4 -->
-          <div class="accordion-item border-0 mb-0" id="fl-4">
-            <div class="accordion-header" id="fleetFour">
-              <div role="button" class="accordion-button collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet4" aria-expanded="true" aria-controls="fleet4">
+          <div class="accordion-item shadow-none border-0 my-0" id="fl-4">
+            <div class="accordion-header border-0" id="fleetFour">
+              <div role="button" class="accordion-button pe-0 collapsed shadow-none" data-bs-toggle="collapse" data-bs-target="#fleet4" aria-expanded="true" aria-controls="fleet4">
 
                 <div class="d-flex align-items-center">
                   <div class="avatar-wrapper">
                     <div class="avatar me-3">
-                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="bx bxs-truck"></i></span>
+                      <span class="avatar-initial rounded-circle bg-label-secondary"><i class="mdi mdi-bus mdi-24px"></i></span>
                     </div>
                   </div>
                   <span class="d-flex flex-column">
-                    <span class="h6 mb-0">VOL-343908</span>
-                    <span class="text-muted">Hoboken, NY, USA</span>
+                    <span class="text-heading mb-0">VOL-343908</span>
+                    <span class="text-body">Hoboken, NY, USA</span>
                   </span>
                 </div>
               </div>
@@ -280,46 +280,46 @@
               <div class="accordion-body pt-3 pb-0">
                 <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-1">Delivery Process</h6>
-                  <p class="text-body mb-1">28%</p>
+                  <p class="mb-1">28%</p>
                 </div>
-                <div class="progress" style="height: 5px;">
+                <div class="progress rounded-pill" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 28%;" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <ul class="timeline ps-3 mt-4">
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-success border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-success text-uppercase fw-medium">tracking number created</small>
+                        <small class="text-success text-uppercase me-0">tracking number created</small>
                       </div>
                       <h6 class="mb-1">Helen Jacobs</h6>
-                      <p class="text-muted mb-0">Sep 01, 7:53 AM</p>
+                      <p class="mb-0">Sep 01, 7:53 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-left-dashed">
-                    <span class="timeline-indicator-advanced timeline-indicator-secondary border-0 shadow-none">
-                      <i class='bx bx-check-circle'></i>
+                    <span class="timeline-indicator-advanced text-secondary border-0 shadow-none">
+                      <i class='mdi mdi-check-circle-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-secondary text-uppercase fw-medium">out for delivery</small>
+                        <small class="text-secondary text-uppercase">out for delivery</small>
                       </div>
                       <h6 class="mb-1">Helen Jacobs</h6>
-                      <p class="text-muted mb-0">Sep 03, 8:02 AM</p>
+                      <p class="mb-0">Sep 03, 8:02 AM</p>
                     </div>
                   </li>
                   <li class="timeline-item ps-4 border-transparent">
-                    <span class="timeline-indicator-advanced timeline-indicator-secondary border-0 shadow-none">
-                      <i class='bx bx-map mt-1'></i>
+                    <span class="timeline-indicator-advanced text-secondary border-0 shadow-none">
+                      <i class='mdi mdi-map-marker-outline'></i>
                     </span>
-                    <div class="timeline-event ps-0 pb-0">
+                    <div class="timeline-event ps-1 pb-2">
                       <div class="timeline-header">
-                        <small class="text-secondary text-uppercase fw-medium">arriving</small>
+                        <small class="text-secondary text-uppercase">arriving</small>
                       </div>
                       <h6 class="mb-1">Helen Jacobs</h6>
-                      <p class="text-muted mb-0">Sep 04, 8:18 AM</p>
+                      <p class="mb-0">Sep 04, 8:18 AM</p>
                     </div>
                   </li>
                 </ul>

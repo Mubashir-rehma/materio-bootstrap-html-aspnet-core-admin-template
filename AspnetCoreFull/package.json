@@ -6,16 +6,17 @@
     "build": "npx gulp build",
     "build:js": "npx gulp build:js",
     "build:css": "npx gulp build:css",
+    "build:fonts": "npx gulp build:fonts",
     "build:prod": "npx gulp build --env=production",
     "build:prod:js": "npx gulp build:js --env=production",
     "build:prod:css": "npx gulp build:css --env=production",
+    "build:prod:fonts": "npx gulp build:fonts --env=production",
     "watch": "npx gulp watch",
     "serve": "npx gulp serve"
   },
   "dependencies": {
     "jquery-validation-unobtrusive": "~4.0.0",
     "@mdi/font": "^7.2.96",
-    "@fortawesome/fontawesome-free": "~6.4.0",
     "@fullcalendar/core": "~6.1.8",
     "@fullcalendar/daygrid": "~6.1.8",
     "@fullcalendar/interaction": "~6.1.8",
