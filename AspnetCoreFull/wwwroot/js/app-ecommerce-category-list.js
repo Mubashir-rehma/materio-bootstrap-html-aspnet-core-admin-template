@@ -378,7 +378,7 @@ $(function () {
         }
       }
     });
-    $('.dataTables_length').addClass('mt-0 mt-md-3');
+    $('.dataTables_length').addClass('mt-0 mt-md-3 me-1');
     $('.dt-action-buttons').addClass('pt-0');
   }
 

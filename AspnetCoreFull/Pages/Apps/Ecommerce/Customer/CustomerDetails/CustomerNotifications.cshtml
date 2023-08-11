@@ -42,7 +42,7 @@
       Aug 17, 2020, 5:48 (ET)
     </p>
   </div>
-  <button type="button" class="btn btn-label-danger delete-customer">Delete Customer</button>
+  <button type="button" class="btn btn-outline-danger delete-customer">Delete Customer</button>
 </div>
 
 
@@ -54,17 +54,17 @@
       <div class="card-body">
         <div class="customer-avatar-section">
           <div class="d-flex align-items-center flex-column">
-            <img class="img-fluid rounded my-3" src="~/img/avatars/12.png" height="110" width="110" alt="User avatar" />
-            <div class="customer-info text-center">
-              <h4 class="mb-1">Lorine Hischke</h4>
-              <small>Customer ID #634759</small>
+            <img class="img-fluid rounded mb-3 mt-4" src="~/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+            <div class="customer-info text-center mb-4">
+              <h5 class="mb-1">Lorine Hischke</h5>
+              <span>Customer ID #634759</span>
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-around flex-wrap mt-4 py-3">
+        <div class="d-flex justify-content-around flex-wrap mb-4">
           <div class="d-flex align-items-center gap-2">
-            <div class="avatar">
-              <div class="avatar-initial rounded bg-label-primary"><i class='bx bx-cart-alt bx-sm'></i>
+            <div class="avatar me-1">
+              <div class="avatar-initial rounded-3 bg-label-primary"><i class='mdi mdi mdi-cart-plus mdi-20px'></i>
               </div>
             </div>
             <div>
@@ -73,8 +73,8 @@
             </div>
           </div>
           <div class="d-flex align-items-center gap-2">
-            <div class="avatar">
-              <div class="avatar-initial rounded bg-label-primary"><i class='bx bx-dollar bx-sm'></i>
+            <div class="avatar me-1">
+              <div class="avatar-initial rounded-3 bg-label-primary"><i class='mdi mdi-currency-usd mdi-20px'></i>
               </div>
             </div>
             <div>
@@ -85,33 +85,32 @@
         </div>
 
         <div class="info-container">
-          <small class="d-block pt-4 border-top fw-normal text-uppercase text-muted my-3">DETAILS</small>
-          <ul class="list-unstyled">
-            <li class="mb-3">
-              <span class="fw-medium me-2">Username:</span>
+          <h5 class="border-bottom text-uppercase pb-3">DETAILS</h5>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">
+              <span class="h6 me-1">Username:</span>
               <span>lorine.hischke</span>
             </li>
-            <li class="mb-3">
-              <span class="fw-medium me-2">Email:</span>
-              <span>vafgot@vultukir.org</span>
+            <li class="mb-2">
+              <span class="h6 me-1">Email:</span>
+              <span>vafgot&#64;vultukir.org</span>
             </li>
-            <li class="mb-3">
-              <span class="fw-medium me-2">Status:</span>
-              <span class="badge bg-label-success">Active</span>
+            <li class="mb-2">
+              <span class="h6 me-1">Status:</span>
+              <span class="badge bg-label-success rounded-pill">Active</span>
             </li>
-            <li class="mb-3">
-              <span class="fw-medium me-2">Contact:</span>
+            <li class="mb-2">
+              <span class="h6 me-1">Contact:</span>
               <span>(123) 456-7890</span>
             </li>
 
-            <li class="mb-3">
-              <span class="fw-medium me-2">Country:</span>
+            <li>
+              <span class="h6 me-1">Country:</span>
               <span>USA</span>
             </li>
           </ul>
           <div class="d-flex justify-content-center">
             <a href="javascript:;" class="btn btn-primary me-3" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
-
           </div>
         </div>
       </div>
@@ -119,7 +118,7 @@
     <!-- /Customer-detail Card -->
     <!-- Plan Card -->
 
-    <div class="card mb-4 bg-gradient-primary">
+    <div class="card mb-4 bg-primary">
       <div class="card-body">
         <div class="row justify-content-between mb-3">
           <div class="col-md-12 col-lg-7 col-xl-12 col-xxl-7 text-center text-lg-start text-xl-center text-xxl-start order-1  order-lg-0 order-xl-1 order-xxl-0">
@@ -140,11 +139,11 @@
   <!-- Customer Content -->
   <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
     <!-- Customer Pills -->
-    <ul class="nav nav-pills flex-column flex-md-row mb-3">
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"><i class="bx bx-user me-1"></i>Overview</a></li>
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"><i class="bx bx-lock-alt me-1"></i>Security</a></li>
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling"><i class="bx bx-detail me-1"></i>Address & Billing</a></li>
-      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="bx bx-bell me-1"></i>Notifications</a></li>
+    <ul class="nav nav-pills flex-column flex-md-row mb-4">
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"><i class="mdi mdi-account-outline mdi-20px me-1"></i>Overview</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i>Security</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling"><i class="mdi mdi-bookmark-outline mdi-20px me-1"></i>Address & Billing</a></li>
+      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="mdi mdi-bell-outline mdi-20px me-1"></i>Notifications</a></li>
     </ul>
     <!--/ Customer Pills -->
     <!-- Project table -->
@@ -152,99 +151,97 @@
       <!-- Notifications -->
       <div class="card-header">
         <h5 class="card-title mb-1">Recent Devices</h5>
-        <span>Change to notification settings, the user will get the update</span>
+        <span class="text-body">Change to notification settings, the user will get the update</span>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-light">
+            <tr>
+              <th class="text-nowrap">Type</th>
+              <th class="text-nowrap text-center">✉️ Email</th>
+              <th class="text-nowrap text-center">🖥 Browser</th>
+              <th class="text-nowrap text-center">👩🏻‍💻 App</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-nowrap text-heading">Order status</td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck1" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck2" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck3" checked />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-nowrap text-heading">Upcoming sale</td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck4" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck5" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck6" checked />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-nowrap text-heading">Special offers</td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck7" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck8" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck9" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-nowrap text-heading">New item arrival</td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck10" checked />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck11" />
+                </div>
+              </td>
+              <td>
+                <div class="form-check mb-0 d-flex justify-content-center">
+                  <input class="form-check-input" type="checkbox" id="defaultCheck12" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="card-body">
-        <div class="table-responsive border rounded">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th class="text-nowrap">Type</th>
-                <th class="text-nowrap text-center">✉️ Email</th>
-                <th class="text-nowrap text-center">🖥 Browser</th>
-                <th class="text-nowrap text-center">👩🏻‍💻 App</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-nowrap">Order status</td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck1" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck2" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck3" checked />
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-nowrap">Upcoming sale</td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck4" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck5" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck6" checked />
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-nowrap">Special offers</td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck7" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck8" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck9" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="border-transparent">
-                <td class="text-nowrap">New item arrival</td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck10" checked />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck11" />
-                  </div>
-                </td>
-                <td>
-                  <div class="form-check d-flex justify-content-center">
-                    <input class="form-check-input" type="checkbox" id="defaultCheck12" />
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card-body pt-0">
         <button type="submit" class="btn btn-primary me-2">Save changes</button>
-        <button type="reset" class="btn btn-label-secondary">Discard</button>
+        <button type="reset" class="btn btn-outline-secondary">Discard</button>
       </div>
       <!-- /Notifications -->
     </div>
