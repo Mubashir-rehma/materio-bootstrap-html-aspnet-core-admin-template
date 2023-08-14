@@ -8,4 +8,8 @@ namespace AspnetCoreFull.Pages.Dashboards
   {
     public void OnGet() { }
   }
+  public class CRMModel : PageModel
+  {
+    public void OnGet() { }
+  }
 }

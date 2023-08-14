@@ -20,4 +20,8 @@ namespace AspnetCoreFull.Pages.Pages.Misc
   {
     public void OnGet() { }
   }
+  public class ServerErrorModel : PageModel
+  {
+    public void OnGet() { }
+  }
 }

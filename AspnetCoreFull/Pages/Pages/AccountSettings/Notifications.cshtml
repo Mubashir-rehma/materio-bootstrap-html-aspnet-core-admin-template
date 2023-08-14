@@ -4,14 +4,6 @@
   ViewData["Title"] = "Account settings - Notification";
 }
 
-@section VendorStyles{
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-}
-
-@section VendorScripts {
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-}
-
 @* ************** Content ************** *@
 <h4 class="py-3 mb-4">
   <span class="text-muted fw-light">Account Settings /</span> Notifications
@@ -19,99 +11,99 @@
 
 <div class="row">
   <div class="col-md-12">
-    <ul class="nav nav-pills flex-column flex-md-row mb-3">
-      <li class="nav-item"><a class="nav-link" href="Account"><i class="bx bx-user me-1"></i> Account</a></li>
-      <li class="nav-item"><a class="nav-link" href="Security"><i class="bx bx-lock-alt me-1"></i> Security</a></li>
-      <li class="nav-item"><a class="nav-link" href="Billing"><i class="bx bx-detail me-1"></i> Billing & Plans</a></li>
-      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="bx bx-bell me-1"></i> Notifications</a></li>
-      <li class="nav-item"><a class="nav-link" href="Connections"><i class="bx bx-link-alt me-1"></i> Connections</a></li>
+    <ul class="nav nav-pills flex-column flex-md-row mb-4 gap-2 gap-lg-0">
+      <li class="nav-item"><a class="nav-link" href="Account"><i class="mdi mdi-account-outline mdi-20px me-1"></i> Account</a></li>
+      <li class="nav-item"><a class="nav-link" href="Security"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i> Security</a></li>
+      <li class="nav-item"><a class="nav-link" href="Billing"><i class="mdi mdi-bookmark-outline mdi-20px me-1"></i> Billing & Plans</a></li>
+      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="mdi mdi-bell-outline mdi-20px me-1"></i> Notifications</a></li>
+      <li class="nav-item"><a class="nav-link" href="Connections"><i class="mdi mdi-link mdi-20px me-1"></i> Connections</a></li>
     </ul>
     <div class="card">
       <!-- Notifications -->
       <h5 class="card-header">Recent Devices</h5>
       <div class="card-body">
-        <span>We need permission from your browser to show notifications. <span class="notificationRequest"><span class="fw-medium">Request Permission</span></span></span>
+        <span>We need permission from your browser to show notifications. <a href="javascript:void(0);" class="notificationRequest">Request Permission</a></span>
         <div class="error"></div>
       </div>
       <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
+        <table class="table">
+          <thead class="table-light">
             <tr>
-              <th class="text-nowrap">Type</th>
-              <th class="text-nowrap text-center">✉️ Email</th>
-              <th class="text-nowrap text-center">🖥 Browser</th>
-              <th class="text-nowrap text-center">👩🏻‍💻 App</th>
+              <th class="text-nowrap fw-medium">Time</th>
+              <th class="text-nowrap fw-medium text-center">✉️ Email</th>
+              <th class="text-nowrap fw-medium text-center">🖥 Browser</th>
+              <th class="text-nowrap fw-medium text-center">👩🏻‍💻 App</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="text-nowrap">New for you</td>
+              <td class="text-nowrap text-heading">New for you</td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck1" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck2" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck3" checked />
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="text-nowrap">Account activity</td>
+              <td class="text-nowrap text-heading">Account activity</td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck4" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck5" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck6" checked />
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="text-nowrap">A new browser used to sign in</td>
+              <td class="text-nowrap text-heading">A new browser used to sign in</td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck7" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck8" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck9" />
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="text-nowrap">A new device is linked</td>
+              <td class="text-nowrap text-heading">A new device is linked</td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck10" checked />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck11" />
                 </div>
               </td>
               <td>
-                <div class="form-check d-flex justify-content-center">
+                <div class="form-check mb-0 d-flex justify-content-center mb-0">
                   <input class="form-check-input" type="checkbox" id="defaultCheck12" />
                 </div>
               </td>
@@ -120,18 +112,18 @@
         </table>
       </div>
       <div class="card-body">
-        <h6>When should we send you notifications?</h6>
+        <h6 class="mb-4">When should we send you notifications?</h6>
         <form action="javascript:void(0);">
           <div class="row">
             <div class="col-sm-6">
-              <select id="sendNotification" class="form-select" name="sendNotification">
+              <select id="sendNotification" class="form-select select2" name="sendNotification">
                 <option selected>Only when I'm online</option>
                 <option>Anytime</option>
               </select>
             </div>
             <div class="mt-4">
               <button type="submit" class="btn btn-primary me-2">Save changes</button>
-              <button type="reset" class="btn btn-label-secondary">Discard</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
             </div>
           </div>
         </form>
