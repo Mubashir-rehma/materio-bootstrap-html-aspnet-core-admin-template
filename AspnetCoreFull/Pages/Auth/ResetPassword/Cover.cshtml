@@ -24,62 +24,63 @@
 <script src="~/js/pages-auth.dist.js"></script>
 }
 @* ************** Content ************** *@
-<div class="authentication-wrapper authentication-cover">
-  <div class="authentication-inner row m-0">
+<div class="position-relative">
+  <div class="authentication-wrapper authentication-cover">
+    <!-- Logo -->
+    <a href="/" class="auth-cover-brand d-flex align-items-center gap-2">
+      <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
+      <span class="app-brand-text demo text-heading fw-semibold">@TempData.Peek("appName")</span>
+    </a>
+    <!-- /Logo -->
+    <div class="authentication-inner row m-0">
 
-    <!-- /Left Text -->
-    <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center p-5">
-      <div class="w-100 px-5">
-        <h1 class="display-2 mb-4">JOIN OUR<br>COMMUNITY</h1>
-        <div class="text-large fw-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu gravida faucibus.
-          Suspendisse viverra pharetra purus. Proin fringilla ac lorem at sagittis. Proin tincidunt dui et nunc
-          ultricies dignissim.
+      <!-- /Left Section -->
+      <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center justify-content-center p-5 pb-2">
+        <div>
+          <img src="~/img/illustrations/auth-cover-reset-password-illustration-light.png" class="authentication-image-model d-none d-lg-block" alt="auth-model" data-app-light-img="illustrations/auth-cover-reset-password-illustration-light.png" data-app-dark-img="illustrations/auth-cover-reset-password-illustration-dark.png">
+        </div>
+        <img src="~/img/illustrations/tree-3.png" alt="tree" class="authentication-image-tree">
+        <img src="~/img/illustrations/auth-cover-mask-light.png" class="scaleX-n1-rtl authentication-image d-none d-lg-block w-75" alt="triangle-bg" data-app-light-img="illustrations/auth-cover-mask-light.png" data-app-dark-img="illustrations/auth-cover-mask-dark.png">
+      </div>
+      <!-- /Left Section -->
+
+      <!-- Reset Password -->
+      <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg position-relative py-sm-5 px-4 py-4">
+        <div class="w-px-400 mx-auto pt-5 pt-lg-0">
+          <h4 class="mb-2">Reset Password 🔒</h4>
+          <p class="mb-4">Your new password must be different from previously used passwords</p>
+          <form id="formAuthentication" class="mb-3" action="~/Auth/Login/Cover" method="POST">
+            <div class="mb-3 form-password-toggle">
+              <div class="input-group input-group-merge">
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="password">New Password</label>
+                </div>
+                <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
+              </div>
+            </div>
+            <div class="mb-3 form-password-toggle">
+              <div class="input-group input-group-merge">
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="confirm-password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="confirm-password">Confirm Password</label>
+                </div>
+                <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
+              </div>
+            </div>
+            <button class="btn btn-primary d-grid w-100 mb-3">
+              Set new password
+            </button>
+            <div class="text-center">
+              <a href="/Auth/Login/Cover" class="d-flex align-items-center justify-content-center">
+                <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>
+                Back to login
+              </a>
+            </div>
+          </form>
         </div>
       </div>
+      <!-- /Reset Password -->
     </div>
-    <!-- /Left Text -->
-
-    <!-- Reset Password -->
-    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-4 p-sm-5">
-      <div class="w-px-400 mx-auto">
-        <!-- Logo -->
-        <div class="app-brand justify-content-center mb-5">
-          <a href="/" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo bg-primary">@await Html.PartialAsync("../_Partials/_Macros")</span>
-            <span class="app-brand-text demo text-body fw-bold">@TempData.Peek("appName")</span>
-          </a>
-        </div>
-        <!-- /Logo -->
-        <h4 class="mb-2">Reset Password 🔒</h4>
-        <p class="mb-4">for <span class="fw-medium">john.doe@email.com</span></p>
-        <form id="formAuthentication" class="mb-3" action="~/Auth/Login/Cover" method="POST">
-          <div class="mb-3 form-password-toggle">
-            <label class="form-label" for="password">New Password</label>
-            <div class="input-group input-group-merge">
-              <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-            </div>
-          </div>
-          <div class="mb-3 form-password-toggle">
-            <label class="form-label" for="confirm-password">Confirm Password</label>
-            <div class="input-group input-group-merge">
-              <input type="password" id="confirm-password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-            </div>
-          </div>
-          <button class="btn btn-primary d-grid w-100 mb-3">
-            Set new password
-          </button>
-          <div class="text-center">
-            <a href="/Auth/Login/Cover">
-              <i class="bx bx-chevron-left scaleX-n1-rtl"></i>
-              Back to login
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- /Reset Password -->
   </div>
 </div>

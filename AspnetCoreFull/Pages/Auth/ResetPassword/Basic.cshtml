@@ -24,44 +24,48 @@
 <script src="~/js/pages-auth.dist.js"></script>
 }
 @* ************** Content ************** *@
-<div class="container-xxl">
+<div class="position-relative">
   <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner py-4">
 
-      <!-- Logo -->
-      <div class="app-brand justify-content-center mb-5">
-        <a href="/" class="app-brand-link gap-2">
-          <span class="app-brand-logo demo bg-primary">@await Html.PartialAsync("../_Partials/_Macros")</span>
-          <span class="app-brand-text demo text-body fw-bold">@TempData.Peek("appName")</span>
-        </a>
-      </div>
-      <!-- /Logo -->
-      <!-- Reset Password -->
-      <div class="card">
+      <div class="card p-2">
+        <!-- Logo -->
+        <div class="app-brand justify-content-center mt-5 mb-4">
+          <a href="/" class="app-brand-link gap-2">
+            <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
+            <span class="app-brand-text demo text-body fw-semibold">@TempData.Peek("appName")</span>
+          </a>
+        </div>
+        <!-- /Logo -->
+        <!-- Reset Password -->
         <div class="card-body">
           <h4 class="mb-2">Reset Password 🔒</h4>
-          <p class="mb-4">for <span class="fw-medium">john.doe@email.com</span></p>
+          <p class="mb-4">Your new password must be different from previously used passwords</p>
           <form id="formAuthentication" class="mb-3" action="~/Auth/Login/Basic" method="POST">
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">New Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="password">New Password</label>
+                </div>
+                <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
               </div>
             </div>
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="confirm-password">Confirm Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="confirm-password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="confirm-password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="confirm-password">Confirm Password</label>
+                </div>
+                <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
               </div>
             </div>
             <button class="btn btn-primary d-grid w-100 mb-3">
               Set new password
             </button>
             <div class="text-center">
-              <a href="/Auth/Login/Basic">
-                <i class="bx bx-chevron-left scaleX-n1-rtl"></i>
+              <a href="/Auth/Login/Basic" class="d-flex align-items-center justify-content-center">
+                <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>
                 Back to login
               </a>
             </div>
@@ -69,6 +73,9 @@
         </div>
       </div>
       <!-- /Reset Password -->
+      <img src="~/img/illustrations/tree-3.png" alt="auth-tree" class="authentication-image-object-left d-none d-lg-block">
+      <img src="~/img/illustrations/auth-basic-mask-light.png" class="authentication-image d-none d-lg-block" alt="triangle-bg" data-app-light-img="illustrations/auth-basic-mask-light.png" data-app-dark-img="illustrations/auth-basic-mask-dark.png">
+      <img src="~/img/illustrations/tree.png" alt="auth-tree" class="authentication-image-object-right d-none d-lg-block">
     </div>
   </div>
 </div>

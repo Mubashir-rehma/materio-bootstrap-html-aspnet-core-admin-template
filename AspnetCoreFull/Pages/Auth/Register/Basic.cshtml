@@ -26,38 +26,40 @@
 }
 @* ************** Content ************** *@
 
-<div class="container-xxl">
+<div class="position-relative">
   <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner py-4">
-      <!-- Logo -->
-      <div class="app-brand justify-content-center mb-5">
-        <a href="/" class="app-brand-link gap-2">
-          <span class="app-brand-logo demo bg-primary">@await Html.PartialAsync("../_Partials/_Macros")</span>
-          <span class="app-brand-text demo text-body fw-bold">@TempData.Peek("appName")</span>
-        </a>
-      </div>
-      <!-- /Logo -->
 
       <!-- Register Card -->
-      <div class="card">
-        <div class="card-body">
+      <div class="card p-2">
+        <!-- Logo -->
+        <div class="app-brand justify-content-center mt-5">
+          <a href="/" class="app-brand-link gap-2">
+            <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
+            <span class="app-brand-text demo text-heading fw-semibold">@TempData.Peek("appName")</span>
+          </a>
+        </div>
+        <!-- /Logo -->
+        <div class="card-body mt-2">
           <h4 class="mb-2">Adventure starts here 🚀</h4>
           <p class="mb-4">Make your app management easy and fun!</p>
 
           <form id="formAuthentication" class="mb-3" action="~/Dashboards/Analytics" method="POST">
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
+            <div class="form-floating form-floating-outline mb-3">
               <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus>
+              <label for="username">Username</label>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email">
+            <div class="form-floating form-floating-outline mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+              <label for="email">Email</label>
             </div>
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="password">Password</label>
+                </div>
+                <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
               </div>
             </div>
 
@@ -86,22 +88,29 @@
             <div class="divider-text">or</div>
           </div>
 
-          <div class="d-flex justify-content-center">
-            <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
-              <i class="tf-icons bx bxl-facebook"></i>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-facebook">
+              <i class="tf-icons mdi mdi-24px mdi-facebook"></i>
             </a>
 
-            <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
-              <i class="tf-icons bx bxl-google-plus"></i>
+            <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-twitter">
+              <i class="tf-icons mdi mdi-24px mdi-twitter"></i>
             </a>
 
-            <a href="javascript:;" class="btn btn-icon btn-label-twitter">
-              <i class="tf-icons bx bxl-twitter"></i>
+            <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-github">
+              <i class="tf-icons mdi mdi-24px mdi-github"></i>
+            </a>
+
+            <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
+              <i class="tf-icons mdi mdi-24px mdi-google"></i>
             </a>
           </div>
         </div>
       </div>
       <!-- Register Card -->
+      <img src="~/img/illustrations/tree-3.png" alt="auth-tree" class="authentication-image-object-left d-none d-lg-block">
+      <img src="~/img/illustrations/auth-basic-mask-light.png" class="authentication-image d-none d-lg-block" alt="triangle-bg" data-app-light-img="illustrations/auth-basic-mask-light.png" data-app-dark-img="illustrations/auth-basic-mask-dark.png">
+      <img src="~/img/illustrations/tree.png" alt="auth-tree" class="authentication-image-object-right d-none d-lg-block">
     </div>
   </div>
 </div>
