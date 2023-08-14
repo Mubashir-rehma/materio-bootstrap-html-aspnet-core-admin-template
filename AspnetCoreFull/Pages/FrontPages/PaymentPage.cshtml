@@ -51,62 +51,77 @@
           </div>
           <h4 class="mt-2 mb-4">Billing Details</h4>
           <form>
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-6">
-                <label class="form-label" for="billings-email">Email Address</label>
-                <input type="text" id="billings-email" class="form-control" placeholder="john.doe&#64;gmail.com" />
+                <div class="form-floating form-floating-outline ">
+                  <input type="text" class="form-control" id="billings-email" placeholder="john.doe&#64;gmail.com" />
+                  <label for="billings-email">Email Address</label>
+                </div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="billings-password">Password</label>
-                <input type="password" id="billings-password" class="form-control" placeholder="Password" />
+                <div class="form-floating form-floating-outline">
+                  <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                  <label for="password">Password</label>
+                </div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="billings-country">Country</label>
-                <select id="billings-country" class="form-select" data-allow-clear="true">
-                  <option value="">Select</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Brazil">Brazil</option>
-                  <option value="Canada">Canada</option>
-                  <option value="China">China</option>
-                  <option value="France">France</option>
-                  <option value="Germany">Germany</option>
-                  <option value="India">India</option>
-                  <option value="Turkey">Turkey</option>
-                  <option value="Ukraine">Ukraine</option>
-                  <option value="United Arab Emirates">United Arab Emirates</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="United States">United States</option>
-                </select>
+                <div class="form-floating form-floating-outline">
+                  <select id="billings-country" class="form-select" data-allow-clear="true">
+                    <option value="">Billing Country</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India">India</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                  </select>
+                  <label for="billings-country">Country</label>
+                </div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="billings-zip">Billing Zip / Postal Code</label>
-                <input type="text" id="billings-zip" class="form-control billings-zip-code" placeholder="Zip / Postal Code">
+                <div class="form-floating form-floating-outline">
+                  <input type="text" id="billings-zip" class="form-control billings-zip-code" placeholder="123456">
+                  <label for="billings-zip">Billing Zip / Postal Code</label>
+                </div>
               </div>
             </div>
           </form>
           <div id="form-credit-card">
-            <h4 class="mt-4 pt-2">Credit Card Info</h4>
+            <h4 class="my-4 pt-2">Credit Card Info</h4>
             <form>
-              <div class="row g-3">
+              <div class="row g-4">
                 <div class="col-12">
-                  <label class="form-label" for="billings-card-num">Card number</label>
                   <div class="input-group input-group-merge">
-                    <input type="text" id="billings-card-num" class="form-control billing-card-mask" placeholder="7465 8374 5837 5067" aria-describedby="paymentCard" />
-                    <span class="input-group-text cursor-pointer p-1" id="paymentCard"><span class="card-type"></span></span>
-
+                    <div class="form-floating form-floating-outline">
+                      <input type="text" id="billings-card-num" class="form-control billing-card-mask" placeholder="4541 2541 2547 2577" aria-describedby="paymentCard" />
+                      <label for="billings-card-num">Card number</label>
+                    </div>
+                    <span class="input-group-text cursor-pointer p-1" id="paymentCard"><span class="card-type w-px-50"></span></span>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label" for="billings-card-name">Name</label>
-                  <input type="text" id="billings-card-name" class="form-control" placeholder="John Doe" />
+                  <div class="form-floating form-floating-outline">
+                    <input type="text" id="billings-card-name" class="form-control" placeholder="John Doe" />
+                    <label for="billings-card-name">Card holder</label>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                  <label class="form-label" for="billings-card-date">EXP. Date</label>
-                  <input type="text" id="billings-card-date" class="form-control billing-expiry-date-mask" placeholder="MM/YY" />
+                  <div class="form-floating form-floating-outline">
+                    <input type="text" id="billings-card-date" class="form-control billing-expiry-date-mask" placeholder="05/26" />
+                    <label for="billings-card-date">EXP. Date</label>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                  <label class="form-label" for="billings-card-cvv">CVV</label>
-                  <input type="text" id="billings-card-cvv" class="form-control billing-cvv-mask" maxlength="3" placeholder="965" />
+                  <div class="form-floating form-floating-outline">
+                    <input type="text" id="billings-card-cvv" class="form-control billing-cvv-mask" maxlength="3" placeholder="965" />
+                    <label for="billings-card-cvv">CVV</label>
+                  </div>
                 </div>
               </div>
             </form>
@@ -122,7 +137,7 @@
               <sub>/month</sub>
             </div>
             <div class="d-grid">
-              <button type="button" data-bs-target="#pricingModal" data-bs-toggle="modal" class="btn btn-label-primary">Change Plan</button>
+              <a data-bs-target="#pricingModal" data-bs-toggle="modal" class="btn btn-outline-primary text-primary">Change Plan</a>
             </div>
           </div>
           <div>
@@ -142,7 +157,7 @@
             <div class="d-grid mt-3">
               <button class="btn btn-success">
                 <span class="me-2">Proceed with Payment</span>
-                <i class="bx bx-right-arrow-alt scaleX-n1-rtl"></i>
+                <i class="mdi mdi-arrow-right scaleX-n1-rtl"></i>
               </button>
             </div>
 
