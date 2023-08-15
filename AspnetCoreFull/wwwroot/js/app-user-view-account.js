@@ -16,7 +16,8 @@ $(function () {
       ajax: assetsPath + 'json/projects-list.json', // JSON file to add data
       columns: [
         // columns according to JSON
-        { data: '' },
+        { data: 'hours' },
+        { data: 'hours' },
         { data: 'project_name' },
         { data: 'total_task' },
         { data: 'progress' },
@@ -27,6 +28,7 @@ $(function () {
           // For Responsive
           className: 'control',
           searchable: false,
+          orderable: false,
           responsivePriority: 2,
           targets: 0,
           render: function (data, type, full, meta) {
@@ -34,8 +36,20 @@ $(function () {
           }
         },
         {
-          // User full name and email
+          // For Checkboxes
           targets: 1,
+          orderable: false,
+          checkboxes: {
+            selectAllRender: '<input type="checkbox" class="form-check-input">'
+          },
+          render: function () {
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
+          },
+          searchable: false
+        },
+        {
+          // User full name and email
+          targets: 2,
           responsivePriority: 1,
           render: function (data, type, full, meta) {
             var $name = full['project_name'],
@@ -80,12 +94,12 @@ $(function () {
           }
         },
         {
-          targets: 2,
+          targets: 3,
           orderable: false
         },
         {
           // Label
-          targets: -2,
+          targets: 4,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
             var $progress = full['progress'] + '%',
@@ -122,11 +136,11 @@ $(function () {
           }
         },
         {
-          targets: -1,
+          targets: 5,
           orderable: false
         }
       ],
-      order: [[1, 'desc']],
+      order: [[2, 'desc']],
       dom:
         '<"d-flex justify-content-between align-items-center flex-column flex-sm-row mx-4 row"' +
         '<"col-sm-4 col-12 d-flex align-items-center justify-content-sm-start justify-content-center"l>' +
@@ -209,7 +223,8 @@ $(function () {
           render: function (data, type, full, meta) {
             var $invoice_id = full['invoice_id'];
             // Creates full output for row
-            var $row_output = '<a href="/Apps/Invoice/Preview"><span class="fw-medium">#' + $invoice_id + '</span></a>';
+            var $row_output =
+              '<a href="app-invoice-preview.html"><span class="fw-medium">#' + $invoice_id + '</span></a>';
             return $row_output;
           }
         },
@@ -262,7 +277,7 @@ $(function () {
             return (
               '<div class="d-flex align-items-center">' +
               '<a href="javascript:;" class="text-body" data-bs-toggle="tooltip" title="Send Mail"><i class="bx bx-send mx-1"></i></a>' +
-              '<a href="/Apps/Invoice/Preview" class="text-body" data-bs-toggle="tooltip" title="Preview"><i class="bx bx-show mx-1"></i></a>' +
+              '<a href="app-invoice-preview.html" class="text-body" data-bs-toggle="tooltip" title="Preview"><i class="bx bx-show mx-1"></i></a>' +
               '<a href="javascript:;" class="text-body" data-bs-toggle="tooltip" title="Download"><i class="bx bx-download mx-1"></i></a>' +
               '</div>'
             );
