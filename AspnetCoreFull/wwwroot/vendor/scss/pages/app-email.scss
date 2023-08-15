@@ -135,7 +135,7 @@ $email-filter-padding-x: 1.5rem;
         height: calc(100vh - 19.5rem);
       }
       @include light.media-breakpoint-down(lg) {
-        height: calc(100vh - 17.5rem);
+        height: calc(100vh - 18.5rem);
       }
       .layout-navbar-hidden & {
         @include light.media-breakpoint-up(lg) {

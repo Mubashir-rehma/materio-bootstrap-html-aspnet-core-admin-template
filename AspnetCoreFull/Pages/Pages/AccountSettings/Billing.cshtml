@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
 <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
 <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
+<link rel="stylesheet" href="~/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.dist.css">
 }
 
 @section VendorScripts {
@@ -304,3 +305,7 @@
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+@await Html.PartialAsync("../_Partials/_Modals/ModalPricing")
+<!-- /Modal -->

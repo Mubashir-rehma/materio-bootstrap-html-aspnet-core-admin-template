@@ -126,7 +126,7 @@ $(function () {
               '<a href="/Pages/Profile/User" class="text-truncate"><h6 class="mb-0">' +
               $name +
               '</h6></a>' +
-              '<small class="text-truncate text-muted">' +
+              '<small class="text-truncate">' +
               $email +
               '</small>' +
               '</div>' +

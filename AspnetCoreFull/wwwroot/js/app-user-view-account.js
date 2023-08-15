@@ -15,7 +15,8 @@ $(function () {
       ajax: assetsPath + 'json/projects-list.json', // JSON file to add data
       columns: [
         // columns according to JSON
-        { data: '' },
+        { data: 'hours' },
+        { data: 'hours' },
         { data: 'project_name' },
         { data: 'total_task' },
         { data: 'progress' },
@@ -26,6 +27,7 @@ $(function () {
           // For Responsive
           className: 'control',
           searchable: false,
+          orderable: false,
           responsivePriority: 2,
           targets: 0,
           render: function (data, type, full, meta) {
@@ -33,8 +35,20 @@ $(function () {
           }
         },
         {
-          // User full name and email
+          // For Checkboxes
           targets: 1,
+          orderable: false,
+          checkboxes: {
+            selectAllRender: '<input type="checkbox" class="form-check-input">'
+          },
+          render: function () {
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
+          },
+          searchable: false
+        },
+        {
+          // User full name and email
+          targets: 2,
           responsivePriority: 1,
           render: function (data, type, full, meta) {
             var $name = full['project_name'],
@@ -80,7 +94,7 @@ $(function () {
         },
         {
           // Task
-          targets: 2,
+          targets: 3,
           render: function (data, type, full, meta) {
             var $task = full['total_task'];
             return '<span class="text-heading">' + $task + '</span>';
@@ -88,7 +102,7 @@ $(function () {
         },
         {
           // Label
-          targets: -2,
+          targets: 4,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
             var $progress = full['progress'] + '%',
@@ -132,11 +146,11 @@ $(function () {
           }
         },
         {
-          targets: -1,
+          targets: 5,
           orderable: false
         }
       ],
-      order: [[1, 'desc']],
+      order: [[2, 'desc']],
       dom:
         't' +
         '<"d-flex justify-content-between mx-1 row"' +
