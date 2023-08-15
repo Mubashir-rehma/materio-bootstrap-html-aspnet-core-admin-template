@@ -48,9 +48,20 @@
 
 
   <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+    <!-- Search -->
+    @if (Convert.ToBoolean(TempData.Peek("menuHorizontal")).ToString() == "True")
+    {
+      <li class="nav-item navbar-search-wrapper">
+        <a class="nav-item btn btn-text-secondary rounded-pill btn-icon nav-link search-toggler" href="javascript:void(0);">
+          <i class="mdi mdi-magnify mdi-24px scaleX-n1-rtl"></i>
+        </a>
+      </li>
+    }
+    <!-- /Search -->
     <!-- Language -->
-    <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
-      <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+    <li class="nav-item dropdown-language dropdown">
+      <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
         <i class="mdi mdi-translate mdi-24px"></i>
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
@@ -78,21 +89,9 @@
     </li>
     <!--/ Language -->
 
-    <!-- Search -->
-        @if (Convert.ToBoolean(TempData.Peek("menuHorizontal")).ToString() == "True")
-        {
-        <div class="navbar-nav align-items-center">
-          <div class="nav-item navbar-search-wrapper mb-0">
-            <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
-              <i class="mdi mdi-magnify mdi-24px scaleX-n1-rtl"></i>
-            </a>
-          </div>
-        </div>
-        }
-    <!-- /Search -->
     <!-- Style Switcher -->
-    <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
-      <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+    <li class="nav-item dropdown-style-switcher dropdown">
+      <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
         <i class='mdi mdi-24px'></i>
       </a>
       <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
@@ -116,7 +115,7 @@
     <!-- / Style Switcher-->
 
     <!-- Quick links  -->
-    <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-1 me-xl-0">
+    <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown">
       <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
         <i class='mdi mdi-view-grid-outline mdi-24px'></i>
       </a>

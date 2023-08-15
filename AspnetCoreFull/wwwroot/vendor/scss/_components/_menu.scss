@@ -318,19 +318,19 @@
   }
 
   .menu-item .menu-toggle {
-    padding-right: calc(#{$menu-vertical-link-padding-x} + #{$caret-width * 4.4});
+    padding-right: calc(#{$menu-vertical-link-padding-x} + #{$caret-width * 3});
 
     @include rtl-style {
       padding-right: $menu-vertical-link-padding-x;
-      padding-left: calc(#{$menu-vertical-link-padding-x} + #{$caret-width * 4.4});
+      padding-left: calc(#{$menu-vertical-link-padding-x} + #{$caret-width * 3});
     }
 
     &::after {
-      right: calc(#{$menu-vertical-link-padding-x} - 0.125rem);
+      right: calc(#{$menu-vertical-link-padding-x} - 0.4rem);
 
       @include rtl-style {
         right: auto;
-        left: calc(#{$menu-vertical-link-padding-x} - 0.125rem);
+        left: calc(#{$menu-vertical-link-padding-x} - 0.4rem);
       }
     }
   }
