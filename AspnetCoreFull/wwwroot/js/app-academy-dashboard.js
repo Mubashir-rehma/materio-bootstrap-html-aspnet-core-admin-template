@@ -373,7 +373,7 @@
               logoObj[$logo] +
               '</span>' +
               '<div>' +
-              '<a href="/Apps/Ecommerce/Order/OrderDetails"><span class="text-heading mb-2 text-wrap fw-medium">' +
+              '<a href="/Apps/Academy/CourseDetails"><span class="text-heading mb-2 text-wrap fw-medium">' +
               $course +
               '</span></a>' +
               '<div class="d-flex align-items-center mt-1">' +
@@ -421,7 +421,7 @@
               $status_number +
               '" aria-valuemin="0" aria-valuemax="100"></div>' +
               '</div>' +
-              '<small class="text-muted">' +
+              '<small>' +
               $average_number +
               '</small></div>'
             );
