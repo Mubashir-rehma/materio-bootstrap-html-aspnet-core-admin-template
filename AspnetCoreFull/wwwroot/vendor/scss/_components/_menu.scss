@@ -393,13 +393,13 @@
   $menu-first-level-spacer: $menu-vertical-link-padding-x + $menu-icon-expanded-width + $menu-icon-expanded-spacer;
 
   .menu-sub .menu-link {
-    &:not(.menu-toggle) {
-      .menu-icon:before {
-        .layout-wrapper.layout-horizontal & {
-          font-size: $font-size-lg;
-        }
-      }
-    }
+    // &:not(.menu-toggle) {
+    //   .menu-icon:before {
+    //     .layout-wrapper.layout-horizontal & {
+    //       font-size: $font-size-lg;
+    //     }
+    //   }
+    // }
     .layout-wrapper:not(.layout-horizontal) & {
       padding-left: $menu-first-level-spacer;
 
@@ -639,11 +639,11 @@
       left: 100%;
       top: 0;
       width: 100%;
-      .menu-item > .menu-link {
-        .menu-icon:before {
-          font-size: $font-size-sm;
-        }
-      }
+      // .menu-item > .menu-link {
+      //   .menu-icon:before {
+      //     font-size: $font-size-lg;
+      //   }
+      // }
 
       @include rtl-style {
         left: -103%;
