@@ -98,6 +98,12 @@ $tag-bg: rgb(light.$text-light, 0.5) !default;
       margin: $tag-spacer 0 0 $tag-spacer;
     }
 
+    + input,
+    + textarea {
+      left: 0;
+      right: -9999em !important;
+    }
+
     &__tag {
       > div {
         padding: 0 $tag-spacer 0 0;

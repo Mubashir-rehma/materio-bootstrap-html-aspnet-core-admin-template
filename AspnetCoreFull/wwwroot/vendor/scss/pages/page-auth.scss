@@ -90,7 +90,7 @@ $authentication-1-inner-max-width: 450px !default;
   }
 }
 
-// Responsive style for model
+// Responsive style for cover mask
 @include light.media-breakpoint-down(xl) {
   .authentication-cover {
     .authentication-image-model {

@@ -3,6 +3,7 @@
 
 @use '../_bootstrap-extended/include' as light;
 @use '../_bootstrap-extended/include-dark' as dark;
+@import '../_components/include';
 @import '../_custom-variables/pages';
 
 $email-sidebar-width: 16.25rem;
@@ -26,7 +27,7 @@ $email-filter-padding-x: 1.5rem;
   @include light.media-breakpoint-down(md) {
     height: calc($email-app-height - 0.5rem) !important;
   }
-  @include light.media-breakpoint-up(xl) {
+  @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
     .layout-horizontal & {
       height: calc($email-app-height - $email-app-horizontal-height-diff) !important;
     }
@@ -55,7 +56,7 @@ $email-filter-padding-x: 1.5rem;
       .layout-navbar-hidden & {
         height: calc(100vh - 11rem);
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(100vh - 14rem - $email-app-horizontal-height-diff);
         }
@@ -145,7 +146,7 @@ $email-filter-padding-x: 1.5rem;
           height: calc(100vh - 12.75rem);
         }
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(100vh - 16.5rem - 7rem);
         }
@@ -201,7 +202,7 @@ $email-filter-padding-x: 1.5rem;
       height: $email-app-height-with-no-navbar;
     }
     .layout-horizontal & {
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         height: calc($email-app-height - $email-app-horizontal-height-diff);
       }
     }
@@ -227,7 +228,7 @@ $email-filter-padding-x: 1.5rem;
       @include light.media-breakpoint-down(md) {
         height: calc(100vh - 17.5rem);
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(100vh - 17.5rem - $email-app-horizontal-height-diff);
         }

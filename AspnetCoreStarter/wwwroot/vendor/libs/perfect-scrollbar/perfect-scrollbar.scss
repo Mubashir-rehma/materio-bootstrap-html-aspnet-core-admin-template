@@ -172,5 +172,6 @@ $ps-hover-width: 0.375rem !default;
 .ps--active-y > .ps__rail-y {
   @include app-rtl {
     left: 0;
+    right: auto !important;
   }
 }

@@ -3,6 +3,7 @@
 
 @use '../_bootstrap-extended/include' as light;
 @use '../_bootstrap-extended/include-dark' as dark;
+@import '../_components/include';
 @import '../_custom-variables/pages';
 
 // Variables
@@ -46,7 +47,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
   .layout-navbar-hidden & {
     height: $chat-app-height-with-no-navbar;
   }
-  @include light.media-breakpoint-up(xl) {
+  @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
     .layout-horizontal & {
       height: calc($chat-app-height - $chat-app-horizontal-height-diff);
     }
@@ -78,7 +79,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
     .layout-navbar-hidden & {
       height: $chat-app-height-with-no-navbar;
     }
-    @include light.media-breakpoint-up(xl) {
+    @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
       .layout-horizontal & {
         height: calc($chat-app-height - $chat-app-horizontal-height-diff);
       }
@@ -97,7 +98,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
       .layout-navbar-hidden & {
         height: calc(#{$chat-app-height-with-no-navbar} - 4rem);
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(#{$chat-app-height} - 3.5rem - #{$chat-app-horizontal-height-diff});
         }
@@ -141,7 +142,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
     .layout-navbar-hidden & {
       height: $chat-app-height-with-no-navbar;
     }
-    @include light.media-breakpoint-up(xl) {
+    @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
       .layout-horizontal & {
         height: calc($chat-app-height - $chat-app-horizontal-height-diff);
       }
@@ -157,7 +158,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
       .layout-navbar-hidden & {
         height: calc(#{$chat-app-height-with-no-navbar} - 11rem);
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(#{$chat-app-height} - 10.9rem - #{$chat-app-horizontal-height-diff});
         }
@@ -172,7 +173,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
     .layout-navbar-hidden & {
       height: $chat-app-height-with-no-navbar;
     }
-    @include light.media-breakpoint-up(xl) {
+    @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
       .layout-horizontal & {
         height: calc($chat-app-height - $chat-app-horizontal-height-diff);
       }
@@ -189,7 +190,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
       .layout-navbar-hidden & {
         height: $chat-history-height-with-no-nabvar;
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc($chat-history-height - $chat-app-horizontal-height-diff);
         }
@@ -268,7 +269,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
     .layout-navbar-hidden & {
       height: $chat-app-height-with-no-navbar;
     }
-    @include light.media-breakpoint-up(xl) {
+    @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
       .layout-horizontal & {
         height: calc($chat-app-height - $chat-app-horizontal-height-diff);
       }
@@ -284,7 +285,7 @@ $app-chat-shadow-dark: 0px 2px 1px -1px rgba(dark.$black, 0.2), 0px 1px 1px rgba
       .layout-navbar-hidden & {
         height: calc(#{$chat-app-height-with-no-navbar} - 11.19rem);
       }
-      @include light.media-breakpoint-up(xl) {
+      @include light.media-breakpoint-up($menu-collapsed-layout-breakpoint) {
         .layout-horizontal & {
           height: calc(#{$chat-app-height} - 11.1rem - #{$chat-app-horizontal-height-diff});
         }
