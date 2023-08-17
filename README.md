@@ -1,34 +1,36 @@
 <p align="center"></p>
 
 <p align="center">
-   <a href="$product_page_url" target="_blank">
-      <img src="$product_logo_image_url" alt="$slugified_product_name-logo" width="40px" height="auto">
+   <a href="https://themeselection.com/item/materio-bootstrap-html-admin-template/" target="_blank">
+      <img src="https://user-images.githubusercontent.com/64475785/158384184-1fe44a59-6b68-40f5-b860-d14c51f0ce5d.svg" alt="materio-logo" width="60px" height="auto">
    </a>
 </p>
 
 <h1 align="center">
-   <a href="$product_page_url" target="_blank" align="center">
-      $product_name
+   <a href="https://themeselection.com/item/materio-bootstrap-html-admin-template/" target="_blank" align="center">
+      Materio - Bootstrap 5 HTML ASPNET Core Admin Template
    </a>
 </h1>
 
-<p align="center">$product_punchline</p>
+<p align="center">Most Powerful & Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!</p>
 
-[![$product_name Demo Screenshot]($product_banner_img_url)]($product_page_url)
+[![$product_name Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-bootstrap-aspnet-core-admin-template/banner/banner.png)](https://themeselection.com/item/materio-bootstrap-html-admin-template/)
 
 ## Introduction
 
-$introduction_text
+If you’re a developer looking for most Powerful & comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you the very best admin template that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
 
-[View Demo]($product_landing_page_url)
+Build premium quality applications with ease. Use our innovative admin template to create eye-catching, high-quality WebApps. Your apps will be completely responsive, ensuring they’ll look stunning and function flawlessly on desktops, tablets, and mobile devices.
+
+[View Demo](https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/)
 
 ## Installation ⚒️
 
-$installation_steps
+Please [visit](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/) our docs for installation guide.
 
 ## Documentation 📜
 
-Check out our live [Documentation]($documentation_url)
+Check out our live [Documentation](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/)
 
 ## Support 👨‍💻
 
