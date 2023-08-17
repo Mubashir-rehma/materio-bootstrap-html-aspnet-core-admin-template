@@ -8,7 +8,7 @@
 
 <h1 align="center">
    <a href="https://themeselection.com/item/materio-bootstrap-html-admin-template/" target="_blank" align="center">
-      Materio - Bootstrap 5 HTML ASPNET Core Admin Template
+      Materio - ASP.NET Core Admin Template
    </a>
 </h1>
 
