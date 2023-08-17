@@ -2066,7 +2066,7 @@ bootstrap-maxlength@~1.10.1:
     jquery "^3.5.1"
     qunit "^2.10.0"
 
-"bootstrap-select@github:snapappointments/bootstrap-select#main":
+bootstrap-select@snapappointments/bootstrap-select#main:
   version "1.14.0-beta3"
   resolved "git+ssh://git@github.com/snapappointments/bootstrap-select.git#939e94b14a34759e193f616b753e0a33081cc0c5"
 
