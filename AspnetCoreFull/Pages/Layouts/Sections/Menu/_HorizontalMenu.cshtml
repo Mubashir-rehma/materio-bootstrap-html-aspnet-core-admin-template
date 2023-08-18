@@ -133,31 +133,31 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Ecommerce/Dashboard" ? " active" : "")'>
                 <a asp-page='/Apps/Ecommerce/Dashboard' class='menu-link'>
-                  <i class="menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1"></i>
+                  <i class="menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body"></i>
                   <div data-i18n="Dashboard">Dashboard</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Products") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Products">Products</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Products/ProductList" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Products/ProductList' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Product list">Product list</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Products/ProductAdd" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Products/ProductAdd' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Add Product">Add Product</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Products/CategoryList" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Products/CategoryList' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Category list">Category List</div>
                     </a>
                   </li>
@@ -165,19 +165,19 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Order") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Order">Order</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Order/OrderList" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Order/OrderList' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Order list">Order list</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Order/OrderDetails" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Order/OrderDetails' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Order Details">Order Details</div>
                     </a>
                   </li>
@@ -185,43 +185,43 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Customer">Customer</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerAll" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Customer/CustomerAll' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="All Customers">All Customers</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer") ? " active" : "")'>
                     <a href='javascript:void(0);' class='menu-link menu-toggle'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Customer Details">Customer Details</div>
                     </a>
                     <ul class="menu-sub">
                       <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview' class='menu-link'>
-                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Overview">Overview</div>
                         </a>
                       </li>
                       <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity' class='menu-link'>
-                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Security">Security</div>
                         </a>
                       </li>
                       <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling' class='menu-link'>
-                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Address & Billing">Address & Billing</div>
                         </a>
                       </li>
                       <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications' class='menu-link'>
-                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                          <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Notifications">Notifications</div>
                         </a>
                       </li>
@@ -231,55 +231,55 @@
               </li>
               <li class='menu-item@(currentPage == "/Apps/Ecommerce/Reviews" ? " active" : "")'>
                 <a asp-page='/Apps/Ecommerce/Reviews' class='menu-link'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Manage reviews">Manage reviews</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Ecommerce/Referrals" ? " active" : "")'>
                 <a asp-page='/Apps/Ecommerce/Referrals' class='menu-link'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Referrals">Referrals</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Settings") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Settings">Settings</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/StoreDetails" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/StoreDetails' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Store details">Store details</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Payments" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Payments' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Payments">Payments</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Checkout" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Checkout' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Checkout">Checkout</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Shipping" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Shipping' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Shipping & delivery">Shipping & delivery</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Locations" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Locations' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Locations">Locations</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Notifications" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Notifications' class='menu-link'>
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Notifications">Notifications</div>
                     </a>
                   </li>
@@ -295,19 +295,19 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Academy/Dashboard" ? " active" : "")'>
                 <a asp-page="/Apps/Academy/Dashboard" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Dashboard">Dashboard</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Academy/MyCourse" ? " active" : "")'>
                 <a asp-page="/Apps/Academy/MyCourse" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="My Course">My Course</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Academy/CourseDetails" ? " active" : "")'>
                 <a asp-page="/Apps/Academy/CourseDetails" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Course Details">Course Details</div>
                 </a>
               </li>
@@ -321,13 +321,13 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Logistics/Dashboard" ? " active" : "")'>
                 <a asp-page="/Apps/Logistics/Dashboard" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Dashboard">Dashboard</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Logistics/Fleet" ? " active" : "")'>
                 <a asp-page="/Apps/Logistics/Fleet" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Fleet">Fleet</div>
                 </a>
               </li>
@@ -341,25 +341,25 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Invoice/List" ? " active" : "")'>
                 <a asp-page="/Apps/Invoice/List" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="List">List</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Invoice/Preview" ? " active" : "")'>
                 <a asp-page="/Apps/Invoice/Preview" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Preview">Preview</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Invoice/Edit" ? " active" : "")'>
                 <a asp-page="/Apps/Invoice/Edit" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Edit">Edit</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Invoice/Add" ? " active" : "")'>
                 <a asp-page="/Apps/Invoice/Add" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Add">Add</div>
                 </a>
               </li>
@@ -373,43 +373,43 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Users/List" ? " active" : "")'>
                 <a asp-page="/Apps/Users/List" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="List">List</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Apps/Users/View/") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="View">View</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Apps/Users/View/Account" ? " active" : "")'>
                     <a asp-page="/Apps/Users/View/Account" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Account">Account</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Users/View/Security" ? " active" : "")'>
                     <a asp-page="/Apps/Users/View/Security" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Security">Security</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Users/View/Billing" ? " active" : "")'>
                     <a asp-page="/Apps/Users/View/Billing" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Billing & Plans">Billing & Plans</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Users/View/Notifications" ? " active" : "")'>
                     <a asp-page="/Apps/Users/View/Notifications" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Notifications">Notifications</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Users/View/Connections" ? " active" : "")'>
                     <a asp-page="/Apps/Users/View/Connections" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Connections">Connections</div>
                     </a>
                   </li>
@@ -425,13 +425,13 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Apps/Access/Roles" ? " active" : "")'>
                 <a asp-page="/Apps/Access/Roles" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Roles">Roles</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Apps/Access/Permission" ? " active" : "")'>
                 <a asp-page="/Apps/Access/Permission" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Permission">Permission</div>
                 </a>
               </li>
@@ -455,31 +455,31 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/FrontPages/LandingPage" ? " active" : "")'>
                 <a asp-page="/FrontPages/LandingPage" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Landing">Landing</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FrontPages/PricingPage" ? " active" : "")'>
                 <a asp-page="/FrontPages/PricingPage" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Pricing">Pricing</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FrontPages/PaymentPage" ? " active" : "")'>
                 <a asp-page="/FrontPages/PaymentPage" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Payment">Payment</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FrontPages/CheckoutPage" ? " active" : "")'>
                 <a asp-page="/FrontPages/CheckoutPage" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Checkout">Checkout</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FrontPages/HelpCenterLanding" ? " active" : "")'>
                 <a asp-page="/FrontPages/HelpCenterLanding" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Help Center">Help Center</div>
                 </a>
               </li>
@@ -494,25 +494,25 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Pages/Profile/User" ? " active" : "")'>
                 <a asp-page="/Pages/Profile/User" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Profile">Profile</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Profile/Teams" ? " active" : "")'>
                 <a asp-page="/Pages/Profile/Teams" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Teams">Teams</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Profile/Projects" ? " active" : "")'>
                 <a asp-page="/Pages/Profile/Projects" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Projects">Projects</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Profile/Connections" ? " active" : "")'>
                 <a asp-page="/Pages/Profile/Connections" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Connections">Connections</div>
                 </a>
               </li>
@@ -526,31 +526,31 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Pages/AccountSettings/Account" ? " active" : "")'>
                 <a asp-page="/Pages/AccountSettings/Account" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Account">Account</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/AccountSettings/Security" ? " active" : "")'>
                 <a asp-page="/Pages/AccountSettings/Security" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Security">Security</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/AccountSettings/Billing" ? " active" : "")'>
                 <a asp-page="/Pages/AccountSettings/Billing" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Billing & Plans">Billing & Plans</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/AccountSettings/Notifications" ? " active" : "")'>
                 <a asp-page="/Pages/AccountSettings/Notifications" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Notifications">Notifications</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/AccountSettings/Connections" ? " active" : "")'>
                 <a asp-page="/Pages/AccountSettings/Connections" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Connections">Connections</div>
                 </a>
               </li>
@@ -576,31 +576,31 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Pages/Misc/Error" ? " active" : "")'>
                 <a asp-page="/Pages/Misc/Error" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Error">Error</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Misc/UnderMaintenance" ? " active" : "")'>
                 <a asp-page="/Pages/Misc/UnderMaintenance" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Under Maintenance">Under Maintenance</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Misc/ComingSoon" ? " active" : "")'>
                 <a asp-page="/Pages/Misc/ComingSoon" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Coming Soon">Coming Soon</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Misc/NotAuthorized" ? " active" : "")'>
                 <a asp-page="/Pages/Misc/NotAuthorized" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Not Authorized">Not Authorized</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Pages/Misc/ServerError" ? " active" : "")'>
                 <a asp-page="/Pages/Misc/ServerError" class="menu-link" target="_blank">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Server Error">Server Error</div>
                 </a>
               </li>
@@ -615,19 +615,19 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage.StartsWith("/Auth/Login") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Login">Login</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/Login/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/Login/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/Login/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/Login/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
@@ -635,25 +635,25 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Auth/Register") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Register">Register</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/Register/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/Register/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/Register/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/Register/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/Register/Multisteps" ? " active" : "")'>
                     <a asp-page="/Auth/Register/Multisteps" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Multi-steps">Multi-steps</div>
                     </a>
                   </li>
@@ -661,19 +661,19 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Auth/VerifyEmail") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Verify Email">Verify Email</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/VerifyEmail/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/VerifyEmail/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/VerifyEmail/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/VerifyEmail/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
@@ -681,19 +681,19 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Auth/ResetPassword") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Reset Password">Reset Password</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/ResetPassword/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/ResetPassword/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/ResetPassword/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/ResetPassword/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
@@ -701,19 +701,19 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Auth/ForgotPassword") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Forgot Password">Forgot Password</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/ForgotPassword/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/ForgotPassword/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/ForgotPassword/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/ForgotPassword/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
@@ -721,19 +721,19 @@
               </li>
               <li class='menu-item@(currentPage.StartsWith("/Auth/TwoSteps") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Two Steps">Two Steps</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/Auth/TwoSteps/Basic" ? " active" : "")'>
                     <a asp-page="/Auth/TwoSteps/Basic" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Auth/TwoSteps/Cover" ? " active" : "")'>
                     <a asp-page="/Auth/TwoSteps/Cover" class="menu-link" target="_blank">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Cover">Cover</div>
                     </a>
                   </li>
@@ -749,19 +749,19 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Wizards/Checkout" ? " active" : "")'>
                 <a asp-page="/Wizards/Checkout" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Checkout">Checkout</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Wizards/PropertyListing" ? " active" : "")'>
                 <a asp-page="/Wizards/PropertyListing" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Property Listing">Property Listing</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Wizards/CreateDeal" ? " active" : "")'>
                 <a asp-page="/Wizards/CreateDeal" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Create Deal">Create Deal</div>
                 </a>
               </li>
@@ -792,37 +792,37 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Cards/Basic" ? " active" : "")'>
                 <a asp-page="/Cards/Basic" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Basic">Basic</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Cards/Advance" ? " active" : "")'>
                 <a asp-page="/Cards/Advance" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Advance">Advance</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Cards/Statistics" ? " active" : "")'>
                 <a asp-page="/Cards/Statistics" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Statistics">Statistics</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Cards/Analytics" ? " active" : "")'>
                 <a asp-page="/Cards/Analytics" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Analytics">Analytics</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Cards/Gamifications" ? " active" : "")'>
                 <a asp-page="/Cards/Gamifications" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Gamifications">Gamifications</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Cards/Actions" ? " active" : "")'>
                 <a asp-page="/Cards/Actions" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Actions">Actions</div>
                 </a>
               </li>
@@ -837,115 +837,115 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Ui/Accordion" ? " active" : "")'>
                 <a asp-page="/Ui/Accordion" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Accordion">Accordion</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Alerts" ? " active" : "")'>
                 <a asp-page="/Ui/Alerts" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Alerts">Alerts</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Badges" ? " active" : "")'>
                 <a asp-page="/Ui/Badges" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Badges">Badges</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Buttons" ? " active" : "")'>
                 <a asp-page="/Ui/Buttons" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Buttons">Buttons</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Carousel" ? " active" : "")'>
                 <a asp-page="/Ui/Carousel" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Carousel">Carousel</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Collapse" ? " active" : "")'>
                 <a asp-page="/Ui/Collapse" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Collapse">Collapse</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Dropdowns" ? " active" : "")'>
                 <a asp-page="/Ui/Dropdowns" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Dropdowns">Dropdowns</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Footer" ? " active" : "")'>
                 <a asp-page="/Ui/Footer" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Footer">Footer</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/ListGroups" ? " active" : "")'>
                 <a asp-page="/Ui/ListGroups" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="List groups">List groups</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Modals" ? " active" : "")'>
                 <a asp-page="/Ui/Modals" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Modals">Modals</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Navbar" ? " active" : "")'>
                 <a asp-page="/Ui/Navbar" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Navbar">Navbar</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Offcanvas" ? " active" : "")'>
                 <a asp-page="/Ui/Offcanvas" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Offcanvas">Offcanvas</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/PaginationBreadcrumbs" ? " active" : "")'>
                 <a asp-page="/Ui/PaginationBreadcrumbs" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Pagination & Breadcrumbs">Pagination &amp; Breadcrumbs</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Progress" ? " active" : "")'>
                 <a asp-page="/Ui/Progress" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Progress">Progress</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Spinners" ? " active" : "")'>
                 <a asp-page="/Ui/Spinners" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Spinners">Spinners</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/TabsPills" ? " active" : "")'>
                 <a asp-page="/Ui/TabsPills" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Tabs & Pills">Tabs &amp; Pills</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Toasts" ? " active" : "")'>
                 <a asp-page="/Ui/Toasts" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Toasts">Toasts</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/TooltipsPopovers" ? " active" : "")'>
                 <a asp-page="/Ui/TooltipsPopovers" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Tooltips & popovers">Tooltips &amp; popovers</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Ui/Typography" ? " active" : "")'>
                 <a asp-page="/Ui/Typography" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Typography">Typography</div>
                 </a>
               </li>
@@ -960,67 +960,67 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/ExtendedUi/Avatar" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Avatar" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Avatar">Avatar</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/Blockui" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Blockui" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="BlockUI">BlockUI</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/DragDrop" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/DragDrop" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Drag & Drop">Drag &amp; Drop</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/MediaPlayer" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/MediaPlayer" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Media Player">Media Player</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/PerfectScrollbar" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/PerfectScrollbar" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Perfect scrollbar">Perfect scrollbar</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/StarRatings" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/StarRatings" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Star Ratings">Star Ratings</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/Sweetalert2" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Sweetalert2" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="SweetAlert2">SweetAlert2</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/TextDivider" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/TextDivider" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Text Divider">Text Divider</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage.StartsWith("/ExtendedUi/Timeline") ? " active" : "")'>
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Timeline">Timeline</div>
                 </a>
                 <ul class="menu-sub">
                   <li class='menu-item@(currentPage == "/ExtendedUi/Timeline/Basic" ? " active" : "")'>
                     <a asp-page="/ExtendedUi/Timeline/Basic" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Basic">Basic</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/ExtendedUi/Timeline/Fullscreen" ? " active" : "")'>
                     <a asp-page="/ExtendedUi/Timeline/Fullscreen" class="menu-link">
-                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                      <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                       <div data-i18n="Fullscreen">Fullscreen</div>
                     </a>
                   </li>
@@ -1028,19 +1028,19 @@
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/Tour" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Tour" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Tour">Tour</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/Treeview" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Treeview" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Treeview">Treeview</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/ExtendedUi/Misc" ? " active" : "")'>
                 <a asp-page="/ExtendedUi/Misc" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Miscellaneous">Miscellaneous</div>
                 </a>
               </li>
@@ -1070,61 +1070,61 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Forms/BasicInputs" ? " active" : "")'>
                 <a asp-page="/Forms/BasicInputs" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Basic Inputs">Basic Inputs</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/InputGroups" ? " active" : "")'>
                 <a asp-page="/Forms/InputGroups" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Input groups">Input groups</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/CustomOptions" ? " active" : "")'>
                 <a asp-page="/Forms/CustomOptions" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Custom Options">Custom Options</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Editors" ? " active" : "")'>
                 <a asp-page="/Forms/Editors" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Editors">Editors</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/FileUpload" ? " active" : "")'>
                 <a asp-page="/Forms/FileUpload" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="File Upload">File Upload</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Pickers" ? " active" : "")'>
                 <a asp-page="/Forms/Pickers" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Pickers">Pickers</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Selects" ? " active" : "")'>
                 <a asp-page="/Forms/Selects" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Select & Tags">Select &amp; Tags</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Sliders" ? " active" : "")'>
                 <a asp-page="/Forms/Sliders" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Sliders">Sliders</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Switches" ? " active" : "")'>
                 <a asp-page="/Forms/Switches" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Switches">Switches</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Forms/Extras" ? " active" : "")'>
                 <a asp-page="/Forms/Extras" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Extras">Extras</div>
                 </a>
               </li>
@@ -1138,19 +1138,19 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/FormLayouts/Vertical" ? " active" : "")'>
                 <a asp-page="/FormLayouts/Vertical" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Vertical Form">Vertical Form</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FormLayouts/Horizontal" ? " active" : "")'>
                 <a asp-page="/FormLayouts/Horizontal" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Horizontal Form">Horizontal Form</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FormLayouts/Sticky" ? " active" : "")'>
                 <a asp-page="/FormLayouts/Sticky" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Sticky Actions">Sticky Actions</div>
                 </a>
               </li>
@@ -1164,13 +1164,13 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/FormWizard/Numbered" ? " active" : "")'>
                 <a asp-page="/FormWizard/Numbered" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Numbered">Numbered</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/FormWizard/Icons" ? " active" : "")'>
                 <a asp-page="/FormWizard/Icons" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Icons">Icons</div>
                 </a>
               </li>
@@ -1207,19 +1207,19 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Tables/DataTables/Basic" ? " active" : "")'>
                 <a asp-page="/Tables/DataTables/Basic" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Basic">Basic</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Tables/DataTables/Advanced" ? " active" : "")'>
                 <a asp-page="/Tables/DataTables/Advanced" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Advanced">Advanced</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Tables/DataTables/Extensions" ? " active" : "")'>
                 <a asp-page="/Tables/DataTables/Extensions" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Extensions">Extensions</div>
                 </a>
               </li>
@@ -1243,13 +1243,13 @@
             <ul class="menu-sub">
               <li class='menu-item@(currentPage == "/Charts/Apex" ? " active" : "")'>
                 <a asp-page="/Charts/Apex" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Apex Charts">Apex Charts</div>
                 </a>
               </li>
               <li class='menu-item@(currentPage == "/Charts/Chartjs" ? " active" : "")'>
                 <a asp-page="/Charts/Chartjs" class="menu-link">
-                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1'></i>
+                  <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="ChartJS">ChartJS</div>
                 </a>
               </li>
