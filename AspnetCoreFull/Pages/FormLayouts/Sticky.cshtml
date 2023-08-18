@@ -242,47 +242,48 @@
             <div class="row g-3">
               <div class="mb-3">
                 <div class="form-check form-check-inline">
-                  <input name="collapsible-payment" class="form-check-input" type="radio" value="" id="collapsible-payment-cc" checked="" />
+                  <input name="collapsible-payment" class="form-check-input form-check-input-payment" type="radio" value="credit-card" id="collapsible-payment-cc" checked="" />
                   <label class="form-check-label" for="collapsible-payment-cc">
                     Credit/Debit/ATM Card <i class="bx bx-credit-card-alt"></i>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input name="collapsible-payment" class="form-check-input" type="radio" value="" id="collapsible-payment-cash" />
+                  <input name="collapsible-payment" class="form-check-input form-check-input-payment" type="radio" value="cash" id="collapsible-payment-cash" />
                   <label class="form-check-label" for="collapsible-payment-cash">
                     Cash On Delivery
                     <i class="bx bx-help-circle text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="You can pay once you receive the product."></i>
                   </label>
                 </div>
               </div>
-
-              <div class="col-12 col-md-10 col-xxl-8">
-                <div class="mb-3">
-                  <label class="form-label w-100" for="collapsible-payment-card">Card Number</label>
-                  <div class="input-group input-group-merge">
-                    <input type="text" id="collapsible-payment-card" name="creditCardMask" class="form-control credit-card-mask" placeholder="1356 3215 6548 7898" aria-describedby="creditCardMask2" />
-                    <span class="input-group-text cursor-pointer p-1" id="creditCardMask2"><span class="card-type"></span></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="mb-3">
-                      <label class="form-label" for="collapsible-payment-name">Name</label>
-                      <input type="text" id="collapsible-payment-name" class="form-control" placeholder="John Doe" />
+              <div id="form-credit-card">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label w-100" for="creditCardMask">Card Number</label>
+                    <div class="input-group input-group-merge">
+                      <input type="text" id="creditCardMask" name="creditCardMask" class="form-control credit-card-mask" placeholder="1356 3215 6548 7898" aria-describedby="creditCardMask2" />
+                      <span class="input-group-text cursor-pointer p-1" id="creditCardMask2"><span class="card-type"></span></span>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3">
-                    <div class="mb-3">
-                      <label class="form-label" for="collapsible-payment-expiry-date">Exp. Date</label>
-                      <input type="text" id="collapsible-payment-expiry-date" class="form-control expiry-date-mask" placeholder="MM/YY" />
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="collapsible-payment-name">Name</label>
+                        <input type="text" id="collapsible-payment-name" class="form-control" placeholder="John Doe" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="mb-3">
-                      <label class="form-label" for="collapsible-payment-cvv">CVV Code</label>
-                      <div class="input-group input-group-merge">
-                        <input type="text" id="collapsible-payment-cvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
-                        <span class="input-group-text cursor-pointer" id="collapsible-payment-cvv2"><i class="bx bx-help-circle text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
+                    <div class="col-6 col-md-3">
+                      <div class="mb-3">
+                        <label class="form-label" for="collapsible-payment-expiry-date">Exp. Date</label>
+                        <input type="text" id="collapsible-payment-expiry-date" class="form-control expiry-date-mask" placeholder="MM/YY" />
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="mb-3">
+                        <label class="form-label" for="collapsible-payment-cvv">CVV Code</label>
+                        <div class="input-group input-group-merge">
+                          <input type="text" id="collapsible-payment-cvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
+                          <span class="input-group-text cursor-pointer" id="collapsible-payment-cvv2"><i class="bx bx-help-circle text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
+                        </div>
                       </div>
                     </div>
                   </div>
