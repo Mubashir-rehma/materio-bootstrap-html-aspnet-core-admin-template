@@ -41,7 +41,7 @@
   text-transform: uppercase;
   flex-shrink: 0;
   opacity: 1;
-  transition: opacity $menu-animation-duration ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .app-brand-img-collapsed {

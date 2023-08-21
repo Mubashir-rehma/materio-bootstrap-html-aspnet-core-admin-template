@@ -445,10 +445,13 @@ class TemplateCustomizer {
     if (this.settings.stylesOpt === 'system') {
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         this.settings.style = 'dark'
+        document.cookie = `style=dark` // to fix laravel system mode issue
       } else {
         this.settings.style = 'light'
+        document.cookie = `style=light` // to fix laravel system mode issue
       }
     } else {
+      document.cookie = `style=; expires=Thu, 01 Jan 2000 00:00:00 UTC; path=/;` // to fix laravel system mode issue
       this.settings.style = this.settings.styles.indexOf(style) !== -1 ? style : this.settings.defaultStyle
     }
     if (this.settings.styles.indexOf(this.settings.style) === -1) {
