@@ -527,6 +527,7 @@ $(function () {
       }
     });
     $('.dataTables_length').addClass('mt-0 mt-md-3 me-3');
+    $('.dt-buttons').addClass('d-flex flex-wrap');
   }
 
   // Delete Record

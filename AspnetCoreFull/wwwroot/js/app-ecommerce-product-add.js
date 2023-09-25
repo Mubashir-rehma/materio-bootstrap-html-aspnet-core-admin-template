@@ -124,7 +124,11 @@ $(function () {
         });
         $('.select2-container').css('width', '100%');
         $('.form-repeater:first .form-select').select2({
+          dropdownParent: $(this).parent(),
           placeholder: 'Placeholder text'
+        });
+        $('.ecommerce-select2-dropdown .form-select').select2({
+          dropdownParent: $('.ecommerce-select2-dropdown').parent()
         });
       }
     });
