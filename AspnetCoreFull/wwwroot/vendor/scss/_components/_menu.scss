@@ -377,6 +377,10 @@
     .layout-wrapper:not(.layout-horizontal) & {
       margin-right: 0;
 
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+
       @include rtl-style {
         margin-left: 0;
       }

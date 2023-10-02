@@ -282,7 +282,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-secondary dropdown-toggle me-2',
+          className: 'btn btn-label-secondary dropdown-toggle me-3',
           text: '<i class="mdi mdi-export-variant me-1"></i><span class="d-none d-sm-inline-block">Export </span>',
           buttons: [
             {
@@ -422,7 +422,7 @@ $(function () {
         },
         {
           text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Product</span>',
-          className: 'add-new btn btn-primary ms-1',
+          className: 'add-new btn btn-primary',
           action: function () {
             window.location.href = productAdd;
           }
@@ -532,6 +532,7 @@ $(function () {
     });
     $('.dataTables_length').addClass('mt-0 mt-md-3');
     $('.dt-action-buttons').addClass('pt-0');
+    $('.dt-buttons').addClass('d-flex flex-wrap');
   }
 
   // Filter form control to default size

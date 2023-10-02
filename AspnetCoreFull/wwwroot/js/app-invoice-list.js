@@ -54,7 +54,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $invoice_id = full['invoice_id'];
             // Creates full output for row
-            var $row_output = '<a href="/Apps/Invoice/Preview"><span>#' + $invoice_id + '</span></a>';
+            var $row_output = '<a href="app-invoice-preview.html"><span>#' + $invoice_id + '</span></a>';
             return $row_output;
           }
         },
@@ -123,7 +123,7 @@ $(function () {
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column gap-1">' +
-              '<a href="/Pages/Profile/User" class="text-truncate"><h6 class="mb-0">' +
+              '<a href="pages-profile-user.html" class="text-truncate"><h6 class="mb-0">' +
               $name +
               '</h6></a>' +
               '<small class="text-truncate">' +
@@ -185,12 +185,12 @@ $(function () {
             return (
               '<div class="d-flex align-items-center">' +
               '<a href="javascript:;" data-bs-toggle="tooltip" class="text-body delete-record" data-bs-placement="top" title="Delete Invoice"><i class="mdi mdi-delete-outline mdi-20px mx-1"></i></a>' +
-              '<a href="/Apps/Invoice/Preview" data-bs-toggle="tooltip" class="text-body" data-bs-placement="top" title="Preview Invoice"><i class="mdi mdi-eye-outline mdi-20px mx-1"></i></a>' +
+              '<a href="app-invoice-preview.html" data-bs-toggle="tooltip" class="text-body" data-bs-placement="top" title="Preview Invoice"><i class="mdi mdi-eye-outline mdi-20px mx-1"></i></a>' +
               '<div class="dropdown">' +
               '<a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></a>' +
               '<div class="dropdown-menu dropdown-menu-end">' +
               '<a href="javascript:;" class="dropdown-item">Download</a>' +
-              '<a href="/Apps/Invoice/Edit" class="dropdown-item">Edit</a>' +
+              '<a href="app-invoice-edit.html" class="dropdown-item">Edit</a>' +
               '<a href="javascript:;" class="dropdown-item">Duplicate</a>' +
               '</div>' +
               '</div>' +
@@ -220,7 +220,7 @@ $(function () {
           text: '<i class="mdi mdi-plus me-lg-1"></i><span class="d-lg-inline-block d-none">Create Invoice</span>',
           className: 'btn btn-primary',
           action: function (e, dt, button, config) {
-            window.location = '/Apps/Invoice/Add';
+            window.location = 'app-invoice-add.html';
           }
         }
       ],

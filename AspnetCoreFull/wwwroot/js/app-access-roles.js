@@ -236,13 +236,6 @@ $(function () {
       "<button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#editUser'><i class='mdi mdi-plus me-0 me-sm-1'></i><span class= 'd-none d-sm-inline-block'> Add User </span ></button>"
     );
   }
-
-  // Filter form control to default size
-  // ? setTimeout used for multilingual table initialization
-  setTimeout(() => {
-    $('.dataTables_filter .form-control').removeClass('form-control-sm');
-    $('.dataTables_length .form-select').removeClass('form-select-sm');
-  }, 300);
 });
 
 (function () {
@@ -261,4 +254,10 @@ $(function () {
       };
     });
   }
+  // Filter form control to default size
+  // ? setTimeout used for multilingual table initialization
+  setTimeout(() => {
+    $('.dataTables_filter .form-control').removeClass('form-control-sm');
+    $('.dataTables_length .form-select').removeClass('form-select-sm');
+  }, 300);
 })();

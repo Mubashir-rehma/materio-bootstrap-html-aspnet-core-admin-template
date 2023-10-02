@@ -1022,54 +1022,54 @@
   resolved "https://registry.yarnpkg.com/@foliojs-fork/restructure/-/restructure-2.0.2.tgz#73759aba2aff1da87b7c4554e6839c70d43c92b4"
   integrity sha512-59SgoZ3EXbkfSX7b63tsou/SDGzwUEK6MuB5sKqgVK1/XE0fxmpsOb9DQI8LXW3KfGnAjImCGhhEb7uPPAUVNA==
 
-"@fullcalendar/core@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.8.tgz#62008f7b2785dc01f0bf8c2f0c853925eab1c03a"
-  integrity sha512-i8JBIvZCWGO9dsMEDcx9bnsQZ9PtGSJdOXGgWbhLaGq2iq41OBdp9g9gM4b/Otv2oK8bL5Gl6CsMmb/HkDtA6Q==
+"@fullcalendar/core@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.9.tgz#ea735b0dd0a0a487969ebbb6c99b0967e07568c0"
+  integrity sha512-eeG+z9BWerdsU9Ac6j16rpYpPnE0wxtnEHiHrh/u/ADbGTR3hCOjCD9PxQOfhOTHbWOVs7JQunGcksSPu5WZBQ==
   dependencies:
     preact "~10.12.1"
 
-"@fullcalendar/daygrid@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.8.tgz#2ca4a10892f5e2abeac0f8a8ecc8f07c002a4bf4"
-  integrity sha512-kCZxQFKb9Vqa3CZRX0v7rMSJ2mlTt4gDpyLfiNJKxUAq7W51uKurPaFZWicaXy1ESHVBxKNlbx5uNjBpyu50JQ==
+"@fullcalendar/daygrid@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.9.tgz#efb8aabb2f928ac0b05a77c5443accb546ae5818"
+  integrity sha512-o/6joH/7lmVHXAkbaa/tUbzWYnGp/LgfdiFyYPkqQbjKEeivNZWF1WhHqFbhx0zbFONSHtrvkjY2bjr+Ef2quQ==
 
-"@fullcalendar/interaction@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-6.1.8.tgz#36c35bd5718f893e8215a45d48a6ef7d5fcc4650"
-  integrity sha512-r6W4E9ohaA87M2uPSlmpE2WT7Fzu7LN0u2pE6D/tThruCEaAPbN8Pw5+sqclsuyTIL09mg0eSJm/ggJekTabSA==
+"@fullcalendar/interaction@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-6.1.9.tgz#9023922df24c296cb7f4671887f1731f5d5a5db2"
+  integrity sha512-I3FGnv0kKZpIwujg3HllbKrciNjTqeTYy3oJG226oAn7lV6wnrrDYMmuGmA0jPJAGN46HKrQqKN7ItxQRDec4Q==
 
-"@fullcalendar/list@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-6.1.8.tgz#69e5efba0cb8416955a3ad1cd7d550345ffaa16d"
-  integrity sha512-10N0T/vCtId1cE3JGLpnbAivWVnaWCCkVO7wmbsyr5Y+I939kr/zq4BUNwBoP/xSFVVxx59FETh3iyA+MkV8Fw==
+"@fullcalendar/list@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-6.1.9.tgz#67ce0712a8713fd478fde5c71ec2d94dff68a2a4"
+  integrity sha512-OCKdC1Gz26cJ5QsXdQyXVyzVu23ypT2xzyAR+Wc8jEytcJLWXw2a914m/MVax8n8EHuaIYY2exhsy/eaSU0XNA==
 
-"@fullcalendar/premium-common@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/premium-common/-/premium-common-6.1.8.tgz#56023d1ba1fe892a18dce3e3ead3908b0a3e9101"
-  integrity sha512-r4o73uGl2xQlckcv4yoH+lv1OzkqampdMvPQUnBSTA4MYJHmzt4KEskCxwhD2Ayy+2UQNO47JRSReE84y2WJIA==
+"@fullcalendar/premium-common@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/premium-common/-/premium-common-6.1.9.tgz#588cd6e4a70c89e83c0ea3098d3f4fb230e3cc54"
+  integrity sha512-hbyXAPU0r9psO0oH22ge0GCxQhlHQ0KJRJhAM2KkTTfYUSAYgaaYfX9cUC6ysNE7T1gZ5JDlYDu/xskwPymyvA==
 
-"@fullcalendar/scrollgrid@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/scrollgrid/-/scrollgrid-6.1.8.tgz#04246ba9cd09379a083e6ef792ef913ce1373ae5"
-  integrity sha512-Btp5ipZ+BsDF5xOBbCN2TWU7pd9cCCLQaB1Hhgi997YKzsQ7PmwsJu+zI33UgJQkhmpxnJdg7gb73AuhTTa7kg==
+"@fullcalendar/scrollgrid@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/scrollgrid/-/scrollgrid-6.1.9.tgz#26c9d98dd30db535f4dc30ad12c4e44d21e19748"
+  integrity sha512-mrdNb0kgDrs15oesKFfr475UYEuqAEQmxBJB2IjQVUL1v213ZqY1TYzgXsIQhVmyGudosVbBOaiQ+vb0zMk8HA==
   dependencies:
-    "@fullcalendar/premium-common" "~6.1.8"
+    "@fullcalendar/premium-common" "~6.1.9"
 
-"@fullcalendar/timegrid@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-6.1.8.tgz#30b9860eb900c5dc9b72ceaab98c0728018a0ff1"
-  integrity sha512-3+3KHHCoNcaLs/gQt004hAqICbY5+WAffrZ0ePv+80HFB1OVh8BQ5XXLHSOUbTvXdgtUTcfBHuw9fhO31kt5gA==
+"@fullcalendar/timegrid@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-6.1.9.tgz#83b61ac734638d11182aeb579b638fa0bc52ea32"
+  integrity sha512-le7UV05wVE1Trdr054kgJXTwa+A1pEI8nlCBnPWdcyrL+dTLoPvQ4AWEVCnV7So+4zRYaCqnqGXfCJsj0RQa0g==
   dependencies:
-    "@fullcalendar/daygrid" "~6.1.8"
+    "@fullcalendar/daygrid" "~6.1.9"
 
-"@fullcalendar/timeline@~6.1.8":
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/timeline/-/timeline-6.1.8.tgz#b353f5d5fcae1aeeca697b78a3fec08345d01257"
-  integrity sha512-RyqmK+Jq4cOHzetiXGemOkGM3ipsWl62FR+iaOGqgFZgjijchVYYWbx9kRPDDbhD1j3b7MMgHbP8bVehgy2L/g==
+"@fullcalendar/timeline@~6.1.9":
+  version "6.1.9"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timeline/-/timeline-6.1.9.tgz#4b4139046de94e38de9ddda6a0a1d989c8c5cb83"
+  integrity sha512-0WuLvJpIsJZPYUuVlRsELdOUOuw6Tizer5pF93/EoHoQa7ZKMWvQY/6H+foxGXBszjHMFpIjRFlltDytL9VbGQ==
   dependencies:
-    "@fullcalendar/premium-common" "~6.1.8"
-    "@fullcalendar/scrollgrid" "~6.1.8"
+    "@fullcalendar/premium-common" "~6.1.9"
+    "@fullcalendar/scrollgrid" "~6.1.9"
 
 "@gulp-sourcemaps/identity-map@^2.0.1":
   version "2.0.1"
@@ -6995,15 +6995,6 @@ sass@1.63.6, sass@^1.49.0:
   version "1.63.6"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.63.6.tgz#481610e612902e0c31c46b46cf2dad66943283ea"
   integrity sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-    source-map-js ">=0.6.2 <2.0.0"
-
-sass@^1.63.6:
-  version "1.66.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.66.1.tgz#04b51c4671e4650aa393740e66a4e58b44d055b1"
-  integrity sha512-50c+zTsZOJVgFfTgwwEzkjA3/QACgdNsKueWPyAR0mRINIvLAStVQBbPg14iuqEQ74NPDbXzJARJ/O4SI1zftA==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"

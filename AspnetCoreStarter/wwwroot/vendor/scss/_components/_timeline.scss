@@ -37,7 +37,7 @@
       &:before {
         position: absolute;
         top: 0.75rem;
-        left: 32px;
+        left: 33px;
         right: 100%;
         width: 0;
         height: 0;
@@ -173,7 +173,7 @@
           }
 
           &:before {
-            right: -0.95rem;
+            right: -0.9rem;
             left: auto;
             border-left-width: 1rem;
             border-right-width: 0;
@@ -356,7 +356,7 @@
 
         .timeline-event {
           &:before {
-            right: 100% !important;
+            right: 99.8% !important;
             border-right-width: 1rem !important;
             border-left-width: 0 !important;
           }
@@ -405,7 +405,7 @@
           .timeline-event {
             &:before {
               left: 100% !important;
-              right: -1rem !important;
+              right: -0.95rem !important;
               border-left-width: 1rem !important;
               border-right-width: 0 !important;
             }

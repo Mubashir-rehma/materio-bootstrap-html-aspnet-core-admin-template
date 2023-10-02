@@ -43,6 +43,7 @@ $(function () {
     }
     select2Focus(select2Icons);
     select2Icons.wrap('<div class="position-relative"></div>').select2({
+      dropdownParent: select2Icons.parent(),
       templateResult: renderIcons,
       templateSelection: renderIcons,
       escapeMarkup: function (es) {

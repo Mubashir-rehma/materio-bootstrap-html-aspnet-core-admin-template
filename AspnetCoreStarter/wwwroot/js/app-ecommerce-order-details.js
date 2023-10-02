@@ -190,8 +190,8 @@ $(function () {
         showCancelButton: true,
         confirmButtonText: 'Yes, Delete order!',
         customClass: {
-          confirmButton: 'btn btn-primary me-2 waves-effect waves-light',
-          cancelButton: 'btn btn-outline-secondary waves-effect'
+          confirmButton: 'btn btn-primary me-2',
+          cancelButton: 'btn btn-outline-secondary'
         },
         buttonsStyling: false
       }).then(function (result) {
@@ -201,7 +201,7 @@ $(function () {
             title: 'Deleted!',
             text: 'Order has been removed.',
             customClass: {
-              confirmButton: 'btn btn-success waves-effect'
+              confirmButton: 'btn btn-success'
             }
           });
         } else if (result.dismiss === Swal.DismissReason.cancel) {
