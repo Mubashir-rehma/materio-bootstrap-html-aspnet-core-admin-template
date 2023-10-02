@@ -1046,7 +1046,6 @@
               value: {
                 fontSize: '1.5rem',
                 color: legendColor,
-                fontFamily: 'Inter',
                 formatter: function (val) {
                   return parseInt(val, 10) + '%';
                 }

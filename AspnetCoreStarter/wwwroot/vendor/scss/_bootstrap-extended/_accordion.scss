@@ -45,7 +45,7 @@
 
       &::before {
         background-image: var(--#{$prefix}accordion-btn-active-icon);
-        transform: rotate(-90deg);
+        transform: rotate(-180deg);
       }
       &::after {
         background-image: none;
@@ -194,10 +194,12 @@
       &::before {
         margin-left: 1.1rem;
         margin-right: 0;
+        // transform: rotate(180deg);
       }
-      &:not(.collapsed)::before {
-        transform: rotate(90deg);
-      }
+      // !- For RTL accordion icon rotation in other templates
+      // &:not(.collapsed)::before {
+      // transform: rotate(90deg);
+      // }
     }
   }
   .accordion-button {

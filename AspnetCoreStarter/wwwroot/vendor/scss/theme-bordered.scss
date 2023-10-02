@@ -186,6 +186,19 @@ body {
   }
 }
 
+@include rtl-only {
+  .timeline {
+    .timeline-item {
+      .timeline-event {
+        &:before {
+          left: 32px;
+          right: 99.8%;
+        }
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .timeline.timeline-center .timeline-item {
     &.timeline-item-left,

@@ -50,7 +50,7 @@ $(function () {
       starWidth: '25px',
       rtl: isRtl,
       multiColor: {
-        startColor: '#fdb528',
+        startColor: '#ffd687',
         endColor: '#fdb528'
       }
     });
