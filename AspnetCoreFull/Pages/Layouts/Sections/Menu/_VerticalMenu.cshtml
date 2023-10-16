@@ -167,7 +167,7 @@
     <!-- Apps & Pages -->
     <li class="menu-divider mb-1"></li>
     <li class="menu-header small fw-semibold">
-      <span class="menu-header-text">Apps &amp; Pages</span>
+      <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Email" ? " active" : "")'>
       <a asp-page="/Apps/Email" class="menu-link">
@@ -717,7 +717,7 @@
     <!-- Components -->
     <li class="menu-divider mb-1"></li>
     <li class="menu-header small fw-semibold">
-      <span class="menu-header-text">Components</span>
+      <span class="menu-header-text" data-i18n="Components">Components</span>
     </li>
     <!-- Cards -->
     <li class='menu-item@(currentPage.StartsWith("/Cards/") ? " active open" : "")'>
@@ -974,7 +974,7 @@
     <!-- Forms & Tables -->
     <li class="menu-divider mb-1"></li>
     <li class="menu-header small fw-semibold">
-      <span class="menu-header-text">Forms &amp; Tables</span>
+      <span class="menu-header-text" data-i18n="Forms & Tables">Forms &amp; Tables</span>
     </li>
     <!-- Forms -->
     <li class='menu-item@(currentPage.StartsWith("/Forms/") ? " active open" : "")'>
@@ -1116,7 +1116,7 @@
     <!-- Charts & Maps -->
     <li class="menu-divider mb-1"></li>
     <li class="menu-header small fw-semibold">
-      <span class="menu-header-text">Charts &amp; Maps</span>
+      <span class="menu-header-text" data-i18n="Charts & Maps">Charts &amp; Maps</span>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Charts/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -1146,7 +1146,7 @@
     <!-- Misc -->
     <li class="menu-divider mb-1"></li>
     <li class="menu-header small fw-semibold">
-      <span class="menu-header-text">Misc</span>
+      <span class="menu-header-text" data-i18n="Misc">Misc</span>
     </li>
     <li class="menu-item">
       <a href='@TempData.Peek("support")' target="_blank" class="menu-link">

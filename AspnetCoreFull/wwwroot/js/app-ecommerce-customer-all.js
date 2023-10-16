@@ -375,6 +375,7 @@ $(function () {
     });
     $('.dataTables_length').addClass('ms-2 mt-0 mt-md-3 me-2');
     $('.dt-action-buttons').addClass('pt-0');
+    $('.dt-buttons').addClass('d-flex flex-wrap');
   }
 
   // Delete Record
