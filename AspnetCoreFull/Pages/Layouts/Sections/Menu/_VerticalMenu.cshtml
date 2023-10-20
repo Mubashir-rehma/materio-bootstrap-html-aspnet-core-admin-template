@@ -8,7 +8,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 
   @* ! Hide app brand if navbar-full *@
-  <div class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
+  <div
+    class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
     <a asp-page="/Index" class="app-brand-link">
       <span class="app-brand-logo demo bg-primary">
         @await Html.PartialAsync("../_Partials/_Macros")
@@ -23,7 +24,8 @@
   </div>
 
   @* ! Hide menu divider if navbar-full *@
-  <div class='menu-divider mt-0 @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
+  <div
+    class='menu-divider mt-0 @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
   </div>
 
   <div class="menu-inner-shadow"></div>
@@ -163,6 +165,12 @@
       </ul>
     </li>
 
+    <li class='menu-item@(currentPage == "/CRUD/userCRUD" ? " active" : "")'>
+      <a asp-page="/CRUD/userCRUD" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-data"></i>
+        <div data-i18n="Users (CRUD)">Users (CRUD)</div>
+      </a>
+    </li>
 
     <!-- Apps & Pages -->
     <li class="menu-divider mb-1"></li>
@@ -253,22 +261,26 @@
                 <div data-i18n='Customer All'>Customer All</div>
               </a>
             </li>
-            <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active open" : "")'>
+            <li
+              class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active open" : "")'>
               <a href='javascript:void(0);' class='menu-link menu-toggle'>
                 <div data-i18n='Customer Details'>Customer Details</div>
               </a>
               <ul class='menu-sub'>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview' class='menu-link'>
                     <div data-i18n='Overview'>Overview</div>
                   </a>
                 </li>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity' class='menu-link'>
                     <div data-i18n='Security'>Security</div>
                   </a>
                 </li>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling' class='menu-link'>
                     <div data-i18n='Billing & Address'>Billing & Address</div>
                   </a>
