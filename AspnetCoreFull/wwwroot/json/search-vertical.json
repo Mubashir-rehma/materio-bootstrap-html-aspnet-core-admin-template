@@ -56,6 +56,11 @@
       "url": "/LayoutExamples/Blank"
     },
     {
+      "name": "Users (CRUD)",
+      "icon": "bx-data",
+      "url": "/CRUD/userCRUD"
+    },
+    {
       "name": "Email",
       "icon": "bx-envelope",
       "url": "/Apps/Email"

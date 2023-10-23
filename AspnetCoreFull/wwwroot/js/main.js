@@ -163,7 +163,7 @@ if (document.getElementById('layout-menu')) {
     i18next
       .use(i18NextHttpBackend)
       .init({
-        lng: window.templateCustomizer.settings.lang || 'en',
+        lng: window.templateCustomizer ? window.templateCustomizer.settings.lang : 'en',
         debug: false,
         fallbackLng: 'en',
         backend: {
@@ -200,18 +200,21 @@ if (document.getElementById('layout-menu')) {
         this.classList.add('active');
 
         i18next.changeLanguage(currentLanguage, (err, t) => {
-          window.templateCustomizer.setLang(currentLanguage);
-          if (textDirection == 'rtl') {
-            if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') !== 'true')
-              window.templateCustomizer.setRtl(true);
-          } else {
-            if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') === 'true')
-              window.templateCustomizer.setRtl(false);
-          }
+          window.templateCustomizer ? window.templateCustomizer.setLang(currentLanguage) : '';
+          directionChange(textDirection);
           if (err) return console.log('something went wrong loading', err);
           localize();
         });
       });
+    }
+    function directionChange(textDirection) {
+      if (textDirection === 'rtl') {
+        if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') !== 'true')
+          window.templateCustomizer.setRtl(true);
+      } else {
+        if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') === 'true')
+          window.templateCustomizer.setRtl(false);
+      }
     }
   }
 
