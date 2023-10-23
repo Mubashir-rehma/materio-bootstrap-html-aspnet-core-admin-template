@@ -28,7 +28,7 @@
     {
       "name": "Users (CRUD)",
       "icon": "bx-data",
-      "url": "/CRUD/userCRUD"
+      "url": "/CRUD/UserCRUD"
     },
     {
       "name": "Email",

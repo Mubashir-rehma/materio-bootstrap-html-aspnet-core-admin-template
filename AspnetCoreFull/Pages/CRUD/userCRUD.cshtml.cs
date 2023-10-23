@@ -10,15 +10,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AspnetCoreFull.Pages.CRUD
 {
-  // The userCRUDModel class is a Razor PageModel class that defines the logic for all CRUD operations
-  public class userCRUDModel : PageModel
+  // The UserCRUDModel class is a Razor PageModel class that defines the logic for all CRUD operations
+  public class UserCRUDModel : PageModel
   {
     // The UserContext class is a DbContext class that defines the database context
     private readonly UserContext _context;
 
-    // The userCRUDModel constructor accepts a UserContext object as a parameter
+    // The UserCRUDModel constructor accepts a UserContext object as a parameter
 
-    public userCRUDModel(UserContext context)
+    public UserCRUDModel(UserContext context)
     {
       // Assign the UserContext object to the _context field
       _context = context;
