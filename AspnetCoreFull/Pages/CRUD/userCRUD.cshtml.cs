@@ -60,7 +60,7 @@ namespace AspnetCoreFull.Pages.CRUD
       AvailablePlansSelectList = new SelectList(GetAvailablePlans());
 
       // Calculate the count of duplicate user names
-      DuplicateUserCount = Users.GroupBy(u => u.UserName).Where(g => g.Count() > 1).Count();
+      DuplicateUserCount = Users.GroupBy(u => u.UserName).Sum(g => g.Count() - 1);
 
       // Get the total user count
       TotalUserCount = Users.Count;
