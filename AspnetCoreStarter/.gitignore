@@ -130,7 +130,7 @@ AspnetCoreStarter.csproj
 AspnetCoreStarter.sln
 appsettings.*
 Gulpfile.js
-Program.cs
+# Program.cs
 package.json
 webpack.config.js
 yarn.lock
