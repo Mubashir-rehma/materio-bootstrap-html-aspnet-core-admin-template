@@ -5,24 +5,24 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/bootstrap-select/bootstrap-select.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/typeahead-js/typeahead.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/bootstrap-select/bootstrap-select.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/typeahead-js/typeahead.dist.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/tagify/tagify.dist.js"></script>
-<script src="~/vendor/libs/bootstrap-select/bootstrap-select.dist.js"></script>
-<script src="~/vendor/libs/typeahead-js/typeahead.dist.js"></script>
-<script src="~/vendor/libs/bloodhound/bloodhound.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/tagify/tagify.dist.js"></script>
+  <script src="~/vendor/libs/bootstrap-select/bootstrap-select.dist.js"></script>
+  <script src="~/vendor/libs/typeahead-js/typeahead.dist.js"></script>
+  <script src="~/vendor/libs/bloodhound/bloodhound.dist.js"></script>
 }
 
 @section PageScripts {
-<script src="~/js/forms-selects.dist.js"></script>
-<script src="~/js/forms-tagify.dist.js"></script>
-<script src="~/js/forms-typeahead.dist.js"></script>
+  <script src="~/js/forms-selects.dist.js"></script>
+  <script src="~/js/forms-tagify.dist.js"></script>
+  <script src="~/js/forms-typeahead.dist.js"></script>
 }
 @* ************** Content ************** *@
 
@@ -313,7 +313,8 @@
           <!-- Readonly Mode -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <input id="TagifyReadonly" class="form-control readonlyMix" readonly value='[
+              <input id="TagifyReadonly" class="form-control readonlyMix" readonly
+                value='[
               {"value" : "tag1", "readonly" : true, "title" : "Non-editable Read-only tag"}, {"value" : "tag2","title" : "Editable read-only tag"},{"value" : "tag3","readonly" : true,"title" : "Another readonly tag"}]' />
               <label for="TagifyReadonly">Readonly</label>
             </div>
@@ -321,21 +322,24 @@
           <!-- Custom Suggestions: Inline -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <input id="TagifyCustomInlineSuggestion" name="TagifyCustomInlineSuggestion" class="form-control h-auto" placeholder="select technologies" value="css, html, javascript">
+              <input id="TagifyCustomInlineSuggestion" name="TagifyCustomInlineSuggestion" class="form-control h-auto"
+                placeholder="select technologies" value="css, html, javascript">
               <label for="TagifyCustomInlineSuggestion">Custom Inline Suggestions</label>
             </div>
           </div>
           <!-- Custom Suggestions: List -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <input id="TagifyCustomListSuggestion" name="TagifyCustomListSuggestion" class="form-control h-auto" placeholder="select technologies" value="css, html, php">
+              <input id="TagifyCustomListSuggestion" name="TagifyCustomListSuggestion" class="form-control h-auto"
+                placeholder="select technologies" value="css, html, php">
               <label for="TagifyCustomListSuggestion">Custom List Suggestions</label>
             </div>
           </div>
           <!-- Users List -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <input id="TagifyUserList" name="TagifyUserList" class="form-control h-auto" value="abatisse2&#64;nih.gov, Justinian Hattersley" />
+              <input id="TagifyUserList" name="TagifyUserList" class="form-control h-auto"
+                value="abatisse2&#64;nih.gov, Justinian Hattersley" />
               <label for="TagifyUserList">Users List</label>
             </div>
           </div>
@@ -343,7 +347,8 @@
           <div class="col-md-6 mb-4">
             <label for="TagifyEmailList" class="form-label d-block">Email List</label>
             <input id="TagifyEmailList" class="tagify-email-list" value="some56.name&#64;website.com">
-            <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary mb-1"> <span class="tf-icons mdi mdi-plus"></span> </button>
+            <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary mb-1"> <span
+                class="tf-icons mdi mdi-plus"></span> </button>
           </div>
         </div>
       </div>
@@ -390,7 +395,8 @@
           <!-- Multiple -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerMultiple" class="selectpicker w-100" data-style="btn-default" multiple data-icon-base="mdi" data-tick-icon="mdi-check text-white">
+              <select id="selectpickerMultiple" class="selectpicker w-100" data-style="btn-default" multiple
+                data-icon-base="mdi" data-tick-icon="mdi-check text-white">
                 <option>Rocky</option>
                 <option>Pulp Fiction</option>
                 <option>The Godfather</option>
@@ -401,7 +407,8 @@
           <!-- Live Search -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerLiveSearch" class="selectpicker w-100" data-style="btn-default" data-live-search="true">
+              <select id="selectpickerLiveSearch" class="selectpicker w-100" data-style="btn-default"
+                data-live-search="true">
                 <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
                 <option data-tokens="mustard">Burger, Shake and a Smile</option>
                 <option data-tokens="frosting">Sugar, Spice and all things nice</option>
@@ -412,7 +419,8 @@
           <!-- Icons -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="mdi" data-tick-icon="mdi-check" data-style="btn-default">
+              <select class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="mdi"
+                data-tick-icon="mdi-check" data-style="btn-default">
                 <option data-icon="mdi mdi-instagram">Instagram</option>
                 <option data-icon="mdi mdi-pinterest">Pinterest</option>
                 <option data-icon="mdi mdi-twitch">Twitch</option>
@@ -423,7 +431,8 @@
           <!-- Subtext -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerSubtext" class="selectpicker w-100" data-style="btn-default" data-show-subtext="true">
+              <select id="selectpickerSubtext" class="selectpicker w-100" data-style="btn-default"
+                data-show-subtext="true">
                 <option data-subtext="Framework">React</option>
                 <option data-subtext="Styles">Sass</option>
                 <option data-subtext="Markup">HTML</option>
@@ -434,7 +443,8 @@
           <!-- Selection Limit -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerSelection" class="selectpicker w-100" data-style="btn-default" multiple data-max-options="2">
+              <select id="selectpickerSelection" class="selectpicker w-100" data-style="btn-default" multiple
+                data-max-options="2">
                 <option>Rocky</option>
                 <option>Pulp Fiction</option>
                 <option>The Godfather</option>
@@ -445,7 +455,8 @@
           <!-- Select / Deselect All -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerSelectDeselect" class="selectpicker w-100" data-style="btn-default" multiple data-actions-box="true">
+              <select id="selectpickerSelectDeselect" class="selectpicker w-100" data-style="btn-default" multiple
+                data-actions-box="true">
                 <option>Rocky</option>
                 <option>Pulp Fiction</option>
                 <option>The Godfather</option>
@@ -468,7 +479,8 @@
           <!-- Header -->
           <div class="col-md-6 mb-4">
             <div class="form-floating form-floating-outline">
-              <select id="selectpickerHeader" class="selectpicker w-100" data-style="btn-default" data-header="Select a Movie">
+              <select id="selectpickerHeader" class="selectpicker w-100" data-style="btn-default"
+                data-header="Select a Movie">
                 <option>Rocky</option>
                 <option>Pulp Fiction</option>
                 <option>The Godfather</option>
@@ -513,32 +525,38 @@
           <!-- Basic -->
           <div class="col-md-6 mb-4">
             <label for="TypeaheadBasic" class="form-label">Basic</label>
-            <input id="TypeaheadBasic" class="form-control typeahead" type="text" autocomplete="off" placeholder="Enter states from USA" />
+            <input id="TypeaheadBasic" class="form-control typeahead" type="text" autocomplete="off"
+              placeholder="Enter states from USA" />
           </div>
           <!-- Bloodhound -->
           <div class="col-md-6 mb-4">
             <label for="TypeaheadBloodHound" class="form-label">BloodHound (Suggestion Engine)</label>
-            <input id="TypeaheadBloodHound" class="form-control typeahead-bloodhound" type="text" autocomplete="off" placeholder="Enter states from USA" />
+            <input id="TypeaheadBloodHound" class="form-control typeahead-bloodhound" type="text" autocomplete="off"
+              placeholder="Enter states from USA" />
           </div>
           <!-- Prefetch -->
           <div class="col-md-6 mb-4">
             <label for="TypeaheadPrefetch" class="form-label">Prefetch</label>
-            <input id="TypeaheadPrefetch" class="form-control typeahead-prefetch" type="text" autocomplete="off" placeholder="Enter states from USA" />
+            <input id="TypeaheadPrefetch" class="form-control typeahead-prefetch" type="text" autocomplete="off"
+              placeholder="Enter states from USA" />
           </div>
           <!-- Default Suggestions -->
           <div class="col-md-6 mb-4">
             <label for="TypeaheadSuggestions" class="form-label">Default Suggestions</label>
-            <input id="TypeaheadSuggestions" class="form-control typeahead-default-suggestions" type="text" autocomplete="off" />
+            <input id="TypeaheadSuggestions" class="form-control typeahead-default-suggestions" type="text"
+              autocomplete="off" />
           </div>
           <!-- Custom Template -->
           <div class="col-md-6 mb-4 mb-md-0">
             <label for="TypeaheadCustom" class="form-label">Custom Template</label>
-            <input id="TypeaheadCustom" class="form-control typeahead-custom-template" type="text" autocomplete="off" placeholder="Search For Oscar Winner" />
+            <input id="TypeaheadCustom" class="form-control typeahead-custom-template" type="text" autocomplete="off"
+              placeholder="Search For Oscar Winner" />
           </div>
           <!-- Multiple Datasets -->
           <div class="col-md-6">
             <label for="TypeaheadMultipleDataset" class="form-label">Multiple Datasets</label>
-            <input id="TypeaheadMultipleDataset" class="form-control typeahead-multi-datasets" type="text" autocomplete="off" />
+            <input id="TypeaheadMultipleDataset" class="form-control typeahead-multi-datasets" type="text"
+              autocomplete="off" />
           </div>
         </div>
       </div>

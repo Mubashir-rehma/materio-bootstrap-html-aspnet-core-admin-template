@@ -4,27 +4,27 @@
   ViewData["Title"] = "Customer Details Address & Billing - eCommerce";
 }
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+  <link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 @section VendorScripts {
-<script src="~/vendor/libs/moment/moment.dist.js"></script>
-<script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
+  <script src="~/vendor/libs/moment/moment.dist.js"></script>
+  <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 @section PageScripts {
-<script src="~/js/modal-edit-user.dist.js"></script>
-<script src="~/js/modal-edit-cc.dist.js"></script>
-<script src="~/js/modal-add-new-cc.dist.js"></script>
-<script src="~/js/modal-add-new-address.dist.js"></script>
-<script src="~/js/app-ecommerce-customer-detail.dist.js"></script>
+  <script src="~/js/modal-edit-user.dist.js"></script>
+  <script src="~/js/modal-edit-cc.dist.js"></script>
+  <script src="~/js/modal-add-new-cc.dist.js"></script>
+  <script src="~/js/modal-add-new-address.dist.js"></script>
+  <script src="~/js/app-ecommerce-customer-detail.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -32,7 +32,8 @@
   <span class="text-muted fw-light">eCommerce / Customer Details /</span> Address & Billing
 </h4>
 
-<div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between mb-4 text-center text-sm-start gap-2">
+<div
+  class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between mb-4 text-center text-sm-start gap-2">
   <div class="mb-2 mb-sm-0">
     <h4 class="mb-1">
       Customer ID #634759
@@ -53,7 +54,8 @@
       <div class="card-body">
         <div class="customer-avatar-section">
           <div class="d-flex align-items-center flex-column">
-            <img class="img-fluid rounded mb-3 mt-4" src="~/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+            <img class="img-fluid rounded mb-3 mt-4" src="~/img/avatars/1.png" height="120" width="120"
+              alt="User avatar" />
             <div class="customer-info text-center mb-4">
               <h5 class="mb-1">Lorine Hischke</h5>
               <span>Customer ID #634759</span>
@@ -109,7 +111,8 @@
             </li>
           </ul>
           <div class="d-flex justify-content-center">
-            <a href="javascript:;" class="btn btn-primary me-3" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            <a href="javascript:;" class="btn btn-primary me-3" data-bs-target="#editUser" data-bs-toggle="modal">Edit
+              Details</a>
           </div>
         </div>
       </div>
@@ -120,13 +123,16 @@
     <div class="card mb-4 bg-primary">
       <div class="card-body">
         <div class="row justify-content-between mb-3">
-          <div class="col-md-12 col-lg-7 col-xl-12 col-xxl-7 text-center text-lg-start text-xl-center text-xxl-start order-1  order-lg-0 order-xl-1 order-xxl-0">
+          <div
+            class="col-md-12 col-lg-7 col-xl-12 col-xxl-7 text-center text-lg-start text-xl-center text-xxl-start order-1  order-lg-0 order-xl-1 order-xxl-0">
             <h4 class="card-title text-white text-nowrap">Upgrade to premium</h4>
             <p class="card-text text-white">Upgrade customer to premium membership to access pro features.</p>
           </div>
-          <span class="col-md-12 col-lg-5 col-xl-12 col-xxl-5 text-center mx-auto mx-md-0 mb-2"><img src="~/img/illustrations/rocket.png" class="w-px-75 m-2" alt="3dRocket"></span>
+          <span class="col-md-12 col-lg-5 col-xl-12 col-xxl-5 text-center mx-auto mx-md-0 mb-2"><img
+              src="~/img/illustrations/rocket.png" class="w-px-75 m-2" alt="3dRocket"></span>
         </div>
-        <button class="btn btn-white text-primary w-100 fw-medium shadow-sm" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade to premium</button>
+        <button class="btn btn-white text-primary w-100 fw-medium shadow-sm" data-bs-target="#upgradePlanModal"
+          data-bs-toggle="modal">Upgrade to premium</button>
       </div>
     </div>
 
@@ -139,10 +145,14 @@
   <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
     <!-- Customer Pills -->
     <ul class="nav nav-pills flex-column flex-md-row mb-4">
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"><i class="mdi mdi-account-outline mdi-20px me-1"></i>Overview</a></li>
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i>Security</a></li>
-      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="mdi mdi-bookmark-outline mdi-20px me-1"></i>Address & Billing</a></li>
-      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications"><i class="mdi mdi-bell-outline mdi-20px me-1"></i>Notifications</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview"><i
+            class="mdi mdi-account-outline mdi-20px me-1"></i>Overview</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity"><i
+            class="mdi mdi-lock-open-outline mdi-20px me-1"></i>Security</a></li>
+      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i
+            class="mdi mdi-bookmark-outline mdi-20px me-1"></i>Address & Billing</a></li>
+      <li class="nav-item"><a class="nav-link" href="/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications"><i
+            class="mdi mdi-bell-outline mdi-20px me-1"></i>Notifications</a></li>
     </ul>
     <!--/ Customer Pills -->
 
@@ -152,15 +162,19 @@
       <div class="card-header align-items-center flex-wrap gap-2">
         <h5 class="card-action-title mb-0">Address Book</h5>
         <div class="card-action-element">
-          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#addNewAddress">Add new address</button>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+            data-bs-target="#addNewAddress">Add new address</button>
         </div>
       </div>
       <div class="card-body">
         <div class="accordion accordion-arrow-left" id="ecommerceBillingAccordionAddress">
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingHome">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingAddressHome" aria-expanded="false" aria-controls="headingHome" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingHome">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingAddressHome" aria-expanded="false" aria-controls="headingHome"
+                role="button">
                 <span>
                   <span class="d-flex gap-2 align-items-baseline">
                     <span class="h6 mb-0">Home</span>
@@ -172,13 +186,15 @@
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
                 <a href="javascript:void(0);"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as default address</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingAddressHome" class="accordion-collapse collapse" data-bs-parent="#ecommerceBillingAccordionAddress">
+            <div id="ecommerceBillingAddressHome" class="accordion-collapse collapse"
+              data-bs-parent="#ecommerceBillingAccordionAddress">
               <div class="accordion-body ps-4 ms-4">
                 <h6 class="mb-2">Violet Mendoza</h6>
                 <p class="mb-1">23 Shatinon Mekalan,</p>
@@ -189,8 +205,11 @@
           </div>
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingOffice">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingAddressOffice" aria-expanded="false" aria-controls="headingOffice" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingOffice">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingAddressOffice" aria-expanded="false" aria-controls="headingOffice"
+                role="button">
                 <span class="d-flex flex-column">
                   <span class="h6 mb-0">Office</span>
                   <span class="mb-0 text-body">45 Roker Terrace</span>
@@ -199,13 +218,15 @@
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
                 <a href="javascript:void(0);"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as default address</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingAddressOffice" class="accordion-collapse collapse" aria-labelledby="headingOffice" data-bs-parent="#ecommerceBillingAccordionAddress">
+            <div id="ecommerceBillingAddressOffice" class="accordion-collapse collapse" aria-labelledby="headingOffice"
+              data-bs-parent="#ecommerceBillingAccordionAddress">
               <div class="accordion-body ps-4 ms-4">
                 <h6 class="mb-2">Violet Mendoza</h6>
                 <p class="mb-1">45 Roker Terrace,</p>
@@ -217,8 +238,11 @@
           </div>
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingFamily">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingAddressFamily" aria-expanded="false" aria-controls="headingFamily" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingFamily">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingAddressFamily" aria-expanded="false" aria-controls="headingFamily"
+                role="button">
                 <span class="d-flex flex-column">
                   <span class="h6 mb-0">Family</span>
                   <span class="mb-0 text-body">512 Water Plant</span>
@@ -227,13 +251,15 @@
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
                 <a href="javascript:void(0);"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as default address</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingAddressFamily" class="accordion-collapse collapse" aria-labelledby="headingFamily" data-bs-parent="#ecommerceBillingAccordionAddress">
+            <div id="ecommerceBillingAddressFamily" class="accordion-collapse collapse" aria-labelledby="headingFamily"
+              data-bs-parent="#ecommerceBillingAccordionAddress">
               <div class="accordion-body ps-4 ms-4">
                 <h6 class="mb-2">Violet Mendoza</h6>
                 <p class="mb-1">512 Water Plant,</p>
@@ -253,18 +279,24 @@
       <div class="card-header align-items-center flex-wrap gap-2">
         <h5 class="card-action-title mb-0">Payment Methods</h5>
         <div class="card-action-element">
-          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#addNewCCModal">Add payment methods</button>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+            data-bs-target="#addNewCCModal">Add payment methods</button>
         </div>
       </div>
       <div class="card-body">
         <div class="accordion accordion-arrow-left" id="ecommerceBillingAccordionPayment">
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingPaymentMaster">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingPaymentMaster" aria-expanded="false" aria-controls="headingPaymentMaster" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingPaymentMaster">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingPaymentMaster" aria-expanded="false"
+                aria-controls="headingPaymentMaster" role="button">
                 <span class="accordion-button-information d-flex align-items-center gap-3">
                   <span class="accordion-button-image">
-                    <img src="~/img/icons/payments/master-light.png" class="img-fluid w-px-50 h-px-30" alt="master-card" data-app-light-img="icons/payments/master-light.png" data-app-dark-img="icons/payments/master-dark.png" />
+                    <img src="~/img/icons/payments/master-light.png" class="img-fluid w-px-50 h-px-30" alt="master-card"
+                      data-app-light-img="icons/payments/master-light.png"
+                      data-app-dark-img="icons/payments/master-dark.png" />
                   </span>
                   <span class="d-flex flex-column">
                     <span class="h6 mb-0">Mastercard</span>
@@ -273,16 +305,20 @@
                 </span>
               </a>
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
-                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i
+                    class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as Primary</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingPaymentMaster" class="accordion-collapse collapse" data-bs-parent="#ecommerceBillingAccordionPayment">
-              <div class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
+            <div id="ecommerceBillingPaymentMaster" class="accordion-collapse collapse"
+              data-bs-parent="#ecommerceBillingAccordionPayment">
+              <div
+                class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
                 <table class="table table-sm table-borderless text-nowrap">
                   <tr>
                     <td class="w-50">Name</td>
@@ -328,7 +364,8 @@
                   </tr>
                   <tr>
                     <td>CVC check</td>
-                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i class='mdi mdi-check'></i></span></td>
+                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i
+                          class='mdi mdi-check'></i></span></td>
                   </tr>
                 </table>
               </div>
@@ -336,11 +373,16 @@
           </div>
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingPaymentExpress">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingPaymentExpress" aria-expanded="false" aria-controls="headingPaymentExpress" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingPaymentExpress">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingPaymentExpress" aria-expanded="false"
+                aria-controls="headingPaymentExpress" role="button">
                 <span class="accordion-button-information d-flex align-items-center gap-3">
                   <span class="accordion-button-image">
-                    <img src="~/img/icons/payments/ae-light.png" class="img-fluid w-px-50 h-px-30" alt="american-express-card" data-app-light-img="icons/payments/ae-light.png" data-app-dark-img="icons/payments/ae-dark.png" />
+                    <img src="~/img/icons/payments/ae-light.png" class="img-fluid w-px-50 h-px-30"
+                      alt="american-express-card" data-app-light-img="icons/payments/ae-light.png"
+                      data-app-dark-img="icons/payments/ae-dark.png" />
                   </span>
                   <span>
                     <span class="d-flex gap-2 flex-wrap align-items-baseline">
@@ -352,16 +394,20 @@
                 </span>
               </a>
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
-                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i
+                    class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as Primary</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingPaymentExpress" class="accordion-collapse collapse" aria-labelledby="headingPaymentExpress" data-bs-parent="#ecommerceBillingAccordionPayment">
-              <div class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
+            <div id="ecommerceBillingPaymentExpress" class="accordion-collapse collapse"
+              aria-labelledby="headingPaymentExpress" data-bs-parent="#ecommerceBillingAccordionPayment">
+              <div
+                class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
                 <table class="table table-sm table-borderless text-nowrap">
                   <tr>
                     <td class="w-50">Name</td>
@@ -407,7 +453,8 @@
                   </tr>
                   <tr>
                     <td>CVC check</td>
-                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i class='mdi mdi-check'></i></span></td>
+                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i
+                          class='mdi mdi-check'></i></span></td>
                   </tr>
                 </table>
               </div>
@@ -416,11 +463,16 @@
           </div>
 
           <div class="accordion-item">
-            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap" id="headingPaymentVisa">
-              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse" data-bs-target="#ecommerceBillingPaymentVisa" aria-expanded="false" aria-controls="headingPaymentVisa" role="button">
+            <div class="accordion-header d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap"
+              id="headingPaymentVisa">
+              <a class="accordion-button collapsed px-2" data-bs-toggle="collapse"
+                data-bs-target="#ecommerceBillingPaymentVisa" aria-expanded="false" aria-controls="headingPaymentVisa"
+                role="button">
                 <span class="accordion-button-information d-flex align-items-center gap-3">
                   <span class="accordion-button-image">
-                    <img src="~/img/icons/payments/visa-light.png" class="img-fluid w-px-50 h-px-30" alt="visa-card" data-app-light-img="icons/payments/visa-light.png" data-app-dark-img="icons/payments/visa-dark.png" />
+                    <img src="~/img/icons/payments/visa-light.png" class="img-fluid w-px-50 h-px-30" alt="visa-card"
+                      data-app-light-img="icons/payments/visa-light.png"
+                      data-app-dark-img="icons/payments/visa-dark.png" />
                   </span>
                   <span class="d-flex flex-column">
                     <span class="h6 mb-0">Visa</span>
@@ -429,16 +481,20 @@
                 </span>
               </a>
               <div class="d-flex gap-3 p-4 p-sm-2 py-sm-0 pt-0 ms-3 ms-sm-0">
-                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editCCModal"><i
+                    class="mdi mdi-pencil-outline mdi-20px text-secondary"></i></a>
                 <a href="javascript:void(0);"><i class="mdi mdi-delete-outline mdi-20px text-secondary"></i></a>
-                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
+                <button class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false" role="button"><i
+                    class="mdi mdi-dots-vertical mdi-20px text-secondary"></i></button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="javascript:void(0);">Set as Primary</a></li>
                 </ul>
               </div>
             </div>
-            <div id="ecommerceBillingPaymentVisa" class="accordion-collapse collapse" aria-labelledby="headingPaymentVisa" data-bs-parent="#ecommerceBillingAccordionPayment">
-              <div class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
+            <div id="ecommerceBillingPaymentVisa" class="accordion-collapse collapse"
+              aria-labelledby="headingPaymentVisa" data-bs-parent="#ecommerceBillingAccordionPayment">
+              <div
+                class="accordion-body d-flex align-items-baseline flex-wrap flex-xl-nowrap flex-sm-nowrap flex-md-wrap ms-4 ps-3">
                 <table class="table table-sm table-borderless text-nowrap">
                   <tr>
                     <td class="w-50">Name</td>
@@ -484,7 +540,8 @@
                   </tr>
                   <tr>
                     <td>CVC check</td>
-                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i class='mdi mdi-check'></i></span></td>
+                    <td class="h6">Passed <span class="badge bg-label-success rounded-circle p-0"><i
+                          class='mdi mdi-check'></i></span></td>
                   </tr>
                 </table>
               </div>

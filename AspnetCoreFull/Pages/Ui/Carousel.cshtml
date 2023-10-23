@@ -29,11 +29,11 @@
     <h5 class="my-4">Bootstrap carousel</h5>
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
-      </ol>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="~/img/elements/13.jpg" alt="First slide" />
@@ -71,12 +71,12 @@
   <div class="col-md">
     <h5 class="my-4">Bootstrap crossfade carousel (dark)</h5>
 
-    <div id="carouselExample-cf" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExample-cf" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExample-cf" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExample-cf" data-bs-slide-to="2"></li>
-      </ol>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="~/img/elements/18.jpg" alt="First slide" />
@@ -100,11 +100,11 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExample-cf" role="button" data-bs-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExample-cf" role="button" data-bs-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </a>
@@ -121,11 +121,11 @@
     <h6 class="text-muted mt-3">Default</h6>
     <div class="swiper text-white" id="swiper-default">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 5</div>
       </div>
     </div>
   </div>
@@ -134,11 +134,11 @@
     <h6 class="text-muted mt-3">With arrows</h6>
     <div class="swiper text-white" id="swiper-with-arrows">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 5</div>
       </div>
       <div class="swiper-button-next swiper-button-white custom-icon">
       </div>
@@ -151,11 +151,11 @@
     <h6 class="text-muted mt-3">With pagination</h6>
     <div class="swiper text-white" id="swiper-with-pagination">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -166,11 +166,11 @@
     <h6 class="text-muted mt-3">With progress</h6>
     <div class="swiper text-white" id="swiper-with-progress">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next swiper-button-white custom-icon"></div>
@@ -183,11 +183,11 @@
     <h6 class="text-muted mt-3">With scrollbar</h6>
     <div class="swiper text-white" id="swiper-with-scrollbar">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 5</div>
       </div>
       <div class="swiper-scrollbar"></div>
     </div>
@@ -198,11 +198,11 @@
     <h6 class="text-muted mt-3">Vertical</h6>
     <div class="swiper text-white" id="swiper-vertical">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/11.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/1.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/5.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/12.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/11.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/1.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/5.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/12.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -213,11 +213,11 @@
     <h6 class="text-muted mt-3">Multiple slides</h6>
     <div class="swiper text-white" id="swiper-multiple-slides">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/13.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/19.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/18.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/20.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/13.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/19.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/18.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/20.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -228,11 +228,11 @@
     <h6 class="text-muted mt-3">3D coverflow effect</h6>
     <div class="swiper text-white" id="swiper-3d-coverflow-effect">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/20.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/13.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/19.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/18.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/20.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/13.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/19.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/18.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -243,11 +243,11 @@
     <h6 class="text-muted mt-3">3D cube effect</h6>
     <div class="swiper text-white" id="swiper-3d-cube-effect">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/18.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/20.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/13.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/19.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/18.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/20.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/13.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/19.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -258,11 +258,11 @@
     <h6 class="text-muted mt-3">3D flip effect</h6>
     <div class="swiper text-white" id="swiper-3d-flip-effect">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(../img/elements/19.jpg)">Slide 1</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/18.jpg)">Slide 2</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/20.jpg)">Slide 3</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/7.jpg)">Slide 4</div>
-        <div class="swiper-slide" style="background-image:url(../img/elements/13.jpg)">Slide 5</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/19.jpg)">Slide 1</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/18.jpg)">Slide 2</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/20.jpg)">Slide 3</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/7.jpg)">Slide 4</div>
+        <div class="swiper-slide" style="background-image:url(/img/elements/13.jpg)">Slide 5</div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next swiper-button-black custom-icon">
@@ -278,11 +278,11 @@
     <div id="swiper-gallery">
       <div class="swiper gallery-top">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/6.jpg)">Slide 1</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/5.jpg)">Slide 2</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/7.jpg)">Slide 3</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/10.jpg)">Slide 4</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/16.jpg)">Slide 5</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/6.jpg)">Slide 1</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/5.jpg)">Slide 2</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/7.jpg)">Slide 3</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/10.jpg)">Slide 4</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/16.jpg)">Slide 5</div>
         </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next swiper-button-white"></div>
@@ -290,11 +290,11 @@
       </div>
       <div class="swiper gallery-thumbs">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/6.jpg)">Slide 1</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/5.jpg)">Slide 2</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/7.jpg)">Slide 3</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/10.jpg)">Slide 4</div>
-          <div class="swiper-slide" style="background-image:url(../img/backgrounds/16.jpg)">Slide 5</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/6.jpg)">Slide 1</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/5.jpg)">Slide 2</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/7.jpg)">Slide 3</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/10.jpg)">Slide 4</div>
+          <div class="swiper-slide" style="background-image:url(/img/backgrounds/16.jpg)">Slide 5</div>
         </div>
       </div>
     </div>

@@ -8,7 +8,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 
   @* ! Hide app brand if navbar-full *@
-  <div class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
+  <div
+    class='app-brand demo @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
     <a asp-page="/Index" class="app-brand-link">
       <span class="app-brand-logo demo">
         @await Html.PartialAsync("../_Partials/_Macros")
@@ -16,13 +17,14 @@
       <span class="app-brand-text demo menu-text fw-semibold ms-2">@TempData.Peek("appName")</span>
     </a>
 
-   <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
       <i class="mdi menu-toggle-icon d-xl-block align-middle mdi-20px"></i>
     </a>
   </div>
 
   @* ! Hide menu divider if navbar-full *@
-  <div class='menu-divider mt-0 @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
+  <div
+    class='menu-divider mt-0 @((@ViewData["navbarFull"] != null && Convert.ToBoolean(@ViewData["navbarFull"])) ? "d-xl-none" : "")'>
   </div>
 
   <div class="menu-inner-shadow"></div>
@@ -42,7 +44,7 @@
             <div data-i18n="CRM">CRM</div>
           </a>
         </li>
-       <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
+        <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
           <a asp-page="/Dashboards/Analytics" class="menu-link">
             <div data-i18n="Analytics">Analytics</div>
           </a>
@@ -157,10 +159,17 @@
       </ul>
     </li>
 
+    <!-- User (CRUD) -->
+    <li class='menu-item@(currentPage == "/CRUD/userCRUD" ? " active" : "")'>
+      <a asp-page="/CRUD/userCRUD" class="menu-link">
+        <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
+        <div data-i18n="Users (CRUD)">Users (CRUD)</div>
+      </a>
+    </li>
 
     <!-- Apps & Pages -->
     <li class="menu-header fw-medium mt-4">
-      <span class="menu-header-text">Apps &amp; Pages</span>
+      <span class="menu-header-text data-i18n=" Apps & Pages">Apps &amp; Pages</span>
     </li>
     <li class='menu-item@(currentPage == "/Apps/Email" ? " active" : "")'>
       <a asp-page="/Apps/Email" class="menu-link">
@@ -246,22 +255,26 @@
                 <div data-i18n='Customer All'>Customer All</div>
               </a>
             </li>
-            <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active open" : "")'>
+            <li
+              class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active open" : "")'>
               <a href='javascript:void(0);' class='menu-link menu-toggle'>
                 <div data-i18n='Customer Details'>Customer Details</div>
               </a>
               <ul class='menu-sub'>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview' class='menu-link'>
                     <div data-i18n='Overview'>Overview</div>
                   </a>
                 </li>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity' class='menu-link'>
                     <div data-i18n='Security'>Security</div>
                   </a>
                 </li>
-                <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
+                <li
+                  class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
                   <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling' class='menu-link'>
                     <div data-i18n='Billing & Address'>Billing & Address</div>
                   </a>
@@ -714,7 +727,7 @@
 
     <!-- Components -->
     <li class="menu-header fw-medium mt-4">
-      <span class="menu-header-text">Components</span>
+      <span class="menu-header-text" data-i18n="Components">Components</span>
     </li>
     <!-- Cards -->
     <li class='menu-item@(currentPage.StartsWith("/Cards/") ? " active open" : "")'>
@@ -953,7 +966,7 @@
 
     <!-- Forms & Tables -->
     <li class="menu-header fw-medium mt-4">
-      <span class="menu-header-text">Forms &amp; Tables</span>
+      <span class="menu-header-text" data-i18n="Forms & Tables">Forms &amp; Tables</span>
     </li>
     <!-- Forms -->
     <li class='menu-item@(currentPage.StartsWith("/Forms/") ? " active open" : "")'>
@@ -1094,7 +1107,7 @@
 
     <!-- Charts & Maps -->
     <li class="menu-header fw-medium mt-4">
-      <span class="menu-header-text">Charts &amp; Maps</span>
+      <span class="menu-header-text" data-i18n="Charts & Maps">Charts &amp; Maps</span>
     </li>
     <li class='menu-item@(currentPage.StartsWith("/Charts/") ? " active open" : "")'>
       <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -1123,7 +1136,7 @@
 
     <!-- Misc -->
     <li class="menu-header fw-medium mt-4">
-      <span class="menu-header-text">Misc</span>
+      <span class="menu-header-text" data-i18n="Misc">Misc</span>
     </li>
     <li class="menu-item">
       <a href='@TempData.Peek("support")' target="_blank" class="menu-link">

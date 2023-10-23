@@ -5,28 +5,28 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/quill/typography.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/quill/katex.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/quill/editor.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/dropzone/dropzone.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/flatpickr/flatpickr.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/quill/typography.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/quill/katex.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/quill/editor.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/dropzone/dropzone.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/flatpickr/flatpickr.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
 }
 <!-- assets/vendor/libs/dropzone/dropzone.dist.css -->
 @section VendorScripts {
-<script src="~/vendor/libs/quill/katex.dist.js"></script>
-<script src="~/vendor/libs/quill/quill.dist.js"></script>
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/dropzone/dropzone.dist.js"></script>
-<script src="~/vendor/libs/jquery-repeater/jquery-repeater.dist.js"></script>
-<script src="~/vendor/libs/flatpickr/flatpickr.dist.js"></script>
-<script src="~/vendor/libs/tagify/tagify.dist.js"></script>
+  <script src="~/vendor/libs/quill/katex.dist.js"></script>
+  <script src="~/vendor/libs/quill/quill.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/dropzone/dropzone.dist.js"></script>
+  <script src="~/vendor/libs/jquery-repeater/jquery-repeater.dist.js"></script>
+  <script src="~/vendor/libs/flatpickr/flatpickr.dist.js"></script>
+  <script src="~/vendor/libs/tagify/tagify.dist.js"></script>
 
 }
 
 @section PageScripts {
-<script src="~/js/app-ecommerce-product-add.dist.js"></script>
+  <script src="~/js/app-ecommerce-product-add.dist.js"></script>
 
 }
 
@@ -62,7 +62,8 @@
         </div>
         <div class="card-body">
           <div class="form-floating form-floating-outline mb-4">
-            <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Product title" name="productTitle" aria-label="Product title">
+            <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Product title"
+              name="productTitle" aria-label="Product title">
             <label for="ecommerce-product-name">Name</label>
           </div>
 
@@ -70,13 +71,15 @@
           <div class="row mb-3">
             <div class="col">
               <div class="form-floating form-floating-outline">
-                <input type="number" class="form-control" id="ecommerce-product-sku" placeholder="00000" name="productSku" aria-label="Product SKU">
+                <input type="number" class="form-control" id="ecommerce-product-sku" placeholder="00000"
+                  name="productSku" aria-label="Product SKU">
                 <label for="ecommerce-product-sku">SKU</label>
               </div>
             </div>
             <div class="col">
               <div class="form-floating form-floating-outline">
-                <input type="text" class="form-control" id="ecommerce-product-barcode" placeholder="0123-4567" name="productBarcode" aria-label="Product barcode">
+                <input type="text" class="form-control" id="ecommerce-product-barcode" placeholder="0123-4567"
+                  name="productBarcode" aria-label="Product barcode">
                 <label for="ecommerce-product-name">Barcode</label>
               </div>
             </div>
@@ -138,7 +141,8 @@
                 <div class="row mb-3 mb-sm-0">
                   <div class="mb-3 col-sm-4">
                     <div class="form-floating form-floating-outline">
-                      <select id="select2Basic" class="select2 form-select" data-placeholder="Option" data-allow-clear="true">
+                      <select id="select2Basic" class="select2 form-select" data-placeholder="Option"
+                        data-allow-clear="true">
                         <option value="">Option</option>
                         <option value="size">Size</option>
                         <option value="color">Color</option>
@@ -220,7 +224,8 @@
                   <div class="row mb-3 g-3">
                     <div class="col-12 col-sm-8 col-lg-12 col-xxl-8">
                       <div class="form-floating form-floating-outline">
-                        <input type="number" class="form-control" id="ecommerce-product-stock" placeholder="Quantity" name="quantity" aria-label="Quantity">
+                        <input type="number" class="form-control" id="ecommerce-product-stock" placeholder="Quantity"
+                          name="quantity" aria-label="Quantity">
                         <label for="ecommerce-product-stock">Add to Stock</label>
                       </div>
                     </div>
@@ -250,12 +255,14 @@
                     <div class="form-check mb-5">
                       <input class="form-check-input" type="radio" name="shippingType" id="companyName" checked>
                       <label class="form-check-label" for="companyName">
-                        <span class="h6">Fulfilled by Company name &nbsp;<span class="badge rounded-pill badge-warning bg-label-warning fs-tiny py-1">RECOMMENDED</span></span>
+                        <span class="h6">Fulfilled by Company name &nbsp;<span
+                            class="badge rounded-pill badge-warning bg-label-warning fs-tiny py-1">RECOMMENDED</span></span>
                         <small class="text-muted d-block">Your product, Our responsibility.<br>
                           For a measly fee, we will handle the delivery process for you.</small>
                       </label>
                     </div>
-                    <p class="mb-0">See our <a href="javascript:void(0);">Delivery terms and conditions</a> for details</p>
+                    <p class="mb-0">See our <a href="javascript:void(0);">Delivery terms and conditions</a> for details
+                    </p>
                   </div>
                 </div>
                 <!-- Global Delivery Tab -->
@@ -341,7 +348,8 @@
                     <div class="col">
                       <h6 class="mb-2">Product ID Type</h6>
                       <div class="form-floating form-floating-outline">
-                        <select id="product-id" class="select2 form-select" data-placeholder="ISBN" data-allow-clear="true">
+                        <select id="product-id" class="select2 form-select" data-placeholder="ISBN"
+                          data-allow-clear="true">
                           <option value="">ISBN</option>
                           <option value="ISBN">ISBN</option>
                           <option value="UPC">UPC</option>
@@ -384,13 +392,15 @@
         <div class="card-body">
           <!-- Base Price -->
           <div class="form-floating form-floating-outline mb-4">
-            <input type="number" class="form-control" id="ecommerce-product-price" placeholder="Price" name="productPrice" aria-label="Product price">
+            <input type="number" class="form-control" id="ecommerce-product-price" placeholder="Price"
+              name="productPrice" aria-label="Product price">
             <label for="ecommerce-product-price">Best Price</label>
           </div>
 
           <!-- Discounted Price -->
           <div class="form-floating form-floating-outline mb-4">
-            <input type="number" class="form-control" id="ecommerce-product-discount-price" placeholder="Discounted Price" name="productDiscountedPrice" aria-label="Product discounted price">
+            <input type="number" class="form-control" id="ecommerce-product-discount-price"
+              placeholder="Discounted Price" name="productDiscountedPrice" aria-label="Product discounted price">
             <label for="ecommerce-product-discount-price">Discounted Price</label>
           </div>
           <!-- Charge tax check box -->
@@ -482,7 +492,8 @@
           <!-- Tags -->
           <div class="mb-3">
             <div class="form-floating form-floating-outline">
-              <input id="ecommerce-product-tags" class="form-control h-auto" name="ecommerce-product-tags" value="Normal,Standard,Premium" aria-label="Product Tags" />
+              <input id="ecommerce-product-tags" class="form-control h-auto" name="ecommerce-product-tags"
+                value="Normal,Standard,Premium" aria-label="Product Tags" />
               <label for="ecommerce-product-tags">Tags</label>
             </div>
           </div>

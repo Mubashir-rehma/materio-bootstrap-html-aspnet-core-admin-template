@@ -4,25 +4,25 @@
   ViewData["Title"] = "Wizard Numbered - Form Wizards";
 }
 
-@section VendorStyles{
-<link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/bootstrap-select/bootstrap-select.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+@section VendorStyles {
+  <link rel="stylesheet" href="~/vendor/libs/bs-stepper/bs-stepper.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/bootstrap-select/bootstrap-select.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
-@section VendorScripts{
-<script src="~/vendor/libs/bs-stepper/bs-stepper.dist.js"></script>
-<script src="~/vendor/libs/bootstrap-select/bootstrap-select.dist.js"></script>
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
+@section VendorScripts {
+  <script src="~/vendor/libs/bs-stepper/bs-stepper.dist.js"></script>
+  <script src="~/vendor/libs/bootstrap-select/bootstrap-select.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
 }
 
 @section PageScripts {
-<script src="~/js/form-wizard-numbered.dist.js"></script>
-<script src="~/js/form-wizard-validation.dist.js"></script>
+  <script src="~/js/form-wizard-numbered.dist.js"></script>
+  <script src="~/js/form-wizard-validation.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -96,33 +96,43 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="email" id="email" class="form-control" placeholder="john.doe&#64;email.com" aria-label="john.doe" />
+                  <input type="email" id="email" class="form-control" placeholder="john.doe&#64;email.com"
+                    aria-label="john.doe" />
                   <label for="email">Email</label>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password2" />
+                    <input type="password" id="password" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="password2" />
                     <label for="password">Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="password2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="password2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="confirm-password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="confirm-password2" />
+                    <input type="password" id="confirm-password" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="confirm-password2" />
                     <label for="confirm-password">Confirm Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="confirm-password2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="confirm-password2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-between">
-                <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                <button class="btn btn-outline-secondary btn-prev" disabled> <i
+                    class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -161,7 +171,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <select class="selectpicker w-auto" id="language" data-style="btn-transparent" data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
+                  <select class="selectpicker w-auto" id="language" data-style="btn-transparent" data-icon-base="mdi"
+                    data-tick-icon="mdi-check text-white" multiple>
                     <option>English</option>
                     <option>French</option>
                     <option>Spanish</option>
@@ -173,7 +184,9 @@
                 <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -274,39 +287,51 @@
             <div class="row g-4">
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" name="formValidationUsername" id="formValidationUsername" class="form-control" placeholder="johndoe" />
+                  <input type="text" name="formValidationUsername" id="formValidationUsername" class="form-control"
+                    placeholder="johndoe" />
                   <label for="formValidationUsername">Username</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="email" name="formValidationEmail" id="formValidationEmail" class="form-control" placeholder="john.doe&#64;email.com" aria-label="john.doe" />
+                  <input type="email" name="formValidationEmail" id="formValidationEmail" class="form-control"
+                    placeholder="john.doe&#64;email.com" aria-label="john.doe" />
                   <label for="formValidationEmail">Email</label>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="formValidationPass" name="formValidationPass" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="formValidationPass2" />
+                    <input type="password" id="formValidationPass" name="formValidationPass" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="formValidationPass2" />
                     <label for="formValidationPass">Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="formValidationPass2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="formValidationPass2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="formValidationConfirmPass" name="formValidationConfirmPass" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="formValidationConfirmPass2" />
+                    <input type="password" id="formValidationConfirmPass" name="formValidationConfirmPass"
+                      class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="formValidationConfirmPass2" />
                     <label for="formValidationConfirmPass">Confirm Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="formValidationConfirmPass2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="formValidationConfirmPass2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-between">
-                <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                <button class="btn btn-outline-secondary btn-prev" disabled> <i
+                    class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -319,13 +344,15 @@
             <div class="row g-4">
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="formValidationFirstName" name="formValidationFirstName" class="form-control" placeholder="John" />
+                  <input type="text" id="formValidationFirstName" name="formValidationFirstName" class="form-control"
+                    placeholder="John" />
                   <label for="formValidationFirstName">First Name</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="formValidationLastName" name="formValidationLastName" class="form-control" placeholder="Doe" />
+                  <input type="text" id="formValidationLastName" name="formValidationLastName" class="form-control"
+                    placeholder="Doe" />
                   <label for="formValidationLastName">Last Name</label>
                 </div>
               </div>
@@ -345,7 +372,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <select class="selectpicker w-auto" id="formValidationLanguage" data-style="btn-transparent" data-icon-base="mdi" data-tick-icon="mdi-check text-white" name="formValidationLanguage" multiple>
+                  <select class="selectpicker w-auto" id="formValidationLanguage" data-style="btn-transparent"
+                    data-icon-base="mdi" data-tick-icon="mdi-check text-white" name="formValidationLanguage" multiple>
                     <option>English</option>
                     <option>French</option>
                     <option>Spanish</option>
@@ -357,7 +385,9 @@
                 <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -370,25 +400,29 @@
             <div class="row g-4">
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" name="formValidationTwitter" id="formValidationTwitter" class="form-control" placeholder="https://twitter.com/abc" />
+                  <input type="text" name="formValidationTwitter" id="formValidationTwitter" class="form-control"
+                    placeholder="https://twitter.com/abc" />
                   <label for="formValidationTwitter">Twitter</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" name="formValidationFacebook" id="formValidationFacebook" class="form-control" placeholder="https://facebook.com/abc" />
+                  <input type="text" name="formValidationFacebook" id="formValidationFacebook" class="form-control"
+                    placeholder="https://facebook.com/abc" />
                   <label for="formValidationFacebook">Facebook</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" name="formValidationGoogle" id="formValidationGoogle" class="form-control" placeholder="https://plus.google.com/abc" />
+                  <input type="text" name="formValidationGoogle" id="formValidationGoogle" class="form-control"
+                    placeholder="https://plus.google.com/abc" />
                   <label for="formValidationGoogle">Google+</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" name="formValidationLinkedIn" id="formValidationLinkedIn" class="form-control" placeholder="https://linkedin.com/abc" />
+                  <input type="text" name="formValidationLinkedIn" id="formValidationLinkedIn" class="form-control"
+                    placeholder="https://linkedin.com/abc" />
                   <label for="formValidationLinkedIn">LinkedIn</label>
                 </div>
               </div>
@@ -467,33 +501,43 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="email" id="email-vertical" class="form-control" placeholder="john.doe&#64;email.com" aria-label="john.doe" />
+                  <input type="email" id="email-vertical" class="form-control" placeholder="john.doe&#64;email.com"
+                    aria-label="john.doe" />
                   <label for="email-vertical">Email</label>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="password-vertical" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password2-vertical" />
+                    <input type="password" id="password-vertical" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="password2-vertical" />
                     <label for="password-vertical">Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="password2-vertical"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="password2-vertical"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="confirm-password-vertical" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="confirm-password-vertical2" />
+                    <input type="password" id="confirm-password-vertical" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="confirm-password-vertical2" />
                     <label for="confirm-password-vertical">Confirm Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="confirm-password-vertical2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="confirm-password-vertical2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-between">
-                <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                <button class="btn btn-outline-secondary btn-prev" disabled> <i
+                    class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -532,7 +576,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <select class="selectpicker w-auto" id="language-vertical" data-style="btn-transparent" data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
+                  <select class="selectpicker w-auto" id="language-vertical" data-style="btn-transparent"
+                    data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
                     <option>English</option>
                     <option>French</option>
                     <option>Spanish</option>
@@ -544,7 +589,9 @@
                 <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -563,19 +610,22 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="facebook-vertical" class="form-control" placeholder="https://facebook.com/abc" />
+                  <input type="text" id="facebook-vertical" class="form-control"
+                    placeholder="https://facebook.com/abc" />
                   <label for="facebook-vertical">Facebook</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="google-vertical" class="form-control" placeholder="https://plus.google.com/abc" />
+                  <input type="text" id="google-vertical" class="form-control"
+                    placeholder="https://plus.google.com/abc" />
                   <label for="google-vertical">Google+</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="linkedin-vertical" class="form-control" placeholder="https://linkedin.com/abc" />
+                  <input type="text" id="linkedin-vertical" class="form-control"
+                    placeholder="https://linkedin.com/abc" />
                   <label for="linkedin-vertical">LinkedIn</label>
                 </div>
               </div>
@@ -662,33 +712,43 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="email" id="email-modern" class="form-control" placeholder="john.doe&#64;email.com" aria-label="john.doe" />
+                  <input type="email" id="email-modern" class="form-control" placeholder="john.doe&#64;email.com"
+                    aria-label="john.doe" />
                   <label for="email-modern">Email</label>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="password-modern" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password2-modern" />
+                    <input type="password" id="password-modern" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="password2-modern" />
                     <label for="password-modern">Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="password2-modern"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="password2-modern"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="confirm-password-modern" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="confirm-password-modern2" />
+                    <input type="password" id="confirm-password-modern" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="confirm-password-modern2" />
                     <label for="confirm-password-modern">Confirm Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="confirm-password-modern2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="confirm-password-modern2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-between">
-                <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                <button class="btn btn-outline-secondary btn-prev" disabled> <i
+                    class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -727,7 +787,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <select class="selectpicker w-auto" id="language-modern" data-style="btn-transparent" data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
+                  <select class="selectpicker w-auto" id="language-modern" data-style="btn-transparent"
+                    data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
                     <option>English</option>
                     <option>French</option>
                     <option>Spanish</option>
@@ -739,7 +800,9 @@
                 <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -764,7 +827,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="google-modern" class="form-control" placeholder="https://plus.google.com/abc" />
+                  <input type="text" id="google-modern" class="form-control"
+                    placeholder="https://plus.google.com/abc" />
                   <label for="google-modern">Google+</label>
                 </div>
               </div>
@@ -849,33 +913,43 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="email" id="email-modern-vertical" class="form-control" placeholder="john.doe&#64;email.com" aria-label="john.doe" />
+                  <input type="email" id="email-modern-vertical" class="form-control"
+                    placeholder="john.doe&#64;email.com" aria-label="john.doe" />
                   <label for="email-modern-vertical">Email</label>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="password-modern-vertical" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password2-modern-vertical" />
+                    <input type="password" id="password-modern-vertical" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="password2-modern-vertical" />
                     <label for="password-modern-vertical">Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="password2-modern-vertical"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="password2-modern-vertical"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-sm-6 form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="password" id="confirm-password-modern-vertical" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="confirm-password-modern-vertical2" />
+                    <input type="password" id="confirm-password-modern-vertical" class="form-control"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      aria-describedby="confirm-password-modern-vertical2" />
                     <label for="confirm-password-modern-vertical">Confirm Password</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="confirm-password-modern-vertical2"><i class="mdi mdi-eye-off-outline"></i></span>
+                  <span class="input-group-text cursor-pointer" id="confirm-password-modern-vertical2"><i
+                      class="mdi mdi-eye-off-outline"></i></span>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-between">
-                <button class="btn btn-outline-secondary btn-prev" disabled> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                <button class="btn btn-outline-secondary btn-prev" disabled> <i
+                    class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -914,7 +988,8 @@
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <select class="selectpicker w-auto" id="language-modern-vertical" data-style="btn-transparent" data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
+                  <select class="selectpicker w-auto" id="language-modern-vertical" data-style="btn-transparent"
+                    data-icon-base="mdi" data-tick-icon="mdi-check text-white" multiple>
                     <option>English</option>
                     <option>French</option>
                     <option>Spanish</option>
@@ -926,7 +1001,9 @@
                 <button class="btn btn-outline-secondary btn-prev"> <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                 </button>
-                <button class="btn btn-primary btn-next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i class="mdi mdi-arrow-right"></i></button>
+                <button class="btn btn-primary btn-next"> <span
+                    class="align-middle d-sm-inline-block d-none me-sm-1">Next</span> <i
+                    class="mdi mdi-arrow-right"></i></button>
               </div>
             </div>
           </div>
@@ -939,25 +1016,29 @@
             <div class="row g-4">
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="twitter-modern-vertical" class="form-control" placeholder="https://twitter.com/abc" />
+                  <input type="text" id="twitter-modern-vertical" class="form-control"
+                    placeholder="https://twitter.com/abc" />
                   <label for="twitter-modern-vertical">Twitter</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="facebook-modern-vertical" class="form-control" placeholder="https://facebook.com/abc" />
+                  <input type="text" id="facebook-modern-vertical" class="form-control"
+                    placeholder="https://facebook.com/abc" />
                   <label for="facebook-modern-vertical">Facebook</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="google-modern-vertical" class="form-control" placeholder="https://plus.google.com/abc" />
+                  <input type="text" id="google-modern-vertical" class="form-control"
+                    placeholder="https://plus.google.com/abc" />
                   <label for="google-modern-vertical">Google+</label>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="linkedin-modern-vertical" class="form-control" placeholder="https://linkedin.com/abc" />
+                  <input type="text" id="linkedin-modern-vertical" class="form-control"
+                    placeholder="https://linkedin.com/abc" />
                   <label for="linkedin-modern-vertical">LinkedIn</label>
                 </div>
               </div>

@@ -4,34 +4,34 @@
   ViewData["Title"] = "Account settings - Billing";
 }
 
-@section VendorStyles{
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
-<link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
-<link rel="stylesheet" href="~/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.dist.css">
+@section VendorStyles {
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+  <link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.dist.css">
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
-<script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
-<script src="~/vendor/libs/moment/moment.dist.js"></script>
-<script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+  <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
+  <script src="~/vendor/libs/moment/moment.dist.js"></script>
+  <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.dist.js"></script>
 }
 
 @section PageScripts {
-<script src="~/js/pages-pricing.dist.js"></script>
-<script src="~/js/pages-account-settings-billing.dist.js"></script>
-<script src="~/js/app-invoice-list.dist.js"></script>
-<script src="~/js/modal-edit-cc.dist.js"></script>
+  <script src="~/js/pages-pricing.dist.js"></script>
+  <script src="~/js/pages-account-settings-billing.dist.js"></script>
+  <script src="~/js/app-invoice-list.dist.js"></script>
+  <script src="~/js/modal-edit-cc.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -42,11 +42,16 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="nav nav-pills flex-column flex-md-row mb-4 gap-2 gap-lg-0">
-      <li class="nav-item"><a class="nav-link" href="Account"><i class="mdi mdi-account-outline mdi-20px me-1"></i> Account</a></li>
-      <li class="nav-item"><a class="nav-link" href="Security"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i> Security</a></li>
-      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="mdi mdi-bookmark-outline mdi-20px me-1"></i> Billing & Plans</a></li>
-      <li class="nav-item"><a class="nav-link" href="Notifications"><i class="mdi mdi-bell-outline mdi-20px me-1"></i> Notifications</a></li>
-      <li class="nav-item"><a class="nav-link" href="Connections"><i class="mdi mdi-link mdi-20px me-1"></i> Connections</a></li>
+      <li class="nav-item"><a class="nav-link" href="Account"><i class="mdi mdi-account-outline mdi-20px me-1"></i>
+          Account</a></li>
+      <li class="nav-item"><a class="nav-link" href="Security"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i>
+          Security</a></li>
+      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i
+            class="mdi mdi-bookmark-outline mdi-20px me-1"></i> Billing & Plans</a></li>
+      <li class="nav-item"><a class="nav-link" href="Notifications"><i class="mdi mdi-bell-outline mdi-20px me-1"></i>
+          Notifications</a></li>
+      <li class="nav-item"><a class="nav-link" href="Connections"><i class="mdi mdi-link mdi-20px me-1"></i>
+          Connections</a></li>
     </ul>
     <div class="card mb-4">
       <!-- Current Plan -->
@@ -63,7 +68,8 @@
               <p>We will send you a notification upon Subscription expiration</p>
             </div>
             <div>
-              <h6 class="mb-1"><span class="me-2">$199 Per Month</span> <span class="badge bg-label-primary rounded-pill">Popular</span></h6>
+              <h6 class="mb-1"><span class="me-2">$199 Per Month</span> <span
+                  class="badge bg-label-primary rounded-pill">Popular</span></h6>
               <p class="mb-0">Standard plan for small to medium businesses</p>
             </div>
           </div>
@@ -81,13 +87,15 @@
                 <h6 class="mb-2">24 of 30 Days</h6>
               </div>
               <div class="progress rounded" style="height: 8px">
-                <div class="progress-bar w-75 rounded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar w-75 rounded" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
               <small class="mt-1 text-muted">6 days remaining until your plan requires update</small>
             </div>
           </div>
           <div class="col-12 d-flex gap-2 mt-4 flex-wrap">
-            <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#pricingModal">Upgrade Plan</button>
+            <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#pricingModal">Upgrade
+              Plan</button>
             <button class="btn btn-outline-secondary cancel-subscription">Cancel Subscription</button>
           </div>
         </div>
@@ -102,21 +110,25 @@
             <form id="creditCardForm" class="row g-4" onsubmit="return false">
               <div class="col-12">
                 <div class="form-check form-check-inline">
-                  <input name="collapsible-payment" class="form-check-input" type="radio" value="" id="collapsible-payment-cc" checked="" />
+                  <input name="collapsible-payment" class="form-check-input" type="radio" value=""
+                    id="collapsible-payment-cc" checked="" />
                   <label class="form-check-label" for="collapsible-payment-cc">Credit/Debit/ATM Card</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input name="collapsible-payment" class="form-check-input" type="radio" value="" id="collapsible-payment-cash" />
+                  <input name="collapsible-payment" class="form-check-input" type="radio" value=""
+                    id="collapsible-payment-cash" />
                   <label class="form-check-label" for="collapsible-payment-cash">Paypal account</label>
                 </div>
               </div>
               <div class="col-12">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input id="paymentCard" name="paymentCard" class="form-control credit-card-mask" type="text" placeholder="1356 3215 6548 7898" aria-describedby="paymentCard2" />
+                    <input id="paymentCard" name="paymentCard" class="form-control credit-card-mask" type="text"
+                      placeholder="1356 3215 6548 7898" aria-describedby="paymentCard2" />
                     <label for="paymentCard">Card Number</label>
                   </div>
-                  <span class="input-group-text cursor-pointer p-1" id="paymentCard2"><span class="card-type"></span></span>
+                  <span class="input-group-text cursor-pointer p-1" id="paymentCard2"><span
+                      class="card-type"></span></span>
                 </div>
               </div>
               <div class="col-12 col-md-6">
@@ -134,10 +146,13 @@
               <div class="col-6 col-md-3">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
-                    <input type="text" id="paymentCvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
+                    <input type="text" id="paymentCvv" class="form-control cvv-code-mask" maxlength="3"
+                      placeholder="654" />
                     <label for="paymentCvv">CVV Code</label>
                   </div>
-                  <span class="input-group-text cursor-pointer" id="paymentCvv2"><i class="mdi mdi-help-circle-outline text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Card Verification Value"></i></span>
+                  <span class="input-group-text cursor-pointer" id="paymentCvv2"><i
+                      class="mdi mdi-help-circle-outline text-muted" data-bs-toggle="tooltip" data-bs-placement="top"
+                      title="Card Verification Value"></i></span>
                 </div>
               </div>
               <div class="col-12">
@@ -171,7 +186,8 @@
                   </div>
                   <div class="d-flex flex-column text-start text-lg-end">
                     <div class="d-flex order-sm-0 order-1 mt-sm-0 mt-3">
-                      <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editCCModal">Edit</button>
+                      <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#editCCModal">Edit</button>
                       <button class="btn btn-outline-secondary">Delete</button>
                     </div>
                     <small class="mt-3 order-sm-1 order-0 text-muted">Card expires at 12/26</small>
@@ -187,7 +203,8 @@
                   </div>
                   <div class="d-flex flex-column text-start text-lg-end">
                     <div class="d-flex order-sm-0 order-1 mt-sm-0 mt-3">
-                      <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editCCModal">Edit</button>
+                      <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#editCCModal">Edit</button>
                       <button class="btn btn-outline-secondary">Delete</button>
                     </div>
                     <small class="mt-3 order-sm-1 order-0 text-muted">Card expires at 02/24</small>
@@ -210,13 +227,15 @@
           <div class="row">
             <div class="col-sm-6 mb-4">
               <div class="form-floating form-floating-outline">
-                <input type="text" id="companyName" name="companyName" class="form-control" placeholder='&#64;TempData.Peek("authorName")' />
+                <input type="text" id="companyName" name="companyName" class="form-control"
+                  placeholder='&#64;TempData.Peek("authorName")' />
                 <label for="companyName">Company Name</label>
               </div>
             </div>
             <div class="col-sm-6 mb-4">
               <div class="form-floating form-floating-outline">
-                <input class="form-control" type="text" id="billingEmail" name="billingEmail" placeholder="john.doe&#64;example.com" />
+                <input class="form-control" type="text" id="billingEmail" name="billingEmail"
+                  placeholder="john.doe&#64;example.com" />
                 <label for="billingEmail">Billing Email</label>
               </div>
             </div>
@@ -228,14 +247,16 @@
             </div>
             <div class="col-sm-6 mb-4">
               <div class="form-floating form-floating-outline">
-                <input class="form-control" type="text" id="vatNumber" name="vatNumber" placeholder="Enter VAT Number" />
+                <input class="form-control" type="text" id="vatNumber" name="vatNumber"
+                  placeholder="Enter VAT Number" />
                 <label for="vatNumber">VAT Number</label>
               </div>
             </div>
             <div class="col-sm-6 mb-4">
               <div class="input-group input-group-merge">
                 <div class="form-floating form-floating-outline">
-                  <input class="form-control mobile-number" type="text" id="mobileNumber" name="mobileNumber" placeholder="202 555 0111" />
+                  <input class="form-control mobile-number" type="text" id="mobileNumber" name="mobileNumber"
+                    placeholder="202 555 0111" />
                   <label for="mobileNumber">Mobile</label>
                 </div>
                 <span class="input-group-text">US (+1)</span>
@@ -255,7 +276,8 @@
             </div>
             <div class="col-12 mb-4">
               <div class="form-floating form-floating-outline">
-                <input type="text" class="form-control" id="billingAddress" name="billingAddress" placeholder="Billing Address" />
+                <input type="text" class="form-control" id="billingAddress" name="billingAddress"
+                  placeholder="Billing Address" />
                 <label for="billingAddress">Billing Address</label>
               </div>
             </div>
@@ -267,7 +289,8 @@
             </div>
             <div class="col-sm-6 mb-4">
               <div class="form-floating form-floating-outline">
-                <input type="text" class="form-control zip-code" id="zipCode" name="zipCode" placeholder="231465" maxlength="6" />
+                <input type="text" class="form-control zip-code" id="zipCode" name="zipCode" placeholder="231465"
+                  maxlength="6" />
                 <label for="zipCode">Zip Code</label>
               </div>
             </div>
