@@ -374,8 +374,8 @@
   }
 
   .menu-sub .menu-icon {
-    .layout-wrapper:not(.layout-horizontal) & {
-      margin-right: 0;
+      .layout-wrapper:not(.layout-horizontal) & {
+        margin-right: 0;
 
       @include media-breakpoint-down(xl) {
         display: none;

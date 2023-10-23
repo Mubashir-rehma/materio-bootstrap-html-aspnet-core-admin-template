@@ -11,6 +11,9 @@ $base-color: if($dark-style, $base, $black) !default;
   justify-content: center;
   text-transform: $btn-text-transform;
   letter-spacing: $btn-letter-spacing;
+  //ToDo: Remove this variable after declaring it in bootstrap
+  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
 
   // Disabled Style for all the button options as using gray color for all disabled buttons
   &[class*='btn-']:not([class*='btn-label-']):not([class*='btn-outline-']):not([class*='btn-text-']):not(.btn-icon) {
@@ -130,7 +133,7 @@ label.btn {
   $btn-icon-size-lg: ($btn-font-size-lg * $btn-line-height-lg) + ($btn-padding-y-lg * 2);
   $btn-icon-size-sm: ($btn-font-size-sm * $btn-line-height-sm) + ($btn-padding-y-sm * 2);
   $btn-icon-size-xs: ($btn-font-size-xs * $btn-line-height-xs) + ($btn-padding-y-xs * 2);
-  $borders-width: $btn-border-width * 2;
+  $borders-width: calc(#{$btn-border-width} * 2);
   --#{$prefix}btn-active-border-color: transparent;
 
   padding: 0;

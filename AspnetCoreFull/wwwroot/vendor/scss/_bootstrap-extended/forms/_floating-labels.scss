@@ -19,6 +19,11 @@
       &::placeholder {
         color: $input-placeholder-color;
       }
+      ~ label {
+        &:after {
+          background-color: transparent;
+        }
+      }
     }
     // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
     &:-webkit-autofill {
@@ -122,6 +127,9 @@
       margin: (-$form-floating-padding-y) (-$form-floating-padding-x);
       margin-inline-end: $form-floating-padding-x;
     }
+  }
+  > label {
+    width: 100%;
   }
 }
 

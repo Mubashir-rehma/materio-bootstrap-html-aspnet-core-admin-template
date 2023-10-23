@@ -242,7 +242,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-link {
   padding: light.$pagination-padding-y;
   min-width: calc(
-    #{'#{(light.$font-size-sm * light.$pagination-line-height) + (light.$pagination-padding-y * 2)} + #{light.$pagination-border-width * 2}'}
+    #{'#{(light.$font-size-sm * light.$pagination-line-height) + (light.$pagination-padding-y * 2)} + calc(#{light.$pagination-border-width} * 2)'}
   );
   font-size: light.$font-size-sm;
   line-height: light.$pagination-line-height;
@@ -257,7 +257,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-link {
   div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-link {
     padding: light.$pagination-padding-y-sm light.$pagination-padding-x-sm;
     min-width: calc(
-      #{'#{(light.$font-size-sm * light.$pagination-line-height) + (light.$pagination-padding-y-sm * 2)} + #{light.$pagination-border-width * 2}'}
+      #{'#{(light.$font-size-sm * light.$pagination-line-height) + (light.$pagination-padding-y-sm * 2)} + calc(#{light.$pagination-border-width} * 2)'}
     );
     font-size: light.$font-size-sm;
     line-height: light.$pagination-line-height;
