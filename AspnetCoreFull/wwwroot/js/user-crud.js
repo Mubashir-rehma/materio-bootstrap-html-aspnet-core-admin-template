@@ -61,7 +61,7 @@
     var name = message[0].toUpperCase() + message.slice(1);
     Swal.fire({
       title: name,
-      text: `Users ${message} Successfully!`,
+      text: `User ${message} Successfully!`,
       icon: 'success',
       confirmButtonText: 'Ok',
       confirmButton: false,
