@@ -4,6 +4,9 @@
   ViewData["Title"] = "Input groups - Forms";
 }
 
+@section PageScripts {
+<script src="~/js/form-input-group.dist.js"></script>
+}
 @* ************** Content ************** *@
 
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">Forms /</span> Input groups</h4>
@@ -192,19 +195,19 @@
 
         <small class="text-light fw-medium d-block">Input Group</small>
 
-        <div class="input-group input-group-merge speech-to-text">
-          <input type="text" class="form-control" placeholder="Say it" aria-describedby="text-to-speech-addon">
-          <span class="input-group-text" id="text-to-speech-addon">
-            <i class='bx bx-microphone cursor-pointer text-to-speech-toggle'></i>
+        <div class="input-group input-group-merge form-send-message">
+          <input type="text" class="form-control message-input" placeholder="Say it" aria-describedby="text-to-speech-addon">
+          <span class="message-actions input-group-text" id="text-to-speech-addon">
+            <i class="bx bx-microphone cursor-pointer speech-to-text"></i>
           </span>
         </div>
 
         <small class="text-light fw-medium d-block pt-3">Textarea</small>
 
-        <div class="input-group input-group-merge speech-to-text">
-          <textarea class="form-control" placeholder="Say it" rows="2"></textarea>
-          <span class="input-group-text">
-            <i class='bx bx-microphone cursor-pointer text-to-speech-toggle'></i>
+        <div class="input-group input-group-merge form-send-message">
+          <textarea class="form-control message-input" placeholder="Say it" rows="2"></textarea>
+          <span class="message-actions input-group-text">
+            <i class='bx bx-microphone cursor-pointer speech-to-text'></i>
           </span>
         </div>
 
