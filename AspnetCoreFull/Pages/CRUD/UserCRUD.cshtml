@@ -7,7 +7,7 @@
 @{
   ViewData["Title"] = "UserCRUD";
 
-  // Calculate percentages and round them to the nearest integer
+  @* Calculate percentages and round them to the nearest integer *@
   int totalUsers = Model.TotalUserCount;
   int verifiedUsers = Model.VerifiedUserCount;
   int duplicateUsers = Model.DuplicateUserCount;
@@ -212,7 +212,7 @@
 
 
 @* Create User Form Offcanvas Partial*@
-@Html.Partial("partials/_CreatUserOffcanvasPartial")
+@await Html.PartialAsync("partials/_CreatUserOffcanvasPartial")
 
 @* Edit User Form Offcanvas Partial*@
-@Html.Partial("partials/_EditUserOffcanvasPartial")
+@await Html.PartialAsync("partials/_EditUserOffcanvasPartial")
