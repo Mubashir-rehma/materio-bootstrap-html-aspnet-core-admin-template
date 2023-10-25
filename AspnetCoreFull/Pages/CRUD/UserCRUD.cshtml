@@ -52,18 +52,20 @@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex align-items-start justify-content-between">
-          <div class="content-left">
-            <span>Users</span>
-            <div class="d-flex align-items-end mt-2">
-              <h3 class="mb-0 me-2">@Model.TotalUserCount</h3>
-              <small class="text-primary">(100%)</small>
+        <div class="d-flex justify-content-between">
+          <div class="me-1">
+            <p class="text-heading mb-2">Users</p>
+            <div class="d-flex align-items-center">
+              <h4 class="mb-2 me-1 display-6">@Model.TotalUserCount</h4>
+              <p class="text-primary mb-2">(+100%)</p>
             </div>
-            <small>Total Users</small>
+            <p class="mb-0">Total Users</p>
           </div>
-          <span class="badge bg-label-primary rounded p-2">
-            <i class="mdi mdi-account-outline mdi-20px"></i>
-          </span>
+          <div class="avatar">
+            <div class="avatar-initial bg-label-primary rounded">
+              <div class="mdi mdi-account-outline mdi-24px"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -72,18 +74,20 @@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex align-items-start justify-content-between">
-          <div class="content-left">
-            <span>Verified Users</span>
-            <div class="d-flex align-items-end mt-2">
-              <h3 class="mb-0 me-2">@Model.VerifiedUserCount</h3>
-              <small class="text-success">( +@ViewData["VerifiedUsersPercentage"]% )</small>
+        <div class="d-flex justify-content-between">
+          <div class="me-1">
+            <p class="text-heading mb-2">Verified Users</p>
+            <div class="d-flex align-items-center">
+              <h4 class="mb-2 me-1 display-6">@Model.VerifiedUserCount</h4>
+              <p class="text-success mb-2">( +@ViewData["VerifiedUsersPercentage"]% )</p>
             </div>
-            <small>Recent analytics </small>
+            <p class="mb-0">Recent analytics</p>
           </div>
-          <span class="badge bg-label-success rounded p-2">
-            <i class="mdi mdi-account-check-outline mdi-20px"></i>
-          </span>
+          <div class="avatar">
+            <div class="avatar-initial bg-label-success rounded">
+              <div class="mdi mdi-account-check-outline mdi-24px"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -92,18 +96,20 @@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex align-items-start justify-content-between">
-          <div class="content-left">
-            <span>Duplicate Users</span>
-            <div class="d-flex align-items-end mt-2">
-              <h3 class="mb-0 me-2">@Model.DuplicateUserCount</h3>
-              <small class="text-danger">( +@ViewData["DuplicateUsersPercentage"]% )</small>
+        <div class="d-flex justify-content-between">
+          <div class="me-1">
+            <p class="text-heading mb-2">Duplicate Users</p>
+            <div class="d-flex align-items-center">
+              <h4 class="mb-2 me-1 display-6">@Model.DuplicateUserCount</h4>
+              <p class="text-danger mb-2">( +@ViewData["DuplicateUsersPercentage"]% )</p>
             </div>
-            <small>Recent analytics</small>
+            <p class="mb-0">Recent analytics</p>
           </div>
-          <span class="badge bg-label-danger rounded p-2">
-            <i class="mdi mdi-account-group-outline mdi-20px"></i>
-          </span>
+          <div class="avatar">
+            <div class="avatar-initial bg-label-danger rounded">
+              <div class="mdi mdi-account-group-outline mdi-24px"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -112,18 +118,20 @@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex align-items-start justify-content-between">
-          <div class="content-left">
-            <span>Verification Pending</span>
-            <div class="d-flex align-items-end mt-2">
-              <h3 class="mb-0 me-2">@Model.UnverifiedUserCount</h3>
-              <small class="text-warning">( +@ViewData["UnverifiedUsersPercentage"]% )</small>
+        <div class="d-flex justify-content-between">
+          <div class="me-1">
+            <p class="text-heading mb-2">Verification Pending</p>
+            <div class="d-flex align-items-center">
+              <h4 class="mb-2 me-1 display-6">@Model.UnverifiedUserCount</h4>
+              <p class="text-warning mb-2">( +@ViewData["UnverifiedUsersPercentage"]% )</p>
             </div>
-            <small>Recent analytics</small>
+            <p class="mb-0">Recent analytics</p>
           </div>
-          <span class="badge bg-label-warning rounded p-2">
-            <i class="mdi mdi-account-circle-outline mdi-20px"></i>
-          </span>
+          <div class="avatar">
+            <div class="avatar-initial bg-label-warning rounded">
+              <div class="mdi mdi-account-search mdi-24px"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -178,7 +186,7 @@
                 <button class="btn btn-sm btn-icon edit-user-button" data-bs-toggle="offcanvas"
                   data-bs-target="#editUserOffcanvas" id="@user.Id-editUser"><i
                     class="mdi mdi-pencil-outline mdi-20px"></i></button>
-                <!-- Delete Button -->
+                @* Delete Button *@
                 <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" id="@user.Id-deleteForm"
                   onsubmit="showSuccessAlert('Deleted');" class="d-inline">
                   <button class="btn btn-sm btn-icon" id="@user.Id-deleteUser" onclick="showDeleteConfirmation('@user.Id')">
