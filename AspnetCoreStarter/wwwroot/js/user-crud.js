@@ -4,6 +4,51 @@
 
 'use strict';
 
+// Functions to handle the Delete User Sweet Alerts (Delete Confirmation)
+function showDeleteConfirmation(userId) {
+  event.preventDefault(); // prevent form submit
+  const userName = document.querySelector(`.user-name-full-${userId}`).innerText;
+  Swal.fire({
+    title: 'Delete User',
+    // Show the user the user name to be deleted
+    html: `<p>Are you sure you want to delete user ?<br><br><span class="fw-medium text-danger">${userName}</span></p>`,
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Delete',
+    cancelButtonText: 'Cancel',
+    customClass: {
+      confirmButton: 'btn btn-primary',
+      cancelButton: 'btn btn-outline-secondary'
+    }
+  }).then(result => {
+    if (result.isConfirmed) {
+      const form = document.getElementById(userId + '-deleteForm');
+      if (form) {
+        submitFormAndSetSuccessFlag(form, 'successFlag');
+      } else {
+        console.error('Form element not found');
+      }
+    } else {
+      Swal.fire({
+        title: 'Cancelled',
+        // Show the user that the user has not been deleted.
+        html: `<p><span class="fw-medium text-primary">${userName}</span> is not deleted!</p>`,
+        icon: 'error',
+        confirmButtonText: 'Ok',
+        customClass: {
+          confirmButton: 'btn btn-success'
+        }
+      });
+    }
+  });
+}
+
+// Function to submit the form and set the success flag (Set success flags for delete, create and update)
+function submitFormAndSetSuccessFlag(form, flagName) {
+  form.submit();
+  sessionStorage.setItem(flagName, 'true');
+}
+
 (function () {
   // Function to set element attributes (asp-for)
   function setElementAttributes(element, attribute, value) {
@@ -15,45 +60,6 @@
     const routeAttribute = 'asp-route-id';
     setElementAttributes(form, routeAttribute, userId);
     form.action = `/CRUD/UserCRUD?handler=${handler}&id=${userId}`;
-  }
-
-  // Functions to handle the Delete User Sweet Alerts (Delete Confirmation)
-  function showDeleteConfirmation(userId) {
-    event.preventDefault(); // prevent form submit
-    const userName = document.querySelector(`.user-name-full-${userId}`).innerText;
-    Swal.fire({
-      title: 'Delete User',
-      // Show the user the user name to be deleted
-      html: `<p>Are you sure you want to delete user ?<br><br><span class="fw-medium text-danger">${userName}</span></p>`,
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Delete',
-      cancelButtonText: 'Cancel',
-      customClass: {
-        confirmButton: 'btn btn-primary',
-        cancelButton: 'btn btn-outline-secondary'
-      }
-    }).then(result => {
-      if (result.isConfirmed) {
-        const form = document.getElementById(userId + '-deleteForm');
-        if (form) {
-          submitFormAndSetSuccessFlag(form, 'successFlag');
-        } else {
-          console.error('Form element not found');
-        }
-      } else {
-        Swal.fire({
-          title: 'Cancelled',
-          // Show the user that the user has not been deleted.
-          html: `<p><span class="fw-medium text-primary">${userName}</span> is not deleted!</p>`,
-          icon: 'error',
-          confirmButtonText: 'Ok',
-          customClass: {
-            confirmButton: 'btn btn-success'
-          }
-        });
-      }
-    });
   }
 
   // Sweet Alert Success Function (User Deleted/Created/Updated)
@@ -227,7 +233,7 @@
     })
     .on('core.form.invalid', function () {
       // if fields are invalid
-      isFormValid = false;
+      return;
     });
 
   // For phone number input mask with cleave.js (US phone number)
@@ -326,7 +332,7 @@
     })
     .on('core.form.invalid', function () {
       // if fields are invalid
-      isFormValid = false;
+      return;
     });
 })();
 
