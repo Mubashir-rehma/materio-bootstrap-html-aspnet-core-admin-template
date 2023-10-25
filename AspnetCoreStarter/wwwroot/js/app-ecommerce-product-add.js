@@ -129,8 +129,10 @@ $(function () {
           dropdownParent: $(this).parent(),
           placeholder: 'Placeholder text'
         });
-        $('.ecommerce-select2-dropdown .form-select').select2({
-          dropdownParent: $('.ecommerce-select2-dropdown').parent()
+        $('.position-relative .select2').each(function () {
+          $(this).select2({
+            dropdownParent: $(this).closest('.position-relative')
+          });
         });
       }
     });

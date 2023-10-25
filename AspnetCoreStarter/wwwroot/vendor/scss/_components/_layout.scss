@@ -827,6 +827,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
   .layout-menu-fixed .layout-horizontal .layout-page .menu-horizontal,
   .layout-menu-fixed-offcanvas .layout-horizontal .layout-page .menu-horizontal {
     position: fixed;
+    top: $navbar-height;
   }
 
   .layout-menu-fixed .layout-horizontal .layout-page .menu-horizontal + [class*='container-'],

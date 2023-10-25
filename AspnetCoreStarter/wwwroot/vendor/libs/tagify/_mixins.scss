@@ -2,7 +2,7 @@
   .tagify--focus {
     border-color: $color !important;
     ~ label {
-      color: $color;
+      color: $color !important;
     }
   }
   .tagify__dropdown__item--active {

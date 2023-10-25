@@ -278,7 +278,7 @@ $daterangepicker-width-with-weeks: $daterangepicker-width + $daterangepicker-cel
       z-index: light.$zindex-popover !important;
       border: light.$dropdown-border-width solid light.$dropdown-border-color;
       border-radius: light.$border-radius-lg;
-      width: calc(#{$daterangepicker-width} + #{light.$dropdown-border-width * 2});
+      width: calc(#{$daterangepicker-width} + calc(#{light.$dropdown-border-width} * 2));
       box-shadow: light.$card-box-shadow;
       background-color: light.$dropdown-bg;
 
@@ -307,7 +307,7 @@ $daterangepicker-width-with-weeks: $daterangepicker-width + $daterangepicker-cel
       }
 
       &.with-week-numbers {
-        width: calc(#{$daterangepicker-width-with-weeks} + #{light.$dropdown-border-width * 2});
+        width: calc(#{$daterangepicker-width-with-weeks} + calc(#{light.$dropdown-border-width} * 2));
       }
     }
 
@@ -455,7 +455,7 @@ $daterangepicker-width-with-weeks: $daterangepicker-width + $daterangepicker-cel
   .dark-style {
     .daterangepicker {
       box-shadow: 0 0.125rem 0.625rem 0 rgba(dark.$black, 0.4);
-      width: calc(#{$daterangepicker-width} + #{dark.$dropdown-border-width * 2});
+      width: calc(#{$daterangepicker-width} + calc(#{dark.$dropdown-border-width} * 2));
       margin-top: dark.$dropdown-spacer;
       background-color: dark.$dropdown-bg;
       border: dark.$dropdown-border-width solid dark.$dropdown-border-color;
@@ -483,7 +483,7 @@ $daterangepicker-width-with-weeks: $daterangepicker-width + $daterangepicker-cel
       }
 
       &.with-week-numbers {
-        width: calc(#{$daterangepicker-width-with-weeks} + #{dark.$dropdown-border-width * 2});
+        width: calc(#{$daterangepicker-width-with-weeks} + calc(#{dark.$dropdown-border-width} * 2));
       }
 
       &.drop-up {

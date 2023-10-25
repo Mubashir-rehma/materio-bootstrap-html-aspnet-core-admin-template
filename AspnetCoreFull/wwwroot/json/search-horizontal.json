@@ -33,7 +33,7 @@
     {
       "name": "Users (CRUD)",
       "icon": "mdi-database-outline",
-      "url": "/CRUD/userCRUD"
+      "url": "/CRUD/UserCRUD"
     },
     {
       "name": "Email",

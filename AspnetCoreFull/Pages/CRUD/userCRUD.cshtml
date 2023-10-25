@@ -1,9 +1,11 @@
 @page
-@model AspnetCoreFull.Pages.CRUD.userCRUDModel
+@model AspnetCoreFull.Pages.CRUD.UserCRUDModel;
+@using AspnetCoreFull.Helpers;
 @using AspnetCoreFull.Models;
 
+
 @{
-  ViewData["Title"] = "userCRUD";
+  ViewData["Title"] = "UserCRUD";
 
   // Calculate percentages and round them to the nearest integer
   int totalUsers = Model.TotalUserCount;
@@ -21,75 +23,6 @@
 
 }
 
-
-@functions {
-  // This function is used to format the phone number in the US format
-  public string FormatUSPhoneNumber(string phoneNumber)
-  {
-    if (!string.IsNullOrEmpty(phoneNumber))
-    {
-      // Replace any non-numeric characters
-      string cleanedNumber = new string(phoneNumber.Where(char.IsDigit).ToArray());
-
-      if (cleanedNumber.Length >= 10)
-      {
-        // Format as +1 (123) 456-7890
-        return string.Format("+1 ({0}) {1}-{2}", cleanedNumber.Substring(0, 3), cleanedNumber.Substring(3, 3),
-        cleanedNumber.Substring(6, 4));
-      }
-      else
-      {
-        return phoneNumber; // Return the original number if it doesn't match the expected format
-      }
-    }
-    return phoneNumber; // Return the original number if it's empty or null
-  }
-
-  // This function is used to generate the user avatar
-  public string GenerateUserAvatar(AspnetCoreFull.Models.User user)
-  {
-    var random = new Random();
-    // The below array contains the list of available states
-    var states = new[] { "success", "danger", "warning", "info", "dark", "primary", "secondary" };
-    // Generate a random number and set it as the index of the state to set the avatar badge background color
-    var randomIndex = (user.Id < 1 || user.Id > 6) ? random.Next(0, states.Length) : user.Id;
-    randomIndex = Math.Max(0, Math.Min(randomIndex, states.Length - 1));
-
-    var selectedState = states[randomIndex];
-    var userPage = "/Apps/Users/View/Account";
-
-    var nameParts = user.UserName.Split(' ');
-    var initials = "NA"; // Default value
-
-    if (nameParts.Length == 1)
-    {
-      // Single name, take the first letter as the initial
-      if (nameParts[0].Length >= 1)
-      {
-        initials = nameParts[0].Substring(0, 1);
-      }
-    }
-    else if (nameParts.Length >= 2)
-    {
-      // Full name, take two initials
-      string firstInitial = nameParts[0].Length >= 1 ? nameParts[0].Substring(0, 1) : "";
-      string secondInitial = nameParts[1].Length >= 1 ? nameParts[1].Substring(0, 1) : "";
-      initials = firstInitial + secondInitial;
-    }
-
-    // Generate the avatar HTML
-    var avatarHtml = $@"
-<div class=""d-flex align-items-center"">
-<div class=""avatar avatar-sm me-3"">
-<span class=""avatar-initial rounded-circle bg-label-{selectedState}"">{initials}</span>
-</div>
-<a href={userPage} class=""user-name-full-{user.Id} fw-medium text-body text-capitalize"">{user.UserName}</a>
-</div>";
-
-    return avatarHtml;
-  }
-}
-
 @section VendorStyles {
   <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
   <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
@@ -101,9 +34,6 @@
 @section VendorScripts {
   <script src="~/vendor/libs/moment/moment.dist.js"></script>
   <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.dist.js"></script>
-  @* The below JsZip include is directly taken from cdn as excell button in datatable exports was not working got to check
-for it later!! *@
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
   <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
   <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
@@ -116,9 +46,9 @@ for it later!! *@
   <script src="~/js/user-crud.dist.js"></script>
 }
 
-<!-- User Analytics Widget -->
+@* User Analytics Widget *@
 <div class="row g-4 mb-4">
-  <!-- Total Users -->
+  @* Total Users *@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
@@ -138,7 +68,7 @@ for it later!! *@
       </div>
     </div>
   </div>
-  <!-- Verified Users -->
+  @* Verified Users *@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
@@ -158,7 +88,7 @@ for it later!! *@
       </div>
     </div>
   </div>
-  <!-- Duplicate Users -->
+  @* Duplicate Users *@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
@@ -178,7 +108,7 @@ for it later!! *@
       </div>
     </div>
   </div>
-  <!-- Unverified Users -->
+  @* Unverified Users *@
   <div class="col-sm-6 col-xl-3">
     <div class="card">
       <div class="card-body">
@@ -200,7 +130,7 @@ for it later!! *@
   </div>
 </div>
 
-<!-- Users DataTable -->
+@* Users DataTable *@
 @if (Model.Users != null && Model.Users.Count > 0)
 {
   <div class="card">
@@ -228,7 +158,7 @@ for it later!! *@
             <tr>
               <td></td>
               <td>@user.Id</td>
-              <td class="user-name text-nowrap">@Html.Raw(GenerateUserAvatar(user))</td>
+              <td class="user-name text-nowrap">@Html.Raw(UserCRUDHelpers.GenerateUserAvatar(user))</td>
               <td class="text-truncate">@user.Email</td>
               <td>@if (user.IsVerified)
                 {
@@ -240,11 +170,11 @@ for it later!! *@
                 }
                 <input type="hidden" class="user-verified-@user.Id" data-is-verified="@user.IsVerified" />
               </td>
-              <td class="text-nowrap">@FormatUSPhoneNumber(user.ContactNumber)</td>
+              <td class="text-nowrap">@UserCRUDHelpers.FormatUSPhoneNumber(user.ContactNumber)</td>
               <td class="text-capitalize">@user.SelectedRole</td>
               <td class="text-capitalize">@user.SelectedPlan</td>
               <td class="text-nowrap">
-                <!-- Edit Button -->
+                @* Edit Button *@
                 <button class="btn btn-sm btn-icon edit-user-button" data-bs-toggle="offcanvas"
                   data-bs-target="#editUserOffcanvas" id="@user.Id-editUser"><i
                     class="mdi mdi-pencil-outline mdi-20px"></i></button>
@@ -255,7 +185,7 @@ for it later!! *@
                     <i class="mdi mdi-delete-outline mdi-20px"></i>
                   </button>
                 </form>
-                <!-- Dropdown Button -->
+                @* Dropdown Button *@
                 <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
                     class="mdi mdi-dots-vertical mdi-20px"></i></button>
                 <div class="dropdown-menu dropdown-menu-end m-0">
@@ -273,106 +203,8 @@ for it later!! *@
 }
 
 
-<!-- Create User Form Offcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="createUserOffcanvas" aria-labelledby="createUserOffcanvasLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="createUserOffcanvasLabel">Add User</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body mx-0 flex-grow-0">
-    <form method="post" id="createUserForm">
-      <div class="mb-3">
-        <label for="NewUser_User" class="form-label">User Name</label>
-        <input asp-for="NewUser.UserName" class="form-control" id="NewUser_User" placeholder="John Doe"
-          aria-label="John Doe" />
-      </div>
-      <div class="mb-3">
-        <label for="NewUser_Email" class="form-label">Email</label>
-        <input asp-for="NewUser.Email" class="form-control" id="NewUser_Email" placeholder="john.doe@example.com"
-          aria-label="john.doe@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="NewUser_ContactNumber" class="form-label">Contact</label>
-        <input asp-for="NewUser.ContactNumber" class="form-control phone-mask" id="NewUser_ContactNumber"
-          placeholder="+1 (609) 988-44-11" aria-label="+1 (609) 988-44-11" />
-      </div>
-      <div class="mb-3">
-        <label for="NewUser_SelectedRole" class="form-label">Select Role</label>
-        <select asp-for="NewUser.SelectedRole" asp-items="Model.AvailableRolesSelectList" class="form-select"
-          id="NewUser_SelectedRole">
-          <option value="">Select Role</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="NewUser_SelectedPlan" class="form-label">Select Plan</label>
-        <select asp-for="NewUser.SelectedPlan" asp-items="Model.AvailablePlansSelectList" class="form-select"
-          id="NewUser_SelectedPlan">
-          <option value="">Select Plan</option>
-        </select>
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" asp-for="NewUser.IsVerified" class="form-check-input" id="NewUser_IsVerified" />
-        <label class="form-check-label" for="NewUser_IsVerified">Is Verified</label>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary me-3">Submit</button>
-          <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+@* Create User Form Offcanvas Partial*@
+@Html.Partial("partials/_CreatUserOffcanvasPartial")
 
-<!-- Edit User Form Offcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="editUserOffcanvas" aria-labelledby="editUserOffcanvasLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="editUserOffcanvasLabel">Edit User</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body mx-0 flex-grow-0">
-    <form method="post" asp-page-handler="EditOrUpdate" asp-route-id="" id="editUserForm">
-
-      <div class="mb-3">
-        <label for="EditUser_UserName" class="form-label">User Name</label>
-        <input class="form-control" id="EditUser_UserName" name="user.UserName" value="" />
-      </div>
-
-      <div class="mb-3">
-        <label for="EditUser_Email" class="form-label">Email</label>
-        <input class="form-control" id="EditUser_Email" name="user.Email" value="" />
-      </div>
-
-      <div class="mb-3">
-        <label for="EditUser_ContactNumber" class="form-label">Contact</label>
-        <input class="form-control phone-mask" id="EditUser_ContactNumber" name="user.ContactNumber" />
-      </div>
-
-      <div class="mb-3">
-        <label for="EditUser_SelectedRole" class="form-label">Select Role</label>
-        <select class="form-select" id="EditUser_SelectedRole" name="user.SelectedRole"
-          asp-items="Model.AvailableRolesSelectList" value="">
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label for="EditUser_SelectedPlan" class="form-label">Select Plan</label>
-        <select class="form-select" id="EditUser_SelectedPlan" name="user.SelectedPlan"
-          asp-items="Model.AvailablePlansSelectList" value="">
-        </select>
-      </div>
-
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" name="user.IsVerified" id="EditUser_IsVerified" />
-        <label class="form-check-label" for="EditUser_IsVerified">Is Verified</label>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary me-3">Submit</button>
-          <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+@* Edit User Form Offcanvas Partial*@
+@Html.Partial("partials/_EditUserOffcanvasPartial")

@@ -26,6 +26,10 @@ body {
   box-shadow: 0 1px 0 $border-color;
 }
 
+.layout-navbar-fixed .layout-page:not(.window-scrolled) .layout-navbar.navbar-detached {
+  background: $body-bg;
+}
+
 // Menu
 // ---------------------------------------------------------------------------
 

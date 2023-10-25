@@ -51,6 +51,11 @@
       "url": "/LayoutExamples/Blank"
     },
     {
+      "name": "Users (CRUD)",
+      "icon": "mdi-database-outline",
+      "url": "/CRUD/UserCRUD"
+    },
+    {
       "name": "Email",
       "icon": "mdi-email-outline",
       "url": "/Apps/Email"

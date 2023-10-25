@@ -413,3 +413,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# wal and shm files - SQLite
+*-wal
+*-shm
