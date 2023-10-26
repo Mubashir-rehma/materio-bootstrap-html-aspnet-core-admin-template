@@ -99,7 +99,7 @@
   &:focus-within {
     > .form-control:first-child,
     > .form-select:first-child {
-      padding: $form-floating-padding-y calc($form-floating-padding-x - 1px);
+      padding: calc($form-floating-padding-y - 1px) calc($form-floating-padding-x - 1px);
     }
   }
 

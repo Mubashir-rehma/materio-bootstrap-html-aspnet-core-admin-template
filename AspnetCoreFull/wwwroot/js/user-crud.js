@@ -576,6 +576,8 @@ $(document).ready(function () {
       {
         // For Actions
         targets: -1,
+        searchable: false,
+        orderable: false,
         responsivePriority: 1
       }
     ],

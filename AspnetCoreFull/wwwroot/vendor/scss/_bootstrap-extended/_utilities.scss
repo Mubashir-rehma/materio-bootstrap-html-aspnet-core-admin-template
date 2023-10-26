@@ -603,11 +603,6 @@ $utilities: map-merge(
         100: 1
       )
     ),
-    'text-color': (
-      property: color,
-      class: text,
-      values: $utilities-text-emphasis-colors
-    ),
     // scss-docs-end utils-color
     // scss-docs-start utils-links
     'link-opacity':

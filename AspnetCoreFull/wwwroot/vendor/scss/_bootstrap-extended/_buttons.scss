@@ -11,9 +11,6 @@ $base-color: if($dark-style, $base, $black) !default;
   justify-content: center;
   text-transform: $btn-text-transform;
   letter-spacing: $btn-letter-spacing;
-  //ToDo: Remove this variable after declaring it in bootstrap
-  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
 
   // Disabled Style for all the button options as using gray color for all disabled buttons
   &[class*='btn-']:not([class*='btn-label-']):not([class*='btn-outline-']):not([class*='btn-text-']):not(.btn-icon) {

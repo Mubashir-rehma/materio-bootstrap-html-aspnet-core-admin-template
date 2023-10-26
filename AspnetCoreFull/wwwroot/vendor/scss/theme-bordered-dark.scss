@@ -188,7 +188,10 @@ body {
 
 .bs-stepper:not(.wizard-modern) {
   border: 1px solid $border-color;
-  border-radius: $card-border-radius;
+  box-shadow: none !important;
+  .tab-content {
+    border: none !important;
+  }
   .modal .modal-body & {
     border-width: 0;
   }
@@ -201,6 +204,14 @@ body {
     box-shadow: none !important;
     border: 1px solid $border-color;
     border-radius: $card-border-radius;
+  }
+}
+
+// Tabs
+.nav-pills {
+  ~ .tab-content {
+    border: 1px solid $border-color !important;
+    box-shadow: none;
   }
 }
 
