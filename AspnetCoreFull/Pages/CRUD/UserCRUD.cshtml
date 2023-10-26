@@ -162,11 +162,11 @@
               <td class="text-truncate">@user.Email</td>
               <td>@if (user.IsVerified)
                 {
-                  <i class='bx fs-4 bx-check-shield text-success'></i>
+                  <i class='bx fs-4 bx-check-shield text-success'><span class="d-none">1</span></i>
                 }
                 else
                 {
-                  <i class="bx fs-4 bx-shield-x text-danger"></i>
+                  <i class="bx fs-4 bx-shield-x text-danger"><span class="d-none">0</span></i>
                 }
                 <input type="hidden" class="user-verified-@user.Id" data-is-verified="@user.IsVerified" />
               </td>
