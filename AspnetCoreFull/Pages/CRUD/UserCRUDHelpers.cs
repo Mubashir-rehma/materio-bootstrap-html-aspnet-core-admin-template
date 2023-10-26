@@ -51,10 +51,10 @@ namespace AspnetCoreFull.Helpers
 
       var avatarHtml = $@"
 <div class=""d-flex align-items-center"">
-<div class=""avatar avatar-sm me-3 d-none d-sm-block"">
+<div class=""avatar avatar-sm me-2 d-none d-sm-block"">
 <span class=""avatar-initial rounded-circle bg-label-{selectedState}"">{initials}</span>
 </div>
-<span class=""user-name-full-{user.Id} fw-medium text-capitalize w-px-100 text-wrap"">{user.UserName}</span>
+<span class=""user-name-full-{user.Id} fw-medium text-capitalize text-wrap"">{user.UserName}</span>
 </div>";
 
       return avatarHtml;

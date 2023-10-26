@@ -533,14 +533,19 @@ $(document).ready(function () {
         }
       },
       {
+        // For Id
+        targets: 1,
+        responsivePriority: 4
+      },
+      {
         // For User Name
         targets: 2,
-        responsivePriority: 1
+        responsivePriority: 3
       },
       {
         // For Actions
         targets: -1,
-        responsivePriority: 3
+        responsivePriority: 1
       }
     ],
     responsive: {
