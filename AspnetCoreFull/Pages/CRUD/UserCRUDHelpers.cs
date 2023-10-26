@@ -54,7 +54,7 @@ namespace AspnetCoreFull.Helpers
 <div class=""avatar avatar-sm me-2 d-none d-sm-block"">
 <span class=""avatar-initial rounded-circle bg-label-{selectedState}"">{initials}</span>
 </div>
-<span class=""user-name-full-{user.Id} fw-medium text-capitalize text-wrap"">{user.UserName}</span>
+<a href=""/Apps/Users/View/Account"" class=""user-name-full-{user.Id} fw-medium text-capitalize text-wrap text-body"">{user.UserName}</a>
 </div>";
 
       return avatarHtml;
