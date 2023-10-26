@@ -149,8 +149,8 @@ function submitFormAndSetSuccessFlag(form, flagName) {
           },
           stringLength: {
             min: 6,
-            max: 30,
-            message: 'The user name must be more than 6 and less than 30 characters long'
+            max: 20,
+            message: 'The user name must be more than 6 and less than 20 characters long'
           }
         }
       },
@@ -248,8 +248,8 @@ function submitFormAndSetSuccessFlag(form, flagName) {
           },
           stringLength: {
             min: 6,
-            max: 30,
-            message: 'The user name must be more than 6 and less than 30 characters long'
+            max: 20,
+            message: 'The user name must be more than 6 and less than 20 characters long'
           }
         }
       },
@@ -541,6 +541,31 @@ $(document).ready(function () {
         // For User Name
         targets: 2,
         responsivePriority: 3
+      },
+      {
+        // For Email
+        targets: 3,
+        responsivePriority: 9
+      },
+      {
+        // For Is Verified
+        targets: 4,
+        responsivePriority: 5
+      },
+      {
+        // For Contact Number
+        targets: 5,
+        responsivePriority: 7
+      },
+      {
+        // For Role
+        targets: 6,
+        responsivePriority: 6
+      },
+      {
+        // For Plan
+        targets: 7,
+        responsivePriority: 8
       },
       {
         // For Actions
