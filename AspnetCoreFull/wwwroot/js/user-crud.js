@@ -131,12 +131,6 @@ function submitFormAndSetSuccessFlag(form, flagName) {
     document.getElementById('EditUser_SelectedPlan').value = userSelectedPlan.toLowerCase();
   };
 
-  // Attach event listeners for "Delete User" buttons (trash icon)
-  const deleteUserButtons = document.querySelectorAll("[id$='-deleteUser']");
-  deleteUserButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', () => showDeleteConfirmation(deleteButton.id.split('-')[0]));
-  });
-
   // Attach event listeners for "Edit User" buttons (pencil icon)
   const editUserButtons = document.querySelectorAll("[id$='-editUser']");
   editUserButtons.forEach(editButton => {
@@ -545,8 +539,18 @@ $(document).ready(function () {
         }
       },
       {
+        // For Id
+        targets: 1,
+        responsivePriority: 4
+      },
+      {
         // For User Name
         targets: 2,
+        responsivePriority: 3
+      },
+      {
+        // For Actions
+        targets: -1,
         responsivePriority: 1
       }
     ],
@@ -563,47 +567,29 @@ $(document).ready(function () {
         }),
         type: 'column',
         renderer: function (api, rowIdx, columns) {
-          var deleteButtonHtml = '';
           var data = $.map(columns, function (col, i) {
-            if (col.title !== '') {
-              // Check if the column data contains 'mdi-delete-outline'
-              if (col.data.indexOf('mdi-delete-outline') !== -1) {
-                // Add the data-bs-dismiss attribute to the Delete button
-                col.data = col.data.replace(
-                  '<i class="mdi mdi-delete-outline mdi-20px"',
-                  '<i class="mdi mdi-delete-outline mdi-20px" data-bs-dismiss="modal"'
-                );
-              }
-              deleteButtonHtml +=
-                '<tr data-dt-row="' +
-                col.rowIndex +
-                '" data-dt-column="' +
-                col.columnIndex +
-                '">' +
-                '<td class="fw-medium">' +
-                col.title +
-                ':</td> ' +
-                '<td>' +
-                col.data +
-                '</td>' +
-                '</tr>';
+            // Exclude the last column (Action)
+            if (i < columns.length - 1) {
+              return col.title !== ''
+                ? '<tr data-dt-row="' +
+                    col.rowIndex +
+                    '" data-dt-column="' +
+                    col.columnIndex +
+                    '">' +
+                    '<td>' +
+                    col.title +
+                    ':' +
+                    '</td> ' +
+                    '<td>' +
+                    col.data +
+                    '</td>' +
+                    '</tr>'
+                : '';
             }
-            return col.title !== ''
-              ? '<tr data-dt-row="' +
-                  col.rowIndex +
-                  '" data-dt-column="' +
-                  col.columnIndex +
-                  '">' +
-                  '<td class="fw-medium">' +
-                  col.title +
-                  ':</td> ' +
-                  '<td>' +
-                  col.data +
-                  '</td>' +
-                  '</tr>'
-              : '';
+            return '';
           }).join('');
-          return deleteButtonHtml ? $('<table class="table mt-3"/><tbody />').append(deleteButtonHtml) : false;
+
+          return data ? $('<table class="table mt-3"/><tbody />').append(data) : false;
         }
       }
     }
