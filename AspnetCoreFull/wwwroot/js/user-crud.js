@@ -542,6 +542,11 @@ $(document).ready(function () {
         // For User Name
         targets: 2,
         responsivePriority: 1
+      },
+      {
+        // For Actions
+        targets: -1,
+        responsivePriority: 3
       }
     ],
     responsive: {
@@ -557,44 +562,29 @@ $(document).ready(function () {
         }),
         type: 'column',
         renderer: function (api, rowIdx, columns) {
-          var deleteButtonHtml = '';
           var data = $.map(columns, function (col, i) {
-            if (col.title !== '') {
-              // Check if the column data contains 'bx-trash'
-              if (col.data.indexOf('bx-trash') !== -1) {
-                // Add the data-bs-dismiss attribute to the Delete button
-                col.data = col.data.replace('<i class="bx bx-trash"', '<i class="bx bx-trash" data-bs-dismiss="modal"');
-              }
-              deleteButtonHtml +=
-                '<tr data-dt-row="' +
-                col.rowIndex +
-                '" data-dt-column="' +
-                col.columnIndex +
-                '">' +
-                '<td class="fw-medium">' +
-                col.title +
-                ':</td> ' +
-                '<td>' +
-                col.data +
-                '</td>' +
-                '</tr>';
+            // Exclude the last column (Action)
+            if (i < columns.length - 1) {
+              return col.title !== ''
+                ? '<tr data-dt-row="' +
+                    col.rowIndex +
+                    '" data-dt-column="' +
+                    col.columnIndex +
+                    '">' +
+                    '<td>' +
+                    col.title +
+                    ':' +
+                    '</td> ' +
+                    '<td>' +
+                    col.data +
+                    '</td>' +
+                    '</tr>'
+                : '';
             }
-            return col.title !== ''
-              ? '<tr data-dt-row="' +
-                  col.rowIndex +
-                  '" data-dt-column="' +
-                  col.columnIndex +
-                  '">' +
-                  '<td class="fw-medium">' +
-                  col.title +
-                  ':</td> ' +
-                  '<td>' +
-                  col.data +
-                  '</td>' +
-                  '</tr>'
-              : '';
+            return '';
           }).join('');
-          return deleteButtonHtml ? $('<table class="table"/><tbody />').append(deleteButtonHtml) : false;
+
+          return data ? $('<table class="table"/><tbody />').append(data) : false;
         }
       }
     }
