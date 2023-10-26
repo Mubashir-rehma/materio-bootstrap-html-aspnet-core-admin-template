@@ -125,12 +125,6 @@ function submitFormAndSetSuccessFlag(form, flagName) {
     document.getElementById('EditUser_SelectedPlan').value = userSelectedPlan.toLowerCase();
   };
 
-  // Attach event listeners for "Delete User" buttons (trash icon)
-  const deleteUserButtons = document.querySelectorAll("[id$='-deleteUser']");
-  deleteUserButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', () => showDeleteConfirmation(deleteButton.id.split('-')[0]));
-  });
-
   // Attach event listeners for "Edit User" buttons (pencil icon)
   const editUserButtons = document.querySelectorAll("[id$='-editUser']");
   editUserButtons.forEach(editButton => {
