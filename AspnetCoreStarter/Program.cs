@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-// using AspnetCoreFull.Data;
-// using AspnetCoreFull.Models;
+// using AspnetCoreStarter.Data;
+// using AspnetCoreStarter.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
