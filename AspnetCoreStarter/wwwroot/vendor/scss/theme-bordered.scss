@@ -14,6 +14,60 @@ body {
   background: $body-bg !important;
 }
 
+.dropdown-menu,
+.popover,
+.toast,
+.flatpickr-calendar,
+.datepicker.datepicker-inline,
+.datepicker.datepicker-inline table,
+.daterangepicker,
+.pcr-app,
+.ui-timepicker-wrapper,
+.twitter-typeahead .tt-menu,
+.tagify__dropdown,
+.menu-horizontal .menu-inner > .menu-item.open .menu-sub {
+  outline: none;
+  box-shadow: none !important;
+  border: 1px solid $input-border-color !important;
+}
+// Bootstrap select > double border fix
+.dropdown-menu .dropdown-menu {
+  border: none !important;
+}
+.datepicker.datepicker-inline {
+  width: fit-content;
+  border-radius: $border-radius;
+}
+.modal-content,
+.offcanvas,
+.select2-dropdown,
+.shepherd-element {
+  box-shadow: none !important;
+}
+.select2-dropdown {
+  border-color: $input-border-color !important;
+}
+.bs-popover-start > .popover-arrow::before,
+.bs-popover-auto[data-popper-placement^='left'] > .popover-arrow::before {
+  border-left-color: $input-border-color !important;
+  right: -1px;
+}
+.bs-popover-end > .popover-arrow::before,
+.bs-popover-auto[data-popper-placement^='right'] > .popover-arrow::before {
+  border-right-color: $input-border-color !important;
+  left: -1px;
+}
+.bs-popover-top > .popover-arrow::before,
+.bs-popover-auto[data-popper-placement^='top'] > .popover-arrow::before {
+  border-top-color: $input-border-color !important;
+  bottom: -1px;
+}
+.bs-popover-bottom > .popover-arrow::before,
+.bs-popover-auto[data-popper-placement^='bottom'] > .popover-arrow::before {
+  border-bottom-color: $input-border-color !important;
+  top: -1px;
+}
+
 @include template-common-theme($primary-color);
 @include template-libs-theme($primary-color);
 @include template-pages-theme($primary-color);
@@ -31,6 +85,7 @@ body {
 .layout-horizontal .layout-navbar {
   box-shadow: 0 1px 0 $border-color;
 }
+.layout-navbar-fixed .layout-page:not(.window-scrolled) .layout-navbar.navbar-detached,
 .layout-navbar-fixed .layout-page:not(.window-scrolled) .layout-navbar.navbar-detached .search-input {
   background: $body-bg;
 }

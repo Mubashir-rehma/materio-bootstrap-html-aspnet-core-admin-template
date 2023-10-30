@@ -5,17 +5,21 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.dist.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/apex-charts/apexcharts.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+  <script src="~/vendor/libs/apex-charts/apexcharts.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+}
+
+@section PageStyles {
+  <link rel="stylesheet" href="~/vendor/css/pages/dashboards-crm.dist.css" />
 }
 
 @section PageScripts {
-<script src="~/js/dashboards-crm.dist.js"></script>
+  <script src="~/js/dashboards-crm.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -39,7 +43,9 @@
         </div>
         <div class="col-6">
           <div class="h-100 position-relative">
-            <img src="~/img/illustrations/illustration-1.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="95">
+            <img src="~/img/illustrations/illustration-1.png" alt="Ratings"
+              class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1"
+              width="95">
           </div>
         </div>
       </div>
@@ -64,7 +70,9 @@
         </div>
         <div class="col-6">
           <div class="h-100 position-relative">
-            <img src="~/img/illustrations/illustration-2.png" alt="Ratings" class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1" width="81">
+            <img src="~/img/illustrations/illustration-2.png" alt="Ratings"
+              class="position-absolute card-img-position scaleX-n1-rtl bottom-0 w-auto end-0 me-3 me-xl-0 me-xxl-3 pe-1"
+              width="81">
           </div>
         </div>
       </div>
@@ -77,7 +85,8 @@
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="card-title m-0 me-2">Transactions</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn p-0" type="button" id="transactionID" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
@@ -140,7 +149,8 @@
         <div class="d-flex justify-content-between">
           <h5 class="mb-2">Total Sales</h5>
           <div class="dropdown">
-            <button class="btn p-0" type="button" id="totalSalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn p-0" type="button" id="totalSalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <i class="mdi mdi-dots-vertical mdi-24px"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalSalesDropdown">
@@ -165,7 +175,8 @@
         <div class="d-flex justify-content-between">
           <h5 class="mb-0">Revenue Report</h5>
           <div class="dropdown">
-            <button class="btn p-0" type="button" id="revenueReportDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn p-0" type="button" id="revenueReportDropdown" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <i class="mdi mdi-dots-vertical mdi-24px"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="revenueReportDropdown">
@@ -189,7 +200,8 @@
         <div class="d-flex justify-content-between">
           <h5 class="mb-0">Sales Overview</h5>
           <div class="dropdown">
-            <button class="btn p-0" type="button" id="salesOverviewDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn p-0" type="button" id="salesOverviewDropdown" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <i class="mdi mdi-dots-vertical mdi-24px"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesOverviewDropdown">
@@ -326,7 +338,8 @@
         <div class="d-flex justify-content-between">
           <h5 class="mb-1">Weekly Sales</h5>
           <div class="dropdown">
-            <button class="btn p-0" type="button" id="weeklySalesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn p-0" type="button" id="weeklySalesDropdown" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <i class="mdi mdi-dots-vertical mdi-24px"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="weeklySalesDropdown">
@@ -392,7 +405,8 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn p-0" type="button" id="newProjectID" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
                 <i class="mdi mdi-dots-vertical mdi-24px"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="newProjectID">
@@ -420,7 +434,8 @@
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="upgradePlanCard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn p-0" type="button" id="upgradePlanCard" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="upgradePlanCard">
@@ -431,7 +446,8 @@
         </div>
       </div>
       <div class="card-body pt-0">
-        <small>Please make the payment to start enjoying all the features of our premium plan as soon as possible.</small>
+        <small>Please make the payment to start enjoying all the features of our premium plan as soon as
+          possible.</small>
         <div class="bg-label-primary p-2 border rounded my-3">
           <div class="d-flex px-1">
             <div class="avatar flex-shrink-0 me-3">
@@ -444,7 +460,8 @@
             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
               <div class="me-2">
                 <h6 class="mb-0">Platinum</h6>
-                <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">Upgrade Plan</a>
+                <a href="javascript:void(0)" class="small" data-bs-target="#upgradePlanModal"
+                  data-bs-toggle="modal">Upgrade Plan</a>
               </div>
               <div class="user-progress">
                 <div class="d-flex justify-content-center">
@@ -486,7 +503,8 @@
               </div>
             </div>
           </div>
-          <a href="javascript:;" class="d-block mt-2 mb-3 pb-1 small" data-bs-toggle="modal" data-bs-target="#addNewCCModal"> Add Payment Method </a>
+          <a href="javascript:;" class="d-block mt-2 mb-3 pb-1 small" data-bs-toggle="modal"
+            data-bs-target="#addNewCCModal"> Add Payment Method </a>
           <div class="col-12 mb-2 pb-2">
             <input id="addEmail" name="addEmail" class="form-control" type="text" placeholder="Email Address" />
           </div>
@@ -506,7 +524,8 @@
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="card-title m-0 me-2">Meeting Schedule</h5>
         <div class="dropdown">
-          <button class="btn p-0" type="button" id="meetingSchedule" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn p-0" type="button" id="meetingSchedule" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <i class="mdi mdi-dots-vertical mdi-24px"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="meetingSchedule">
@@ -616,7 +635,8 @@
   <!-- Developer Meetup -->
   <div class="col-xl-4 col-md-6">
     <div class="card">
-      <img class="card-img-top" src="~/img/elements/laptop.png" alt="laptop image cap" height="188" style="object-fit: cover;">
+      <img class="card-img-top" src="~/img/elements/laptop.png" alt="laptop image cap" height="188"
+        style="object-fit: cover;">
       <div class="card-body">
         <div class="d-flex border-bottom pb-3">
           <div class="badge bg-label-primary d-flex flex-column justify-content-center px-3 rounded-3 me-3">

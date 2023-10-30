@@ -7,8 +7,8 @@
   ViewData["Title"] = "FAQ - Pages";
 }
 
-@section PageStyles{
-<link rel="stylesheet" href="~/vendor/css/pages/page-faq.dist.css" />
+@section PageStyles {
+  <link rel="stylesheet" href="~/vendor/css/pages/page-faq.dist.css" />
 }
 
 @* ************** Content ************** *@
@@ -17,7 +17,8 @@
   <p class="text-body text-center mb-0 px-3">or choose a category to quickly find the help you need</p>
   <div class="input-wrapper my-3 input-group input-group-lg input-group-merge px-sm-5">
     <span class="input-group-text" id="basic-addon1"><i class="mdi mdi-magnify mdi-20px"></i></span>
-    <input type="text" class="form-control" placeholder="Ask a question...." aria-label="Search" aria-describedby="basic-addon1" />
+    <input type="text" class="form-control" placeholder="Ask a question...." aria-label="Search"
+      aria-describedby="basic-addon1" />
   </div>
 </div>
 
@@ -84,14 +85,14 @@
           </div>
         </div>
         <div id="accordionPayment" class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item active">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#accordionPayment-1" aria-controls="accordionPayment-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#accordionPayment-1" aria-controls="accordionPayment-1">
                 When is payment taken for my order?
               </button>
             </h2>
 
-            <div id="accordionPayment-1" class="accordion-collapse collapse">
+            <div id="accordionPayment-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 Payment is taken during the checkout process when you pay for
                 your order. The order number that appears on the confirmation
@@ -128,7 +129,7 @@
                 website, please contact us at our
                 <a href="javascript:void(0);">support portal</a>, or you can call us toll-free at
                 <span class="fw-medium">1-000-000-000</span>, or email us at
-                <a href="javascript:void(0);">order&#64;companymail.com</a>
+                <a href="javascript:void(0);">order@companymail.com</a>
               </div>
             </div>
           </div>
@@ -174,14 +175,14 @@
           </div>
         </div>
         <div id="accordionDelivery" class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item active">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#accordionDelivery-1" aria-controls="accordionDelivery-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#accordionDelivery-1" aria-controls="accordionDelivery-1">
                 How would you ship my order?
               </button>
             </h2>
 
-            <div id="accordionDelivery-1" class="accordion-collapse collapse">
+            <div id="accordionDelivery-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 For large products, we deliver your product via a third party
                 logistics company offering you the “room of choice” scheduled
@@ -233,14 +234,14 @@
           </div>
         </div>
         <div id="accordionCancellation" class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item active">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#accordionCancellation-1" aria-controls="accordionCancellation-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#accordionCancellation-1" aria-controls="accordionCancellation-1">
                 Can I cancel my order?
               </button>
             </h2>
 
-            <div id="accordionCancellation-1" class="accordion-collapse collapse">
+            <div id="accordionCancellation-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 <p>
                   Scheduled delivery orders can be cancelled 72 hours prior to
@@ -300,14 +301,14 @@
           </div>
         </div>
         <div id="accordionOrders" class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item active">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#accordionOrders-1" aria-controls="accordionOrders-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#accordionOrders-1" aria-controls="accordionOrders-1">
                 Has my order been successful?
               </button>
             </h2>
 
-            <div id="accordionOrders-1" class="accordion-collapse collapse">
+            <div id="accordionOrders-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 <p>
                   All successful order transactions will receive an order
@@ -375,14 +376,14 @@
           </div>
         </div>
         <div id="accordionProduct" class="accordion">
-          <div class="accordion-item">
+          <div class="accordion-item active">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#accordionProduct-1" aria-controls="accordionProduct-1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#accordionProduct-1" aria-controls="accordionProduct-1">
                 Will I be notified once my order has shipped?
               </button>
             </h2>
 
-            <div id="accordionProduct-1" class="accordion-collapse collapse">
+            <div id="accordionProduct-1" class="accordion-collapse collapse show">
               <div class="accordion-body">
                 Yes, We will send you an email once your order has been shipped.
                 This email will contain tracking and order information.

@@ -25,7 +25,7 @@
     &.form-floating-outline {
       > label {
         &::after {
-          background-color: $footer-top-bg;
+          background-color: $footer-top-bg !important;
         }
       }
     }

@@ -19,13 +19,13 @@
           <div data-i18n="Dashboards">Dashboards</div>
         </a>
         <ul class="menu-sub">
-         <li class='menu-item@(currentPage == "/Dashboards/CRM" ? " active" : "")'>
-           <a asp-page="/Dashboards/CRM" class="menu-link">
+          <li class='menu-item@(currentPage == "/Dashboards/CRM" ? " active" : "")'>
+            <a asp-page="/Dashboards/CRM" class="menu-link">
               <i class="menu-icon tf-icons mdi mdi-chart-donut"></i>
-             <div data-i18n="CRM">CRM</div>
-           </a>
-         </li>
-         <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
+              <div data-i18n="CRM">CRM</div>
+            </a>
+          </li>
+          <li class='menu-item@(currentPage == "/Dashboards/Analytics" ? " active" : "")'>
             <a asp-page="/Dashboards/Analytics" class="menu-link">
               <i class="menu-icon tf-icons mdi mdi-chart-timeline-variant"></i>
               <div data-i18n="Analytics">Analytics</div>
@@ -63,7 +63,7 @@
 
           <li class='menu-item@(currentPage == "/LayoutExamples/WithoutMenu" ? " active" : "")'>
             <a asp-page="/LayoutExamples/WithoutMenu" class="menu-link">
-            <i class="menu-icon tf-icons mdi mdi-page-layout-header-footer"></i>
+              <i class="menu-icon tf-icons mdi mdi-page-layout-header-footer"></i>
               <div data-i18n="Without menu">Without menu</div>
             </a>
           </li>
@@ -92,6 +92,14 @@
             </a>
           </li>
         </ul>
+      </li>
+
+      <!-- User (CRUD) -->
+      <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
+        <a asp-page="/CRUD/UserCRUD" class="menu-link">
+          <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
+          <div data-i18n="Users (CRUD)">Users (CRUD)</div>
+        </a>
       </li>
 
       <!-- Apps -->
@@ -183,7 +191,8 @@
                   </li>
                 </ul>
               </li>
-              <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active" : "")'>
+              <li
+                class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer/CustomerDetails") ? " active" : "")'>
                 <a href='javascript:void(0);' class='menu-link menu-toggle'>
                   <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                   <div data-i18n="Customer">Customer</div>
@@ -201,25 +210,29 @@
                       <div data-i18n="Customer Details">Customer Details</div>
                     </a>
                     <ul class="menu-sub">
-                      <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
+                      <li
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerOverview' class='menu-link'>
                           <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Overview">Overview</div>
                         </a>
                       </li>
-                      <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
+                      <li
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerSecurity' class='menu-link'>
                           <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Security">Security</div>
                         </a>
                       </li>
-                      <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
+                      <li
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerBilling' class='menu-link'>
                           <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Address & Billing">Address & Billing</div>
                         </a>
                       </li>
-                      <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications" ? " active" : "")'>
+                      <li
+                        class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications" ? " active" : "")'>
                         <a asp-page='/Apps/Ecommerce/Customer/CustomerDetails/CustomerNotifications' class='menu-link'>
                           <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
                           <div data-i18n="Notifications">Notifications</div>
@@ -441,7 +454,8 @@
       </li>
 
       <!-- Pages -->
-      <li class='menu-item@((currentPage.StartsWith("/Pages/") || currentPage.StartsWith("/Wizards/") || currentPage.StartsWith("/Auth/") || currentPage.StartsWith("/Modals/")) ? " active" : "")'>
+      <li
+        class='menu-item@((currentPage.StartsWith("/Pages/") || currentPage.StartsWith("/Wizards/") || currentPage.StartsWith("/Auth/") || currentPage.StartsWith("/Modals/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-content-paste"></i>
           <div data-i18n="Pages">Pages</div>
@@ -777,7 +791,8 @@
       </li>
 
       <!-- Components -->
-      <li class='menu-item@((currentPage.StartsWith("/Cards/") || currentPage.StartsWith("/Ui/") || currentPage.StartsWith("/ExtendedUi/") || currentPage.StartsWith("/Icons/")) ? " active" : "")'>
+      <li
+        class='menu-item@((currentPage.StartsWith("/Cards/") || currentPage.StartsWith("/Ui/") || currentPage.StartsWith("/ExtendedUi/") || currentPage.StartsWith("/Icons/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-layers-outline"></i>
           <div data-i18n="Components">Components</div>
@@ -1048,15 +1063,16 @@
           </li>
           <li class='menu-item@(currentPage == "/Icons/MdiIcons" ? " active" : "")'>
             <a asp-page="/Icons/MdiIcons" class="menu-link">
-                <i class="menu-icon tf-icons mdi mdi-google-circles-extended"></i>
-                <div data-i18n="Icons">Icons</div>
+              <i class="menu-icon tf-icons mdi mdi-google-circles-extended"></i>
+              <div data-i18n="Icons">Icons</div>
             </a>
           </li>
         </ul>
       </li>
 
       <!-- Forms -->
-      <li class='menu-item@((currentPage.StartsWith("/Forms/") || currentPage.StartsWith("/FormLayouts/") || currentPage.StartsWith("/FormWizard/") || currentPage.StartsWith("/FormValidation/")) ? " active" : "")'>
+      <li
+        class='menu-item@((currentPage.StartsWith("/Forms/") || currentPage.StartsWith("/FormLayouts/") || currentPage.StartsWith("/FormWizard/") || currentPage.StartsWith("/FormValidation/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons mdi mdi-checkbox-marked-outline"></i>
           <div data-i18n="Forms">Forms</div>

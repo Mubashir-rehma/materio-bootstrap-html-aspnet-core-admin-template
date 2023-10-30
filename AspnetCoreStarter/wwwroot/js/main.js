@@ -201,7 +201,7 @@ if (document.getElementById('layout-menu')) {
     i18next
       .use(i18NextHttpBackend)
       .init({
-        lng: 'en',
+        lng: window.templateCustomizer ? window.templateCustomizer.settings.lang : 'en',
         debug: false,
         fallbackLng: 'en',
         backend: {
@@ -222,6 +222,7 @@ if (document.getElementById('layout-menu')) {
     for (let i = 0; i < dropdownItems.length; i++) {
       dropdownItems[i].addEventListener('click', function () {
         let currentLanguage = this.getAttribute('data-language');
+        let textDirection = this.getAttribute('data-text-direction');
 
         for (let sibling of this.parentNode.children) {
           var siblingEle = sibling.parentElement.parentNode.firstChild;
@@ -237,10 +238,21 @@ if (document.getElementById('layout-menu')) {
         this.classList.add('active');
 
         i18next.changeLanguage(currentLanguage, (err, t) => {
+          window.templateCustomizer ? window.templateCustomizer.setLang(currentLanguage) : '';
+          directionChange(textDirection);
           if (err) return console.log('something went wrong loading', err);
           localize();
         });
       });
+    }
+    function directionChange(textDirection) {
+      if (textDirection === 'rtl') {
+        if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') !== 'true')
+          window.templateCustomizer.setRtl(true);
+      } else {
+        if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') === 'true')
+          window.templateCustomizer.setRtl(false);
+      }
     }
   }
 

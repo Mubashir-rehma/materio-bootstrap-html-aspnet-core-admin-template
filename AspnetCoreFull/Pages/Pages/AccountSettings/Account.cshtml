@@ -4,25 +4,25 @@
   ViewData["Title"] = "Account settings - Account";
 }
 
-@section VendorStyles{
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
-<link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
+@section VendorStyles {
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+  <link rel="stylesheet" href="~/vendor/libs/animate-css/animate.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-<script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-<script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
-<script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+  <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
 }
 
 @section PageScripts {
-<script src="~/js/pages-account-settings-account.dist.js"></script>
+  <script src="~/js/pages-account-settings-account.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -33,18 +33,24 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="nav nav-pills flex-column flex-md-row mb-4 gap-2 gap-lg-0">
-      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="mdi mdi-account-outline mdi-20px me-1"></i>Account</a></li>
-      <li class="nav-item"><a class="nav-link" href="Security"><i class="mdi mdi-lock-open-outline mdi-20px me-1"></i>Security</a></li>
-      <li class="nav-item"><a class="nav-link" href="Billing"><i class="mdi mdi-bookmark-outline mdi-20px me-1"></i>Billing & Plans</a></li>
-      <li class="nav-item"><a class="nav-link" href="Notifications"><i class="mdi mdi-bell-outline mdi-20px me-1"></i>Notifications</a></li>
-      <li class="nav-item"><a class="nav-link" href="Connections"><i class="mdi mdi-link mdi-20px me-1"></i>Connections</a></li>
+      <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i
+            class="mdi mdi-account-outline mdi-20px me-1"></i>Account</a></li>
+      <li class="nav-item"><a class="nav-link" href="Security"><i
+            class="mdi mdi-lock-open-outline mdi-20px me-1"></i>Security</a></li>
+      <li class="nav-item"><a class="nav-link" href="Billing"><i
+            class="mdi mdi-bookmark-outline mdi-20px me-1"></i>Billing & Plans</a></li>
+      <li class="nav-item"><a class="nav-link" href="Notifications"><i
+            class="mdi mdi-bell-outline mdi-20px me-1"></i>Notifications</a></li>
+      <li class="nav-item"><a class="nav-link" href="Connections"><i
+            class="mdi mdi-link mdi-20px me-1"></i>Connections</a></li>
     </ul>
     <div class="card mb-4">
       <h4 class="card-header">Profile Details</h4>
       <!-- Account -->
       <div class="card-body">
         <div class="d-flex align-items-start align-items-sm-center gap-4">
-          <img src="~/img/avatars/1.png" alt="user-avatar" class="d-block w-px-120 h-px-120 rounded" id="uploadedAvatar" />
+          <img src="~/img/avatars/1.png" alt="user-avatar" class="d-block w-px-120 h-px-120 rounded"
+            id="uploadedAvatar" />
           <div class="button-wrapper">
             <label for="upload" class="btn btn-primary me-2 mb-3" tabindex="0">
               <span class="d-none d-sm-block">Upload new photo</span>
@@ -77,20 +83,23 @@
             </div>
             <div class="col-md-6">
               <div class="form-floating form-floating-outline">
-                <input class="form-control" type="text" id="email" name="email" value="john.doe&#64;example.com" placeholder="john.doe&#64;example.com" />
+                <input class="form-control" type="text" id="email" name="email" value="john.doe&#64;example.com"
+                  placeholder="john.doe&#64;example.com" />
                 <label for="email">E-mail</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating form-floating-outline">
-                <input type="text" class="form-control" id="organization" name="organization" value='@TempData.Peek("authorName")' />
+                <input type="text" class="form-control" id="organization" name="organization"
+                  value='@TempData.Peek("authorName")' />
                 <label for="organization">Organization</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group input-group-merge">
                 <div class="form-floating form-floating-outline">
-                  <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="202 555 0111" />
+                  <input type="text" id="phoneNumber" name="phoneNumber" class="form-control"
+                    placeholder="202 555 0111" />
                   <label for="phoneNumber">Phone Number</label>
                 </div>
                 <span class="input-group-text">US (+1)</span>
@@ -110,7 +119,8 @@
             </div>
             <div class="col-md-6">
               <div class="form-floating form-floating-outline">
-                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="231465" maxlength="6" />
+                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="231465"
+                  maxlength="6" />
                 <label for="zipCode">Zip Code</label>
               </div>
             </div>
@@ -219,7 +229,8 @@
             <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
             <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
           </div>
-          <button type="submit" class="btn btn-secondary deactivate-account" disabled="disabled">Deactivate Account</button>
+          <button type="submit" class="btn btn-secondary deactivate-account" disabled="disabled">Deactivate
+            Account</button>
         </form>
       </div>
     </div>

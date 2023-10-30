@@ -300,7 +300,7 @@ $validation-messages: '';
 
     // Input group border radius
     > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
-      margin-right: calc($input-border-width * -1);
+      margin-right: calc(#{$input-border-width} * -1);
       @include border-end-radius(0);
       margin-left: 0px;
       @include border-start-radius($input-border-radius);

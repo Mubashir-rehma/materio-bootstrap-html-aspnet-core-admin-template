@@ -1,11 +1,28 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using AspnetCoreFull.Data;
+using AspnetCoreFull.Models;
+
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Services.AddDbContext<UserContext>(options =>
+{
+  options.UseSqlite(builder.Configuration.GetConnectionString("UserContext") ?? throw new InvalidOperationException("Connection string 'UserContext' not found."));
+}, ServiceLifetime.Scoped);
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+  var services = scope.ServiceProvider;
+
+  SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

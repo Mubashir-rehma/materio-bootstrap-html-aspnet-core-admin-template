@@ -5,24 +5,24 @@
 }
 
 @section VendorStyles {
-<link rel="stylesheet" href="~/vendor/libs/quill/katex.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/quill/editor.dist.css" />
-<link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/quill/katex.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/quill/editor.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/select2/select2.dist.css" />
 }
 
 @section VendorScripts {
-<script src="~/vendor/libs/quill/katex.dist.js"></script>
-<script src="~/vendor/libs/quill/quill.dist.js"></script>
-<script src="~/vendor/libs/select2/select2.dist.js"></script>
-<script src="~/vendor/libs/block-ui/block-ui.dist.js"></script>
+  <script src="~/vendor/libs/quill/katex.dist.js"></script>
+  <script src="~/vendor/libs/quill/quill.dist.js"></script>
+  <script src="~/vendor/libs/select2/select2.dist.js"></script>
+  <script src="~/vendor/libs/block-ui/block-ui.dist.js"></script>
 }
 
 @section PageStyles {
-<link rel="stylesheet" href="~/vendor/css/pages/app-email.dist.css" />
+  <link rel="stylesheet" href="~/vendor/css/pages/app-email.dist.css" />
 }
 
 @section PageScripts {
-<script src="~/js/app-email.dist.js"></script>
+  <script src="~/js/app-email.dist.js"></script>
 }
 
 @* ************** Content ************** *@
@@ -32,7 +32,8 @@
       <!-- Email Sidebar -->
       <div class="col app-email-sidebar border-end flex-grow-0" id="app-email-sidebar">
         <div class="btn-compost-wrapper">
-          <button class="btn btn-primary btn-compose w-100" data-bs-toggle="modal" data-bs-target="#emailComposeSidebar">Compose</button>
+          <button class="btn btn-primary btn-compose w-100" data-bs-toggle="modal"
+            data-bs-target="#emailComposeSidebar">Compose</button>
         </div>
         <!-- Email Filters -->
         <div class="email-filters pt-2 pb-2">
@@ -120,13 +121,15 @@
             <!-- Email List: Search -->
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center w-100">
-                <i class="mdi mdi-menu mdi-24px cursor-pointer d-block d-lg-none me-3" data-bs-toggle="sidebar" data-target="#app-email-sidebar" data-overlay></i>
+                <i class="mdi mdi-menu mdi-24px cursor-pointer d-block d-lg-none me-3" data-bs-toggle="sidebar"
+                  data-target="#app-email-sidebar" data-overlay></i>
                 <div class="mb-0 mb-lg-1 w-100">
                   <div class="input-group input-group-merge shadow-none">
                     <span class="input-group-text border-0 ps-0" id="email-search">
                       <i class="mdi mdi-magnify mdi-20px text-muted"></i>
                     </span>
-                    <input type="text" class="form-control email-search-input border-0" placeholder="Search..." aria-label="Search..." aria-describedby="email-search">
+                    <input type="text" class="form-control email-search-input border-0" placeholder="Search..."
+                      aria-label="Search..." aria-describedby="email-search">
                   </div>
                 </div>
               </div>
@@ -135,7 +138,9 @@
                   <i class="mdi mdi-refresh mdi-20px scaleX-n1-rtl cursor-pointer email-refresh"></i>
                 </span>
                 <div class="dropdown">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="emailsActions"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="emailsActions"><i
+                      class="mdi mdi-dots-vertical mdi-20px"></i></button>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="emailsActions">
                     <a class="dropdown-item" href="javascript:void(0)">Mark as read</a>
                     <a class="dropdown-item" href="javascript:void(0)">Mark as unread</a>
@@ -160,7 +165,9 @@
                   <i class="mdi mdi-email-open-outline mdi-24px email-list-read cursor-pointer"></i>
                 </div>
                 <div class="dropdown mx-1">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" id="dropdownMenuFolderOne" data-bs-toggle="dropdown" aria-expanded="true"><i class="mdi mdi-folder-outline mdi-24px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    id="dropdownMenuFolderOne" data-bs-toggle="dropdown" aria-expanded="true"><i
+                      class="mdi mdi-folder-outline mdi-24px"></i></button>
 
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolderOne">
                     <a class="dropdown-item" href="javascript:void(0)">
@@ -178,7 +185,9 @@
                   </div>
                 </div>
                 <div class="dropdown mx-1">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownLabelOne"><i class="mdi mdi-label-outline mdi-24px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="dropdownLabelOne"><i
+                      class="mdi mdi-label-outline mdi-24px"></i></button>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabelOne">
                     <a class="dropdown-item" href="javascript:void(0)">
                       <i class="mdi mdi-circle-medium mdi-24px text-success me-1"></i>
@@ -199,7 +208,8 @@
                   </div>
                 </div>
               </div>
-              <div class="email-pagination d-sm-flex d-none align-items-center flex-wrap justify-content-between justify-sm-content-end">
+              <div
+                class="email-pagination d-sm-flex d-none align-items-center flex-wrap justify-content-between justify-sm-content-end">
                 <span class="d-sm-block d-none mx-3">1-10 of 653</span>
                 <span class="btn btn-icon btn-text-secondary rounded-pill btn-sm">
                   <i class="email-prev mdi mdi-chevron-left cursor-pointer text-muted scaleX-n1-rtl"></i>
@@ -214,20 +224,25 @@
           <!-- Email List: Items -->
           <div class="email-list pt-0">
             <ul class="list-unstyled m-0">
-              <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-1">
                     <label class="form-check-label" for="email-1"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/1.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/1.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Chandler Bing</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from
+                      the project of GitHub</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2" data-label="private"></span>
+                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2"
+                      data-label="private"></span>
                     <small class="email-list-item-time text-muted">08:40 AM</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -237,21 +252,27 @@
                   </div>
                 </div>
               </li>
-              <li class="email-list-item email-marked-read" data-sent="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-sent="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-2">
                     <label class="form-check-label" for="email-2"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/2.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/2.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Ross Geller</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Dessert soufflé tootsie roll soufflé carrot cake halvah jelly.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Dessert soufflé tootsie
+                      roll soufflé carrot cake halvah jelly.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2" data-label="important"></span>
-                    <span class="email-list-item-label badge badge-dot bg-warning d-none d-md-inline-block me-2" data-label="private"></span>
+                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2"
+                      data-label="important"></span>
+                    <span class="email-list-item-label badge badge-dot bg-warning d-none d-md-inline-block me-2"
+                      data-label="private"></span>
                     <small class="email-list-item-time text-muted">10:12 AM</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -261,23 +282,28 @@
                   </div>
                 </div>
               </li>
-              <li class="email-list-item email-marked-read" data-draft="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-draft="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-3">
                     <label class="form-check-label" for="email-3"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-success">BS</span>
                   </div>
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Barney Stinson</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Soufflé apple pie caramels soufflé tiramisu bear claw.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Soufflé apple pie
+                      caramels soufflé tiramisu bear claw.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-attachment mdi mdi-attachment mdi-20px cursor-pointer me-2 float-end float-sm-none"></span>
-                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2" data-label="company"></span>
+                    <span
+                      class="email-list-item-attachment mdi mdi-attachment mdi-20px cursor-pointer me-2 float-end float-sm-none"></span>
+                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2"
+                      data-label="company"></span>
                     <small class="email-list-item-time text-muted">12:44 AM</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -293,14 +319,18 @@
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-4">
                     <label class="form-check-label" for="email-4"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/3.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/3.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Pheobe Buffay</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Tart croissant jujubes gummies macaroon Icing sweet.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Tart croissant jujubes
+                      gummies macaroon Icing sweet.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-success d-none d-md-inline-block me-2" data-label="work"></span>
+                    <span class="email-list-item-label badge badge-dot bg-success d-none d-md-inline-block me-2"
+                      data-label="work"></span>
                     <small class="email-list-item-time text-muted">Yesterday</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-read"> <i class='mdi mdi-email-open-outline mdi-24px'></i> </li>
@@ -310,20 +340,25 @@
                   </div>
                 </div>
               </li>
-              <li class="email-list-item email-marked-read" data-spam="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-spam="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-5">
                     <label class="form-check-label" for="email-5"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/4.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/4.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Ted Mosby</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love Pudding cookie chocolate sweet tiramisu jujubes I love danish.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love Pudding cookie
+                      chocolate sweet tiramisu jujubes I love danish.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2" data-label="company"></span>
+                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2"
+                      data-label="company"></span>
                     <small class="email-list-item-time text-muted">Yesterday</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -339,16 +374,19 @@
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-6">
                     <label class="form-check-label" for="email-6"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-info">Sk</span>
                   </div>
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Stacy Cooper</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I
+                      love carrot cake sugar plum I love.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2" data-label="work"></span>
+                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2"
+                      data-label="work"></span>
                     <small class="email-list-item-time text-muted">5 May</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-read"> <i class='mdi mdi-email-open-outline mdi-24px'></i> </li>
@@ -358,20 +396,25 @@
                   </div>
                 </div>
               </li>
-              <li class="email-list-item email-marked-read" data-draft="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-draft="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-7">
                     <label class="form-check-label" for="email-7"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/5.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/5.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Rachel Green</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding chocolate bar ice cream bonbon lollipop.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding
+                      chocolate bar ice cream bonbon lollipop.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-warning d-none d-md-inline-block me-2" data-label="company"></span>
+                    <span class="email-list-item-label badge badge-dot bg-warning d-none d-md-inline-block me-2"
+                      data-label="company"></span>
                     <small class="email-list-item-time text-muted">15 May</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -387,15 +430,20 @@
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-8">
                     <label class="form-check-label" for="email-8"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/6.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/6.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Grace Shelby</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Icing gummi bears ice cream croissant dessert wafer.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Icing gummi bears ice
+                      cream croissant dessert wafer.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-attachment mdi mdi-attachment mdi-20px cursor-pointer me-2 float-end float-sm-none"></span>
-                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2" data-label="private"></span>
+                    <span
+                      class="email-list-item-attachment mdi mdi-attachment mdi-20px cursor-pointer me-2 float-end float-sm-none"></span>
+                    <span class="email-list-item-label badge badge-dot bg-danger d-none d-md-inline-block me-2"
+                      data-label="private"></span>
                     <small class="email-list-item-time text-muted">20 Apr</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-read"> <i class='mdi mdi-email-open-outline mdi-24px'></i> </li>
@@ -411,16 +459,19 @@
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-9">
                     <label class="form-check-label" for="email-9"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
                   <div class="avatar avatar-sm d-block flex-shrink-0 me-sm-3 me-0">
                     <span class="avatar-initial rounded-circle bg-label-danger">JF</span>
                   </div>
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Jacob Frye</span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding chocolate bar ice cream Sweet.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, Chocolate cake pudding
+                      chocolate bar ice cream Sweet.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2" data-label="important"></span>
+                    <span class="email-list-item-label badge badge-dot bg-primary d-none d-md-inline-block me-2"
+                      data-label="important"></span>
                     <small class="email-list-item-time text-muted">25 Mar</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-read"> <i class='mdi mdi-email-open-outline mdi-24px'></i> </li>
@@ -430,20 +481,25 @@
                   </div>
                 </div>
               </li>
-              <li class="email-list-item email-marked-read" data-trash="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+              <li class="email-list-item email-marked-read" data-trash="true" data-bs-toggle="sidebar"
+                data-target="#app-email-view">
                 <div class="d-flex align-items-center">
                   <div class="form-check mb-0">
                     <input class="email-list-item-input form-check-input" type="checkbox" id="email-10">
                     <label class="form-check-label" for="email-10"></label>
                   </div>
-                  <i class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
-                  <img src="~/img/avatars/9.png" alt="user-avatar" class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
+                  <i
+                    class="email-list-item-bookmark mdi mdi-star-outline mdi-24px d-sm-inline-block d-none cursor-pointer ms-1 me-3"></i>
+                  <img src="~/img/avatars/9.png" alt="user-avatar"
+                    class="d-block flex-shrink-0 rounded-circle me-sm-3 me-0" height="32" width="32" />
                   <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                     <span class="email-list-item-username me-2 h6">Alistair Crowley </span>
-                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I love carrot cake sugar plum I love.</span>
+                    <span class="email-list-item-subject d-xl-inline-block d-block"> Hey Katy, I love danish. Cupcake I
+                      love carrot cake sugar plum I love.</span>
                   </div>
                   <div class="email-list-item-meta ms-auto d-flex align-items-center">
-                    <span class="email-list-item-label badge badge-dot bg-success d-none d-md-inline-block me-2" data-label="company"></span>
+                    <span class="email-list-item-label badge badge-dot bg-success d-none d-md-inline-block me-2"
+                      data-label="company"></span>
                     <small class="email-list-item-time text-muted">25 Feb</small>
                     <ul class="list-inline email-list-item-actions">
                       <li class="list-inline-item email-unread"> <i class='mdi mdi-email-outline mdi-24px'></i> </li>
@@ -470,7 +526,8 @@
           <div class="d-flex justify-content-between align-items-center py-2">
             <div class="d-flex align-items-center overflow-hidden">
               <span class="btn btn-icon btn-text-secondary rounded-pill btn-sm">
-                <i class="mdi mdi-chevron-left mdi-20px cursor-pointer text-heading" data-bs-toggle="sidebar" data-target="#app-email-view"></i>
+                <i class="mdi mdi-chevron-left mdi-20px cursor-pointer text-heading" data-bs-toggle="sidebar"
+                  data-target="#app-email-view"></i>
               </span>
               <h6 class="text-truncate mb-0 ms-2 me-3 pe-1 fw-normal">Focused impactful open issues</h6>
               <span class="badge bg-label-warning rounded-pill">Important</span>
@@ -478,7 +535,9 @@
             <!-- Email View : Action bar-->
             <div class="d-flex">
               <div class="dropdown ms-3">
-                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMoreOptions"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                  data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMoreOptions"><i
+                    class="mdi mdi-dots-vertical mdi-20px"></i></button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMoreOptions">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="mdi mdi-email-outline me-1"></i>
@@ -515,10 +574,13 @@
                 <i class='mdi mdi-delete-outline mdi-24px cursor-pointer'></i>
               </div>
               <div class="btn btn-text-secondary btn-icon rounded-pill">
-                <i class='mdi mdi-email-outline mdi-24px cursor-pointer' data-bs-toggle="sidebar" data-target="#app-email-view"></i>
+                <i class='mdi mdi-email-outline mdi-24px cursor-pointer' data-bs-toggle="sidebar"
+                  data-target="#app-email-view"></i>
               </div>
               <div class="dropdown mx-1">
-                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMenuFolderTwo"><i class="mdi mdi-folder-outline mdi-24px"></i></button>
+                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                  data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMenuFolderTwo"><i
+                    class="mdi mdi-folder-outline mdi-24px"></i></button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuFolderTwo">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="mdi mdi-alert-circle-outline me-1"></i>
@@ -535,7 +597,9 @@
                 </div>
               </div>
               <div class="dropdown mx-1">
-                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownLabelTwo"><i class="mdi mdi-label-outline mdi-24px"></i></button>
+                <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                  data-bs-toggle="dropdown" aria-expanded="true" id="dropdownLabelTwo"><i
+                    class="mdi mdi-label-outline mdi-24px"></i></button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLabelTwo">
                   <a class="dropdown-item" href="javascript:void(0)">
                     <i class="mdi mdi-circle-medium text-success mdi-24px"></i>
@@ -567,9 +631,11 @@
           <div class="card email-card-prev mx-sm-4 mx-3 border">
             <div class="card-header d-flex justify-content-between align-items-center flex-wrap border-bottom">
               <div class="d-flex align-items-center mb-sm-0 mb-3">
-                <img src="~/img/avatars/2.png" alt="user-avatar" class="flex-shrink-0 rounded-circle me-3" height="40" width="40" />
+                <img src="~/img/avatars/2.png" alt="user-avatar" class="flex-shrink-0 rounded-circle me-3" height="40"
+                  width="40" />
                 <div class="flex-grow-1 ms-1">
                   <h6 class="m-0">Ross Geller</h6>
+                  <small class="text-muted">rossGeller&#64;email.com</small>
                   <small class="text-muted">rossGeller&#64;email.com</small>
                 </div>
               </div>
@@ -578,7 +644,9 @@
                 <i class="mdi mdi-attachment mdi-20px cursor-pointer me-3"></i>
                 <i class="email-list-item-bookmark mdi mdi-star-outline mdi-20px cursor-pointer me-2"></i>
                 <div class="dropdown me-3">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownEmailTwo"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="dropdownEmailTwo"><i
+                      class="mdi mdi-dots-vertical mdi-20px"></i></button>
 
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmailTwo">
                     <a class="dropdown-item scroll-to-reply" href="javascript:void(0)">
@@ -628,7 +696,8 @@
           <div class="card email-card-last mx-sm-4 mx-3 mt-3">
             <div class="card-header d-flex justify-content-between align-items-center flex-wrap border-bottom">
               <div class="d-flex align-items-center mb-sm-0 mb-3">
-                <img src="~/img/avatars/1.png" alt="user-avatar" class="flex-shrink-0 rounded-circle me-3" height="40" width="40" />
+                <img src="~/img/avatars/1.png" alt="user-avatar" class="flex-shrink-0 rounded-circle me-3" height="40"
+                  width="40" />
                 <div class="flex-grow-1 ms-1">
                   <h6 class="m-0">Chandler Bing</h6>
                   <small class="text-muted">iAmAhoot&#64;email.com</small>
@@ -639,7 +708,9 @@
                 <i class="mdi mdi-attachment cursor-pointer me-3 mdi-20px"></i>
                 <i class="email-list-item-bookmark mdi mdi-star-outline mdi-20px cursor-pointer me-2"></i>
                 <div class="dropdown">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownEmailOne"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="dropdownEmailOne"><i
+                      class="mdi mdi-dots-vertical mdi-20px"></i></button>
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmailOne">
                     <a class="dropdown-item scroll-to-reply" href="javascript:void(0)">
                       <i class="mdi mdi-reply-outline me-1"></i>
@@ -721,7 +792,8 @@
   </div>
 
   <!-- Compose Email -->
-  <div class="app-email-compose modal" id="emailComposeSidebar" tabindex="-1" aria-labelledby="emailComposeSidebar" aria-hidden="true">
+  <div class="app-email-compose modal" id="emailComposeSidebar" tabindex="-1" aria-labelledby="emailComposeSidebar"
+    aria-hidden="true">
     <div class="modal-dialog m-0 me-md-4 mb-4 modal-lg">
       <div class="modal-content p-0">
         <div class="modal-header bg-lightest py-3">
@@ -736,7 +808,8 @@
             <div class="email-compose-to d-flex justify-content-between align-items-center">
               <label class="form-label mb-0 fs-6 text-muted" for="emailContacts">To:</label>
               <div class="select2-primary border-0 shadow-none flex-grow-1 mx-2">
-                <select class="select2 select-email-contacts form-select" id="emailContacts" name="emailContacts" multiple>
+                <select class="select2 select-email-contacts form-select" id="emailContacts" name="emailContacts"
+                  multiple>
                   <option data-avatar="1.png" value="Jane Foster">Jane Foster</option>
                   <option data-avatar="3.png" value="Donna Frank">Donna Frank</option>
                   <option data-avatar="5.png" value="Gabrielle Robertson">Gabrielle Robertson</option>
@@ -755,20 +828,23 @@
               <hr class="container-m-nx my-2">
               <div class="d-flex align-items-center">
                 <label for="email-cc" class="form-label mb-0 fw-6 text-muted">Cc:</label>
-                <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-cc" placeholder="someone&#64;email.com">
+                <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-cc"
+                  placeholder="someone&#64;email.com">
               </div>
             </div>
             <div class="email-compose-bcc d-none">
               <hr class="container-m-nx my-2">
               <div class="d-flex align-items-center">
                 <label for="email-bcc" class="form-label mb-0 fw-6 text-muted">Bcc:</label>
-                <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-bcc" placeholder="someone&#64;email.com">
+                <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-bcc"
+                  placeholder="someone&#64;email.com">
               </div>
             </div>
             <hr class="container-m-nx my-2">
             <div class="email-compose-subject d-flex align-items-center mb-2">
               <label for="email-subject" class="form-label mb-0 fs-6 text-muted">Subject:</label>
-              <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-subject" placeholder="Project Details">
+              <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2" id="email-subject"
+                placeholder="Project Details">
             </div>
             <div class="email-compose-message container-m-nx">
               <div class="d-flex justify-content-end">
@@ -791,7 +867,8 @@
               <div class="d-flex align-items-center">
                 <div class="btn-group">
                   <button type="reset" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Send</button>
-                  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="visually-hidden">Toggle Dropdown</span>
                   </button>
                   <ul class="dropdown-menu">
@@ -804,7 +881,9 @@
               </div>
               <div class="d-flex align-items-center">
                 <div class="dropdown">
-                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMoreActions"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                  <button class="btn btn-icon btn-text-secondary rounded-pill dropdown-toggle hide-arrow"
+                    data-bs-toggle="dropdown" aria-expanded="true" id="dropdownMoreActions"><i
+                      class="mdi mdi-dots-vertical mdi-20px"></i></button>
 
                   <ul class="dropdown-menu" aria-labelledby="dropdownMoreActions">
                     <li><button type="button" class="dropdown-item">Add Label</button></li>
@@ -816,7 +895,8 @@
                     <li><button type="button" class="dropdown-item">Check Spelling</button></li>
                   </ul>
                 </div>
-                <button type="reset" class="btn btn-icon btn-text-secondary rounded-pill" data-bs-dismiss="modal" aria-label="Close"><i class="mdi mdi-delete-outline mdi-20px"></i></button>
+                <button type="reset" class="btn btn-icon btn-text-secondary rounded-pill" data-bs-dismiss="modal"
+                  aria-label="Close"><i class="mdi mdi-delete-outline mdi-20px"></i></button>
               </div>
             </div>
           </form>

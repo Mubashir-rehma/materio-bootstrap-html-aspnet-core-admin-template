@@ -121,7 +121,7 @@
     > .btn:not(:first-child),
     > .btn-group:not(:first-child) {
       margin-left: 0;
-      margin-right: -$btn-border-width;
+      margin-right: calc(#{$btn-border-width} * -1);
     }
 
     // Reset rounded corners
