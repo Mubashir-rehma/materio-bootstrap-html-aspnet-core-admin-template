@@ -340,7 +340,7 @@ $(document).ready(function () {
 
   // User List DataTable Initialization (For User CRUD Page)
   $('#userTable').DataTable({
-    order: [[2, 'asc']],
+    order: [[1, 'desc']],
     displayLength: 7,
     dom:
       // Datatable DOM positioning
