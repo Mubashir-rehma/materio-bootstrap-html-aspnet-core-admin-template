@@ -24,26 +24,26 @@
 }
 
 @section VendorStyles {
-    <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
-    <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
-    <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
-    <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
-    <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
+  <link rel="stylesheet" href="~/vendor/libs/datatables-bs5/datatables.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.dist.css">
+  <link rel="stylesheet" href="~/vendor/libs/sweetalert2/sweetalert2.dist.css" />
+  <link rel="stylesheet" href="~/vendor/libs/&#64;form-validation/umd/styles/index.min.css" />
 }
 
 @section VendorScripts {
-    <script src="~/vendor/libs/moment/moment.dist.js"></script>
-    <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.dist.js"></script>
-    <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
-    <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
-    <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-    <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
-    <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
-    <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
+  <script src="~/vendor/libs/moment/moment.dist.js"></script>
+  <script src="~/vendor/libs/datatables-bs5/datatables-bootstrap5.dist.js"></script>
+  <script src="~/vendor/libs/sweetalert2/sweetalert2.dist.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/bundle/popular.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+  <script src="~/vendor/libs/&#64;form-validation/umd/plugin-auto-focus/index.min.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave.dist.js"></script>
+  <script src="~/vendor/libs/cleavejs/cleave-phone.dist.js"></script>
 }
 
 @section PageScripts {
-    <script src="~/js/user-crud.dist.js"></script>
+  <script src="~/js/user-crud.dist.js"></script>
 }
 
 @* User Analytics Widget *@
@@ -141,98 +141,98 @@
 @* Users DataTable *@
 @if (Model.Users != null && Model.Users.Count > 0)
 {
-    <div class="card">
-    <div class="card-header">
-      <h5 class="card-title mb-0">Search Filter</h5>
-    </div>
-    <div class="card-datatable table-responsive pb-0">
-      <table id="userTable" class="table">
-        <thead class="table-light">
-          <tr>
-            <th></th>
-            <th>Id</th>
-            <th>User</th>
-            <th>Email</th>
-            <th>Verified</th>
-            <th>Contact</th>
-            <th>Role</th>
-            <th>Plan</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach (var user in Model.Users)
+  <div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Search Filter</h5>
+  </div>
+  <div class="card-datatable table-responsive pb-0">
+    <table id="userTable" class="table">
+      <thead class="table-light">
+        <tr>
+          <th></th>
+          <th>Id</th>
+          <th>User</th>
+          <th>Email</th>
+          <th>Verified</th>
+          <th>Contact</th>
+          <th>Role</th>
+          <th>Plan</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (var user in Model.Users)
           {
-                <tr>
-                  <td></td>
-                  <td>@user.Id</td>
-                  <td class="user-name text-nowrap">@Html.Raw(UserCRUDHelpers.GenerateUserAvatar(user))</td>
-                  <td class="text-truncate">@user.Email</td>
-                  <td>@if (user.IsVerified)
-                    {
-                        <i class='mdi mdi-shield-check-outline fs-4 text-success'><span class="d-none">1</span></i>
-                    }
-                    else
-                    {
-                        <i class="mdi mdi-shield-remove-outline fs-4 text-danger"><span class="d-none">0</span></i>
-                    }
-                    <input type="hidden" class="user-verified-@user.Id" data-is-verified="@user.IsVerified" />
-                  </td>
-                  <td class="text-nowrap">@UserCRUDHelpers.FormatUSPhoneNumber(user.ContactNumber)</td>
-                  <td class="text-capitalize">@user.SelectedRole</td>
-                  <td class="text-capitalize">@user.SelectedPlan</td>
-                  <td class="text-nowrap">
+            <tr>
+              <td></td>
+              <td>@user.Id</td>
+              <td class="user-name text-nowrap">@Html.Raw(UserCRUDHelpers.GenerateUserAvatar(user))</td>
+              <td class="text-truncate">@user.Email</td>
+              <td>@if (user.IsVerified)
+                {
+                  <i class='mdi mdi-shield-check-outline fs-4 text-success'><span class="d-none">1</span></i>
+                }
+                else
+                {
+                  <i class="mdi mdi-shield-remove-outline fs-4 text-danger"><span class="d-none">0</span></i>
+                }
+                <input type="hidden" class="user-verified-@user.Id" data-is-verified="@user.IsVerified" />
+              </td>
+              <td class="text-nowrap">@UserCRUDHelpers.FormatUSPhoneNumber(user.ContactNumber)</td>
+              <td class="text-capitalize">@user.SelectedRole</td>
+              <td class="text-capitalize">@user.SelectedPlan</td>
+              <td class="text-nowrap">
                 @* Edit Button *@
-                    <button class="btn btn-sm btn-icon edit-user-button" data-bs-toggle="offcanvas"
-                      data-bs-target="#editUserOffcanvas" id="@user.Id-editUser"><i
-                        class="mdi mdi-pencil-outline mdi-20px"></i></button>
+                <button class="btn btn-sm btn-icon edit-user-button" data-bs-toggle="offcanvas"
+                  data-bs-target="#editUserOffcanvas" id="@user.Id-editUser"><i
+                    class="mdi mdi-pencil-outline mdi-20px"></i></button>
                 @* Delete Button *@
-                    <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" id="@user.Id-deleteForm"
-                      onsubmit="showSuccessAlert('Deleted');" class="d-inline">
-                      <button class="btn btn-sm btn-icon" id="@user.Id-deleteUser" onclick="showDeleteConfirmation('@user.Id')">
-                        <i class="mdi mdi-delete-outline mdi-20px"></i>
-                      </button>
-                    </form>
+                <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" id="@user.Id-deleteForm"
+                  onsubmit="showSuccessAlert('Deleted');" class="d-inline">
+                  <button class="btn btn-sm btn-icon" id="@user.Id-deleteUser" onclick="showDeleteConfirmation('@user.Id')">
+                    <i class="mdi mdi-delete-outline mdi-20px"></i>
+                  </button>
+                </form>
                 @* Dropdown Button *@
-                    <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
-                        class="mdi mdi-dots-vertical mdi-20px"></i></button>
-                    <div class="dropdown-menu dropdown-menu-end m-0">
-                      <a href="/Apps/Users/View/Account" class="dropdown-item">View</a>
-                      <a href="javascript:void(0);" class="dropdown-item">Suspend</a>
-                    </div>
+                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
+                    class="mdi mdi-dots-vertical mdi-20px"></i></button>
+                <div class="dropdown-menu dropdown-menu-end m-0">
+                  <a href="/Apps/Users/View/Account" class="dropdown-item">View</a>
+                  <a href="javascript:void(0);" class="dropdown-item">Suspend</a>
+                </div>
 
-                  </td>
-                </tr>
+              </td>
+            </tr>
           }
-          </tbody>
-        </table>
-      </div>
-    </div>
-}
-else
-{
-    <div class="card">
-    <div class="card-header">
-      <h5 class="card-title mb-0">Search Filter</h5>
-    </div>
-    <div class="card-datatable table-responsive pb-0">
-      <table id="userTable" class="table">
-        <thead class="border-top">
-          <tr>
-            <th></th>
-            <th>Id</th>
-            <th>User</th>
-            <th>Email</th>
-            <th>Verified</th>
-            <th>Contact</th>
-            <th>Role</th>
-            <th>Plan</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+        </tbody>
       </table>
     </div>
   </div>
+}
+else
+{
+  <div class="card">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Search Filter</h5>
+  </div>
+  <div class="card-datatable table-responsive pb-0">
+    <table id="userTable" class="table">
+      <thead class="border-top">
+        <tr>
+          <th></th>
+          <th>Id</th>
+          <th>User</th>
+          <th>Email</th>
+          <th>Verified</th>
+          <th>Contact</th>
+          <th>Role</th>
+          <th>Plan</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
 }
 
 
