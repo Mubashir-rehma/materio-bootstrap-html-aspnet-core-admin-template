@@ -79,16 +79,8 @@
         </ul>
       </li>
 
-      <!-- User (CRUD) -->
-      <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
-        <a asp-page="/CRUD/UserCRUD" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-data"></i>
-          <div data-i18n="Users (CRUD)">Users (CRUD)</div>
-        </a>
-      </li>
-
       <!-- Apps -->
-      <li class='menu-item@(currentPage.StartsWith("/Apps/") ? " active" : "")'>
+      <li class='menu-item@((currentPage.StartsWith("/Apps/")|| currentPage.StartsWith("/CRUD/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class='menu-icon tf-icons bx bx-customize'></i>
           <div data-i18n="Apps">Apps</div>
@@ -382,6 +374,11 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
+            <a asp-page="/CRUD/UserCRUD" class="menu-link">
+              <div data-i18n="Users (CRUD)">Users (CRUD)</div>
+            </a>
           </li>
         </ul>
       </li>

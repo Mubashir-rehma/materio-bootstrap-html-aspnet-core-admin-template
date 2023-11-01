@@ -210,10 +210,10 @@ if (document.getElementById('layout-menu')) {
     function directionChange(textDirection) {
       if (textDirection === 'rtl') {
         if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') !== 'true')
-          window.templateCustomizer.setRtl(true);
+          window.templateCustomizer ? window.templateCustomizer.setRtl(true) : '';
       } else {
         if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') === 'true')
-          window.templateCustomizer.setRtl(false);
+          window.templateCustomizer ? window.templateCustomizer.setRtl(false) : '';
       }
     }
   }
@@ -568,7 +568,7 @@ if (typeof $ !== 'undefined') {
                 header: '<h6 class="suggestions-header text-primary mb-0 mx-3 mt-3 pb-2">Members</h6>',
                 suggestion: function ({ name, src, subtitle }) {
                   return (
-                    '<a href="app-user-view-account.html">' +
+                    '<a href="/Apps/Users/View/Account">' +
                     '<div class="d-flex align-items-center">' +
                     '<img class="rounded-circle me-3" src="' +
                     assetsPath +
