@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   web:
     container_name: dotnet-starter-app # Name your container
@@ -6,4 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile # Path to your Dockerfile
     ports:
-      - "5050:80" # Map container port 80 to host port 5050
+      - '5050:80' # Map container port 80 to host port 5050
+    environment:
+      - ASPNETCORE_URLS=http://+:80

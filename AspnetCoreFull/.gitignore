@@ -110,7 +110,8 @@ wwwroot/js/*.dist.js
 !wwwroot/js/site.js
 wwwroot/img/
 wwwroot/svg/
-wwwroot/json/**/*
+wwwroot/json/*
+!wwwroot/json/locales
 !wwwroot/json/search-vertical.json
 !wwwroot/json/search-horizontal.json
 wwwroot/vendor/
