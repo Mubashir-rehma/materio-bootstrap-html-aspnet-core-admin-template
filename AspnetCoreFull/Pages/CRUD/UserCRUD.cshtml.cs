@@ -22,6 +22,12 @@ namespace AspnetCoreFull.Pages.CRUD
     {
       // Assign the UserContext object to the _context field
       _context = context;
+      Users = new List<User>(); // Initialize Users list
+      AvailableRolesSelectList = new SelectList(new List<string>()); // Initialize AvailableRolesSelectList
+      AvailablePlansSelectList = new SelectList(new List<string>()); // Initialize AvailablePlansSelectList
+
+      // Initialize NewUser
+      NewUser = new User();
     }
 
     [BindProperty]
@@ -74,7 +80,7 @@ namespace AspnetCoreFull.Pages.CRUD
     // The OnPostAsync method is called when the Create User form is submitted
     public async Task<IActionResult> OnPostAsync()
     {
-      if (NewUser.UserName != null && NewUser.Email != null)
+      if (NewUser?.UserName != null && NewUser?.Email != null)
       {
         // Add a new user to the database
         _context.User.Add(NewUser);
@@ -95,7 +101,7 @@ namespace AspnetCoreFull.Pages.CRUD
       }
 
       // Update user properties based on form data
-      string isVerifiedString = Request.Form["user.IsVerified"];
+      string? isVerifiedString = Request.Form["user.IsVerified"];
       userToUpdate.IsVerified = (isVerifiedString == "on") ? true : false;
 
       // Update the user in the database and save changes
@@ -122,30 +128,12 @@ namespace AspnetCoreFull.Pages.CRUD
     // Define a list of available roles
     private List<string> GetAvailableRoles()
     {
-      List<string> availableRoles = new List<string>
-            {
-                "subscriber",
-                "editor",
-                "maintainer",
-                "author",
-                "admin"
-            };
-
-      return availableRoles;
+      return new List<string> { "subscriber", "editor", "maintainer", "author", "admin" };
     }
 
-    // Define a list of available plans
     private List<string> GetAvailablePlans()
     {
-      List<string> availablePlans = new List<string>
-            {
-                "basic",
-                "enterprise",
-                "company",
-                "team"
-            };
-
-      return availablePlans;
+      return new List<string> { "basic", "enterprise", "company", "team" };
     }
   }
 }
