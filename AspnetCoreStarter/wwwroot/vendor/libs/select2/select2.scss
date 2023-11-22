@@ -268,7 +268,7 @@ $select2-multiple-selection-line-height: 1.5rem !default;
 }
 
 // Floating (outline) label position on focus
-.form-floating:has(.select2) {
+.form-floating.form-floating-select2 {
   label {
     width: auto !important;
     height: auto !important;

@@ -450,13 +450,10 @@ class TemplateCustomizer {
     if (this.settings.stylesOpt === 'system') {
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         this.settings.style = 'dark'
-        document.cookie = `style=dark` // to fix laravel system mode issue
       } else {
         this.settings.style = 'light'
-        document.cookie = `style=light` // to fix laravel system mode issue
       }
     } else {
-      document.cookie = `style=; expires=Thu, 01 Jan 2000 00:00:00 UTC; path=/;` // to fix laravel system mode issue
       this.settings.style = this.settings.styles.indexOf(style) !== -1 ? style : this.settings.defaultStyle
     }
     if (this.settings.styles.indexOf(this.settings.style) === -1) {
@@ -511,7 +508,7 @@ class TemplateCustomizer {
             id="${inputName}${nameVal}" />
         </label>
       </div>
-      <label class="form-check-label small" for="${inputName}${nameVal}">${title}</label>
+      <label class="form-check-label small text-nowrap" for="${inputName}${nameVal}">${title}</label>
     </div>`)
     }
 
@@ -656,6 +653,7 @@ class TemplateCustomizer {
 
         const rtlCb = e => {
           this._loadingState(true)
+          this._setSetting('Lang', this.settings.lang)
           // For demo purpose, we will use EN as LTR and AR as RTL Language
           this._getSetting('Lang') === 'ar' ? this._setSetting('Lang', 'en') : this._setSetting('Lang', 'ar')
           this.setRtl(e.target.value === 'rtl', true, () => {

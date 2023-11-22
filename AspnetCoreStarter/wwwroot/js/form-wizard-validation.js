@@ -156,6 +156,7 @@
           FormValidation2.revalidateField('formValidationLanguage');
         });
       });
+      handleBootstrapSelectEvents();
     }
 
     // select2

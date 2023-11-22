@@ -832,7 +832,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 
   .layout-menu-fixed .layout-horizontal .layout-page .menu-horizontal + [class*='container-'],
   .layout-menu-fixed-offcanvas .layout-horizontal .layout-page .menu-horizontal + [class*='container-'] {
-    padding-top: calc(4.8rem + $menu-icon-expanded-width) !important;
+    padding-top: calc($container-padding-y + 4rem) !important;
   }
 
   @include rtl-only {

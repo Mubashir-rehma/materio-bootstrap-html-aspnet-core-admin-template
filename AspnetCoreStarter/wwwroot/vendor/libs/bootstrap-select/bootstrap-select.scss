@@ -58,7 +58,7 @@
 }
 
 // Floating (outline) label position on focus
-.form-floating:has(.bootstrap-select) {
+.form-floating.form-floating-bootstrap-select {
   label {
     width: auto !important;
     height: auto !important;

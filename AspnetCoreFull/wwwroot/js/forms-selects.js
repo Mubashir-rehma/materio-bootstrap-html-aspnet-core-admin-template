@@ -13,6 +13,7 @@ $(function () {
   // --------------------------------------------------------------------
   if (selectPicker.length) {
     selectPicker.selectpicker();
+    handleBootstrapSelectEvents();
   }
 
   // Select2

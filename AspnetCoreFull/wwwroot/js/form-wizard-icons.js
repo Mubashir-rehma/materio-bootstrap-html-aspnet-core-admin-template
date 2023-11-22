@@ -11,6 +11,7 @@ $(function () {
   // Bootstrap select
   if (selectPicker.length) {
     selectPicker.selectpicker();
+    handleBootstrapSelectEvents();
   }
 
   // select2
