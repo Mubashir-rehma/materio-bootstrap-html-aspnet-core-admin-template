@@ -103,7 +103,7 @@
       </li>
 
       <!-- Apps -->
-      <li class='menu-item@(currentPage.StartsWith("/Apps/") ? " active" : "")'>
+      <li class='menu-item@((currentPage.StartsWith("/Apps/")|| currentPage.StartsWith("/CRUD/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class='menu-icon tf-icons mdi mdi-apps'></i>
           <div data-i18n="Apps">Apps</div>
@@ -201,7 +201,7 @@
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerAll" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Customer/CustomerAll' class='menu-link'>
                       <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
-                      <div data-i18n="All Customers">All Customers</div>
+                      <div data-i18n="All Customer">All Customer</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer") ? " active" : "")'>
@@ -281,7 +281,7 @@
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Shipping" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Settings/Shipping' class='menu-link'>
                       <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
-                      <div data-i18n="Shipping & delivery">Shipping & delivery</div>
+                      <div data-i18n="Shipping & Delivery">Shipping & Delivery</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Settings/Locations" ? " active" : "")'>
@@ -449,6 +449,11 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
+            <a asp-page="/CRUD/UserCRUD" class="menu-link">
+              <div data-i18n="Users (CRUD)">Users (CRUD)</div>
+            </a>
           </li>
         </ul>
       </li>
