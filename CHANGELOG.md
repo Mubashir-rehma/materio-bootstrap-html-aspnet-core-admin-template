@@ -4,6 +4,24 @@
 
 All notable changes to this template will be documented in this file
 
+## v1.2.0 (2023-11-22)
+
+### Updated
+
+- Updated to .NET 8 (Reduced Package size & startup time)
+- Documentation
+- Docker compatibility with .NET 8
+
+### Fixed
+
+- Removed warnings during build process
+- Front pages without customizer console error
+- Static/Fixed header jump issue in horizontal layout
+- Locale issues in RTL mode (Arabic)
+- Template customizer JS for RTL mode
+- Floating label issue with select2 & bootstrap-select in mozilla firefox
+- Minor improvements & bug fixes
+
 ## v1.1.0 (2023-10-30)
 
 ### Added

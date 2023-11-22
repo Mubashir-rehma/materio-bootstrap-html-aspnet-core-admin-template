@@ -7,7 +7,16 @@
   // Bootstrap validation example
   //------------------------------------------------------------------------------------------
   // const flatPickrEL = $('.flatpickr-validation');
-  const flatPickrList = [].slice.call(document.querySelectorAll('.flatpickr-validation'));
+  const flatPickrList = [].slice.call(document.querySelectorAll('.flatpickr-validation')),
+    selectPicker = $('.selectpicker');
+
+  // Bootstrap Select
+  // --------------------------------------------------------------------
+  if (selectPicker.length) {
+    selectPicker.selectpicker();
+    handleBootstrapSelectEvents();
+  }
+
   // Flat pickr
   if (flatPickrList) {
     flatPickrList.forEach(flatPickr => {

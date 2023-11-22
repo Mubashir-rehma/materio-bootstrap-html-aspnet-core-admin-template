@@ -248,10 +248,10 @@ if (document.getElementById('layout-menu')) {
     function directionChange(textDirection) {
       if (textDirection === 'rtl') {
         if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') !== 'true')
-          window.templateCustomizer.setRtl(true);
+          window.templateCustomizer ? window.templateCustomizer.setRtl(true) : '';
       } else {
         if (localStorage.getItem('templateCustomizer-' + templateName + '--Rtl') === 'true')
-          window.templateCustomizer.setRtl(false);
+          window.templateCustomizer ? window.templateCustomizer.setRtl(false) : '';
       }
     }
   }

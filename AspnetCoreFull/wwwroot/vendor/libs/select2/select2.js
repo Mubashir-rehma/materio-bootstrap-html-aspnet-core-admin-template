@@ -10,5 +10,7 @@ function select2Focus(ele) {
   $(ele).on('select2:close', function (e) {
     $(e.target.closest('.form-floating')).removeClass('select2-focus');
   });
+  ele.closest('.form-floating').hasClass('form-floating') &&
+    ele.closest('.form-floating').addClass('form-floating-select2');
 }
 export { select2Focus };

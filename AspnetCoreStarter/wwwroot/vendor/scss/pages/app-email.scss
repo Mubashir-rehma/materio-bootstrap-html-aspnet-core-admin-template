@@ -114,6 +114,7 @@ $email-filter-padding-x: 1.5rem;
 
     .ql-editor {
       height: 10rem;
+      min-height: 10rem;
     }
     .ql-snow.ql-toolbar {
       padding: 0.5rem 1rem;
@@ -238,7 +239,8 @@ $email-filter-padding-x: 1.5rem;
         border: 0;
 
         .ql-editor {
-          height: 5rem;
+          height: 7rem;
+          min-height: 7rem;
         }
       }
       .ql-editor,
