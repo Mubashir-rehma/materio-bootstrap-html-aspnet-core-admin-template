@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/AspnetCoreFull/bin/Debug/net6.0/AspnetCoreFull.dll",
+            "program": "${workspaceFolder}/AspnetCoreFull/bin/Debug/net8.0/AspnetCoreFull.dll",
             "args": [],
             "cwd": "${workspaceFolder}/AspnetCoreFull",
             "stopAtEntry": false,
