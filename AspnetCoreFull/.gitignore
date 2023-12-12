@@ -115,7 +115,22 @@ wwwroot/json/*
 !wwwroot/json/locales
 !wwwroot/json/search-vertical.json
 !wwwroot/json/search-horizontal.json
-wwwroot/vendor/
+# Ignore everything in wwwroot/vendor/
+wwwroot/vendor/**
+
+# Except for scss/_components/ directory
+!wwwroot/vendor/scss/
+wwwroot/vendor/scss/**/*
+!wwwroot/vendor/scss/_components/
+
+# Exclude all files in scss/_components/ except _layout.scss
+wwwroot/vendor/scss/_components/*
+!wwwroot/vendor/scss/_components/_layout.scss
+
+# Exclude all files in js except helpers.js
+!wwwroot/vendor/js/
+wwwroot/vendor/js/**/*
+!wwwroot/vendor/js/helpers.js
 
 build-config.js
 package.json
