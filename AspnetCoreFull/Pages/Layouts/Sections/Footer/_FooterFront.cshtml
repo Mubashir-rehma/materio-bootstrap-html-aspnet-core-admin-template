@@ -4,11 +4,11 @@
     <div class="container">
       <div class="row gx-0 gy-4 g-md-5">
         <div class="col-lg-5">
-          <a asp-page="/" class="app-brand-link gap-2 mb-4">
-            <span class="app-brand-logo demo">
+          <a asp-page="/" class="app-brand-link mb-4">
+            <span class="app-brand-logo demo me-2">
               @await Html.PartialAsync("../_Partials/_Macros")
             </span>
-            <span class="app-brand-text demo footer-link fw-semibold ms-2 ps-1">@TempData.Peek("appName")</span>
+            <span class="app-brand-text demo footer-link fw-semibold ms-1">@TempData.Peek("appName")</span>
           </a>
           <p class="footer-text footer-logo-description mb-4">
             Most Powerful & Comprehensive 🤩 React NextJS Admin Template with Elegant Material Design & Unique
@@ -39,7 +39,7 @@
             <li class="mb-3">
               <a href="javascript:void(0);" class="footer-link">Semi Dark Layout</a>
             </li>
-            <li class="mb-3">
+            <li>
               <a href="javascript:void(0);" class="footer-link">Dark Layout</a>
             </li>
           </ul>
@@ -59,8 +59,8 @@
             <li class="mb-3">
               <a asp-page="HelpCenterLanding" class="footer-link">Help Center</a>
             </li>
-            <li class="mb-3">
-              <a asp-page="/Auth/Register/Cover" target="_blank" class="footer-link">Login/Register</a>
+            <li>
+              <a asp-page="/Auth/Login/Cover" target="_blank" class="footer-link">Login/Register</a>
             </li>
           </ul>
         </div>

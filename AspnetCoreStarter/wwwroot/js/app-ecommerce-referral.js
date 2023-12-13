@@ -151,7 +151,7 @@ $(function () {
           render: function (data, type, full, meta) {
             var $earn = full['earning'];
 
-            return '<span class="text-heading">' + $earn + '</span > ';
+            return '<span  class="text-heading">' + $earn + '</span > ';
           }
         }
       ],
@@ -170,7 +170,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-primary dropdown-toggle',
+          className: 'btn btn-primary dropdown-toggle waves-effect waves-light',
           text: '<i class="mdi mdi-export-variant me-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {

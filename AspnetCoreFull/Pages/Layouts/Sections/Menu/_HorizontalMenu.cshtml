@@ -94,14 +94,6 @@
         </ul>
       </li>
 
-      <!-- User (CRUD) -->
-      <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
-        <a asp-page="/CRUD/UserCRUD" class="menu-link">
-          <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
-          <div data-i18n="Users (CRUD)">Users (CRUD)</div>
-        </a>
-      </li>
-
       <!-- Apps -->
       <li class='menu-item@((currentPage.StartsWith("/Apps/")|| currentPage.StartsWith("/CRUD/")) ? " active" : "")'>
         <a href="javascript:void(0)" class="menu-link menu-toggle">
@@ -201,7 +193,7 @@
                   <li class='menu-item@(currentPage == "/Apps/Ecommerce/Customer/CustomerAll" ? " active" : "")'>
                     <a asp-page='/Apps/Ecommerce/Customer/CustomerAll' class='menu-link'>
                       <i class='menu-icon tf-icons mdi mdi-circle-outline mdi-14px p-1 text-body'></i>
-                      <div data-i18n="All Customer">All Customer</div>
+                      <div data-i18n="All Customers">All Customers</div>
                     </a>
                   </li>
                   <li class='menu-item@(currentPage.StartsWith("/Apps/Ecommerce/Customer") ? " active" : "")'>
@@ -452,6 +444,7 @@
           </li>
           <li class='menu-item@(currentPage == "/CRUD/UserCRUD" ? " active" : "")'>
             <a asp-page="/CRUD/UserCRUD" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
               <div data-i18n="Users (CRUD)">Users (CRUD)</div>
             </a>
           </li>
