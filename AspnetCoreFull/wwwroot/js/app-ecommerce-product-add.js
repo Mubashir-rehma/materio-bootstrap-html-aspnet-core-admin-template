@@ -124,7 +124,8 @@ $(function () {
           placeholder: 'Placeholder text'
         });
         $('.select2-container').css('width', '100%');
-        select2Focus('.form-select');
+        var $this = $(this);
+        select2Focus($this);
         $('.form-repeater:first .form-select').select2({
           dropdownParent: $(this).parent(),
           placeholder: 'Placeholder text'

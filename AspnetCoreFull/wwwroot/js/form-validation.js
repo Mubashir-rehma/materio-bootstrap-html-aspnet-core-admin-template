@@ -21,7 +21,6 @@
   if (flatPickrList) {
     flatPickrList.forEach(flatPickr => {
       flatPickr.flatpickr({
-        allowInput: true,
         monthSelectorType: 'static'
       });
     });
@@ -275,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
           placeholder: 'Select country',
           dropdownParent: formValidationSelect2Ele.parent()
         })
-        .on('change.select2', function () {
+        .on('change', function () {
           // Revalidate the color field when an option is chosen
           fv.revalidateField('formValidationSelect2');
         });

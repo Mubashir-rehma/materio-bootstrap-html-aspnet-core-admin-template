@@ -38,7 +38,6 @@ $bs-stepper-check-icon-size: 0.875rem;
     padding: $bs-stepper-header-padding-y $bs-stepper-header-padding-x;
     .step {
       .step-trigger {
-        opacity: unset;
         padding: 0 $bs-stepper-trigger-padding;
         flex-wrap: nowrap;
         font-weight: light.$font-weight-medium;

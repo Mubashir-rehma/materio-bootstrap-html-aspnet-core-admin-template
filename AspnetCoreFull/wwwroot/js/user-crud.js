@@ -17,8 +17,8 @@ function showDeleteConfirmation(userId) {
     confirmButtonText: 'Delete',
     cancelButtonText: 'Cancel',
     customClass: {
-      confirmButton: 'btn btn-primary',
-      cancelButton: 'btn btn-outline-secondary'
+      confirmButton: 'btn btn-primary waves-effect waves-light',
+      cancelButton: 'btn btn-outline-secondary waves-effect waves-light'
     }
   }).then(result => {
     if (result.isConfirmed) {
@@ -36,7 +36,7 @@ function showDeleteConfirmation(userId) {
         icon: 'error',
         confirmButtonText: 'Ok',
         customClass: {
-          confirmButton: 'btn btn-success'
+          confirmButton: 'btn btn-success waves-effect waves-light'
         }
       });
     }
@@ -72,7 +72,7 @@ function submitFormAndSetSuccessFlag(form, flagName) {
       confirmButtonText: 'Ok',
       confirmButton: false,
       customClass: {
-        confirmButton: 'btn btn-success'
+        confirmButton: 'btn btn-success waves-effect waves-light'
       }
     });
   }
@@ -368,7 +368,7 @@ $(document).ready(function () {
     buttons: [
       {
         extend: 'collection',
-        className: 'btn btn-outline-secondary dropdown-toggle ms-2 me-0 me-md-3 mx-sm-3',
+        className: 'btn btn-outline-secondary dropdown-toggle ms-2 me-0 me-md-3 mx-sm-3 waves-effect waves-light',
         text: '<i class="mdi mdi-export-variant me-1"></i>Export',
         buttons: [
           {
@@ -513,7 +513,7 @@ $(document).ready(function () {
       {
         // For Create User Button (Add New User)
         text: '<i class="mdi mdi-plus me-0 me-md-2"></i><span class="d-none d-md-inline-block">Add New User</span>',
-        className: 'add-new btn btn-primary',
+        className: 'add-new btn btn-primary waves-effect waves-light',
         attr: {
           'data-bs-toggle': 'offcanvas',
           'data-bs-target': '#createUserOffcanvas'

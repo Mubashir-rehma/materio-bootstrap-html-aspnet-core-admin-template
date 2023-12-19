@@ -31,6 +31,7 @@ $flatpickr-width: ($flatpickr-cell-size * 7)+ ($flatpickr-content-padding-x * 2)
   overflow: hidden;
   box-sizing: border-box;
   padding: 0;
+  padding-bottom: 4px;
   max-height: 0;
   border: 0;
   background: transparent;

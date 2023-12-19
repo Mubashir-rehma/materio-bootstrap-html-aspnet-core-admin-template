@@ -264,7 +264,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-primary dropdown-toggle me-2',
+          className: 'btn btn-label-primary dropdown-toggle me-2 waves-effect waves-light',
           text: '<i class="mdi mdi-export-variant me-sm-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {
@@ -404,7 +404,7 @@ $(function () {
         },
         {
           text: '<i class="mdi mdi-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Add New Record</span>',
-          className: 'create-new btn btn-primary'
+          className: 'create-new btn btn-primary waves-effect waves-light'
         }
       ],
       responsive: {

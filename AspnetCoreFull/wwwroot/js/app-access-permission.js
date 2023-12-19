@@ -119,7 +119,7 @@ $(function () {
       buttons: [
         {
           text: 'Add Permission',
-          className: 'add-new btn btn-primary mb-3 mb-sm-0',
+          className: 'add-new btn btn-primary mb-3 mb-sm-0 waves-effect waves-light',
           attr: {
             'data-bs-toggle': 'modal',
             'data-bs-target': '#addPermissionModal'

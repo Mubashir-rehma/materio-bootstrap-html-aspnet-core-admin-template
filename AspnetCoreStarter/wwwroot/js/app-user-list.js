@@ -44,7 +44,7 @@ $(function () {
       columns: [
         // columns according to JSON
         { data: '' },
-        { data: 'full_name' },
+        { data: 'id' },
         { data: 'full_name' },
         { data: 'email' },
         { data: 'role' },
@@ -208,7 +208,7 @@ $(function () {
       buttons: [
         {
           extend: 'collection',
-          className: 'btn btn-label-secondary dropdown-toggle',
+          className: 'btn btn-label-secondary dropdown-toggle waves-effect waves-light',
           text: '<i class="mdi mdi-export-variant me-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
           buttons: [
             {
@@ -457,7 +457,7 @@ $(function () {
       }
     });
     $('.add-new').html(
-      "<button class='btn btn-primary' data-bs-toggle='offcanvas' data-bs-target='#offcanvasAddUser'><i class='mdi mdi-plus me-0 me-sm-1'></i><span class= 'd-none d-sm-inline-block'> Add New User </span ></button>"
+      "<button class='btn btn-primary waves-effect waves-light' data-bs-toggle='offcanvas' data-bs-target='#offcanvasAddUser'><i class='mdi mdi-plus me-0 me-sm-1'></i><span class= 'd-none d-sm-inline-block'> Add New User </span ></button>"
     );
   }
 

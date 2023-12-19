@@ -110,7 +110,15 @@ $(function () {
     $('.dt-column-search thead tr').clone(true).appendTo('.dt-column-search thead');
     $('.dt-column-search thead tr:eq(1) th').each(function (i) {
       var title = $(this).text();
-      $(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+      var $input = $('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+
+      // Add left and right border styles to the parent element
+      $(this).css('border-left', 'none');
+      if (i === $('.dt-column-search thead tr:eq(1) th').length - 1) {
+        $(this).css('border-right', 'none');
+      }
+
+      $(this).html($input);
 
       $('input', this).on('keyup change', function () {
         if (dt_filter.column(i).search() !== this.value) {
@@ -293,7 +301,6 @@ $(function () {
       }
     });
   }
-
   // Filter form control to default size
   // ? setTimeout used for multilingual table initialization
   setTimeout(() => {

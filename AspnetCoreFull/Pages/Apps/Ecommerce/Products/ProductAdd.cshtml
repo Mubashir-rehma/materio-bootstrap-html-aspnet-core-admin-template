@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="~/vendor/libs/flatpickr/flatpickr.dist.css">
   <link rel="stylesheet" href="~/vendor/libs/tagify/tagify.dist.css" />
 }
-<!-- assets/vendor/libs/dropzone/dropzone.dist.css -->
+
 @section VendorScripts {
   <script src="~/vendor/libs/quill/katex.dist.js"></script>
   <script src="~/vendor/libs/quill/quill.dist.js"></script>
@@ -247,7 +247,7 @@
                     <div class="form-check mb-3">
                       <input class="form-check-input" type="radio" name="shippingType" id="seller">
                       <label class="form-check-label" for="seller">
-                        <span class="h6">Fulfilled by Seller</span>
+                        <span class="h6">Fulfilled by Seller</span><br>
                         <small class="text-muted d-block">You'll be responsible for product delivery.<br>
                           Any damage or delay during shipping may cost you a Damage fee.</small>
                       </label>
@@ -256,7 +256,7 @@
                       <input class="form-check-input" type="radio" name="shippingType" id="companyName" checked>
                       <label class="form-check-label" for="companyName">
                         <span class="h6">Fulfilled by Company name &nbsp;<span
-                            class="badge rounded-pill badge-warning bg-label-warning fs-tiny py-1">RECOMMENDED</span></span>
+                            class="badge rounded-pill badge-warning bg-label-warning fs-tiny py-1">RECOMMENDED</span></span><br>
                         <small class="text-muted d-block">Your product, Our responsibility.<br>
                           For a measly fee, we will handle the delivery process for you.</small>
                       </label>
@@ -272,7 +272,7 @@
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="radio" name="globalDel" id="worldwide">
                     <label class="form-check-label" for="worldwide">
-                      <span class="h6">Worldwide delivery</span>
+                      <span class="h6">Worldwide delivery</span><br>
                       <small class="text-muted d-block">Only available with Shipping method:
                         <a href="javascript:void(0);">Fulfilled by Company name</a></small>
                     </label>
@@ -292,7 +292,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="globalDel" id="local">
                     <label class="form-check-label" for="local">
-                      <span class="h6">Local delivery</span>
+                      <span class="h6">Local delivery</span><br>
                       <small class="text-muted d-block">Deliver to your country of residence :
                         <a href="javascript:void(0);">Change profile address</a></small>
                     </label>

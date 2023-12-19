@@ -218,7 +218,7 @@ $(function () {
       buttons: [
         {
           text: '<i class="mdi mdi-plus me-lg-1"></i><span class="d-lg-inline-block d-none">Create Invoice</span>',
-          className: 'btn btn-primary',
+          className: 'btn btn-primary waves-effect waves-light',
           action: function (e, dt, button, config) {
             window.location = 'app-invoice-add.html';
           }

@@ -22,7 +22,7 @@ $(function () {
       columns: [
         // columns according to JSON
         { data: '' },
-        { data: 'full_name' },
+        { data: 'id' },
         { data: 'full_name' },
         { data: 'email' },
         { data: 'role' },

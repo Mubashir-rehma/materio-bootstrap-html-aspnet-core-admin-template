@@ -130,12 +130,8 @@ const pageJsTask = function () {
 
 const FONT_TASKS = [
   {
-    name: 'boxicons',
-    path: 'node_modules/boxicons/fonts/*'
-  },
-  {
-    name: 'fontawesome',
-    path: 'node_modules/@fortawesome/fontawesome-free/webfonts/*'
+    name: 'materialdesignicons',
+    path: 'node_modules/@mdi/font/fonts/*'
   },
   {
     name: 'flags',
