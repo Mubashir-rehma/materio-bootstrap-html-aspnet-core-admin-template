@@ -83,7 +83,7 @@
           placeholder: 'Select an region',
           dropdownParent: dealRegion.parent()
         })
-        .on('change.select2', function () {
+        .on('change', function () {
           // Revalidate the region field when an option is chosen
           FormValidation1.revalidateField('dealRegion');
         });
@@ -143,7 +143,7 @@
           placeholder: 'Select an offered item',
           dropdownParent: dealOfferedItem.parent()
         })
-        .on('change.select2', function () {
+        .on('change', function () {
           // Revalidate the field if needed when an option is chosen
           // FormValidation2.revalidateField('dealOfferedItem');
         });

@@ -328,6 +328,24 @@
       }
     }
   }
+
+  // * Horizontal card radius issue fix
+  .card-img-left {
+    @include border-start-radius(0);
+    @include border-end-radius($card-inner-border-radius);
+    @include media-breakpoint-down(md) {
+      @include border-top-radius(0);
+      @include border-bottom-radius($card-inner-border-radius);
+    }
+  }
+  .card-img-right {
+    @include border-end-radius(0);
+    @include border-start-radius($card-inner-border-radius);
+    @include media-breakpoint-down(md) {
+      @include border-bottom-radius(0);
+      @include border-top-radius($card-inner-border-radius);
+    }
+  }
   // Card group
   @include media-breakpoint-up(sm) {
     .card-group > .card {

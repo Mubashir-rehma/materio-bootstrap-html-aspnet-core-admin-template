@@ -150,6 +150,15 @@ div.dataTables_wrapper .dt-button-collection > div[role='menu'] {
   border: $border-width solid $card-border-color;
 }
 
+// card border-shadow variant
+.card {
+  &[class*='card-border-shadow-'] {
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+}
+
 // Accordion
 .accordion-arrow-left {
   .accordion-item {
