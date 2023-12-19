@@ -18,19 +18,19 @@
 
 ## Introduction
 
-If you’re a developer looking for most Powerful & comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you the very best admin template that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
+If you’re a developer looking for most Powerful & comprehensive ASP.NET Core Bootstrap 5 HTML Admin Dashboard Template built for developers, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you the very best admin template that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
 
 Build premium quality applications with ease. Use our innovative admin template to create eye-catching, high-quality WebApps. Your apps will be completely responsive, ensuring they’ll look stunning and function flawlessly on desktops, tablets, and mobile devices.
 
-[View Demo](https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/vertical-menu-template/)
+[View Demo](https://demos.themeselection.com/materio-aspnet-core-admin-template/html/vertical-menu-template/)
 
 ## Installation ⚒️
 
-Please [visit](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/) our docs for installation guide.
+Please [visit](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/net-core-init-installation.html) our docs for installation guide.
 
 ## Documentation 📜
 
-Check out our live [Documentation](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/)
+Check out our live [Documentation](https://demos.themeselection.com/materio-bootstrap-html-admin-template/documentation/net-core-introduction.html)
 
 ## Support 👨‍💻
 
@@ -50,11 +50,11 @@ Hence, as precautions we disabled forking our repo.
 However, you can still keep your repo even after your support expires by setting our repo as upstream:
 
 1. Create a new **private repo** in your GitHub. Make sure it's a private repo. You can't share our code publicly as per license.
-2. Clone our repo: `git clone $product_repo_url`
+2. Clone our repo: `git clone https://github.com/themeselection/materio-bootstrap-html-aspnet-core-admin-template.git`
 3. Navigate to cloned directory
 4. Remove our repo as origin by running command: `git remote remove origin`
 5. Add your newly created repo as origin by running command: `git remote add origin YOUR_NEWLY_CREATE_REPO_GIT_URL`
-6. Add our repo as upstream by running command: `git remote add upstream $product_repo_url`
+6. Add our repo as upstream by running command: `git remote add upstream https://github.com/themeselection/materio-bootstrap-html-aspnet-core-admin-template.git`
 7. Push the code to GitHub by running command: `git push -u origin main`
 
 Now, whenever you want to pull the latest changes from our repo just pull the changes by running command: `git pull upstream main`
@@ -65,7 +65,7 @@ Cheers 🥂
 
 Contributions are always welcome and recommended! Here is how:
 
-- Clone our repo `git clone $product_repo_url`
+- Clone our repo `git clone https://github.com/themeselection/materio-bootstrap-html-aspnet-core-admin-template.git`
 - create a new branch based on branch you want to make Pull request to. For example if you want to make pull request to main branch, create new branch based on main branch.
 - Push your changes to new branch
 - Create pull request
