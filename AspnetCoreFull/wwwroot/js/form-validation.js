@@ -12,7 +12,6 @@
   if (flatPickrList) {
     flatPickrList.forEach(flatPickr => {
       flatPickr.flatpickr({
-        allowInput: true,
         monthSelectorType: 'static'
       });
     });
