@@ -7,7 +7,6 @@
   ViewData["contentType"] = ViewData["container"] is string container && container == "container-xxl" ? "layout-compact" : "layout-wide";
 }
 
-@await Html.PartialAsync("Layouts/Sections/_Variables")
 @inject IHttpContextAccessor httpContextAccessor
 
 <!DOCTYPE html>
